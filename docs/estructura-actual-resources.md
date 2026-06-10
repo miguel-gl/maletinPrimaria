@@ -1,0 +1,364 @@
+# Estructura actual de src/resources
+
+Fecha: 2026-05-18
+
+## URLs de carpetas
+
+- src/resources/
+- src/resources/FASE 3/
+- src/resources/FASE 3/1 GRADO/
+- src/resources/FASE 3/1 GRADO/cuadernillos_trabajo/
+- src/resources/FASE 3/1 GRADO/planos_didacticos/
+- src/resources/FASE 3/1 GRADO/planos_didacticos/comunitarios/
+- src/resources/FASE 3/1 GRADO/planos_didacticos/problemas/
+- src/resources/FASE 3/1 GRADO/planos_didacticos/servicio/
+- src/resources/FASE 3/1 GRADO/planos_didacticos/steam/
+- src/resources/FASE 3/2 GRADO/
+- src/resources/FASE 3/2 GRADO/cuadernillos_trabajo/
+- src/resources/FASE 3/2 GRADO/planos_didacticos/
+- src/resources/FASE 3/2 GRADO/planos_didacticos/comunitarios/
+- src/resources/FASE 3/2 GRADO/planos_didacticos/problemas/
+- src/resources/FASE 3/2 GRADO/planos_didacticos/servicio/
+- src/resources/FASE 3/2 GRADO/planos_didacticos/steam/
+- src/resources/FASE 4/
+- src/resources/FASE 4/3_grado/
+- src/resources/FASE 4/3_grado/cuadernillo_trabajo/
+- src/resources/FASE 4/3_grado/planos_didacticos/
+- src/resources/FASE 4/3_grado/planos_didacticos/comunitarios/
+- src/resources/FASE 4/3_grado/planos_didacticos/problemas/
+- src/resources/FASE 4/3_grado/planos_didacticos/servicio/
+- src/resources/FASE 4/3_grado/planos_didacticos/steam/
+- src/resources/FASE 4/4_grado/
+- src/resources/FASE 4/4_grado/cuadernillos_trabajo/
+- src/resources/FASE 4/4_grado/planos_didacticos/
+- src/resources/FASE 4/4_grado/planos_didacticos/comunitarios/
+- src/resources/FASE 4/4_grado/planos_didacticos/problemas/
+- src/resources/FASE 4/4_grado/planos_didacticos/servicio/
+- src/resources/FASE 4/4_grado/planos_didacticos/steam/
+- src/resources/FASE 5/
+- src/resources/FASE 5/5_grado/
+- src/resources/FASE 5/5_grado/cuadernillos_trabajo/
+- src/resources/FASE 5/5_grado/planos_didacticos/
+- src/resources/FASE 5/5_grado/planos_didacticos/comunitarios/
+- src/resources/FASE 5/5_grado/planos_didacticos/problemas/
+- src/resources/FASE 5/5_grado/planos_didacticos/servicio/
+- src/resources/FASE 5/5_grado/planos_didacticos/steam/
+- src/resources/FASE 5/6_grado/
+- src/resources/FASE 5/6_grado/cuadernillos_trabajo/
+- src/resources/FASE 5/6_grado/planos_didacticos/
+- src/resources/FASE 5/6_grado/planos_didacticos/comunitarios/
+- src/resources/FASE 5/6_grado/planos_didacticos/problemas/
+- src/resources/FASE 5/6_grado/planos_didacticos/servicio/
+- src/resources/FASE 5/6_grado/planos_didacticos/steam/
+- src/resources/instrumentos_evaluacion/
+- src/resources/material_alumno/
+- src/resources/material_alumno/Cuadernillo de trabajo/
+- src/resources/material_alumno/Cuadernillo de trabajo/ETICA NATURALEZA Y SOCIEDADES/
+- src/resources/material_alumno/Cuadernillo de trabajo/LENGUAJES/
+- src/resources/material_alumno/Cuadernillo de trabajo/SABERES Y PENSAMIENTO CIENTIFICO/
+- src/resources/material_alumno/Imprimibles/
+- src/resources/material_alumno/Imprimibles/etica_naturaleza_sociedades/
+- src/resources/material_alumno/Imprimibles/Lenguajes/
+- src/resources/material_alumno/Imprimibles/saberes_pensamiento_cientifico/
+- src/resources/MATERIAL PARA EL DOCENTE/
+- src/resources/MATERIAL PARA EL DOCENTE/DOSIFICACIÓN DE PROYECTOS POR GRADOS/
+- src/resources/MATERIAL PARA EL DOCENTE/PARA SECUNDARIA/
+- src/resources/MATERIAL PARA EL DOCENTE/La Carpeta de Seguridad y Autonomía Docente/
+- src/resources/MATERIAL PARA EL DOCENTE/La Carpeta de Seguridad y Autonomía Docente/SUSTENTO TEORICO/
+
+## URLs de archivos
+
+- src/resources/TEMARIO MALETIN PRIMARIA NEM.xlsx
+- src/resources/FASE 3/1 GRADO/cuadernillos_trabajo/cr_1_lenguajes1.pdf
+- src/resources/FASE 3/1 GRADO/cuadernillos_trabajo/cr_1_lenguajes2.pdf
+- src/resources/FASE 3/1 GRADO/cuadernillos_trabajo/cr_1_pensamientoC1.pdf
+- src/resources/FASE 3/1 GRADO/cuadernillos_trabajo/cr_1_pensamientoC2.pdf
+- src/resources/FASE 3/1 GRADO/cuadernillos_trabajo/cr_1_pensamientoC3.pdf
+- src/resources/FASE 3/1 GRADO/planos_didacticos/comunitarios/p1_actuar_en_mi_comunidad.pdf
+- src/resources/FASE 3/1 GRADO/planos_didacticos/comunitarios/p1_cambiado_comunidad.pdf
+- src/resources/FASE 3/1 GRADO/planos_didacticos/comunitarios/p1_fiestas_comunidad.pdf
+- src/resources/FASE 3/1 GRADO/planos_didacticos/comunitarios/p1_jardin_casa.pdf
+- src/resources/FASE 3/1 GRADO/planos_didacticos/comunitarios/p1_seguros_comunidad.pdf
+- src/resources/FASE 3/1 GRADO/planos_didacticos/problemas/p1_como_juego.pdf
+- src/resources/FASE 3/1 GRADO/planos_didacticos/problemas/p1_construyamos_soluciones.pdf
+- src/resources/FASE 3/1 GRADO/planos_didacticos/problemas/p1_formas_ser.pdf
+- src/resources/FASE 3/1 GRADO/planos_didacticos/problemas/p1_hola_me_llamo.pdf
+- src/resources/FASE 3/1 GRADO/planos_didacticos/problemas/p1_vida_suenos.pdf
+- src/resources/FASE 3/1 GRADO/planos_didacticos/servicio/p1_conociendo_contruyendo.pdf
+- src/resources/FASE 3/1 GRADO/planos_didacticos/servicio/p1_derecho_vivir.pdf
+- src/resources/FASE 3/1 GRADO/planos_didacticos/servicio/p1_festival.pdf
+- src/resources/FASE 3/1 GRADO/planos_didacticos/servicio/p1_heroes.pdf
+- src/resources/FASE 3/1 GRADO/planos_didacticos/servicio/p1_presento_emociones.pdf
+- src/resources/FASE 3/1 GRADO/planos_didacticos/steam/p1_cuerpos_geometricos.pdf
+- src/resources/FASE 3/1 GRADO/planos_didacticos/steam/p1_descubriendo_habilidades.pdf
+- src/resources/FASE 3/1 GRADO/planos_didacticos/steam/p1_estructura_resistente.pdf
+- src/resources/FASE 3/1 GRADO/planos_didacticos/steam/p1_mercado_escolar.pdf
+- src/resources/FASE 3/1 GRADO/planos_didacticos/steam/p1_se_mueve_se_gira.pdf
+- src/resources/FASE 3/2 GRADO/cuadernillos_trabajo/cr_2_lenguajes1.pdf
+- src/resources/FASE 3/2 GRADO/cuadernillos_trabajo/cr_2_lenguajes2.pdf
+- src/resources/FASE 3/2 GRADO/cuadernillos_trabajo/cr_2_pensamientoC1.pdf
+- src/resources/FASE 3/2 GRADO/cuadernillos_trabajo/cr_2_pensamientoC2.pdf
+- src/resources/FASE 3/2 GRADO/cuadernillos_trabajo/cr_2_pensamientoC3.pdf
+- src/resources/FASE 3/2 GRADO/planos_didacticos/comunitarios/2_de_naturaleza.pdf
+- src/resources/FASE 3/2 GRADO/planos_didacticos/comunitarios/2p_cuidandome.pdf
+- src/resources/FASE 3/2 GRADO/planos_didacticos/comunitarios/2p_cuidemos_ambientales.pdf
+- src/resources/FASE 3/2 GRADO/planos_didacticos/comunitarios/2p_decisiones_comunidad.pdf
+- src/resources/FASE 3/2 GRADO/planos_didacticos/comunitarios/2p_fuimos_somos.pdf
+- src/resources/FASE 3/2 GRADO/planos_didacticos/comunitarios/2p_sabores_comunidad.pdf
+- src/resources/FASE 3/2 GRADO/planos_didacticos/problemas/p2_acuerdos_paz.pdf
+- src/resources/FASE 3/2 GRADO/planos_didacticos/problemas/p2_aprendo_emociones.pdf
+- src/resources/FASE 3/2 GRADO/planos_didacticos/problemas/p2_nombre_completo.pdf
+- src/resources/FASE 3/2 GRADO/planos_didacticos/problemas/p2_paso_paso.pdf
+- src/resources/FASE 3/2 GRADO/planos_didacticos/problemas/p2_recreo_seguro.pdf
+- src/resources/FASE 3/2 GRADO/planos_didacticos/servicio/p2_constructores.pdf
+- src/resources/FASE 3/2 GRADO/planos_didacticos/servicio/p2_cuidamos.pdf
+- src/resources/FASE 3/2 GRADO/planos_didacticos/servicio/p2_entorno.pdf
+- src/resources/FASE 3/2 GRADO/planos_didacticos/servicio/p2_hacemos_todos.pdf
+- src/resources/FASE 3/2 GRADO/planos_didacticos/servicio/p2_nuestros_derechos.pdf
+- src/resources/FASE 3/2 GRADO/planos_didacticos/steam/p2_alimentos_balanceados.pdf
+- src/resources/FASE 3/2 GRADO/planos_didacticos/steam/p2_hielo_vapor.pdf
+- src/resources/FASE 3/2 GRADO/planos_didacticos/steam/p2_luna_formas.pdf
+- src/resources/FASE 3/2 GRADO/planos_didacticos/steam/p2_luz_cerca.pdf
+- src/resources/FASE 3/2 GRADO/planos_didacticos/steam/p2_materiales_resistentes.pdf
+- src/resources/FASE 4/3_grado/cuadernillo_trabajo/cr_3_humanocomunitario_1.pdf
+- src/resources/FASE 4/3_grado/cuadernillo_trabajo/cr_3_humanocomunitario_2.pdf
+- src/resources/FASE 4/3_grado/cuadernillo_trabajo/cr_3_lenguajes1.pdf
+- src/resources/FASE 4/3_grado/cuadernillo_trabajo/cr_3_lenguajes2.pdf
+- src/resources/FASE 4/3_grado/cuadernillo_trabajo/cr_3_lenguajes3.pdf
+- src/resources/FASE 4/3_grado/cuadernillo_trabajo/cr_3_pensamientoC1.pdf
+- src/resources/FASE 4/3_grado/cuadernillo_trabajo/cr_3_pensamientoC2.pdf
+- src/resources/FASE 4/3_grado/cuadernillo_trabajo/cr_3_pensamientoC3.pdf
+- src/resources/FASE 4/3_grado/planos_didacticos/comunitarios/p3_conociendo_derechos.pdf
+- src/resources/FASE 4/3_grado/planos_didacticos/comunitarios/p3_elementos_naturales.pdf
+- src/resources/FASE 4/3_grado/planos_didacticos/comunitarios/p3_juntos_espacios.pdf
+- src/resources/FASE 4/3_grado/planos_didacticos/comunitarios/p3_narrando_movimiento.pdf
+- src/resources/FASE 4/3_grado/planos_didacticos/comunitarios/p3_nuestras_palabras.pdf
+- src/resources/FASE 4/3_grado/planos_didacticos/comunitarios/p3_tejiendo.pdf
+- src/resources/FASE 4/3_grado/planos_didacticos/problemas/p3_construyendo_democracia.pdf
+- src/resources/FASE 4/3_grado/planos_didacticos/problemas/p3_cuidando_cuerpo.pdf
+- src/resources/FASE 4/3_grado/planos_didacticos/problemas/p3_multiplicando_dividiendo.pdf
+- src/resources/FASE 4/3_grado/planos_didacticos/problemas/p3_tiempo_manos.pdf
+- src/resources/FASE 4/3_grado/planos_didacticos/servicio/p3_aprendiendo_asertividad.pdf
+- src/resources/FASE 4/3_grado/planos_didacticos/servicio/p3_conociendonos.pdf
+- src/resources/FASE 4/3_grado/planos_didacticos/servicio/p3_construyendo.pdf
+- src/resources/FASE 4/3_grado/planos_didacticos/servicio/p3_medimos_respresentamos.pdf
+- src/resources/FASE 4/3_grado/planos_didacticos/servicio/p3_teatro_igualdad.pdf
+- src/resources/FASE 4/3_grado/planos_didacticos/servicio/p3_trabajar_comunidad.pdf
+- src/resources/FASE 4/3_grado/planos_didacticos/steam/p3_construyendo.pdf
+- src/resources/FASE 4/3_grado/planos_didacticos/steam/p3_cuentos_convivir.pdf
+- src/resources/FASE 4/3_grado/planos_didacticos/steam/p3_emociones.pdf
+- src/resources/FASE 4/3_grado/planos_didacticos/steam/p3_medimos_respresentamos.pdf
+- src/resources/FASE 4/3_grado/planos_didacticos/steam/p3_planeta_casa.pdf
+- src/resources/FASE 4/4_grado/cuadernillos_trabajo/cr_4_ens_1.pdf
+- src/resources/FASE 4/4_grado/cuadernillos_trabajo/cr_4_ens_2.pdf
+- src/resources/FASE 4/4_grado/cuadernillos_trabajo/cr_4_lenguajes1.pdf
+- src/resources/FASE 4/4_grado/cuadernillos_trabajo/cr_4_lenguajes2.pdf
+- src/resources/FASE 4/4_grado/cuadernillos_trabajo/cr_4_pensamientoC1.pdf
+- src/resources/FASE 4/4_grado/cuadernillos_trabajo/cr_4_pensamientoC2.pdf
+- src/resources/FASE 4/4_grado/cuadernillos_trabajo/cr_4_pensamientoC3.pdf
+- src/resources/FASE 4/4_grado/planos_didacticos/comunitarios/p4_arquitectoescuela.pdf
+- src/resources/FASE 4/4_grado/planos_didacticos/comunitarios/p4_cuentametuhistoria.pdf
+- src/resources/FASE 4/4_grado/planos_didacticos/comunitarios/p4_familia.pdf
+- src/resources/FASE 4/4_grado/planos_didacticos/comunitarios/p4_panfestejamos.pdf
+- src/resources/FASE 4/4_grado/planos_didacticos/comunitarios/p4_vernoshoy.pdf
+- src/resources/FASE 4/4_grado/planos_didacticos/problemas/p4_ayudamosprevenir.pdf
+- src/resources/FASE 4/4_grado/planos_didacticos/problemas/p4_cartografia.pdf
+- src/resources/FASE 4/4_grado/planos_didacticos/problemas/p4_identidadmexicana.pdf
+- src/resources/FASE 4/4_grado/planos_didacticos/problemas/p4_periodistas.pdf
+- src/resources/FASE 4/4_grado/planos_didacticos/problemas/p4_unviajepasado.pdf
+- src/resources/FASE 4/4_grado/planos_didacticos/servicio/p4_familia.pdf
+- src/resources/FASE 4/4_grado/planos_didacticos/servicio/p4_festival_talentos.pdf
+- src/resources/FASE 4/4_grado/planos_didacticos/servicio/p4_moviendo_cuerpo.pdf
+- src/resources/FASE 4/4_grado/planos_didacticos/servicio/p4_mundo_colores.pdf
+- src/resources/FASE 4/4_grado/planos_didacticos/servicio/p4_tendedero.pdf
+- src/resources/FASE 4/4_grado/planos_didacticos/steam/p4_bordado.pdf
+- src/resources/FASE 4/4_grado/planos_didacticos/steam/p4_comunidad.pdf
+- src/resources/FASE 4/4_grado/planos_didacticos/steam/p4_cuando.pdf
+- src/resources/FASE 4/4_grado/planos_didacticos/steam/p4_sintonia.pdf
+- src/resources/FASE 4/4_grado/planos_didacticos/steam/p4_todoescena.pdf
+- src/resources/FASE 5/5_grado/cuadernillos_trabajo/cr_5_ens_1.pdf
+- src/resources/FASE 5/5_grado/cuadernillos_trabajo/cr_5_ens_2.pdf
+- src/resources/FASE 5/5_grado/cuadernillos_trabajo/cr_5_humanocomunitario_1.pdf
+- src/resources/FASE 5/5_grado/cuadernillos_trabajo/cr_5_lenguajes1.pdf
+- src/resources/FASE 5/5_grado/cuadernillos_trabajo/cr_5_lenguajes2.pdf
+- src/resources/FASE 5/5_grado/cuadernillos_trabajo/cr_5_pensamientoC1.pdf
+- src/resources/FASE 5/5_grado/cuadernillos_trabajo/cr_5_pensamientoC2.pdf
+- src/resources/FASE 5/5_grado/cuadernillos_trabajo/cr_5_pensamientoC3.pdf
+- src/resources/FASE 5/5_grado/planos_didacticos/comunitarios/p5_acciones_importan.pdf
+- src/resources/FASE 5/5_grado/planos_didacticos/comunitarios/p5_cuerpo_sano.pdf
+- src/resources/FASE 5/5_grado/planos_didacticos/comunitarios/p5_derecho_sociedad.pdf
+- src/resources/FASE 5/5_grado/planos_didacticos/comunitarios/p5_noticias_migracion.pdf
+- src/resources/FASE 5/5_grado/planos_didacticos/comunitarios/p5_voces_ayer.pdf
+- src/resources/FASE 5/5_grado/planos_didacticos/problemas/P5_leyendas_mitos_mexico.pdf
+- src/resources/FASE 5/5_grado/planos_didacticos/problemas/p5_alimentos_tierra_maiz.pdf
+- src/resources/FASE 5/5_grado/planos_didacticos/problemas/p5_mexico_presente.pdf
+- src/resources/FASE 5/5_grado/planos_didacticos/problemas/p5_promuevo_lapaz.pdf
+- src/resources/FASE 5/5_grado/planos_didacticos/problemas/p5_todos_merecemos_respeto.pdf
+- src/resources/FASE 5/5_grado/planos_didacticos/servicio/p5_convivo_escuela.pdf
+- src/resources/FASE 5/5_grado/planos_didacticos/servicio/p5_desarollo_personal.pdf
+- src/resources/FASE 5/5_grado/planos_didacticos/servicio/p5_historia_futuro.pdf
+- src/resources/FASE 5/5_grado/planos_didacticos/servicio/p5_que_te_dice.pdf
+- src/resources/FASE 5/5_grado/planos_didacticos/servicio/p5_sociedad_incluyente.pdf
+- src/resources/FASE 5/5_grado/planos_didacticos/steam/p5_alimentacion_saludable.pdf
+- src/resources/FASE 5/5_grado/planos_didacticos/steam/p5_biodiversidad.pdf
+- src/resources/FASE 5/5_grado/planos_didacticos/steam/p5_elemento_vital.pdf
+- src/resources/FASE 5/5_grado/planos_didacticos/steam/p5_heroe.pdf
+- src/resources/FASE 5/5_grado/planos_didacticos/steam/p5_historias.pdf
+- src/resources/FASE 5/6_grado/cuadernillos_trabajo/cr_6_ens_1.pdf
+- src/resources/FASE 5/6_grado/cuadernillos_trabajo/cr_6_ens_2.pdf
+- src/resources/FASE 5/6_grado/cuadernillos_trabajo/cr_6_humanocomunitario_1.pdf
+- src/resources/FASE 5/6_grado/cuadernillos_trabajo/cr_6_lenguajes1.pdf
+- src/resources/FASE 5/6_grado/cuadernillos_trabajo/cr_6_lenguajes2.pdf
+- src/resources/FASE 5/6_grado/cuadernillos_trabajo/cr_6_lenguajes3.pdf
+- src/resources/FASE 5/6_grado/cuadernillos_trabajo/cr_6_pensamientoC1.pdf
+- src/resources/FASE 5/6_grado/cuadernillos_trabajo/cr_6_pensamientoC2.pdf
+- src/resources/FASE 5/6_grado/cuadernillos_trabajo/cr_6_pensamientoC3.pdf
+- src/resources/FASE 5/6_grado/planos_didacticos/comunitarios/p6_acciones_sustentables.pdf
+- src/resources/FASE 5/6_grado/planos_didacticos/comunitarios/p6_bienestar_personal.pdf
+- src/resources/FASE 5/6_grado/planos_didacticos/comunitarios/p6_cultura_democratica.pdf
+- src/resources/FASE 5/6_grado/planos_didacticos/comunitarios/p6_mi_vida_letras.pdf
+- src/resources/FASE 5/6_grado/planos_didacticos/comunitarios/p6_sociedades_equitativas.pdf
+- src/resources/FASE 5/6_grado/planos_didacticos/problemas/p6_democracia_mexico.pdf
+- src/resources/FASE 5/6_grado/planos_didacticos/problemas/p6_derecho_proteccion.pdf
+- src/resources/FASE 5/6_grado/planos_didacticos/problemas/p6_independencia_revolucion.pdf
+- src/resources/FASE 5/6_grado/planos_didacticos/problemas/p6_materiales_cambios.pdf
+- src/resources/FASE 5/6_grado/planos_didacticos/problemas/p6_migracion.pdf
+- src/resources/FASE 5/6_grado/planos_didacticos/servicio/p6_alimentacion_saludable.pdf
+- src/resources/FASE 5/6_grado/planos_didacticos/servicio/p6_decisiones_asertivas.pdf
+- src/resources/FASE 5/6_grado/planos_didacticos/servicio/p6_mexico_patrimonio.pdf
+- src/resources/FASE 5/6_grado/planos_didacticos/servicio/p6_mi_cuerpo.pdf
+- src/resources/FASE 5/6_grado/planos_didacticos/servicio/p6_mi_voz.pdf
+- src/resources/FASE 5/6_grado/planos_didacticos/steam/p6_fascinante_mundo_fuego.pdf
+- src/resources/FASE 5/6_grado/planos_didacticos/steam/p6_noticias_mundo.pdf
+- src/resources/FASE 5/6_grado/planos_didacticos/steam/p6_planeta_casa.pdf
+- src/resources/FASE 5/6_grado/planos_didacticos/steam/p6_problemas_ambientales.pdf
+- src/resources/FASE 5/6_grado/planos_didacticos/steam/p6_sabores_nutren.pdf
+- src/resources/FASE 5/6_grado/planos_didacticos/steam/p6_superheroes_microscopicos.pdf
+- src/resources/instrumentos_evaluacion/1.Autoevaluacion_Proyectos_NEM.xlsx
+- src/resources/instrumentos_evaluacion/2.Instrumento_1_Rubrica_Ensayo.xlsx
+- src/resources/instrumentos_evaluacion/3.Instrumento_2_Lista_Informe.xlsx
+- src/resources/instrumentos_evaluacion/4.Instrumento_3_Rubrica_Resena.xlsx
+- src/resources/instrumentos_evaluacion/5.Instrumento_4_Guia_Analisis_Texto.xlsx
+- src/resources/instrumentos_evaluacion/6.Instrumento_5_Rubrica_Reflexion.xlsx
+- src/resources/instrumentos_evaluacion/7.Instrumentos_Evaluacion_Artes_1Sec.xlsx
+- src/resources/instrumentos_evaluacion/8.Instrumentos_Evaluacion_Biología_1Sec_SPC.xlsx
+- src/resources/instrumentos_evaluacion/9.Instrumentos_Evaluacion_Educación_Socioemocional_1Sec_HyC.xlsx
+- src/resources/instrumentos_evaluacion/10.Instrumentos_Evaluacion_Español_1Sec.xlsx
+- src/resources/instrumentos_evaluacion/11.Instrumentos_Evaluacion_Exposiciones_NEM.xlsx
+- src/resources/instrumentos_evaluacion/12.Instrumentos_Evaluacion_Formacion_Civica_Etica_1Sec_ENS.xlsx
+- src/resources/instrumentos_evaluacion/13.Instrumentos_Evaluacion_FormacionCivica_1Sec_ENS_COMPLETO.xlsx
+- src/resources/instrumentos_evaluacion/15.Instrumentos_Evaluacion_Geografia_1Sec_ENS.xlsx
+- src/resources/instrumentos_evaluacion/16.Instrumentos_Evaluacion_Historia_1Sec_ENS_COMPLETO.xlsx
+- src/resources/instrumentos_evaluacion/19.Instrumentos_Evaluacion_Inglés_1Sec.xlsx
+- src/resources/instrumentos_evaluacion/21.Instrumentos_Evaluacion_Lengua_Indígena_LM_1Sec.xlsx
+- src/resources/instrumentos_evaluacion/22.Instrumentos_Evaluacion_Matemáticas_1Sec_SPC.xlsx
+- src/resources/instrumentos_evaluacion/23.Instrumentos_Evaluacion_Tecnología_1Sec_HyC.xlsx
+- src/resources/instrumentos_evaluacion/24.instrumentos_evaluacionFormativa.xlsx
+- src/resources/material_alumno/Cuadernillo de trabajo/ETICA NATURALEZA Y SOCIEDADES/4formacioncivicayetica-1trimestre.pdf
+- src/resources/material_alumno/Cuadernillo de trabajo/ETICA NATURALEZA Y SOCIEDADES/4geografia-1trimestre.ai
+- src/resources/material_alumno/Cuadernillo de trabajo/ETICA NATURALEZA Y SOCIEDADES/4geografia-1trimestre.pdf
+- src/resources/material_alumno/Cuadernillo de trabajo/ETICA NATURALEZA Y SOCIEDADES/4historia-1trimestre.pdf
+- src/resources/material_alumno/Cuadernillo de trabajo/ETICA NATURALEZA Y SOCIEDADES/Conocimientodelmedio- 1trimestre.ai
+- src/resources/material_alumno/Cuadernillo de trabajo/ETICA NATURALEZA Y SOCIEDADES/Conocimientodelmedio- 1trimestre.pdf
+- src/resources/material_alumno/Cuadernillo de trabajo/ETICA NATURALEZA Y SOCIEDADES/Conocimientodelmedio-1trimestre.pdf
+- src/resources/material_alumno/Cuadernillo de trabajo/LENGUAJES/4Español-1trimestre.pdf
+- src/resources/material_alumno/Cuadernillo de trabajo/LENGUAJES/Español- 1trimestre.pdf
+- src/resources/material_alumno/Cuadernillo de trabajo/LENGUAJES/Español-1trimestre.ai
+- src/resources/material_alumno/Cuadernillo de trabajo/LENGUAJES/Español-1trimestre.pdf
+- src/resources/material_alumno/Cuadernillo de trabajo/SABERES Y PENSAMIENTO CIENTIFICO/4cienciasnaturales-1trimestre.pdf
+- src/resources/material_alumno/Cuadernillo de trabajo/SABERES Y PENSAMIENTO CIENTIFICO/4matematicas-1trimestre.ai
+- src/resources/material_alumno/Cuadernillo de trabajo/SABERES Y PENSAMIENTO CIENTIFICO/4matematicas-1trimestre.pdf
+- src/resources/material_alumno/Cuadernillo de trabajo/SABERES Y PENSAMIENTO CIENTIFICO/6civicayetica-1trimestre.pdf
+- src/resources/material_alumno/Cuadernillo de trabajo/SABERES Y PENSAMIENTO CIENTIFICO/Matematicas-1trimestre(1).ai
+- src/resources/material_alumno/Cuadernillo de trabajo/SABERES Y PENSAMIENTO CIENTIFICO/Matematicas-1trimestre(1).pdf
+- src/resources/material_alumno/Cuadernillo de trabajo/SABERES Y PENSAMIENTO CIENTIFICO/Matematicas-1trimestre.ai
+- src/resources/material_alumno/Cuadernillo de trabajo/SABERES Y PENSAMIENTO CIENTIFICO/Matematicas-1trimestre.pdf
+- src/resources/material_alumno/Imprimibles/etica_naturaleza_sociedades/5_sentidos.pdf
+- src/resources/material_alumno/Imprimibles/etica_naturaleza_sociedades/animales.pdf
+- src/resources/material_alumno/Imprimibles/etica_naturaleza_sociedades/animales_marinos.pdf
+- src/resources/material_alumno/Imprimibles/etica_naturaleza_sociedades/animales_terrestres.pdf
+- src/resources/material_alumno/Imprimibles/etica_naturaleza_sociedades/derechos_ninos.pdf
+- src/resources/material_alumno/Imprimibles/etica_naturaleza_sociedades/desarrollo_infantil.pdf
+- src/resources/material_alumno/Imprimibles/etica_naturaleza_sociedades/estados_capitales.pdf
+- src/resources/material_alumno/Imprimibles/etica_naturaleza_sociedades/limites_fronteras_mexico.pdf
+- src/resources/material_alumno/Imprimibles/etica_naturaleza_sociedades/oasis_mesoamerica_arido.pdf
+- src/resources/material_alumno/Imprimibles/etica_naturaleza_sociedades/olmecas.pdf
+- src/resources/material_alumno/Imprimibles/etica_naturaleza_sociedades/poblamiento_america.pdf
+- src/resources/material_alumno/Imprimibles/Lenguajes/adivinanzas.pdf
+- src/resources/material_alumno/Imprimibles/Lenguajes/adivinanzas_2.pdf
+- src/resources/material_alumno/Imprimibles/Lenguajes/bordado.pdf
+- src/resources/material_alumno/Imprimibles/Lenguajes/cuento.pdf
+- src/resources/material_alumno/Imprimibles/Lenguajes/diminutivos.pdf
+- src/resources/material_alumno/Imprimibles/Lenguajes/elementos_anuncio.pdf
+- src/resources/material_alumno/Imprimibles/Lenguajes/elementos_cartel.pdf
+- src/resources/material_alumno/Imprimibles/Lenguajes/la_oracion.pdf
+- src/resources/material_alumno/Imprimibles/Lenguajes/lenguas_indigenas.pdf
+- src/resources/material_alumno/Imprimibles/Lenguajes/letra_z.pdf
+- src/resources/material_alumno/Imprimibles/Lenguajes/muralismo.pdf
+- src/resources/material_alumno/Imprimibles/Lenguajes/reglamento_aula.pdf
+- src/resources/material_alumno/Imprimibles/Lenguajes/sustantivos.pdf
+- src/resources/material_alumno/Imprimibles/Lenguajes/talavera.pdf
+- src/resources/material_alumno/Imprimibles/Lenguajes/traje_tipico_chiapas.pdf
+- src/resources/material_alumno/Imprimibles/Lenguajes/traje_tipico_puebla.pdf
+- src/resources/material_alumno/Imprimibles/saberes_pensamiento_cientifico/alimentacion_saludable.pdf
+- src/resources/material_alumno/Imprimibles/saberes_pensamiento_cientifico/aparato_reproductor.pdf
+- src/resources/material_alumno/Imprimibles/saberes_pensamiento_cientifico/colorea_numero.pdf
+- src/resources/material_alumno/Imprimibles/saberes_pensamiento_cientifico/completa_figura.pdf
+- src/resources/material_alumno/Imprimibles/saberes_pensamiento_cientifico/conteo.pdf
+- src/resources/material_alumno/Imprimibles/saberes_pensamiento_cientifico/decenas_centenas.pdf
+- src/resources/material_alumno/Imprimibles/saberes_pensamiento_cientifico/decimos_centimos.pdf
+- src/resources/material_alumno/Imprimibles/saberes_pensamiento_cientifico/ejercicio_matematico(1).pdf
+- src/resources/material_alumno/Imprimibles/saberes_pensamiento_cientifico/ejercicio_matematico.pdf
+- src/resources/material_alumno/Imprimibles/saberes_pensamiento_cientifico/ejercicio_matematico_3.pdf
+- src/resources/material_alumno/Imprimibles/saberes_pensamiento_cientifico/fracciones_decimales.pdf
+- src/resources/material_alumno/Imprimibles/saberes_pensamiento_cientifico/insectos.pdf
+- src/resources/material_alumno/Imprimibles/saberes_pensamiento_cientifico/mayor_menor.pdf
+- src/resources/material_alumno/Imprimibles/saberes_pensamiento_cientifico/partes_flor.pdf
+- src/resources/material_alumno/Imprimibles/saberes_pensamiento_cientifico/reinos.pdf
+- src/resources/material_alumno/Imprimibles/saberes_pensamiento_cientifico/suma.pdf
+- src/resources/material_alumno/Imprimibles/saberes_pensamiento_cientifico/tangram.pdf
+- src/resources/material_alumno/Imprimibles/saberes_pensamiento_cientifico/triangulos.pdf
+- src/resources/MATERIAL PARA EL DOCENTE/Copia de 1_exp.pdf
+- src/resources/MATERIAL PARA EL DOCENTE/Copia de CRONOGRAMA.pdf
+- src/resources/MATERIAL PARA EL DOCENTE/Copia de DECLARACIÓN DE PROPIEDAD INTELECTUAL Y USO DE CONTENIDOS COMPLEMENTARIOS (1).docx
+- src/resources/MATERIAL PARA EL DOCENTE/Copia de directorio_padresfam.pdf
+- src/resources/MATERIAL PARA EL DOCENTE/Copia de ENTREVISTA.pdf
+- src/resources/MATERIAL PARA EL DOCENTE/Copia de Entrevista_alumnos.pdf
+- src/resources/MATERIAL PARA EL DOCENTE/Copia de expediente_personal.pdf
+- src/resources/MATERIAL PARA EL DOCENTE/Copia de formato_proyecto.pdf
+- src/resources/MATERIAL PARA EL DOCENTE/Copia de INCIDENCIAS.pdf
+- src/resources/MATERIAL PARA EL DOCENTE/Copia de Manual_usuario.pdf
+- src/resources/MATERIAL PARA EL DOCENTE/Copia de ROL_ENTRADA_SALIDA_CLASES.pdf
+- src/resources/MATERIAL PARA EL DOCENTE/Copia de ROL_PERSONAL_RECREO.pdf
+- src/resources/MATERIAL PARA EL DOCENTE/Copia de rol_profesores.pdf
+- src/resources/MATERIAL PARA EL DOCENTE/DOSIFICACIÓN DE PROYECTOS POR GRADOS/1erGradoDosificaciónDeProyectos2023-2024 (1).docx
+- src/resources/MATERIAL PARA EL DOCENTE/DOSIFICACIÓN DE PROYECTOS POR GRADOS/2doGradoDosificaciónDeProyectos2023-2024 (1).docx
+- src/resources/MATERIAL PARA EL DOCENTE/DOSIFICACIÓN DE PROYECTOS POR GRADOS/3erGradoDosificaciónDeProyectos2023-2024 (1).docx
+- src/resources/MATERIAL PARA EL DOCENTE/DOSIFICACIÓN DE PROYECTOS POR GRADOS/4toGradoDosificaciónDeProyectos2023-2024 (1).docx
+- src/resources/MATERIAL PARA EL DOCENTE/DOSIFICACIÓN DE PROYECTOS POR GRADOS/5toGradoDosificaciónDeProyectos2023-2024 (1).docx
+- src/resources/MATERIAL PARA EL DOCENTE/DOSIFICACIÓN DE PROYECTOS POR GRADOS/6toGradoDosificaciónDeProyectos2023-2024 (1).docx
+- src/resources/MATERIAL PARA EL DOCENTE/PARA SECUNDARIA/1_exp.pdf
+- src/resources/MATERIAL PARA EL DOCENTE/PARA SECUNDARIA/CRONOGRAMA.pdf
+- src/resources/MATERIAL PARA EL DOCENTE/PARA SECUNDARIA/DECLARACIÓN DE PROPIEDAD INTELECTUAL Y USO DE CONTENIDOS COMPLEMENTARIOS (1).docx
+- src/resources/MATERIAL PARA EL DOCENTE/PARA SECUNDARIA/directorio_padresfam.pdf
+- src/resources/MATERIAL PARA EL DOCENTE/PARA SECUNDARIA/ENTREVISTA.pdf
+- src/resources/MATERIAL PARA EL DOCENTE/PARA SECUNDARIA/Entrevista_alumnos.pdf
+- src/resources/MATERIAL PARA EL DOCENTE/PARA SECUNDARIA/expediente_personal.pdf
+- src/resources/MATERIAL PARA EL DOCENTE/PARA SECUNDARIA/formato_proyecto.pdf
+- src/resources/MATERIAL PARA EL DOCENTE/PARA SECUNDARIA/INCIDENCIAS.pdf
+- src/resources/MATERIAL PARA EL DOCENTE/PARA SECUNDARIA/Manual_usuario.pdf
+- src/resources/MATERIAL PARA EL DOCENTE/PARA SECUNDARIA/ROL_ENTRADA_SALIDA_CLASES.pdf
+- src/resources/MATERIAL PARA EL DOCENTE/PARA SECUNDARIA/ROL_PERSONAL_RECREO.pdf
+- src/resources/MATERIAL PARA EL DOCENTE/PARA SECUNDARIA/rol_profesores.pdf
+- src/resources/MATERIAL PARA EL DOCENTE/La Carpeta de Seguridad y Autonomía Docente/Instructivo de Escoltas  y Hojas de Evaluación 2025-2026.pdf
+- src/resources/MATERIAL PARA EL DOCENTE/La Carpeta de Seguridad y Autonomía Docente/Protocolo Para La Prevención, Detención,.pdf
+- src/resources/MATERIAL PARA EL DOCENTE/La Carpeta de Seguridad y Autonomía Docente/Protocolos Para La Detección,.pdf
+- src/resources/MATERIAL PARA EL DOCENTE/La Carpeta de Seguridad y Autonomía Docente/REGLAMENTO DE LAS.pdf
+- src/resources/MATERIAL PARA EL DOCENTE/La Carpeta de Seguridad y Autonomía Docente/SUSTENTO TEORICO/Programa_Sintetico_Fase_3 (1).pdf
+- src/resources/MATERIAL PARA EL DOCENTE/La Carpeta de Seguridad y Autonomía Docente/SUSTENTO TEORICO/Programa_Sintetico_Fase_4 (1).pdf
+- src/resources/MATERIAL PARA EL DOCENTE/La Carpeta de Seguridad y Autonomía Docente/SUSTENTO TEORICO/Programa_Sintetico_Fase_5 (1).pdf
+
+## Resumen
+
+- Total de carpetas (incluyendo src/resources): 61
+- Total de archivos: 289

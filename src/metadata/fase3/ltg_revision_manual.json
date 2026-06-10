@@ -1,0 +1,109 @@
+{
+  "descripcion": "Registros Fase 3 con vinculacion_ltg incompleta o no encontrada.",
+  "total": 7,
+  "generado": "2026-06-10",
+  "registros": [
+    {
+      "id": "e3eda902-2c88-45f8-a828-ff666cb8674c",
+      "titulo": "Descubriendo las habilidades de mi cuerpo y sus movimientos",
+      "archivo": "steam_p1_descubriendo_habilidades.pdf",
+      "grado": 1,
+      "motivo": "Entradas con libro vacío o página 0",
+      "entradas_incompletas": [
+        {
+          "grado": "1°",
+          "libro": "Nuestros saberes, libro para alumnos, maestros y familias",
+          "seccion": "Pág., 70",
+          "pagina": 0
+        }
+      ],
+      "entradas_completas": [
+        {
+          "grado": "1°",
+          "libro": "Proyectos de Aula",
+          "seccion": "Mi cuerpo y sus movimientos",
+          "pagina": 90
+        }
+      ]
+    },
+    {
+      "id": "4fe118d8-21a1-42b4-88a7-f5e3856cfbf0",
+      "titulo": "Mi estructura resistente",
+      "archivo": "steam_p1_estructura_resistente.pdf",
+      "grado": 1,
+      "motivo": "Entradas con libro vacío o página 0",
+      "entradas_incompletas": [
+        {
+          "grado": "1°",
+          "libro": "Nuestros saberes, libro para alumnos, maestros y familias",
+          "seccion": "",
+          "pagina": 0
+        },
+        {
+          "grado": "1°",
+          "libro": "",
+          "seccion": "Características de los materiales y objetos. Libro",
+          "pagina": 122
+        }
+      ],
+      "entradas_completas": [
+        {
+          "grado": "1°",
+          "libro": "Proyectos de Aula",
+          "seccion": "en el Tema ¿Qué tan resistente es un tubo de papel?",
+          "pagina": 112
+        }
+      ]
+    },
+    {
+      "id": "b7cd3030-ed6b-4cf0-8514-74e9710173f1",
+      "titulo": "Se mueve, rueda y gira",
+      "archivo": "steam_p1_se_mueve_se_gira.pdf",
+      "grado": 1,
+      "motivo": "Extractor no encontró sección LTG"
+    },
+    {
+      "id": "52d8612c-076e-461a-b2f3-3b875df3d8d9",
+      "titulo": "Construyamos soluciones",
+      "archivo": "problemas_p1_construyamos_soluciones.pdf",
+      "grado": 1,
+      "motivo": "Entradas con libro vacío o página 0",
+      "entradas_incompletas": [
+        {
+          "grado": "1°",
+          "libro": "Nuestros saberes, libro para alumnos, maestros y familias",
+          "seccion": "",
+          "pagina": 0
+        },
+        {
+          "grado": "1°",
+          "libro": "",
+          "seccion": "corte vivencial con la intención de aportar elementos que lo lleven a comprender el problema. 22. Reflexionar en la importancia de los reglamentos, guiar a los",
+          "pagina": 12
+        }
+      ],
+      "entradas_completas": []
+    },
+    {
+      "id": "2d54f642-7b4f-4106-a792-efabf66c2ac9",
+      "titulo": "Festival de Juegos para nuestra comunidad",
+      "archivo": "servicio_p1_festival.pdf",
+      "grado": 1,
+      "motivo": "Extractor no encontró sección LTG"
+    },
+    {
+      "id": "f7af1005-751d-4ab8-842f-867127a0520d",
+      "titulo": "Nuestros derechos, nuestros compromisos",
+      "archivo": "p2_nuestros_derechos.pdf",
+      "grado": 2,
+      "motivo": "Extractor no encontró sección LTG"
+    },
+    {
+      "id": "dcd4ff2f-c0cd-4dc2-b4cb-d461821ab244",
+      "titulo": "Hielo o vapor",
+      "archivo": "p2_hielo_vapor.pdf",
+      "grado": 2,
+      "motivo": "Extractor no encontró sección LTG"
+    }
+  ]
+}

@@ -1,0 +1,465 @@
+[
+  {
+    "id": "spc-alim-nutricion",
+    "archivo": {
+      "nombre": "alimentacion_saludable.pdf",
+      "tipo": "Recurso de Clasificación"
+    },
+    "clasificacion": {
+      "fase": 3,
+      "grado": "1° y 2° Primaria",
+      "tipo_recurso": "Hoja de trabajo",
+      "categoria_pedagogica": "Vida Saludable / Nutrición"
+    },
+    "contenido": {
+      "titulo": "Nutrición en Acción: Mi Guía de Alimentos Saludables",
+      "para_que_te_sirve": "Identifica y clasifica los alimentos que nutren el cuerpo frente a aquellos de los que no se debe abusar. Utiliza la sopa de letras para fortalecer la lectoescritura de términos científicos y fomenta la toma de decisiones informadas sobre hábitos alimenticios en el entorno familiar.",
+      "descripcion_slide": "Guía a tus estudiantes en la elección de alimentos que cuidan su salud; transforma la teoría en hábitos reales para un crecimiento fuerte y lleno de energía.",
+      "emoji_recurso": "🍎"
+    },
+    "enriquecimiento_ia": {
+      "pedagogico": {
+        "momentos_ciclo_escolar": ["Primer Trimestre"],
+        "competencias_inferidas": ["Autocuidado", "Pensamiento crítico nutricional"],
+        "habilidades_inferidas": ["Clasificación de información", "Asociación palabra-objeto"],
+        "nivel_abstraccion": "Concreto / Aplicado"
+      },
+      "descubrimiento_contextual": {
+        "recursos_y_preparacion": [{"id": "listo_imprimir", "icono": "🖨", "titulo": "Listo para imprimir"}],
+        "intencion_pedagogica": [{"id": "reforzar_aprendizajes", "icono": "🛠", "titulo": "Refuerza aprendizajes"}]
+      }
+    }
+  },
+  {
+    "id": "spc-bio-reproduccion",
+    "archivo": {
+      "nombre": "aparato_reproductor.pdf",
+      "tipo": "Guía de Autoconocimiento"
+    },
+    "clasificacion": {
+      "fase": 3,
+      "grado": "1° y 2° Primaria",
+      "tipo_recurso": "Hoja de registro",
+      "categoria_pedagogica": "Cuerpo Humano / Educación Sexual"
+    },
+    "contenido": {
+      "titulo": "Respeto y Ciencia: Mi Cuerpo por Fuera y por Dentro",
+      "para_que_te_sirve": "Nombra correctamente los órganos sexuales externos y comprende procesos básicos como la reproducción vivípara. Te ayuda a abordar temas de higiene y límites corporales desde una perspectiva biológica y respetuosa, promoviendo el autocuidado y la seguridad infantil.",
+      "descripcion_slide": "Acompaña el descubrimiento del cuerpo humano con nombres correctos y rigor científico; fomenta el respeto a la integridad y el asombro por el inicio de la vida.",
+      "emoji_recurso": "🧬"
+    },
+    "enriquecimiento_ia": {
+      "pedagogico": {
+        "momentos_ciclo_escolar": ["Segundo Trimestre"],
+        "habilidades_inferidas": ["Denominación anatómica", "Comprensión de procesos biológicos"],
+        "nivel_abstraccion": "Simbólico / Biológico"
+      },
+      "descubrimiento_contextual": {
+        "intencion_pedagogica": [{"id": "introducir_tema", "icono": "🧭", "titulo": "Introduce un tema nuevo"}],
+        "clima_emocional_aula": [{"id": "fortalece_confianza", "icono": "🌟", "titulo": "Entorno seguro"}]
+      }
+    }
+  },
+  {
+    "id": "spc-mat-colorea",
+    "archivo": {
+      "nombre": "colorea_numero.pdf",
+      "tipo": "Entrenador Aritmético"
+    },
+    "clasificacion": {
+      "fase": 3,
+      "grado": "1° Primaria",
+      "tipo_recurso": "Actividad lúdica",
+      "categoria_pedagogica": "Aritmética / Suma y Resta"
+    },
+    "contenido": {
+      "titulo": "Arte Numérico: Colorea por Operaciones",
+      "para_que_te_sirve": "Resuelve sumas y restas sencillas para descubrir códigos de color. Es ideal para mecanizar operaciones básicas de forma divertida, integrando la coordinación motriz fina con el cálculo mental inicial.",
+      "descripcion_slide": "Convierte el cálculo en una experiencia creativa; reta a tus alumnos a resolver operaciones para dar vida y color a sus propios descubrimientos numéricos.",
+      "emoji_recurso": "🎨"
+    },
+    "enriquecimiento_ia": {
+      "pedagogico": {
+        "competencias_inferidas": ["Cálculo mental", "Seguimiento de códigos"],
+        "emociones_esperadas": ["Entusiasmo", "Logro"]
+      },
+      "descubrimiento_contextual": {
+        "energia_y_dinamica_grupo": [{"id": "grupos_tranquilos", "icono": "🌙", "titulo": "Para grupos tranquilos"}],
+        "tipo_experiencia_aprendizaje": [{"id": "expresion_artistica", "icono": "🎨", "titulo": "Expresión artística"}]
+      }
+    }
+  },
+  {
+    "id": "spc-geo-completa",
+    "archivo": {
+      "nombre": "completa_figura.pdf",
+      "tipo": "Reto de Simetría"
+    },
+    "clasificacion": {
+      "fase": 3,
+      "grado": "1° y 2° Primaria",
+      "tipo_recurso": "Hoja de dibujo",
+      "categoria_pedagogica": "Geometría / Percepción Espacial"
+    },
+    "contenido": {
+      "titulo": "Detectives de Formas: Completa la Figura",
+      "para_que_te_sirve": "Desarrolla la percepción espacial y la noción de simetría completando dibujos mediante trazos geométricos. Te permite trabajar la atención al detalle y la identificación de propiedades visuales en objetos del entorno.",
+      "emoji_recurso": "📐",
+      "descripcion_slide": "Reta la mirada de tus alumnos; enséñales a observar patrones y completar el mundo a través del dibujo preciso y la lógica espacial."
+    },
+    "enriquecimiento_ia": {
+      "pedagogico": {
+        "habilidades_inferidas": ["Coordinación visomotriz", "Reconocimiento de patrones"],
+        "nivel_abstraccion": "Gráfico / Espacial"
+      }
+    }
+  },
+  {
+    "id": "spc-mat-conteo-azar",
+    "archivo": {
+      "nombre": "conteo.pdf",
+      "tipo": "Generador de Retos"
+    },
+    "clasificacion": {
+      "fase": 3,
+      "grado": "1° Primaria",
+      "tipo_recurso": "Hoja de práctica",
+      "categoria_pedagogica": "Pensamiento Matemático / Conteo"
+    },
+    "contenido": {
+      "titulo": "Desafío de Colecciones: Agrega o Tacha",
+      "para_que_te_sirve": "Ajusta colecciones de insectos (mantis, mariposas, mariquitas) a una cifra dada por ti al azar. Es una herramienta flexible para trabajar el conteo uno a uno, la cardinalidad y los conceptos de más que y menos que.",
+      "descripcion_slide": "Personaliza el reto matemático de hoy; propón una cifra y deja que tus alumnos manipulen visualmente las colecciones hasta lograr la meta exacta.",
+      "emoji_recurso": "🐜"
+    },
+    "enriquecimiento_ia": {
+      "pedagogico": {
+        "competencias_inferidas": ["Cuantificación", "Resolución de problemas de ajuste"],
+        "tipos_interaccion": ["Docente-Alumno (reto guiado)"]
+      }
+    }
+  },
+  {
+    "id": "spc-mat-valor-posicional",
+    "archivo": {
+      "nombre": "decenas_centenas.pdf",
+      "tipo": "Entrenador de Sistema Decimal"
+    },
+    "clasificacion": {
+      "fase": 3,
+      "grado": "2° Primaria",
+      "tipo_recurso": "Cuaderno de ejercicios",
+      "categoria_pedagogica": "Aritmética / Valor Posicional"
+    },
+    "contenido": {
+      "titulo": "Arquitectos de Números: Unidades a Decenas de Millar",
+      "para_que_te_sirve": "Domina la descomposición aditiva y la lectura convencional de números grandes. Te ayuda a consolidar el valor posicional de las cifras y a transitar hacia algoritmos más complejos de suma y resta con agrupamientos.",
+      "descripcion_slide": "Estructura el pensamiento lógico; dales las piezas para que tus alumnos construyan números grandes y comprendan la magnitud de las cantidades.",
+      "emoji_recurso": "🔢"
+    },
+    "enriquecimiento_ia": {
+      "pedagogico": {
+        "habilidades_inferidas": ["Lectura de cifras", "Descomposición aditiva"],
+        "nivel_abstraccion": "Lógico-Matemático"
+      }
+    }
+  },
+  {
+    "id": "spc-mat-decimales-inicial",
+    "archivo": {
+      "nombre": "decimos_centimos.pdf",
+      "tipo": "Introducción a Decimales"
+    },
+    "clasificacion": {
+      "fase": 3,
+      "grado": "2° Primaria",
+      "tipo_recurso": "Hoja de trabajo",
+      "categoria_pedagogica": "Pensamiento Matemático / Decimales"
+    },
+    "contenido": {
+      "titulo": "Pequeñas Partes del Todo: Décimos y Centésimos",
+      "para_que_te_sirve": "Representa gráficamente fracciones decimales pintando cuadrículas y escribe su nombre en palabras. Es el puente perfecto para que tus alumnos comprendan que los números también pueden representar partes de una unidad.",
+      "descripcion_slide": "Explora el mundo de lo minúsculo; guía a tus alumnos para que vean, pinten y nombren las partes que forman un entero.",
+      "emoji_recurso": "🏁"
+    },
+    "enriquecimiento_ia": {
+      "pedagogico": {
+        "habilidades_inferidas": ["Representación gráfica", "Nomenclatura decimal"],
+        "nivel_abstraccion": "Simbólico / Fraccionario"
+      }
+    }
+  },
+  {
+    "id": "spc-mat-conjuntos",
+    "archivo": {
+      "nombre": "ejercicio_matematico(1).pdf",
+      "tipo": "Práctica de Colecciones"
+    },
+    "clasificacion": {
+      "fase": 3,
+      "grado": "1° Primaria",
+      "tipo_recurso": "Hoja de trabajo",
+      "categoria_pedagogica": "Aritmética / Conjuntos"
+    },
+    "contenido": {
+      "titulo": "Misión 15: Completando Conjuntos",
+      "para_que_te_sirve": "Desarrolla la habilidad de completar colecciones hasta el número 15 mediante el dibujo o el tachado. Te permite trabajar la noción de complemento y el conteo de elementos faltantes en situaciones concretas.",
+      "descripcion_slide": "Logra el equilibrio numérico; invita a tus estudiantes a dibujar o quitar elementos hasta que cada conjunto sea exactamente igual a la meta.",
+      "emoji_recurso": "🎯"
+    },
+    "enriquecimiento_ia": {
+      "pedagogico": {
+        "habilidades_inferidas": ["Conteo de colecciones", "Estimación de faltantes"],
+        "emociones_esperadas": ["Concentración"]
+      }
+    }
+  },
+  {
+    "id": "spc-mat-dados",
+    "archivo": {
+      "nombre": "ejercicio_matematico.pdf",
+      "tipo": "Práctica de Puntos"
+    },
+    "clasificacion": {
+      "fase": 3,
+      "grado": "1° Primaria",
+      "tipo_recurso": "Hoja de ejercicios",
+      "categoria_pedagogica": "Aritmética / Conteo Visual"
+    },
+    "contenido": {
+      "titulo": "Dados Incompletos: Puntos y Cantidades",
+      "para_que_te_sirve": "Dibuja los puntos que faltan en dados para alcanzar una suma determinada. Es excelente para trabajar la subitización (reconocimiento visual rápido de cantidades) y la iniciación al cálculo de sumas pequeñas.",
+      "descripcion_slide": "Juega con las cantidades; reta el reconocimiento visual de tus alumnos para que completen los puntos de cada dado con rapidez y precisión.",
+      "emoji_recurso": "🎲"
+    },
+    "enriquecimiento_ia": {
+      "pedagogico": {
+        "habilidades_inferidas": ["Subitización", "Composición numérica"],
+        "nivel_abstraccion": "Concreto / Gráfico"
+      }
+    }
+  },
+  {
+    "id": "spc-mat-secuencias-flores",
+    "archivo": {
+      "nombre": "ejercicio_matematico_3.pdf",
+      "tipo": "Práctica de Series"
+    },
+    "clasificacion": {
+      "fase": 3,
+      "grado": "1° Primaria",
+      "tipo_recurso": "Hoja de trabajo",
+      "categoria_pedagogica": "Aritmética / Sucesiones"
+    },
+    "contenido": {
+      "titulo": "Jardín Numérico: Flores y Sucesiones",
+      "para_que_te_sirve": "Observa el numeral y dibuja la cantidad de flores correspondientes. Es un recurso sencillo pero efectivo para vincular el símbolo numérico con su representación gráfica real, ideal para los primeros pasos en la numeración.",
+      "descripcion_slide": "Siembra aprendizajes; dales el número y deja que ellos den vida al jardín dibujando la cantidad correcta de flores.",
+      "emoji_recurso": "🌸"
+    },
+    "enriquecimiento_ia": {
+      "pedagogico": {
+        "habilidades_inferidas": ["Correspondencia número-cantidad", "Dibujo dirigido"]
+      }
+    }
+  },
+  {
+    "id": "spc-mat-fracciones-decimales",
+    "archivo": {
+      "nombre": "fracciones_decimales.pdf",
+      "tipo": "Entrenador de Conversión"
+    },
+    "clasificacion": {
+      "fase": 4,
+      "grado": "3° o 4° Primaria",
+      "tipo_recurso": "Hoja de trabajo",
+      "categoria_pedagogica": "Pensamiento Matemático / Fracciones"
+    },
+    "contenido": {
+      "titulo": "El Salto del Decimal: De Fracción a Número",
+      "para_que_te_sirve": "Rodea fracciones decimales y conviértelas a su escritura en números con punto decimal. Este material es clave para que tus alumnos comprendan la relación entre la división por potencias de 10 y la posición de la coma o punto decimal.",
+      "descripcion_slide": "Domina el lenguaje de los decimales; enseña a tus alumnos a transformar fracciones en números precisos con este reto de conversión.",
+      "emoji_recurso": "📉"
+    },
+    "enriquecimiento_ia": {
+      "pedagogico": {
+        "habilidades_inferidas": ["Conversión fraccionaria", "Uso del punto decimal"],
+        "nivel_abstraccion": "Lógico-Matemático / Abstracto"
+      }
+    }
+  },
+  {
+    "id": "spc-bio-insectos",
+    "archivo": {
+      "nombre": "insectos.pdf",
+      "tipo": "Mural de Observación"
+    },
+    "clasificacion": {
+      "fase": 3,
+      "grado": "1° y 2° Primaria",
+      "tipo_recurso": "Lámina visual",
+      "categoria_pedagogica": "Zoología / Entomología"
+    },
+    "contenido": {
+      "titulo": "Pequeños Habitantes: El Mundo de los Insectos",
+      "para_que_te_sirve": "Identifica visualmente las características de diversos insectos como la mariposa monarca o el escarabajo. Úsalo como detonador para clases de ciencias naturales, observación de patas, alas y cubiertas corporales en el entorno escolar.",
+      "descripcion_slide": "Abre una ventana al micromundo; usa estas imágenes para que tus alumnos observen los detalles fascinantes de los insectos que nos rodean.",
+      "emoji_recurso": "🦋"
+    },
+    "enriquecimiento_ia": {
+      "pedagogico": {
+        "competencias_inferidas": ["Observación científica", "Respeto a los seres vivos"],
+        "tipos_interaccion": ["Plenaria / Observación dirigida"]
+      }
+    }
+  },
+  {
+    "id": "spc-mat-comparacion",
+    "archivo": {
+      "nombre": "mayor_menor.pdf",
+      "tipo": "Hoja de Jerarquía"
+    },
+    "clasificacion": {
+      "fase": 3,
+      "grado": "1° Primaria",
+      "tipo_recurso": "Hoja de trabajo",
+      "categoria_pedagogica": "Pensamiento Matemático / Comparación"
+    },
+    "contenido": {
+      "titulo": "Tamaños y Órdenes: Mayor, Mediano y Menor",
+      "para_que_te_sirve": "Clasifica objetos asignando números según su tamaño relativo. Te sirve para introducir las nociones de seriación y ordenamiento, fundamentales antes de abordar la comparación simbólica de números con los signos de mayor y menor que.",
+      "descripcion_slide": "Ordena el mundo por su tamaño; guía a tus alumnos para que identifiquen jerarquías visuales y las registren correctamente.",
+      "emoji_recurso": "📏"
+    },
+    "enriquecimiento_ia": {
+      "pedagogico": {
+        "habilidades_inferidas": ["Seriación", "Comparación de magnitudes"],
+        "nivel_abstraccion": "Concreto / Perceptivo"
+      }
+    }
+  },
+  {
+    "id": "spc-bio-partes-flor",
+    "archivo": {
+      "nombre": "partes_flor.pdf",
+      "tipo": "Explorador Botánico"
+    },
+    "clasificacion": {
+      "fase": 3,
+      "grado": "1° y 2° Primaria",
+      "tipo_recurso": "Sopa de letras",
+      "categoria_pedagogica": "Botánica / Ciencias Naturales"
+    },
+    "contenido": {
+      "titulo": "Detectives Botánicos: Las Partes de una Flor",
+      "para_que_te_sirve": "Busca y anota términos científicos como sépalo, óvulo y estambre en una sopa de letras. Es ideal para fijar el vocabulario biológico después de una observación directa de plantas en el jardín escolar.",
+      "descripcion_slide": "Nombra las maravillas de la naturaleza; fortalece el lenguaje científico de tus alumnos mientras juegan a encontrar las piezas de una flor.",
+      "emoji_recurso": "🌻"
+    },
+    "enriquecimiento_ia": {
+      "pedagogico": {
+        "habilidades_inferidas": ["Alfabetización científica", "Búsqueda visual"],
+        "nivel_abstraccion": "Simbólico / Biológico"
+      }
+    }
+  },
+  {
+    "id": "spc-bio-reinos-vida",
+    "archivo": {
+      "nombre": "reinos.pdf",
+      "tipo": "Guía Clasificatoria"
+    },
+    "clasificacion": {
+      "fase": 3,
+      "grado": "1° y 2° Primaria",
+      "tipo_recurso": "Infografía visual",
+      "categoria_pedagogica": "Biología / Biodiversidad"
+    },
+    "contenido": {
+      "titulo": "La Gran Familia de la Vida: Reinos Animalia, Plantae y Fungi",
+      "para_que_te_sirve": "Identifica y valora la diversidad de los seres vivos a través de ejemplos claros de animales, plantas, hongos y bacterias. Te permite trabajar la clasificación taxonómica inicial y el asombro por la biodiversidad macro y microscópica.",
+      "descripcion_slide": "Descubre la diversidad del planeta; utiliza estas láminas para que tus alumnos reconozcan que la vida tiene muchas formas y colores increíbles.",
+      "emoji_recurso": "🦁"
+    },
+    "enriquecimiento_ia": {
+      "pedagogico": {
+        "competencias_inferidas": ["Pensamiento científico descriptivo", "Conciencia ambiental"]
+      }
+    }
+  },
+  {
+    "id": "spc-mat-suma-grafica",
+    "archivo": {
+      "nombre": "suma.pdf",
+      "tipo": "Práctica Aditiva"
+    },
+    "clasificacion": {
+      "fase": 3,
+      "grado": "1° Primaria",
+      "tipo_recurso": "Hoja de ejercicios",
+      "categoria_pedagogica": "Aritmética / Operaciones"
+    },
+    "contenido": {
+      "titulo": "Sumando Amigos: Animalitos y Resultados",
+      "para_que_te_sirve": "Resuelve sumas contando colecciones de pollitos, cerditos y vacas. Es una herramienta visual para transitar del conteo de objetos físicos a la representación numérica de resultados, facilitando la comprensión de la suma como totalización.",
+      "descripcion_slide": "Haz que las sumas cobren vida; usa estos simpáticos personajes para que tus alumnos aprendan a unir cantidades de forma visual y divertida.",
+      "emoji_recurso": "➕"
+    },
+    "enriquecimiento_ia": {
+      "pedagogico": {
+        "habilidades_inferidas": ["Composición numérica", "Registro de resultados"],
+        "emociones_esperadas": ["Alegría", "Seguridad"]
+      }
+    }
+  },
+  {
+    "id": "spc-mat-tangram-formas",
+    "archivo": {
+      "nombre": "tangram.pdf",
+      "tipo": "Recurso Manipulable"
+    },
+    "clasificacion": {
+      "fase": 3,
+      "grado": "1° y 2° Primaria",
+      "tipo_recurso": "Rompecabezas geométrico",
+      "categoria_pedagogica": "Geometría / Razonamiento Espacial"
+    },
+    "contenido": {
+      "titulo": "Magia con Siete Piezas: Creaciones con el Tangram",
+      "para_que_te_sirve": "Representa animales, plantas y objetos usando las piezas del tangram para explorar propiedades de las figuras como lados y vértices. Te permite trabajar la creatividad, la paciencia y el razonamiento espacial mediante el juego de construcción.",
+      "descripcion_slide": "Crea infinitas formas con solo siete piezas; reta el ingenio de tus alumnos y construye el pensamiento espacial a través del juego geométrico.",
+      "emoji_recurso": "🧩"
+    },
+    "enriquecimiento_ia": {
+      "pedagogico": {
+        "competencias_inferidas": ["Pensamiento espacial", "Creatividad geométrica"],
+        "habilidades_inferidas": ["Manipulación de objetos", "Composición de formas"]
+      }
+    }
+  },
+  {
+    "id": "spc-mat-triangulos-tipos",
+    "archivo": {
+      "nombre": "triangulos.pdf",
+      "tipo": "Laboratorio de Polígonos"
+    },
+    "clasificacion": {
+      "fase": 4,
+      "grado": "3° o 4° Primaria",
+      "tipo_recurso": "Hoja de clasificación",
+      "categoria_pedagogica": "Geometría / Triángulos"
+    },
+    "contenido": {
+      "titulo": "Exploradores de Ángulos: Clasificando Triángulos",
+      "para_que_te_sirve": "Identifica y colorea triángulos según sus lados (equilátero, isósceles, escaleno) y sus ángulos (rectángulo, acutángulo, obtusángulo). Es ideal para formalizar el lenguaje geométrico y el uso de instrumentos de medición en grados intermedios.",
+      "descripcion_slide": "Descubre las mil caras del triángulo; enseña a tus alumnos a observar lados y ángulos para clasificar con rigor y precisión geométrica.",
+      "emoji_recurso": "📐"
+    },
+    "enriquecimiento_ia": {
+      "pedagogico": {
+        "habilidades_inferidas": ["Clasificación de polígonos", "Identificación de ángulos"],
+        "nivel_abstraccion": "Simbólico / Geométrico"
+      }
+    }
+  }
+]

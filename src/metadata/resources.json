@@ -1,0 +1,3708 @@
+[
+  {
+    "id": "787f6470-349c-4e8b-967b-116067f90956",
+    "archivo": {
+      "nombre": "p1_actuar_en_mi_comunidad.pdf",
+      "ruta": "p1_actuar_en_mi_comunidad.pdf",
+      "tipo": "Planeación Didáctica",
+      "extension": ".pdf"
+    },
+    "clasificacion": {
+      "fase": 3,
+      "grado": 1,
+      "tipo_recurso": "Proyecto Comunitario",
+      "categoria_pedagogica": "Aprendizaje Basado en Proyectos Comunitarios"
+    },
+    "contenido": {
+      "titulo": "Actuar en Mi Comunidad",
+      "nombre_proyecto": "Actuar en Mi Comunidad",
+      "proposito": "Que las niñas y los niños identifiquen las principales problemáticas de su comunidad a través de la observación, descripción y la formulación de preguntas, para llevar a cabo acciones que contribuyan a su mejora, fomentando el sentido de responsabilidad, colaboración y participación.",
+      "problema_contexto": "Observar y hacer consciente de las problemáticas que existen en la comunidad.",
+      "producto_central": "Acciones para apoyar a erradicar las problemáticas de la comunidad.",
+      "metodologias": [
+        "Aprendizaje Basado en Proyectos Comunitarios (ABPC)"
+      ],
+      "campos_formativos": [
+        {
+          "campo": "Ética, naturaleza y sociedades",
+          "contenidos": [
+            {
+              "contenido": "Diversos contextos sociales, naturales y territoriales: cambios y continuidades.",
+              "pda": [
+                "Identifica que es parte de un barrio, colonia, vecindad, comunidad, pueblo o localidad, y describe las características y diversidad de su entorno.",
+                "Ubica algunos sitios de interés del lugar donde vive y/o donde se encuentra la escuela con referencias básicas y los representa en dibujos y croquis."
+              ]
+            }
+          ]
+        },
+        {
+          "campo": "Lenguajes",
+          "contenidos": [
+            {
+              "contenido": "Conversaciones o entrevistas con personas de la comunidad y otros lugares.",
+              "pda": [
+                "Formula preguntas acordes al tema que abordará una persona invitada y escucha de manera atenta la información."
+              ]
+            }
+          ]
+        },
+        {
+          "campo": "De lo humano y lo Comunitario",
+          "contenidos": [
+            {
+              "contenido": "La comunidad como el espacio en el que se vive y se encuentra la escuela.",
+              "pda": [
+                "Platica sobre las características geográficas, climáticas, ambientales, socioculturales y lingüísticas de su comunidad y escuela."
+              ]
+            }
+          ]
+        }
+      ],
+      "ejes_articuladores": [
+        "Inclusión",
+        "Pensamiento crítico",
+        "Interculturalidad crítica",
+        "Igualdad de género",
+        "Vida saludable",
+        "Artes y experiencias estéticas"
+      ],
+      "momentos_metodologicos": [
+        {
+          "orden": 1,
+          "id": "planeacion",
+          "nombre": "Planeación (Identificación del problema y ruta de acción)"
+        },
+        {
+          "orden": 2,
+          "id": "accion",
+          "nombre": "Acción (Producciones para atender el problema)"
+        },
+        {
+          "orden": 3,
+          "id": "intervencion",
+          "nombre": "Intervención (Difusión y seguimiento)"
+        }
+      ],
+      "sesiones_totales": 0,
+      "anexos": [
+        "Anexo 1: Entrevista sobre la comunidad"
+      ],
+      "vinculacion_ltg": [
+        "1° Libro Proyectos Comunitarios pág. 188: ¿Quién resuelve los conflictos en mi comunidad?"
+      ]
+    },
+    "implementacion": {
+      "duracion_horas": 0,
+      "materiales": [
+        "Dibujos",
+        "Maqueta",
+        "Cuadro de doble entrada",
+        "Entrevistas"
+      ],
+      "modos_trabajo": [
+        "Individual",
+        "Colectivo",
+        "4 equipos temáticos (Ambientales, Salud, Sociales, Urbanos)"
+      ]
+    },
+    "enriquecimiento_ia": {
+      "pedagogico": {
+        "momentos_ciclo_escolar": [
+          "Primer Trimestre"
+        ],
+        "competencias_inferidas": [
+          "Conciencia social",
+          "Resolución de problemas",
+          "Ciudadanía activa"
+        ],
+        "habilidades_inferidas": [
+          "Observación",
+          "Entrevista",
+          "Trabajo colaborativo"
+        ],
+        "tipos_interaccion": [
+          "Alumno-Comunidad",
+          "Trabajo en equipo"
+        ],
+        "nivel_abstraccion": "Concreto/Situado",
+        "emociones_esperadas": [
+          "Empatía",
+          "Responsabilidad",
+          "Pertenencia"
+        ]
+      },
+      "curricular": {
+        "indice_creatividad": 7,
+        "indice_colaboracion": 9,
+        "indice_interdisciplinario": 8,
+        "indice_pensamiento_critico": 9,
+        "experiencias_relacionadas": [
+          "Mapeo participativo",
+          "Brigadas escolares"
+        ],
+        "continuidad": {
+          "fase_anterior": [
+            "Conocimiento del entorno inmediato"
+          ],
+          "fase_siguiente": [
+            "Gestión de proyectos comunitarios complejos"
+          ]
+        }
+      },
+      "recomendacion": {
+        "recomendado_para": [
+          "Docentes de 1° grado"
+        ],
+        "contextos_recomendados": [
+          "Urbano y Rural con problemáticas visibles"
+        ],
+        "agrupaciones_sugeridas": [
+          "Equipos por interés temático"
+        ],
+        "experiencias_similares": [
+          "Proyectos de mejora barrial"
+        ]
+      },
+      "semantica": {
+        "tags": [
+          "Comunidad",
+          "Problemáticas",
+          "Participación"
+        ],
+        "keywords": [
+          "Entrevista",
+          "Solución",
+          "Maqueta"
+        ],
+        "temas_detectados": [
+          "Entorno social",
+          "Servicios públicos",
+          "Cuidado del medio ambiente"
+        ]
+      }
+    }
+  },
+  {
+    "id": "e2c3a5d8-11b2-4f3e-90e1-67890abcdef1",
+    "archivo": {
+      "nombre": "p1_cambiado_comunidad.pdf",
+      "ruta": "p1_cambiado_comunidad.pdf",
+      "tipo": "Planeación Didáctica",
+      "extension": ".pdf"
+    },
+    "clasificacion": {
+      "fase": 3,
+      "grado": 1,
+      "tipo_recurso": "Proyecto Comunitario",
+      "categoria_pedagogica": "Aprendizaje Basado en Proyectos Comunitarios"
+    },
+    "contenido": {
+      "titulo": "¿Cómo ha cambiado nuestra comunidad con el paso del tiempo?",
+      "nombre_proyecto": "¿Cómo ha cambiado nuestra comunidad con el paso del tiempo?",
+      "proposito": "Resolver situaciones diarias que implican agregar, quitar, juntar, comparar y complementar; que los alumnos visualicen el paso del tiempo en sus comunidades.",
+      "problema_contexto": "¿Qué cambios han ocurrido en viviendas, trabajos y áreas verdes, y cómo contarlos usando palabras y calendarios?",
+      "producto_central": "Historia en comic",
+      "metodologias": [
+        "Aprendizaje Basado en Proyectos Comunitarios (ABPC)"
+      ],
+      "campos_formativos": [
+        {
+          "campo": "Ética, naturaleza y sociedades",
+          "contenidos": [
+            {
+              "contenido": "Historia de la vida cotidiana: cambios en el tiempo y el espacio ocurridos en la comunidad.",
+              "pda": [
+                "Indaga en fuentes orales, escritas, fotográficas, testimoniales y digitales, los cambios en la vida cotidiana."
+              ]
+            }
+          ]
+        },
+        {
+          "campo": "Lenguajes",
+          "contenidos": [
+            {
+              "contenido": "Recreación de historias mediante el uso artístico de las palabras, del cuerpo, del espacio y del tiempo.",
+              "pda": [
+                "Crea cómics a partir de una experiencia personal o de una lectura."
+              ]
+            }
+          ]
+        },
+        {
+          "campo": "Saberes y pensamiento científico",
+          "contenidos": [
+            {
+              "contenido": "Medición del tiempo.",
+              "pda": [
+                "Utiliza términos como antes, después, hoy, ayer, mañana, etc., para describir y registrar cronológicamente actividades."
+              ]
+            }
+          ]
+        }
+      ],
+      "ejes_articuladores": [
+        "Interculturalidad crítica",
+        "Pensamiento crítico",
+        "Apropiación de las culturas a través de la lectura y la escritura"
+      ],
+      "momentos_metodologicos": [
+        {
+          "orden": 1,
+          "id": "planeacion",
+          "nombre": "Planeación (Identificación del problema)"
+        },
+        {
+          "orden": 2,
+          "id": "accion",
+          "nombre": "Acción (Producciones y entrevistas)"
+        },
+        {
+          "orden": 3,
+          "id": "intervencion",
+          "nombre": "Intervención (Difusión y presentación)"
+        }
+      ],
+      "sesiones_totales": 0,
+      "anexos": [
+        "Anexo 1: Entrevista sobre viviendas, trabajos y áreas verdes"
+      ],
+      "vinculacion_ltg": [
+        "1° Nuestros saberes: Historieta pág. 31",
+        "1° Nuestros saberes: Encuesta pág. 47"
+      ]
+    },
+    "implementacion": {
+      "duracion_horas": 0,
+      "materiales": [
+        "Video 'Cambios en mi comunidad'",
+        "Imágenes antiguas",
+        "Libreta de investigación",
+        "Calendarios"
+      ],
+      "modos_trabajo": [
+        "Individual o por equipos",
+        "Plenarias grupales"
+      ]
+    },
+    "enriquecimiento_ia": {
+      "pedagogico": {
+        "momentos_ciclo_escolar": [
+          "Segundo Trimestre"
+        ],
+        "competencias_inferidas": [
+          "Pensamiento histórico",
+          "Comunicación narrativa"
+        ],
+        "habilidades_inferidas": [
+          "Investigación documental",
+          "Uso de nociones temporales"
+        ],
+        "tipos_interaccion": [
+          "Alumno-Abuelos/Familia",
+          "Exposición"
+        ],
+        "nivel_abstraccion": "Intermedio (Manejo del tiempo)",
+        "emociones_esperadas": [
+          "Curiosidad",
+          "Nostalgia",
+          "Asombro"
+        ]
+      },
+      "curricular": {
+        "indice_creatividad": 9,
+        "indice_colaboracion": 7,
+        "indice_interdisciplinario": 9,
+        "indice_pensamiento_critico": 8,
+        "experiencias_relacionadas": [
+          "Líneas del tiempo familiares",
+          "Museos comunitarios"
+        ],
+        "continuidad": {
+          "fase_anterior": [
+            "Noción de día y noche"
+          ],
+          "fase_siguiente": [
+            "Historia formal y cronología"
+          ]
+        }
+      },
+      "recomendacion": {
+        "recomendado_para": [
+          "Fomento de la lectoescritura creativa"
+        ],
+        "contextos_recomendados": [
+          "Comunidades con historia oral fuerte"
+        ],
+        "agrupaciones_sugeridas": [
+          "Binash para el diseño del cómic"
+        ],
+        "experiencias_similares": [
+          "Crónicas de mi pueblo"
+        ]
+      },
+      "semantica": {
+        "tags": [
+          "Historia",
+          "Tiempo",
+          "Comic"
+        ],
+        "keywords": [
+          "Antes",
+          "Después",
+          "Vivienda"
+        ],
+        "temas_detectados": [
+          "Evolución urbana",
+          "Memoria histórica",
+          "Narrativa gráfica"
+        ]
+      }
+    }
+  },
+  {
+    "id": "a9d8f3c2-55e1-4b7d-bb90-1234567890ab",
+    "archivo": {
+      "nombre": "p1_fiestas_comunidad.pdf",
+      "ruta": "p1_fiestas_comunidad.pdf",
+      "tipo": "Planeación Didáctica",
+      "extension": ".pdf"
+    },
+    "clasificacion": {
+      "fase": 3,
+      "grado": 1,
+      "tipo_recurso": "Proyecto Comunitario",
+      "categoria_pedagogica": "Aprendizaje Basado en Proyectos Comunitarios"
+    },
+    "contenido": {
+      "titulo": "Las fiestas de mi comunidad",
+      "nombre_proyecto": "Las fiestas de mi comunidad",
+      "proposito": "Conocer e identificar tradiciones, lenguas, fiestas, danzas, música, historia oral, rituales, gastronomía, artes y saberes de la comunidad.",
+      "problema_contexto": "Los alumnos conocen las fiestas o costumbres pero no han reflexionado o valorado estas manifestaciones culturales.",
+      "producto_central": "Video o mural de las manifestaciones culturales",
+      "metodologias": [
+        "Aprendizaje Basado en Proyectos Comunitarios (ABPC)"
+      ],
+      "campos_formativos": [
+        {
+          "campo": "Lenguajes",
+          "contenidos": [
+            {
+              "contenido": "Interacción con manifestaciones culturales y artísticas.",
+              "pda": [
+                "Interactúa con manifestaciones culturales y artísticas presentes en la comunidad, para reflexionar y dialogar sobre emociones."
+              ]
+            }
+          ]
+        },
+        {
+          "campo": "Ética, Naturaleza y Sociedades",
+          "contenidos": [
+            {
+              "contenido": "Manifestaciones culturales y símbolos que identifican a los diversos pueblos.",
+              "pda": [
+                "Identifica y valora manifestaciones culturales y símbolos que identifican a la comunidad (tradiciones, lenguas, fiestas, danzas)."
+              ]
+            }
+          ]
+        }
+      ],
+      "ejes_articuladores": [
+        "Interculturalidad crítica",
+        "Pensamiento crítico",
+        "Artes y experiencias estéticas",
+        "Apropiación de las culturas a través de la lectura y la escritura"
+      ],
+      "momentos_metodologicos": [
+        {
+          "orden": 1,
+          "id": "planeacion",
+          "nombre": "Planeación (Lectura diagnóstica y ruta)"
+        },
+        {
+          "orden": 2,
+          "id": "accion",
+          "nombre": "Acción (Investigación y producciones)"
+        },
+        {
+          "orden": 3,
+          "id": "intervencion",
+          "nombre": "Intervención (Socialización y retroalimentación)"
+        }
+      ],
+      "sesiones_totales": 0,
+      "anexos": [
+        "Lectura: 'Mestizaje: como Puebla no hay dos'"
+      ],
+      "vinculacion_ltg": [
+        "1° Nuestros saberes: Ficha Técnica pág. 74",
+        "1° Nuestros saberes: Tabla de tres columnas pág. 70",
+        "1° Proyectos comunitarios: Un día de fiesta en mi comunidad pág. 252"
+      ]
+    },
+    "implementacion": {
+      "duracion_horas": 0,
+      "materiales": [
+        "Libro 'El árbol de los relatos'",
+        "Carteles",
+        "Maquetas",
+        "Grabadora para entrevistas"
+      ],
+      "modos_trabajo": [
+        "Equipos pequeños",
+        "Binas o trinas",
+        "Plenaria"
+      ]
+    },
+    "enriquecimiento_ia": {
+      "pedagogico": {
+        "momentos_ciclo_escolar": [
+          "Cualquier momento festivo"
+        ],
+        "competencias_inferidas": [
+          "Aprecio estético",
+          "Identidad cultural"
+        ],
+        "habilidades_inferidas": [
+          "Descripción",
+          "Entrevista",
+          "Expresión artística"
+        ],
+        "tipos_interaccion": [
+          "Alumno-Artesano/Líder cultural"
+        ],
+        "nivel_abstraccion": "Simbólico",
+        "emociones_esperadas": [
+          "Orgullo",
+          "Alegría",
+          "Respeto"
+        ]
+      },
+      "curricular": {
+        "indice_creatividad": 10,
+        "indice_colaboracion": 8,
+        "indice_interdisciplinario": 7,
+        "indice_pensamiento_critico": 8,
+        "experiencias_relacionadas": [
+          "Festivales escolares",
+          "Muestras gastronómicas"
+        ],
+        "continuidad": {
+          "fase_anterior": [
+            "Reconocimiento de su familia"
+          ],
+          "fase_siguiente": [
+            "Diversidad cultural nacional"
+          ]
+        }
+      },
+      "recomendacion": {
+        "recomendado_para": [
+          "Identidad regional"
+        ],
+        "contextos_recomendados": [
+          "Comunidades con tradiciones arraigadas"
+        ],
+        "agrupaciones_sugeridas": [
+          "Equipos por tipo de manifestación (danza, comida, etc.)"
+        ],
+        "experiencias_similares": [
+          "Feria de las culturas"
+        ]
+      },
+      "semantica": {
+        "tags": [
+          "Cultura",
+          "Tradición",
+          "Fiestas"
+        ],
+        "keywords": [
+          "Gastronomía",
+          "Danza",
+          "Mestizaje"
+        ],
+        "temas_detectados": [
+          "Patrimonio inmaterial",
+          "Identidad poblana",
+          "Interculturalidad"
+        ]
+      }
+    }
+  },
+  {
+    "id": "c4d5e6f7-8899-4aab-bcde-112233445566",
+    "archivo": {
+      "nombre": "p1_jardin_casa.pdf",
+      "ruta": "p1_jardin_casa.pdf",
+      "tipo": "Planeación Didáctica",
+      "extension": ".pdf"
+    },
+    "clasificacion": {
+      "fase": 3,
+      "grado": 1,
+      "tipo_recurso": "Proyecto Comunitario",
+      "categoria_pedagogica": "Aprendizaje Basado en Proyectos Comunitarios"
+    },
+    "contenido": {
+      "titulo": "Mi jardín, mi casa",
+      "nombre_proyecto": "Mi jardín, mi casa",
+      "proposito": "Que los alumnos conozcan y valoren las plantas que los rodean, comprendan su importancia para la vida y participen activamente en su cuidado mediante la creación de un jardín escolar o comunitario.",
+      "problema_contexto": "Conocer y reconocer la importancia de las plantas en la comunidad.",
+      "producto_central": "Jardín escolar o comunitario",
+      "metodologias": [
+        "Aprendizaje Basado en Proyectos Comunitarios (ABPC)"
+      ],
+      "campos_formativos": [
+        {
+          "campo": "Saberes y pensamiento científico",
+          "contenidos": [
+            {
+              "contenido": "Características del entorno natural y sociocultural.",
+              "pda": [
+                "Observa, compara y registra características de plantas y animales."
+              ]
+            }
+          ]
+        },
+        {
+          "campo": "Ética, Naturaleza y Sociedades",
+          "contenidos": [
+            {
+              "contenido": "Respeto, cuidado y empatía hacia la naturaleza.",
+              "pda": [
+                "Describe y reconoce la existencia de otros seres vivos (plantas, animales) presentes en el lugar donde vive."
+              ]
+            }
+          ]
+        },
+        {
+          "campo": "Lenguajes",
+          "contenidos": [
+            {
+              "contenido": "Registro y/o resumen de información consultada.",
+              "pda": [
+                "Registra sobre un tema de su interés por medio de la escritura, esquema, dibujo o fotografía."
+              ]
+            }
+          ]
+        }
+      ],
+      "ejes_articuladores": [
+        "Vida saludable",
+        "Pensamiento crítico",
+        "Apropiación de las culturas a través de la lectura y la escritura"
+      ],
+      "momentos_metodologicos": [
+        {
+          "orden": 1,
+          "id": "planeacion",
+          "nombre": "Fase 1: Planeación (Caminata y bitácora inicial)"
+        },
+        {
+          "orden": 2,
+          "id": "accion",
+          "nombre": "Fase 2: Acción (Investigación, siembra y taller)"
+        },
+        {
+          "orden": 3,
+          "id": "intervencion",
+          "nombre": "Fase 3: Intervención (Exposición y seguimiento)"
+        }
+      ],
+      "sesiones_totales": 0,
+      "anexos": [
+        "Anexo 1: Ficha técnica de plantas"
+      ],
+      "vinculacion_ltg": [
+        "1° Proyectos comunitarios: Mi huerto de plantas medicinales pág. 100",
+        "1° Nuestros saberes: Ficha Técnica pág. 74"
+      ]
+    },
+    "implementacion": {
+      "duracion_horas": 0,
+      "materiales": [
+        "Bitácora",
+        "Semillas",
+        "Macetas recicladas",
+        "Tierra",
+        "Video sobre plantas"
+      ],
+      "modos_trabajo": [
+        "Individual (cuidado de planta)",
+        "Equipo (diseño del jardín)"
+      ]
+    },
+    "enriquecimiento_ia": {
+      "pedagogico": {
+        "momentos_ciclo_escolar": [
+          "Primavera / Inicio de curso"
+        ],
+        "competencias_inferidas": [
+          "Conciencia ecológica",
+          "Responsabilidad"
+        ],
+        "habilidades_inferidas": [
+          "Clasificación",
+          "Registro de datos",
+          "Cuidado de seres vivos"
+        ],
+        "tipos_interaccion": [
+          "Alumno-Naturaleza",
+          "Familia (apoyo en materiales)"
+        ],
+        "nivel_abstraccion": "Concreto",
+        "emociones_esperadas": [
+          "Paciencia",
+          "Entusiasmo",
+          "Cuidado"
+        ]
+      },
+      "curricular": {
+        "indice_creatividad": 8,
+        "indice_colaboracion": 9,
+        "indice_interdisciplinario": 10,
+        "indice_pensamiento_critico": 7,
+        "experiencias_relacionadas": [
+          "Huertos escolares",
+          "Herbario"
+        ],
+        "continuidad": {
+          "fase_anterior": [
+            "Exploración del entorno"
+          ],
+          "fase_siguiente": [
+            "Ecosistemas y biodiversidad"
+          ]
+        }
+      },
+      "recomendacion": {
+        "recomendado_para": [
+          "Educación ambiental"
+        ],
+        "contextos_recomendados": [
+          "Escuelas con espacios verdes o muros"
+        ],
+        "agrupaciones_sugeridas": [
+          "Equipos por tipo de planta (medicinales, aromáticas)"
+        ],
+        "experiencias_similares": [
+          "Guardianes del bosque"
+        ]
+      },
+      "semantica": {
+        "tags": [
+          "Naturaleza",
+          "Jardín",
+          "Cuidado"
+        ],
+        "keywords": [
+          "Fotosíntesis",
+          "Bitácora",
+          "Siembra"
+        ],
+        "temas_detectados": [
+          "Sustentabilidad",
+          "Biología básica",
+          "Comunidad escolar"
+        ]
+      }
+    }
+  },
+  {
+    "id": "f5e4d3c2-b1a0-4987-9abc-0123456789de",
+    "archivo": {
+      "nombre": "p1_seguros_comunidad.pdf",
+      "ruta": "p1_seguros_comunidad.pdf",
+      "tipo": "Planeación Didáctica",
+      "extension": ".pdf"
+    },
+    "clasificacion": {
+      "fase": 3,
+      "grado": 1,
+      "tipo_recurso": "Proyecto Comunitario",
+      "categoria_pedagogica": "Aprendizaje Basado en Proyectos Comunitarios"
+    },
+    "contenido": {
+      "titulo": "Seguros en mi comunidad",
+      "nombre_proyecto": "Seguros en mi comunidad",
+      "proposito": "Favorecer que las alumnas y alumnos identifiquen y representen lugares seguros de su comunidad y entorno escolar, reconozcan situaciones de riesgo social, propongan acciones de autocuidado y promuevan la convivencia pacífica.",
+      "problema_contexto": "Desconocimiento de rutas seguras y presencia de lugares peligrosos (calles oscuras, peleas).",
+      "producto_central": "Exposición de maquetas, croquis, carteles y dibujos",
+      "metodologias": [
+        "Aprendizaje Basado en Proyectos Comunitarios (ABPC)"
+      ],
+      "campos_formativos": [
+        {
+          "campo": "Ética, Naturaleza y Sociedades",
+          "contenidos": [
+            {
+              "contenido": "Diversos contextos sociales, naturales y territoriales: cambios y continuidades.",
+              "pda": [
+                "Ubica algunos sitios de interés del lugar donde vive y/o donde se encuentra la escuela con referencias básicas."
+              ]
+            }
+          ]
+        },
+        {
+          "campo": "De lo humano y lo comunitario",
+          "contenidos": [
+            {
+              "contenido": "Situaciones de riesgo social en la comunidad y autocuidado.",
+              "pda": [
+                "Reconoce situaciones de riesgos sociales en las familias, la escuela y la comunidad, así como la importancia del autocuidado."
+              ]
+            }
+          ]
+        }
+      ],
+      "ejes_articuladores": [
+        "Vida saludable",
+        "Pensamiento crítico",
+        "Apropiación de las culturas a través de la lectura y la escritura"
+      ],
+      "momentos_metodologicos": [
+        {
+          "orden": 1,
+          "id": "planeacion",
+          "nombre": "Fase 1: Planeación (Identificación de lugares y dibujo)"
+        },
+        {
+          "orden": 2,
+          "id": "accion",
+          "nombre": "Fase 2: Acción (Diario de campo, croquis y tablas de frecuencia)"
+        },
+        {
+          "orden": 3,
+          "id": "intervencion",
+          "nombre": "Fase 3: Intervención (Gestión de soluciones y exposición)"
+        }
+      ],
+      "sesiones_totales": 0,
+      "anexos": [
+        "Anexo 1: Stickers de lugares seguros/no seguros"
+      ],
+      "vinculacion_ltg": [
+        "1° Nuestros saberes: Tablas de frecuencia pág. 102"
+      ]
+    },
+    "implementacion": {
+      "duracion_horas": 0,
+      "materiales": [
+        "Papel Kraft grande",
+        "Stickers",
+        "Diario de trabajo",
+        "Papel bond"
+      ],
+      "modos_trabajo": [
+        "Colectivo (croquis gigante)",
+        "Individual (diario)",
+        "Pequeños grupos (gestión)"
+      ]
+    },
+    "enriquecimiento_ia": {
+      "pedagogico": {
+        "momentos_ciclo_escolar": [
+          "Inicio de ciclo (seguridad escolar)"
+        ],
+        "competencias_inferidas": [
+          "Autoprotección",
+          "Gestión ciudadana"
+        ],
+        "habilidades_inferidas": [
+          "Cartografía básica",
+          "Análisis de datos (frecuencia)",
+          "Argumentación"
+        ],
+        "tipos_interaccion": [
+          "Alumno-Autoridad (Presidente municipal)",
+          "Pares"
+        ],
+        "nivel_abstraccion": "Concreto/Social",
+        "emociones_esperadas": [
+          "Seguridad",
+          "Confianza",
+          "Alerta"
+        ]
+      },
+      "curricular": {
+        "indice_creatividad": 7,
+        "indice_colaboracion": 10,
+        "indice_interdisciplinario": 9,
+        "indice_pensamiento_critico": 10,
+        "experiencias_relacionadas": [
+          "Simulacros de seguridad",
+          "Redes de apoyo vecinal"
+        ],
+        "continuidad": {
+          "fase_anterior": [
+            "Mi casa como lugar seguro"
+          ],
+          "fase_siguiente": [
+            "Derechos humanos y protección civil"
+          ]
+        }
+      },
+      "recomendacion": {
+        "recomendado_para": [
+          "Prevención de riesgos"
+        ],
+        "contextos_recomendados": [
+          "Zonas con vulnerabilidad social"
+        ],
+        "agrupaciones_sugeridas": [
+          "Equipos por zonas geográficas de la comunidad"
+        ],
+        "experiencias_similares": [
+          "El mapa de mis miedos y mis alegrías"
+        ]
+      },
+      "semantica": {
+        "tags": [
+          "Seguridad",
+          "Prevención",
+          "Croquis"
+        ],
+        "keywords": [
+          "Riesgo",
+          "Autocuidado",
+          "Frecuencia"
+        ],
+        "temas_detectados": [
+          "Derecho a la seguridad",
+          "Participación infantil",
+          "Estadística básica"
+        ]
+      }
+    }
+  },
+  {
+    "id": "7f093120-c081-4b1e-92c4-4b5523a54d61",
+    "archivo": {
+      "nombre": "p1_como_juego.pdf",
+      "ruta": "p1_como_juego.pdf",
+      "tipo": "Plano Didáctico",
+      "extension": ".pdf"
+    },
+    "clasificacion": {
+      "fase": 3,
+      "grado": 1,
+      "tipo_recurso": "Plano didáctico",
+      "categoria_pedagogica": "Problemas"
+    },
+    "contenido": {
+      "titulo": "Como, me muevo y juego",
+      "nombre_proyecto": "Como, me muevo y juego",
+      "proposito": "Conocer alternativas de alimentación, movimiento y juego para estar saludables [1].",
+      "problema_contexto": "La mayoría de los alumnos y alumnas no logran identificar los alimentos saludables y prefieren otro tipo de alimentación [2].",
+      "producto_central": "Invención de un juego libre y exposición a padres de familia [2].",
+      "metodologias": [
+        "Aprendizaje Basado en Problemas (ABP) [2]"
+      ],
+      "campos_formativos": [
+        {
+          "campo": "Saberes y pensamiento científico",
+          "contenidos": [
+            {
+              "contenido": "Beneficios del consumo de alimentos saludables, de agua simple potable, y de la práctica de actividad física [3].",
+              "pda": [
+                "Describe los alimentos y bebidas saludables que consume en casa, escuela y comunidad... [3]"
+              ]
+            }
+          ]
+        },
+        {
+          "campo": "Lenguajes",
+          "contenidos": [
+            {
+              "contenido": "Empleo de textos con instrucciones para participar en juegos, usar o elaborar objetos... [3].",
+              "pda": [
+                "Sigue instrucciones, orales o escritas, para preparar un alimento sencillo y saludable (receta)... [1]"
+              ]
+            }
+          ]
+        },
+        {
+          "campo": "De lo Humano y lo Comunitario",
+          "contenidos": [
+            {
+              "contenido": "Estilos de vida activos y saludables [2].",
+              "pda": [
+                "Participa en diferentes juegos para explorar alternativas que le permitan mantener una vida activa y saludable [3]."
+              ]
+            }
+          ]
+        }
+      ],
+      "ejes_articuladores": [
+        "Inclusión",
+        "Pensamiento crítico",
+        "Igualdad de género [2]"
+      ],
+      "momentos_metodologicos": [
+        {
+          "orden": 1,
+          "id": "presentemos",
+          "nombre": "Fase 1: Presentemos (Reflexión inicial) [2]"
+        },
+        {
+          "orden": 2,
+          "id": "recolectemos",
+          "nombre": "Fase 2: Recolectemos (Saberes previos) [2]"
+        },
+        {
+          "orden": 3,
+          "id": "formulen_problema",
+          "nombre": "Fase 3: Formulen el problema [4]"
+        },
+        {
+          "orden": 4,
+          "id": "organicemos",
+          "nombre": "Fase 4: Organicemos la experiencia [4]"
+        },
+        {
+          "orden": 5,
+          "id": "vivamos",
+          "nombre": "Fase 5: Vivamos la experiencia [5]"
+        },
+        {
+          "orden": 6,
+          "id": "resultados",
+          "nombre": "Fase 6: Resultado y análisis [5]"
+        }
+      ],
+      "sesiones_totales": 0,
+      "anexos": [
+        "Anexo 1: Ficha Técnica de alimentos [6]"
+      ],
+      "vinculacion_ltg": [
+        "1° Nuestros saberes pág. 74 (Ficha Técnica) [6]",
+        "1° Nuestros saberes pág. 10 (Alimentos saludables) [6]"
+      ]
+    },
+    "implementacion": {
+      "duracion_horas": 0,
+      "materiales": [
+        "Video 'Betito, me duele la panza'",
+        "Cartulina",
+        "Ingredientes para recetas",
+        "Caja tipo tómbola [7-9]"
+      ],
+      "modos_trabajo": [
+        "Individual",
+        "Parejas",
+        "Tríos",
+        "Pequeños equipos [8]"
+      ]
+    },
+    "enriquecimiento_ia": {
+      "pedagogico": {
+        "momentos_ciclo_escolar": [
+          "Primer trimestre"
+        ],
+        "competencias_inferidas": [
+          "Autocuidado",
+          "Toma de decisiones saludables"
+        ],
+        "habilidades_inferidas": [
+          "Seguimiento de instrucciones",
+          "Investigación",
+          "Clasificación"
+        ],
+        "tipos_interaccion": [
+          "Alumno-Padres",
+          "Trabajo colaborativo"
+        ],
+        "nivel_abstraccion": "Concreto y vivencial",
+        "emociones_esperadas": [
+          "Empatía",
+          "Entusiasmo por el juego"
+        ]
+      },
+      "curricular": {
+        "indice_creatividad": 8,
+        "indice_colaboracion": 9,
+        "indice_interdisciplinario": 10,
+        "indice_pensamiento_critico": 8,
+        "experiencias_relacionadas": [
+          "Huertos escolares",
+          "Talleres de cocina saludable"
+        ],
+        "continuidad": {
+          "fase_anterior": [
+            "Higiene personal"
+          ],
+          "fase_siguiente": [
+            "Sistemas del cuerpo humano"
+          ]
+        }
+      },
+      "recomendacion": {
+        "recomendado_para": [
+          "Fomento de vida saludable"
+        ],
+        "contextos_recomendados": [
+          "Escuelas con altos índices de consumo de comida procesada"
+        ],
+        "agrupaciones_sugeridas": [
+          "Equipos heterogéneos"
+        ],
+        "experiencias_similares": [
+          "Ferias de la salud"
+        ]
+      },
+      "semantica": {
+        "tags": [
+          "Salud",
+          "Alimentación",
+          "Ejercicio"
+        ],
+        "keywords": [
+          "Nutrición",
+          "Recetas",
+          "Juego"
+        ],
+        "temas_detectados": [
+          "Vida Saludable",
+          "Nociones de Higiene",
+          "Cuerpo Humano"
+        ]
+      }
+    }
+  },
+  {
+    "id": "3b2e5a40-d12f-4c91-b3b3-8c887e7a1234",
+    "archivo": {
+      "nombre": "p1_construyamos_soluciones.pdf",
+      "ruta": "p1_construyamos_soluciones.pdf",
+      "tipo": "Plano Didáctico",
+      "extension": ".pdf"
+    },
+    "clasificacion": {
+      "fase": 3,
+      "grado": 1,
+      "tipo_recurso": "Plano didáctico",
+      "categoria_pedagogica": "Problemas"
+    },
+    "contenido": {
+      "titulo": "Construyamos soluciones",
+      "nombre_proyecto": "Construyamos soluciones",
+      "proposito": "Lograr una construcción de acuerdos y reglas para regular la convivencia sana y pacífica en la familia y escuela [10].",
+      "problema_contexto": "La falta de convivencia sana y pacífica en los diversos lugares en los que acude un alumno [11].",
+      "producto_central": "Diversos reglamentos y un compromiso personal [11].",
+      "metodologias": [
+        "Aprendizaje Basado en Problemas (ABP) [11]"
+      ],
+      "campos_formativos": [
+        {
+          "campo": "Ética, naturaleza y sociedades",
+          "contenidos": [
+            {
+              "contenido": "Democracia como forma de vida: construcción participativa de normas... [12].",
+              "pda": [
+                "Participa en la revisión y construcción de acuerdos y reglas que regulan la convivencia... [10]"
+              ]
+            },
+            {
+              "contenido": "Funciones y responsabilidades de las autoridades... [13].",
+              "pda": [
+                "Identifica funciones y responsabilidades de las autoridades de su casa, el aula, la escuela... [13]"
+              ]
+            }
+          ]
+        },
+        {
+          "campo": "Lenguajes",
+          "contenidos": [
+            {
+              "contenido": "Uso del dibujo y/o la escritura para recordar actividades y acuerdos escolares [12].",
+              "pda": [
+                "Escribe y/o dibuja para realizar tareas en casa, recordar mensajes... [12]"
+              ]
+            }
+          ]
+        }
+      ],
+      "ejes_articuladores": [
+        "Inclusión",
+        "Pensamiento crítico",
+        "Interculturalidad crítica",
+        "Igualdad de género",
+        "Apropiación de las culturas a través de la lectura y la escritura [11]"
+      ],
+      "momentos_metodologicos": [
+        {
+          "orden": 1,
+          "id": "presentemos",
+          "nombre": "Presentemos (Reflexión inicial) [14]"
+        },
+        {
+          "orden": 2,
+          "id": "recolectemos",
+          "nombre": "Recolectemos (Saberes previos) [15]"
+        },
+        {
+          "orden": 3,
+          "id": "formulemos",
+          "nombre": "Formulemos el problema [16]"
+        },
+        {
+          "orden": 4,
+          "id": "organicemos",
+          "nombre": "Organicemos la experiencia [17]"
+        },
+        {
+          "orden": 5,
+          "id": "vivamos",
+          "nombre": "Vivamos la experiencia [18]"
+        },
+        {
+          "orden": 6,
+          "id": "resultados",
+          "nombre": "Resultados y análisis [19]"
+        }
+      ],
+      "sesiones_totales": 0,
+      "anexos": [
+        "Anexo 1: Fichas 'Qué pasaría si...' [20]",
+        "Anexo 2: Reglamento de Uso de Libros [21]"
+      ],
+      "vinculacion_ltg": [
+        "Libro Proyectos de Aula pág. 28-37 (Baúl de Soluciones) [20]",
+        "1° Nuestros saberes pág. 144-147 (Reglas y reglamentos) [20]"
+      ]
+    },
+    "implementacion": {
+      "duracion_horas": 0,
+      "materiales": [
+        "Video 'Los niños que no respetan reglas'",
+        "Fichas de juego",
+        "Papel bond o cartulina [14, 17]"
+      ],
+      "modos_trabajo": [
+        "Plenaria",
+        "Individual",
+        "4 equipos temáticos (Familia, Escuela, Aula, Comunidad) [14, 17]"
+      ]
+    },
+    "enriquecimiento_ia": {
+      "pedagogico": {
+        "momentos_ciclo_escolar": [
+          "Inicio del ciclo escolar"
+        ],
+        "competencias_inferidas": [
+          "Convivencia pacífica",
+          "Ciudadanía democrática"
+        ],
+        "habilidades_inferidas": [
+          "Mediación de conflictos",
+          "Redacción de normas",
+          "Análisis de consecuencias"
+        ],
+        "tipos_interaccion": [
+          "Alumno-Autoridad",
+          "Colaboración grupal"
+        ],
+        "nivel_abstraccion": "Social/Normativo",
+        "emociones_esperadas": [
+          "Seguridad",
+          "Respeto",
+          "Pertenencia"
+        ]
+      },
+      "curricular": {
+        "indice_creatividad": 7,
+        "indice_colaboracion": 10,
+        "indice_interdisciplinario": 8,
+        "indice_pensamiento_critico": 10,
+        "experiencias_relacionadas": [
+          "Gobierno escolar",
+          "Asambleas de aula"
+        ],
+        "continuidad": {
+          "fase_anterior": [
+            "Acuerdos en juegos"
+          ],
+          "fase_siguiente": [
+            "Derechos y obligaciones legales"
+          ]
+        }
+      },
+      "recomendacion": {
+        "recomendado_para": [
+          "Establecimiento de disciplina positiva"
+        ],
+        "contextos_recomendados": [
+          "Grupos con dificultades de integración"
+        ],
+        "agrupaciones_sugeridas": [
+          "Equipos por ámbitos de convivencia"
+        ],
+        "experiencias_similares": [
+          "Elaboración de la constitución del aula"
+        ]
+      },
+      "semantica": {
+        "tags": [
+          "Convivenvia",
+          "Reglas",
+          "Paz"
+        ],
+        "keywords": [
+          "Acuerdos",
+          "Reglamento",
+          "Soluciones"
+        ],
+        "temas_detectados": [
+          "Cultura de Paz",
+          "Valores",
+          "Democracia"
+        ]
+      }
+    }
+  },
+  {
+    "id": "a1b2c3d4-e5f6-4a5b-9c8d-7e6f5a4b3c21",
+    "archivo": {
+      "nombre": "p1_formas_ser.pdf",
+      "ruta": "p1_formas_ser.pdf",
+      "tipo": "Plano Didáctico",
+      "extension": ".pdf"
+    },
+    "clasificacion": {
+      "fase": 3,
+      "grado": 1,
+      "tipo_recurso": "Plano didáctico",
+      "categoria_pedagogica": "Problemas"
+    },
+    "contenido": {
+      "titulo": "Formas de ser y actuar",
+      "nombre_proyecto": "Formas de ser y actuar",
+      "proposito": "Que las niñas y los niños reflexionen sobre las diversas formas de ser y actuar de hombres y mujeres en situaciones cotidianas, con el fin de reconocer y valorar la igualdad [22].",
+      "problema_contexto": "Existen aún roles muy específicos y marcados de las formas de ser y actuar de las personas ya sean hombres o mujeres [23].",
+      "producto_central": "Línea de tiempo [24].",
+      "metodologias": [
+        "Aprendizaje Basado en Problemas (ABP) [23]"
+      ],
+      "campos_formativos": [
+        {
+          "campo": "De lo Humano y lo Comunitario",
+          "contenidos": [
+            {
+              "contenido": "Educación Integral en Sexualidad [23].",
+              "pda": [
+                "Reflexiona acerca de las diversas formas de ser y actuar de hombres y mujeres... [25]"
+              ]
+            }
+          ]
+        },
+        {
+          "campo": "Lenguajes",
+          "contenidos": [
+            {
+              "contenido": "Uso de convenciones de la escritura presentes en la cotidianeidad [23].",
+              "pda": [
+                "Distingue letras de números, u otros signos o marcas gráficas... [25]"
+              ]
+            }
+          ]
+        },
+        {
+          "campo": "Ética, naturaleza y sociedades",
+          "contenidos": [
+            {
+              "contenido": "Construcción de la paz mediante el diálogo [23].",
+              "pda": [
+                "Situaciones de conflicto o discrepancia como parte de la interacción de los seres humanos... [25]"
+              ]
+            }
+          ]
+        }
+      ],
+      "ejes_articuladores": [
+        "Inclusión",
+        "Pensamiento crítico",
+        "Igualdad de género [24]"
+      ],
+      "momentos_metodologicos": [
+        {
+          "orden": 1,
+          "id": "presentemos",
+          "nombre": "Fase 1: Presentemos (Plática de actividades diarias) [24]"
+        },
+        {
+          "orden": 2,
+          "id": "recolectemos",
+          "nombre": "Fase 2: Recolectemos (Saberes sobre roles) [26]"
+        },
+        {
+          "orden": 3,
+          "id": "formulen_problema",
+          "nombre": "Fase 3: Formulen el problema [27]"
+        },
+        {
+          "orden": 4,
+          "id": "organicemos",
+          "nombre": "Fase 4: Organicemos la experiencia [27]"
+        },
+        {
+          "orden": 5,
+          "id": "vivamos",
+          "nombre": "Fase 5: Vivamos la experiencia (Video y reflexión) [27, 28]"
+        },
+        {
+          "orden": 6,
+          "id": "resultados",
+          "nombre": "Fase 6: Resultado y análisis (Línea de tiempo) [29]"
+        }
+      ],
+      "sesiones_totales": 0,
+      "anexos": [
+        "Anexo 1: Formato 'Formas de ser y actuar: cómo ha cambiado' [30]"
+      ],
+      "vinculacion_ltg": [
+        "1° Nuestros saberes pág. 216 (Igualdad de género) [29]",
+        "1° Nuestros saberes pág. 184 (Estereotipo) [29]"
+      ]
+    },
+    "implementacion": {
+      "duracion_horas": 0,
+      "materiales": [
+        "Libreta",
+        "Cuadro de acciones familiares",
+        "Video 'Los estereotipos de genero' [24, 28]"
+      ],
+      "modos_trabajo": [
+        "Individual",
+        "Parejas",
+        "Colectivo con padres de familia [31, 32]"
+      ]
+    },
+    "enriquecimiento_ia": {
+      "pedagogico": {
+        "momentos_ciclo_escolar": [
+          "Segundo trimestre"
+        ],
+        "competencias_inferidas": [
+          "Igualdad de género",
+          "Conciencia reflexiva"
+        ],
+        "habilidades_inferidas": [
+          "Análisis de roles sociales",
+          "Narrativa visual",
+          "Diálogo abierto"
+        ],
+        "tipos_interaccion": [
+          "Alumno-Familia",
+          "Alumno-Docente"
+        ],
+        "nivel_abstraccion": "Simbólico/Cultural",
+        "emociones_esperadas": [
+          "Asombro",
+          "Comprensión",
+          "Aceptación"
+        ]
+      },
+      "curricular": {
+        "indice_creatividad": 8,
+        "indice_colaboracion": 8,
+        "indice_interdisciplinario": 9,
+        "indice_pensamiento_critico": 10,
+        "experiencias_relacionadas": [
+          "Proyectos de equidad",
+          "Análisis de medios de comunicación"
+        ],
+        "continuidad": {
+          "fase_anterior": [
+            "Identidad personal básica"
+          ],
+          "fase_siguiente": [
+            "Derechos sexuales y reproductivos"
+          ]
+        }
+      },
+      "recomendacion": {
+        "recomendado_para": [
+          "Sensibilización de género"
+        ],
+        "contextos_recomendados": [
+          "Entornos con roles tradicionales muy marcados"
+        ],
+        "agrupaciones_sugeridas": [
+          "Equipos mixtos"
+        ],
+        "experiencias_similares": [
+          "Juguetes sin etiquetas"
+        ]
+      },
+      "semantica": {
+        "tags": [
+          "Género",
+          "Roles",
+          "Igualdad"
+        ],
+        "keywords": [
+          "Estereotipos",
+          "Hombres",
+          "Mujeres"
+        ],
+        "temas_detectados": [
+          "Equidad",
+          "Identidad",
+          "Sociedad"
+        ]
+      }
+    }
+  },
+  {
+    "id": "e3f4g5h6-i7j8-9k0l-m1n2-o3p4q5r6s7t8",
+    "archivo": {
+      "nombre": "p1_hola_me_llamo.pdf",
+      "ruta": "p1_hola_me_llamo.pdf",
+      "tipo": "Plano Didáctico",
+      "extension": ".pdf"
+    },
+    "clasificacion": {
+      "fase": 3,
+      "grado": 1,
+      "tipo_recurso": "Plano didáctico",
+      "categoria_pedagogica": "Problemas"
+    },
+    "contenido": {
+      "titulo": "¡Hola, me llamo!",
+      "nombre_proyecto": "“¡Hola, me llamo!”",
+      "proposito": "Favorecer la identidad y el reconocimiento del nombre propio como parte de la convivencia escolar [33].",
+      "problema_contexto": "Existe mucho desconocimiento de lo que en realidad significa el nombre... Los alumnos poco valoran su nombre pero sobre todo la identidad que conlleva [34].",
+      "producto_central": "Un libro de su bibliografía [35].",
+      "metodologias": [
+        "Aprendizaje Basado en Problemas (ABP) [35]"
+      ],
+      "campos_formativos": [
+        {
+          "campo": "Lenguajes",
+          "contenidos": [
+            {
+              "contenido": "Escritura de nombres en la lengua materna [34, 36].",
+              "pda": [
+                "Escribe su nombre y lo compara con los nombres de sus compañeros... [33]",
+                "Identifica nombres más largos o cortos que el suyo... [36]"
+              ]
+            }
+          ]
+        },
+        {
+          "campo": "De lo Humano y lo Comunitario",
+          "contenidos": [
+            {
+              "contenido": "Formas de ser, pensar, actuar y relacionarse [36].",
+              "pda": [
+                "Reconoce y descubre sus características y cambios... [36]"
+              ]
+            }
+          ]
+        }
+      ],
+      "ejes_articuladores": [
+        "Interculturalidad crítica",
+        "Apropiación de las culturas a través de la lectura y la escritura",
+        "Inclusión [34]"
+      ],
+      "momentos_metodologicos": [
+        {
+          "orden": 1,
+          "id": "presentemos",
+          "nombre": "Presentemos (Importancia del nombre) [35]"
+        },
+        {
+          "orden": 2,
+          "id": "recolectemos",
+          "nombre": "Recolectemos (Búsqueda de pertenencias y palabras) [37]"
+        },
+        {
+          "orden": 3,
+          "id": "formulemos",
+          "nombre": "Formulemos el problema [38]"
+        },
+        {
+          "orden": 4,
+          "id": "organicemos",
+          "nombre": "Organicemos la experiencia [39]"
+        },
+        {
+          "orden": 5,
+          "id": "vivamos",
+          "nombre": "Vivamos la experiencia (Creación del libro) [40]"
+        },
+        {
+          "orden": 6,
+          "id": "resultados",
+          "nombre": "Resultados y análisis [41]"
+        }
+      ],
+      "sesiones_totales": 0,
+      "anexos": [
+        "Anexo 1: Historia 'El nombre Mágico de Tomas' [42]",
+        "Anexo 2: Clasificación de nombres cortos y largos [43]",
+        "Anexo 3: Alfabeto móvil [43]"
+      ],
+      "vinculacion_ltg": [
+        "1° Proyectos de aula pág. 20 (Nombrario del grupo) [44]",
+        "1° Nuestros saberes pág. 70 (Tabla de 3 columnas) [44]",
+        "1° Múltiples Lenguajes pág. 62 (Hola, me llamo Caco) [44]"
+      ]
+    },
+    "implementacion": {
+      "duracion_horas": 0,
+      "materiales": [
+        "Revistas y periódicos",
+        "Alfabeto móvil",
+        "Fotografías propias",
+        "Mapa mental [45-48]"
+      ],
+      "modos_trabajo": [
+        "Individual",
+        "Pares (búsqueda en biblioteca)",
+        "Equipos para carteles [46, 49]"
+      ]
+    },
+    "enriquecimiento_ia": {
+      "pedagogico": {
+        "momentos_ciclo_escolar": [
+          "Fase inicial (Semanas 1-4)"
+        ],
+        "competencias_inferidas": [
+          "Autoconocimiento",
+          "Identidad cultural"
+        ],
+        "habilidades_inferidas": [
+          "Lectoescritura emergente",
+          "Investigación genealógica básica",
+          "Autoestima"
+        ],
+        "tipos_interaccion": [
+          "Alumno-Padres (investigar origen)",
+          "Intercambio de nombres"
+        ],
+        "nivel_abstraccion": "Simbólico (el nombre como marca)",
+        "emociones_esperadas": [
+          "Orgullo",
+          "Curiosidad",
+          "Sentido de valor"
+        ]
+      },
+      "curricular": {
+        "indice_creatividad": 9,
+        "indice_colaboracion": 7,
+        "indice_interdisciplinario": 8,
+        "indice_pensamiento_critico": 9,
+        "experiencias_relacionadas": [
+          "Árbol genealógico",
+          "Historia de la familia"
+        ],
+        "continuidad": {
+          "fase_anterior": [
+            "Identificación sonora de su nombre"
+          ],
+          "fase_siguiente": [
+            "Biografías de personajes históricos"
+          ]
+        }
+      },
+      "recomendacion": {
+        "recomendado_para": [
+          "Afianzar la lectoescritura inicial"
+        ],
+        "contextos_recomendados": [
+          "Aulas diversas con multiculturalidad de nombres"
+        ],
+        "agrupaciones_sugeridas": [
+          "Binas por longitud de nombre"
+        ],
+        "experiencias_similares": [
+          "El significado de mis apellidos"
+        ]
+      },
+      "semantica": {
+        "tags": [
+          "Identidad",
+          "Nombre",
+          "Escritura"
+        ],
+        "keywords": [
+          "Bibliografía",
+          "Significado",
+          "Origen"
+        ],
+        "temas_detectados": [
+          "Sentido de Pertenencia",
+          "Alfabetización",
+          "Cualidades"
+        ]
+      }
+    }
+  },
+  {
+    "id": "f5g6h7i8-j9k0-l1m2-n3o4-p5q6r7s8t9u0",
+    "archivo": {
+      "nombre": "p1_vida_suenos.pdf",
+      "ruta": "p1_vida_suenos.pdf",
+      "tipo": "Plano Didáctico",
+      "extension": ".pdf"
+    },
+    "clasificacion": {
+      "fase": 3,
+      "grado": 1,
+      "tipo_recurso": "Plano didáctico",
+      "categoria_pedagogica": "Problemas"
+    },
+    "contenido": {
+      "titulo": "Mi vida, mis sueños",
+      "nombre_proyecto": "“Mi vida, mis sueños”",
+      "proposito": "Favorecer que los niños identifiquen sus intereses personales, sueños y metas, los registren y compartan [50].",
+      "problema_contexto": "Aunque los niños son pequeños deben empezar a perfilar lo que les gusta y disgusta... es crucial que se inicien a formar metas y acciones [51].",
+      "producto_central": "Proyecto de Vida (diagrama, anécdota, fotografías o álbum) [50].",
+      "metodologias": [
+        "Aprendizaje Basado en Problemas (ABP) [51]"
+      ],
+      "campos_formativos": [
+        {
+          "campo": "De lo Humano y lo Comunitario",
+          "contenidos": [
+            {
+              "contenido": "Construcción del proyecto de vida [52].",
+              "pda": [
+                "Identifica las necesidades y logros que ha tenido en diferentes momentos de su historia... [53]"
+              ]
+            }
+          ]
+        },
+        {
+          "campo": "Lenguajes",
+          "contenidos": [
+            {
+              "contenido": "Registro y/o resumen de información consultada... [53].",
+              "pda": [
+                "Registra sobre un tema de su interés, por medio de la escritura, esquema, dibujo, fotografía... [50]",
+                "Comparte o expone la información registrada [53]"
+              ]
+            }
+          ]
+        }
+      ],
+      "ejes_articuladores": [
+        "Interculturalidad crítica",
+        "Pensamiento crítico",
+        "Artes y experiencias estéticas",
+        "Apropiación de las culturas a través de la lectura y la escritura [54]"
+      ],
+      "momentos_metodologicos": [
+        {
+          "orden": 1,
+          "id": "presentemos",
+          "nombre": "Momento 1: Presentemos (Video y reflexión) [51]"
+        },
+        {
+          "orden": 2,
+          "id": "recolectemos",
+          "nombre": "Momento 2: Recolectemos (Cuestionamiento de intereses) [54]"
+        },
+        {
+          "orden": 3,
+          "id": "formulen_problema",
+          "nombre": "Momento 3: Formulen el problema [55]"
+        },
+        {
+          "orden": 4,
+          "id": "organicemos",
+          "nombre": "Momento 4: Organicemos la experiencia [56]"
+        },
+        {
+          "orden": 5,
+          "id": "vivamos",
+          "nombre": "Momento 5: Vivamos la experiencia (Elaboración del proyecto) [56]"
+        },
+        {
+          "orden": 6,
+          "id": "resultados",
+          "nombre": "Momento 6: Resultados y análisis [57]"
+        }
+      ],
+      "sesiones_totales": 0,
+      "anexos": [
+        "Tabla de herramientas: Esquema, Anécdota, Álbum fotográfico, Álbum de dibujos [56]"
+      ],
+      "vinculacion_ltg": [
+        "1° Nuestros saberes pág. 72 (Diagrama) [58]",
+        "1° Nuestros saberes pág. 12 (Anécdota) [58]",
+        "1° Nuestros saberes pág. 60 (Fotografía) [58]",
+        "1° Nuestros saberes pág. 64 (Álbum) [58]"
+      ]
+    },
+    "implementacion": {
+      "duracion_horas": 0,
+      "materiales": [
+        "Video 'Proyecto de vida para niños'",
+        "Carpeta o álbum",
+        "Autorretratos",
+        "Esquemas con dibujos [51, 56, 59]"
+      ],
+      "modos_trabajo": [
+        "Individual (mi proyecto)",
+        "Exposición colectiva [57, 60]"
+      ]
+    },
+    "enriquecimiento_ia": {
+      "pedagogico": {
+        "momentos_ciclo_escolar": [
+          "Cierre de ciclo o final de semestre"
+        ],
+        "competencias_inferidas": [
+          "Autonomía",
+          "Planificación personal"
+        ],
+        "habilidades_inferidas": [
+          "Identificación de metas",
+          "Resiliencia (qué hacer si algo cambia)",
+          "Expresión de deseos"
+        ],
+        "tipos_interaccion": [
+          "Alumno-Futuro",
+          "Compartir con pares"
+        ],
+        "nivel_abstraccion": "Prospectivo (visión a futuro)",
+        "emociones_esperadas": [
+          "Esperanza",
+          "Motivación",
+          "Seguridad"
+        ]
+      },
+      "curricular": {
+        "indice_creatividad": 10,
+        "indice_colaboracion": 6,
+        "indice_interdisciplinario": 9,
+        "indice_pensamiento_critico": 10,
+        "experiencias_relacionadas": [
+          "Cápsulas del tiempo",
+          "Árbol de sueños"
+        ],
+        "continuidad": {
+          "fase_anterior": [
+            "Juego simbólico de profesiones"
+          ],
+          "fase_siguiente": [
+            "Orientación vocacional inicial"
+          ]
+        }
+      },
+      "recomendacion": {
+        "recomendado_para": [
+          "Fortalecimiento de la personalidad"
+        ],
+        "contextos_recomendados": [
+          "Entornos que requieran movilizar expectativas de vida"
+        ],
+        "agrupaciones_sugeridas": [
+          "Individual para el producto, grupal para la retroalimentación"
+        ],
+        "experiencias_similares": [
+          "Mi mapa del tesoro (metas)"
+        ]
+      },
+      "semantica": {
+        "tags": [
+          "Futuro",
+          "Sueños",
+          "Metas"
+        ],
+        "keywords": [
+          "Proyecto",
+          "Vida",
+          "Intereses"
+        ],
+        "temas_detectados": [
+          "Desarrollo Humano",
+          "Autovaloración",
+          "Aspiraciones"
+        ]
+      }
+    }
+  },
+  {
+    "id": "f47ac10b-58cc-4372-a567-0e02b2c3d471",
+    "archivo": {
+      "nombre": "p1_conociendo_contruyendo.pdf",
+      "ruta": "p1_conociendo_contruyendo.pdf",
+      "tipo": "Plano Didáctico",
+      "extension": ".pdf"
+    },
+    "clasificacion": {
+      "fase": 3,
+      "grado": 1,
+      "tipo_recurso": "Plano didáctico",
+      "categoria_pedagogica": "Servicio"
+    },
+    "contenido": {
+      "titulo": "Conociendo y transformando nuestra comunidad",
+      "nombre_proyecto": "Conociendo y transformando nuestra comunidad",
+      "proposito": "Identificar, registrar y clasificar actividades personales, familiares y comunitarias que tienen un impacto en la naturaleza y en la salud de las personas, fomentando la reflexión y la acción hacia prácticas más sostenibles.",
+      "problema_contexto": "Existen actividades cotidianas que afectan al medio ambiente y la salud, algunas pueden ser personales, familiares o de la comunidad.",
+      "producto_central": "Notas informativas y Plan de Acción (Jornadas de limpieza, jardines, etc.)",
+      "metodologias": [
+        "Aprendizaje Servicio (AS)"
+      ],
+      "campos_formativos": [
+        {
+          "campo": "Lenguajes",
+          "contenidos": [
+            {
+              "contenido": "Elaboración y difusión de notas informativas en la escuela y el resto de la comunidad.",
+              "pda": [
+                "Colabora en la escritura colectiva de notas informativas breves, respetando sus principales características y funciones."
+              ]
+            }
+          ]
+        },
+        {
+          "campo": "Saberes y pensamiento científico",
+          "contenidos": [
+            {
+              "contenido": "Impacto de las actividades humanas en el entorno natural, así como acciones y prácticas socioculturales para su cuidado.",
+              "pda": [
+                "Identifica actividades personales, familiares y de la comunidad que impactan en la naturaleza y en la salud."
+              ]
+            }
+          ]
+        },
+        {
+          "campo": "Ética, naturaleza y sociedades",
+          "contenidos": [
+            {
+              "contenido": "Respeto, cuidado y empatía hacia la naturaleza, como parte de un todo interdependiente.",
+              "pda": [
+                "Comprende cómo las acciones de los seres humanos pueden preservar, modificar o dañar los distintos componentes sociales y naturales."
+              ]
+            }
+          ]
+        }
+      ],
+      "ejes_articuladores": [
+        "Inclusión",
+        "Pensamiento crítico",
+        "Interculturalidad crítica",
+        "Igualdad de género",
+        "Vida saludable",
+        "Artes y experiencias estéticas"
+      ],
+      "momentos_metodologicos": [
+        {
+          "orden": 1,
+          "id": "punto_partida",
+          "nombre": "Punto de partida (Identificación de la necesidad)"
+        },
+        {
+          "orden": 2,
+          "id": "lo_que_se",
+          "nombre": "Lo que sé y lo que quiero saber (Recolección de información)"
+        },
+        {
+          "orden": 3,
+          "id": "organicemos",
+          "nombre": "Organicemos las actividades (Planificación del servicio)"
+        },
+        {
+          "orden": 4,
+          "id": "creatividad_marcha",
+          "nombre": "Creatividad en marcha (Puesta en práctica)"
+        },
+        {
+          "orden": 5,
+          "id": "evaluacion",
+          "nombre": "Compartimos y evaluamos lo aprendido"
+        }
+      ],
+      "sesiones_totales": 5,
+      "anexos": [
+        "Anexo 1: Horario de actividades",
+        "Anexo 2: Formato de Acción",
+        "Anexo 3: Ejemplos de proyectos (Jardines, Ahorro de agua, etc.)"
+      ],
+      "vinculacion_ltg": [
+        "1° Nuestros saberes pág. 68 y 82",
+        "1° Múltiples Lenguajes pág. 11"
+      ]
+    },
+    "implementacion": {
+      "duracion_horas": 0,
+      "materiales": [
+        "Planificador",
+        "Diarios de observación",
+        "Dibujos/Fotografías",
+        "Notas informativas"
+      ],
+      "modos_trabajo": [
+        "Individual",
+        "Plenaria",
+        "Equipos para el plan de acción"
+      ]
+    },
+    "enriquecimiento_ia": {
+      "pedagogico": {
+        "momentos_ciclo_escolar": [
+          "Segundo trimestre"
+        ],
+        "competencias_inferidas": [
+          "Conciencia ambiental",
+          "Responsabilidad comunitaria"
+        ],
+        "habilidades_inferidas": [
+          "Observación",
+          "Registro de datos",
+          "Comunicación de hallazgos"
+        ],
+        "tipos_interaccion": [
+          "Alumno-Comunidad",
+          "Trabajo colaborativo"
+        ],
+        "nivel_abstraccion": "Concreto/Situado",
+        "emociones_esperadas": [
+          "Preocupación empática",
+          "Entusiasmo por el cambio"
+        ]
+      },
+      "curricular": {
+        "indice_creatividad": 8,
+        "indice_colaboracion": 10,
+        "indice_interdisciplinario": 9,
+        "indice_pensamiento_critico": 9,
+        "experiencias_relacionadas": [
+          "Huertos escolares",
+          "Brigadas de limpieza"
+        ],
+        "continuidad": {
+          "fase_anterior": [
+            "Exploración del entorno"
+          ],
+          "fase_siguiente": [
+            "Proyectos de sustentabilidad complejos"
+          ]
+        }
+      },
+      "recomendacion": {
+        "recomendado_para": [
+          "Educación ambiental"
+        ],
+        "contextos_recomendados": [
+          "Comunidades con problemas de residuos o falta de áreas verdes"
+        ],
+        "agrupaciones_sugeridas": [
+          "Equipos por tipo de impacto (agua, suelo, aire)"
+        ],
+        "experiencias_similares": [
+          "Guardianes de la naturaleza"
+        ]
+      },
+      "semantica": {
+        "tags": [
+          "Sustentabilidad",
+          "Salud",
+          "Comunidad"
+        ],
+        "keywords": [
+          "Impacto",
+          "Notas informativas",
+          "Acción"
+        ],
+        "temas_detectados": [
+          "Ecología",
+          "Higiene comunitaria",
+          "Participación ciudadana"
+        ]
+      }
+    }
+  },
+  {
+    "id": "2e88a567-312c-4f91-b32d-9c447e7a5678",
+    "archivo": {
+      "nombre": "p1_derecho_vivir.pdf",
+      "ruta": "p1_derecho_vivir.pdf",
+      "tipo": "Plano Didáctico",
+      "extension": ".pdf"
+    },
+    "clasificacion": {
+      "fase": 3,
+      "grado": 1,
+      "tipo_recurso": "Plano didáctico",
+      "categoria_pedagogica": "Servicio"
+    },
+    "contenido": {
+      "titulo": "Todos tenemos el derecho de vivir bien",
+      "nombre_proyecto": "Todos tenemos el derecho de vivir bien",
+      "proposito": "Conocer los derechos básicos que tenemos para poder ejercerlos.",
+      "problema_contexto": "La falta de conocimiento en cuanto a los diversos derechos que tenemos todos los seres vivos.",
+      "producto_central": "Campaña escolar de sensibilización sobre los derechos básicos",
+      "metodologias": [
+        "Aprendizaje Servicio (AS)"
+      ],
+      "campos_formativos": [
+        {
+          "campo": "Lenguajes",
+          "contenidos": [
+            {
+              "contenido": "Narración de actividades y eventos relevantes que tengan lugar en la familia, la escuela o el resto de la comunidad.",
+              "pda": [
+                "Reconoce que para que una narración se entienda, debe cuidarse tanto la coherencia como la claridad."
+              ]
+            }
+          ]
+        },
+        {
+          "campo": "Ética, Naturaleza y Sociedades",
+          "contenidos": [
+            {
+              "contenido": "Atención a las necesidades básicas, como parte del ejercicio de los derechos humanos.",
+              "pda": [
+                "Relaciona la atención de sus necesidades básicas (alimentación, salud, vivienda) con el ejercicio de sus derechos humanos."
+              ]
+            }
+          ]
+        },
+        {
+          "campo": "De lo humano y lo comunitario",
+          "contenidos": [
+            {
+              "contenido": "Formas de ser, pensar, actuar y relacionarse.",
+              "pda": [
+                "Reconoce sus características y cambios que le hacen una persona única."
+              ]
+            }
+          ]
+        }
+      ],
+      "ejes_articuladores": [
+        "Inclusión",
+        "Pensamiento crítico",
+        "Interculturalidad crítica",
+        "Igualdad de género"
+      ],
+      "momentos_metodologicos": [
+        {
+          "orden": 1,
+          "id": "planeacion",
+          "nombre": "Planeación (Identificación del problema y cuento inicial)"
+        },
+        {
+          "orden": 2,
+          "id": "accion_producciones",
+          "nombre": "Acción (Investigación, entrevistas y títeres)"
+        },
+        {
+          "orden": 3,
+          "id": "intervencion_difusion",
+          "nombre": "Intervención (Campaña y feria de derechos)"
+        },
+        {
+          "orden": 4,
+          "id": "seguimiento",
+          "nombre": "Seguimiento y cierre (Rally de los derechos)"
+        }
+      ],
+      "sesiones_totales": 5,
+      "anexos": [
+        "Anexo 1: Cuento 'El país donde los niños no podían'",
+        "Anexo 2: Lista de Derechos de niñas y niños"
+      ],
+      "vinculacion_ltg": [
+        "1° Proyectos Comunitarios pág. 152",
+        "1° Nuestros saberes pág. 136"
+      ]
+    },
+    "implementacion": {
+      "duracion_horas": 0,
+      "materiales": [
+        "Cuento",
+        "Títeres",
+        "Carteles informativos",
+        "Dado de emociones",
+        "Rompecabezas de igualdad"
+      ],
+      "modos_trabajo": [
+        "Individual (dibujo)",
+        "Binas (investigación)",
+        "Equipos (acciones solidarias)"
+      ]
+    },
+    "enriquecimiento_ia": {
+      "pedagogico": {
+        "momentos_ciclo_escolar": [
+          "Primer trimestre"
+        ],
+        "competencias_inferidas": [
+          "Conciencia de derechos",
+          "Empatía",
+          "Defensa de la dignidad"
+        ],
+        "habilidades_inferidas": [
+          "Dramatización",
+          "Entrevista a adultos",
+          "Narración oral"
+        ],
+        "tipos_interaccion": [
+          "Alumno-Autoridad",
+          "Alumno-Familia"
+        ],
+        "nivel_abstraccion": "Simbólico/Valoral",
+        "emociones_esperadas": [
+          "Solidaridad",
+          "Sentido de justicia",
+          "Empoderamiento"
+        ]
+      },
+      "curricular": {
+        "indice_creatividad": 9,
+        "indice_colaboracion": 9,
+        "indice_interdisciplinario": 8,
+        "indice_pensamiento_critico": 10,
+        "experiencias_relacionadas": [
+          "Día del Niño",
+          "Mural de los derechos"
+        ],
+        "continuidad": {
+          "fase_anterior": [
+            "Identidad básica"
+          ],
+          "fase_siguiente": [
+            "Organismos internacionales y leyes"
+          ]
+        }
+      },
+      "recomendacion": {
+        "recomendado_para": [
+          "Fomento de la ciudadanía"
+        ],
+        "contextos_recomendados": [
+          "Aulas con diversidad cultural o situaciones de vulnerabilidad"
+        ],
+        "agrupaciones_sugeridas": [
+          "Equipos temáticos por cada derecho"
+        ],
+        "experiencias_similares": [
+          "El árbol de los derechos"
+        ]
+      },
+      "semantica": {
+        "tags": [
+          "Derechos Humanos",
+          "Infancia",
+          "Sensibilización"
+        ],
+        "keywords": [
+          "Dignidad",
+          "Igualdad",
+          "Campaña"
+        ],
+        "temas_detectados": [
+          "Ética",
+          "Bienestar infantil",
+          "Cultura de paz"
+        ]
+      }
+    }
+  },
+  {
+    "id": "8c44f321-b12e-4e92-a123-77889abcdef0",
+    "archivo": {
+      "nombre": "p1_festival.pdf",
+      "ruta": "p1_festival.pdf",
+      "tipo": "Plano Didáctico",
+      "extension": ".pdf"
+    },
+    "clasificacion": {
+      "fase": 3,
+      "grado": 1,
+      "tipo_recurso": "Plano didáctico",
+      "categoria_pedagogica": "Servicio"
+    },
+    "contenido": {
+      "titulo": "Festival de Juegos para nuestra comunidad",
+      "nombre_proyecto": "Festival de Juegos para nuestra comunidad",
+      "proposito": "Conocer alternativas de juego, movimiento y alimentación para estar saludables.",
+      "problema_contexto": "La mayoría de los alumnos y alumnas no logran identificar los alimentos saludables y prefieren otro tipo de alimentación en su comunidad.",
+      "producto_central": "Invención de un juego libre y realización del Festival",
+      "metodologias": [
+        "Aprendizaje Servicio (AS)"
+      ],
+      "campos_formativos": [
+        {
+          "campo": "Lenguajes",
+          "contenidos": [
+            {
+              "contenido": "Empleo de textos con instrucciones para participar en juegos, usar o elaborar objetos, preparar alimentos u otros propósitos.",
+              "pda": [
+                "Sigue instrucciones, orales o escritas, para preparar un alimento sencillo y saludable (receta) o participar en un juego."
+              ]
+            }
+          ]
+        },
+        {
+          "campo": "Saberes y pensamiento científico",
+          "contenidos": [
+            {
+              "contenido": "Beneficios del consumo de alimentos saludables, de agua simple potable, y de la práctica de actividad física.",
+              "pda": [
+                "Describe los alimentos y bebidas saludables que consume en casa, escuela y comunidad."
+              ]
+            }
+          ]
+        },
+        {
+          "campo": "De lo Humano y lo Comunitario",
+          "contenidos": [
+            {
+              "contenido": "Estilos de vida activos y saludables.",
+              "pda": [
+                "Participa en diferentes juegos para explorar alternativas que le permitan mantener una vida activa y saludable."
+              ]
+            }
+          ]
+        }
+      ],
+      "ejes_articuladores": [
+        "Vida saludable",
+        "Pensamiento crítico",
+        "Apropiación de las culturas a través de la lectura y la escritura"
+      ],
+      "momentos_metodologicos": [
+        {
+          "orden": 1,
+          "id": "punto_partida",
+          "nombre": "Punto de partida (Caso 'Betito, me duele la panza')"
+        },
+        {
+          "orden": 2,
+          "id": "lo_que_se",
+          "nombre": "Lo que sé y lo que quiero saber (Investigación y fichas técnicas)"
+        },
+        {
+          "orden": 3,
+          "id": "organicemos",
+          "nombre": "Organicemos las actividades (Ruta de salud y propuesta de juegos)"
+        }
+      ],
+      "sesiones_totales": 3,
+      "anexos": [
+        "Anexo 1: Ficha técnica de alimentos (Color, forma, origen, propiedades)"
+      ],
+      "vinculacion_ltg": [
+        "1° Nuestros saberes (Diversas páginas sobre nutrición)"
+      ]
+    },
+    "implementacion": {
+      "duracion_horas": 0,
+      "materiales": [
+        "Video de Betito",
+        "Cartulina",
+        "Caja tipo tómbola para movimientos",
+        "Ingredientes para recetas"
+      ],
+      "modos_trabajo": [
+        "Equipos",
+        "Parejas/Tríos",
+        "Individual (recetas de casa)"
+      ]
+    },
+    "enriquecimiento_ia": {
+      "pedagogico": {
+        "momentos_ciclo_escolar": [
+          "Segundo trimestre"
+        ],
+        "competencias_inferidas": [
+          "Autocuidado motriz y nutricional"
+        ],
+        "habilidades_inferidas": [
+          "Seguimiento de recetas",
+          "Clasificación de alimentos",
+          "Invención de reglas de juego"
+        ],
+        "tipos_interaccion": [
+          "Alumno-Padres",
+          "Interacción en el patio"
+        ],
+        "nivel_abstraccion": "Concreto/Vivencial",
+        "emociones_esperadas": [
+          "Alegría",
+          "Vigoricidad",
+          "Curiosidad culinaria"
+        ]
+      },
+      "curricular": {
+        "indice_creatividad": 10,
+        "indice_colaboracion": 9,
+        "indice_interdisciplinario": 10,
+        "indice_pensamiento_critico": 8,
+        "experiencias_relacionadas": [
+          "Ferias de la salud",
+          "Recreos activos"
+        ],
+        "continuidad": {
+          "fase_anterior": [
+            "Esquema corporal"
+          ],
+          "fase_siguiente": [
+            "Fisiología del ejercicio"
+          ]
+        }
+      },
+      "recomendacion": {
+        "recomendado_para": [
+          "Combate al sedentarismo"
+        ],
+        "contextos_recomendados": [
+          "Zonas con alto consumo de comida chatarra"
+        ],
+        "agrupaciones_sugeridas": [
+          "Equipos para proponer 4 juegos distintos"
+        ],
+        "experiencias_similares": [
+          "MasterChef escolar saludable"
+        ]
+      },
+      "semantica": {
+        "tags": [
+          "Salud",
+          "Juego",
+          "Nutrición"
+        ],
+        "keywords": [
+          "Recetas",
+          "Actividad física",
+          "Festival"
+        ],
+        "temas_detectados": [
+          "Vida Saludable",
+          "Motricidad",
+          "Alimentación balanceada"
+        ]
+      }
+    }
+  },
+  {
+    "id": "d1e4c3b2-a1f0-4987-8abc-0123456789ff",
+    "archivo": {
+      "nombre": "p1_heroes.pdf",
+      "ruta": "p1_heroes.pdf",
+      "tipo": "Plano Didáctico",
+      "extension": ".pdf"
+    },
+    "clasificacion": {
+      "fase": 3,
+      "grado": 1,
+      "tipo_recurso": "Plano didáctico",
+      "categoria_pedagogica": "Servicio"
+    },
+    "contenido": {
+      "titulo": "Héroes de seres vivos",
+      "nombre_proyecto": "Héroes de seres vivos",
+      "proposito": "Promover actitudes responsables para el cuidado, la empatía y amor hacia los seres vivos, especialmente de plantas y mascotas, mediante la elaboración de una campaña de sensibilización e informativa dirigida a su comunidad escolar.",
+      "problema_contexto": "Algunos alumnos, alumnas o personas no tienen claro cómo cuidar adecuadamente de los seres vivos o muestran actitudes de maltrato involuntario.",
+      "producto_central": "Campaña de sensibilización (Carteles, infografías y pláticas con expertos)",
+      "metodologias": [
+        "Aprendizaje Servicio (AS)"
+      ],
+      "campos_formativos": [
+        {
+          "campo": "Saberes y Pensamiento Científico",
+          "contenidos": [
+            {
+              "contenido": "Características del entorno natural y sociocultural.",
+              "pda": [
+                "Distingue, describe y registra características del entorno natural: plantas, animales, etc."
+              ]
+            },
+            {
+              "contenido": "Figuras geométricas y sus características.",
+              "pda": [
+                "Representa animales, plantas u objetos utilizando el tangram."
+              ]
+            }
+          ]
+        },
+        {
+          "campo": "Ética, Naturaleza y Sociedades",
+          "contenidos": [
+            {
+              "contenido": "Respeto, cuidado y empatía hacia la naturaleza.",
+              "pda": [
+                "Describe y reconoce la existencia de otros seres vivos (animales, plantas, hongos)."
+              ]
+            }
+          ]
+        },
+        {
+          "campo": "De lo Humano y lo Comunitario",
+          "contenidos": [
+            {
+              "contenido": "Los afectos y su influencia en el bienestar.",
+              "pda": [
+                "Reconoce sensaciones y emociones que le produce la relación con seres vivos."
+              ]
+            }
+          ]
+        }
+      ],
+      "ejes_articuladores": [
+        "Interculturalidad crítica",
+        "Pensamiento crítico",
+        "Vida saludable"
+      ],
+      "momentos_metodologicos": [
+        {
+          "orden": 1,
+          "id": "planeacion",
+          "nombre": "Planeación (Problemática y video de características)"
+        },
+        {
+          "orden": 2,
+          "id": "lo_que_se",
+          "nombre": "Lo que sé y lo que quiero saber (Cuadro de doble entrada)"
+        },
+        {
+          "orden": 3,
+          "id": "producciones",
+          "nombre": "Acción (Investigación y creación de infografías por equipo)"
+        },
+        {
+          "orden": 4,
+          "id": "difusion",
+          "nombre": "Intervención (Salida a la comunidad y plática con expertos)"
+        },
+        {
+          "orden": 5,
+          "id": "evaluacion",
+          "nombre": "Compartimos y evaluamos (Juegos de adivinanzas y tangram)"
+        }
+      ],
+      "sesiones_totales": 5,
+      "anexos": [
+        "Anexo 1: Adivinanzas de seres vivos",
+        "Anexo 2: Guía de Tangram (Animales)"
+      ],
+      "vinculacion_ltg": [
+        "1° Nuestros saberes pág. 35, 39, 96, 84, 86, 88",
+        "1° Múltiples Lenguajes pág. 232"
+      ]
+    },
+    "implementacion": {
+      "duracion_horas": 0,
+      "materiales": [
+        "Tangram",
+        "Carteles",
+        "Video 'Seres vivos'",
+        "Infografías"
+      ],
+      "modos_trabajo": [
+        "4 Equipos temáticos (Animales, Plantas, Mascotas, Expertos)",
+        "Individual (adivinanzas)"
+      ]
+    },
+    "enriquecimiento_ia": {
+      "pedagogico": {
+        "momentos_ciclo_escolar": [
+          "Primavera"
+        ],
+        "competencias_inferidas": [
+          "Empatía interespecie",
+          "Divulgación científica básica"
+        ],
+        "habilidades_inferidas": [
+          "Uso del tangram",
+          "Diseño de infografías",
+          "Gestión de invitados"
+        ],
+        "tipos_interaccion": [
+          "Alumno-Experto (Veterinario/Botánico)",
+          "Alumno-Mascota"
+        ],
+        "level_abstraccion": "Intermedio (Cuidado ético)",
+        "emociones_esperadas": [
+          "Amor",
+          "Respeto",
+          "Asombro"
+        ]
+      },
+      "curricular": {
+        "indice_creatividad": 9,
+        "indice_colaboracion": 10,
+        "indice_interdisciplinario": 9,
+        "indice_pensamiento_critico": 9,
+        "experiencias_relacionadas": [
+          "Adopción responsable",
+          "Huertos de polinizadores"
+        ],
+        "continuidad": {
+          "fase_anterior": [
+            "Conocimiento de animales"
+          ],
+          "fase_siguiente": [
+            "Biodiversidad y extinciones"
+          ]
+        }
+      },
+      "recomendacion": {
+        "recomendado_para": [
+          "Prevención del maltrato animal"
+        ],
+        "contextos_recomendados": [
+          "Comunidades con abandono de mascotas"
+        ],
+        "agrupaciones_sugeridas": [
+          "Equipos de intervención comunitaria"
+        ],
+        "experiencias_similares": [
+          "Guardianes de la vida"
+        ]
+      },
+      "semantica": {
+        "tags": [
+          "Seres vivos",
+          "Mascotas",
+          "Plantas"
+        ],
+        "keywords": [
+          "Empatía",
+          "Cuidado",
+          "Tangram"
+        ],
+        "temas_detectados": [
+          "Biología",
+          "Ética ambiental",
+          "Geometría creativa"
+        ]
+      }
+    }
+  },
+  {
+    "id": "e5f4d3c2-b1a0-4c91-9abc-1234567890aa",
+    "archivo": {
+      "nombre": "p1_presento_emociones.pdf",
+      "ruta": "p1_presento_emociones.pdf",
+      "tipo": "Plano Didáctico",
+      "extension": ".pdf"
+    },
+    "clasificacion": {
+      "fase": 3,
+      "grado": 1,
+      "tipo_recurso": "Plano didáctico",
+      "categoria_pedagogica": "Servicio"
+    },
+    "contenido": {
+      "titulo": "Te presento a mis emociones",
+      "nombre_proyecto": "Te presento a mis emociones",
+      "proposito": "Que los niños y niñas identifiquen, expresen y regulen sus emociones, reconociendo cómo influyen en su vida diaria y cómo pueden manejar situaciones emocionales de manera positiva.",
+      "problema_contexto": "Muchos niños y niñas tienen dificultades para expresar sus emociones y regular sus reacciones ante diferentes situaciones. Esto puede generar conflictos en la convivencia.",
+      "producto_central": "Presentación artística para manifestar las emociones (baile, canto, escultura)",
+      "metodologias": [
+        "Aprendizaje Servicio (AS)"
+      ],
+      "campos_formativos": [
+        {
+          "campo": "Lenguajes",
+          "contenidos": [
+            {
+              "contenido": "Interacción con manifestaciones culturales y artísticas.",
+              "pda": [
+                "Interactúa con manifestaciones culturales y artísticas presentes en la comunidad, para reflexionar y dialogar sobre las emociones."
+              ]
+            }
+          ]
+        },
+        {
+          "campo": "De lo humano y lo comunitario",
+          "contenidos": [
+            {
+              "contenido": "Los afectos y su influencia en el bienestar.",
+              "pda": [
+                "Conoce las emociones básicas, su función y reacciones fisiológicas.",
+                "Reconoce emociones básicas en él o ella y en las demás personas."
+              ]
+            }
+          ]
+        }
+      ],
+      "ejes_articuladores": [
+        "Inclusión",
+        "Pensamiento crítico",
+        "Interculturalidad crítica",
+        "Igualdad de género"
+      ],
+      "momentos_metodologicos": [
+        {
+          "orden": 1,
+          "id": "planeacion",
+          "nombre": "Planeación (Video de Leo y tarjetas de situaciones)"
+        },
+        {
+          "orden": 2,
+          "id": "reconocimiento",
+          "nombre": "Acción - El espejo (Observación de gestos y reacciones corporales)"
+        },
+        {
+          "orden": 3,
+          "id": "regulacion",
+          "nombre": "Acción - La tormenta (Estrategias de regulación y termómetro)"
+        },
+        {
+          "orden": 4,
+          "id": "difusion",
+          "nombre": "Intervención (Creación de esculturas y presentación artística)"
+        },
+        {
+          "orden": 5,
+          "id": "evaluacion",
+          "nombre": "Evaluación final ante padres de familia"
+        }
+      ],
+      "sesiones_totales": 5,
+      "anexos": [
+        "Anexo 1: Tarjetas de conflictos (Mateo, Valeria, Luis)",
+        "Anexo 2: Termómetro de las Emociones (Zonas azul a roja)"
+      ],
+      "vinculacion_ltg": [
+        "1° Nuestros saberes pág. 212 (Emociones y Arte), 222 (Motricidad)"
+      ]
+    },
+    "implementacion": {
+      "duracion_horas": 0,
+      "materiales": [
+        "Espejo mediano",
+        "Termómetro impreso",
+        "Video 'La tormenta'",
+        "Material para esculturas"
+      ],
+      "modos_trabajo": [
+        "Parejas (compartir dibujos)",
+        "Individual (espejo)",
+        "Colectivo (presentación final)"
+      ]
+    },
+    "enriquecimiento_ia": {
+      "pedagogico": {
+        "momentos_ciclo_escolar": [
+          "Cualquier momento / Inicio de ciclo"
+        ],
+        "competencias_inferidas": [
+          "Inteligencia emocional",
+          "Resolución de conflictos"
+        ],
+        "habilidades_inferidas": [
+          "Autoreconocimiento facial",
+          "Uso de analogías (termómetro)",
+          "Expresión corporal"
+        ],
+        "tipos_interaccion": [
+          "Alumno-Padres (observación en casa)",
+          "Pares (validación emocional)"
+        ],
+        "nivel_abstraccion": "Simbólico/Psicosocial",
+        "emociones_esperadas": [
+          "Calma",
+          "Confianza",
+          "Alegría"
+        ]
+      },
+      "curricular": {
+        "indice_creatividad": 10,
+        "indice_colaboracion": 8,
+        "indice_interdisciplinario": 7,
+        "indice_pensamiento_critico": 10,
+        "experiencias_relacionadas": [
+          "Rincón de la calma",
+          "Mediación escolar"
+        ],
+        "continuidad": {
+          "fase_anterior": [
+            "Identificación de alegría/tristeza"
+          ],
+          "fase_siguiente": [
+            "Habilidades socioemocionales profundas"
+          ]
+        }
+      },
+      "recomendacion": {
+        "recomendado_para": [
+          "Mejora del clima escolar"
+        ],
+        "contextos_recomendados": [
+          "Grupos con alta conflictividad o baja tolerancia a la frustración"
+        ],
+        "agrupaciones_sugeridas": [
+          "Binas de apoyo emocional"
+        ],
+        "experiencias_similares": [
+          "El monstruo de colores"
+        ]
+      },
+      "semantica": {
+        "tags": [
+          "Emociones",
+          "Autorregulación",
+          "Arte"
+        ],
+        "keywords": [
+          "Termómetro",
+          "Gestos",
+          "Sentimientos"
+        ],
+        "temas_detectados": [
+          "Salud Mental",
+          "Expresión Artística",
+          "Convivencia Pacífica"
+        ]
+      }
+    }
+  },
+  {
+    "id": "9f369649-2f64-4df7-9bb4-da2082414727",
+    "archivo": {
+      "nombre": "p1_cuerpos_geometricos.pdf",
+      "ruta": "p1_cuerpos_geometricos.pdf",
+      "tipo": "Plano Didáctico",
+      "extension": ".pdf"
+    },
+    "clasificacion": {
+      "fase": 3,
+      "grado": 1,
+      "tipo_recurso": "Plano didáctico",
+      "categoria_pedagogica": "STEAM"
+    },
+    "contenido": {
+      "titulo": "Una ciudad de cuerpos geométricos",
+      "nombre_proyecto": "Una ciudad de cuerpos geométricos",
+      "proposito": "Favorecer el reconocimiento, clasificación y uso de cuerpos geométricos en contextos reales mediante la construcción de una ciudad que fomente el pensamiento espacial y creativo [1, 2].",
+      "problema_contexto": "Dificultades para reconocer características de los cuerpos geométricos en el entorno, limitando la capacidad de relacionar conceptos con situaciones reales [1].",
+      "producto_central": "Maqueta de una ciudad construida con cuerpos geométricos [1, 3].",
+      "metodologias": [
+        "Aprendizaje basado en indagación (STEAM como enfoque) [4]"
+      ],
+      "campos_formativos": [
+        {
+          "campo": "Saberes y pensamiento científico",
+          "contenidos": [
+            {
+              "contenido": "Cuerpos geométricos y sus características",
+              "pda": [
+                "Observa y manipula objetos de su entorno para identificar y describir líneas rectas o curvas, caras planas o curvas [5]."
+              ]
+            },
+            {
+              "contenido": "Organización e interpretación de datos",
+              "pda": [
+                "Elabora registros de datos mediante distintos recursos como pictogramas o tablas [5]."
+              ]
+            }
+          ]
+        },
+        {
+          "campo": "Lenguajes",
+          "contenidos": [
+            {
+              "contenido": "Interacción con manifestaciones culturales y artísticas",
+              "pda": [
+                "Identifica que las manifestaciones culturales evidencian distintas formas de ser y nombrar el mundo usando elementos artísticos [6]."
+              ]
+            }
+          ]
+        }
+      ],
+      "ejes_articuladores": [
+        "Interculturalidad crítica",
+        "Pensamiento crítico",
+        "Artes y experiencias estéticas",
+        "Apropiación de las culturas a través de la lectura y la escritura [1]"
+      ],
+      "momentos_metodologicos": [
+        {
+          "orden": 1,
+          "id": "presentemos",
+          "nombre": "Presentemos (Idea de construir una ciudad) [4]"
+        },
+        {
+          "orden": 2,
+          "id": "recolectemos",
+          "nombre": "Recolectemos (Búsqueda de cuerpos geométricos en el aula) [7]"
+        },
+        {
+          "orden": 3,
+          "id": "formulen_problema",
+          "nombre": "Formulen el problema (Cómo hacer la ciudad segura y ordenada) [8]"
+        },
+        {
+          "orden": 4,
+          "id": "organicemos",
+          "nombre": "Organicemos la experiencia (Ruta de trabajo y equipos) [9]"
+        },
+        {
+          "orden": 5,
+          "id": "vivamos",
+          "nombre": "Vivamos la experiencia (Dibujo de plano y armado de maqueta) [3]"
+        },
+        {
+          "orden": 6,
+          "id": "resultados",
+          "nombre": "Resultado y análisis (Exposición y conclusión) [10]"
+        }
+      ],
+      "sesiones_totales": 6,
+      "anexos": [
+        "Anexo 1: Historia 'La ciudad que no tenía forma'",
+        "Anexo 2: Tabla de clasificación de cuerpos",
+        "Anexo 3: Adivinanzas [11-13]"
+      ],
+      "vinculacion_ltg": [
+        "1° Múltiples Lenguajes: Trazos y Números (págs. 87-100) [8, 11]"
+      ]
+    },
+    "implementacion": {
+      "duracion_horas": 0,
+      "materiales": [
+        "Cuerpos geométricos (cubo, esfera, etc.)",
+        "Plano/boceto",
+        "Cartones",
+        "Colores [3, 14, 15]"
+      ],
+      "modos_trabajo": [
+        "Individual",
+        "Binas",
+        "Tríos",
+        "Equipos [9]"
+      ]
+    },
+    "enriquecimiento_ia": {
+      "pedagogico": {
+        "momentos_ciclo_escolar": [
+          "Segundo trimestre"
+        ],
+        "competencias_inferidas": [
+          "Pensamiento espacial",
+          "Modelado geométrico"
+        ],
+        "habilidades_inferidas": [
+          "Clasificación",
+          "Construcción a escala",
+          "Trabajo colaborativo"
+        ],
+        "tipos_interaccion": [
+          "Alumno-Material concreto",
+          "Exposición grupal"
+        ],
+        "nivel_abstraccion": "Concreto a Pictórico",
+        "emociones_esperadas": [
+          "Asombro",
+          "Entusiasmo por construir"
+        ]
+      },
+      "curricular": {
+        "indice_creatividad": 10,
+        "indice_colaboracion": 9,
+        "indice_interdisciplinario": 9,
+        "indice_pensamiento_critico": 8,
+        "experiencias_relacionadas": [
+          "Arquitectura escolar",
+          "Diseño urbano infantil"
+        ],
+        "continuidad": {
+          "fase_anterior": [
+            "Figuras geométricas básicas"
+          ],
+          "fase_siguiente": [
+            "Cálculo de volumen y áreas"
+          ]
+        }
+      },
+      "recomendacion": {
+        "recomendado_para": [
+          "Docentes que buscan integrar arte y matemáticas"
+        ],
+        "contextos_recomendados": [
+          "Aulas con espacio para maquetas"
+        ],
+        "agrupaciones_sugeridas": [
+          "Equipos por 'barrios' de la ciudad"
+        ],
+        "experiencias_similares": [
+          "Mi escuela ideal"
+        ]
+      },
+      "semantica": {
+        "tags": [
+          "Geometría",
+          "Ciudad",
+          "Maqueta"
+        ],
+        "keywords": [
+          "Cilindro",
+          "Prisma",
+          "Construcción"
+        ],
+        "temas_detectados": [
+          "Geometría descriptiva",
+          "Orden social",
+          "Arte constructivo"
+        ]
+      }
+    }
+  },
+  {
+    "id": "3c818a78-968d-409c-9d66-e8482b3b9241",
+    "archivo": {
+      "nombre": "p1_descubriendo_habilidades.pdf",
+      "ruta": "p1_descubriendo_habilidades.pdf",
+      "tipo": "Plano Didáctico",
+      "extension": ".pdf"
+    },
+    "clasificacion": {
+      "fase": 3,
+      "grado": 1,
+      "tipo_recurso": "Plano didáctico",
+      "categoria_pedagogica": "STEAM"
+    },
+    "contenido": {
+      "titulo": "Descubriendo las habilidades de mi cuerpo y sus movimientos",
+      "nombre_proyecto": "Descubriendo las habilidades de mi cuerpo y sus movimientos",
+      "proposito": "Conocer su cuerpo, los movimientos que puede realizar y las dificultades que existen al no tener movimiento en una parte del cuerpo [16, 17].",
+      "problema_contexto": "Desconocimiento de las capacidades corporales y de las dificultades de las personas con movilidad reducida [17].",
+      "producto_central": "Herramientas sencillas para ayudar a personas con movilidad reducida [18].",
+      "metodologias": [
+        "Aprendizaje basado en indagación (STEAM como enfoque) [18]"
+      ],
+      "campos_formativos": [
+        {
+          "campo": "Saberes y pensamiento científico",
+          "contenidos": [
+            {
+              "contenido": "Cuerpo humano: estructura externa, acciones para su cuidado",
+              "pda": [
+                "Compara y representa las partes externas del cuerpo humano, explica su funcionamiento [19]."
+              ]
+            }
+          ]
+        },
+        {
+          "campo": "De lo humano y lo comunitario",
+          "contenidos": [
+            {
+              "contenido": "Capacidades y habilidades motrices",
+              "pda": [
+                "Utiliza patrones básicos de movimiento para favorecer el conocimiento de sí [19]."
+              ]
+            }
+          ]
+        },
+        {
+          "campo": "Lenguajes",
+          "contenidos": [
+            {
+              "contenido": "Registro y resumen de información consultada",
+              "pda": [
+                "Registra sobre un tema de su interés por medio de escritura, esquema, dibujo o video [16]."
+              ]
+            }
+          ]
+        }
+      ],
+      "ejes_articuladores": [
+        "Inclusión",
+        "Pensamiento crítico",
+        "Vida saludable [17]"
+      ],
+      "momentos_metodologicos": [
+        {
+          "orden": 1,
+          "id": "introduccion",
+          "nombre": "Fase 1: Introducción (Habilidades y movimientos habituales) [18]"
+        },
+        {
+          "orden": 2,
+          "id": "diseno_indagacion",
+          "nombre": "Fase 2: Diseño de indagación (Silueta del cuerpo y tarjetas) [20]"
+        },
+        {
+          "orden": 3,
+          "id": "organizar_respuestas",
+          "nombre": "Fase 3: Organizar respuestas (Simulación de discapacidades) [21]"
+        },
+        {
+          "orden": 4,
+          "id": "presentacion",
+          "nombre": "Fase 4: Presentación (Diseño y construcción de la herramienta) [22]"
+        },
+        {
+          "orden": 5,
+          "id": "metacognicion",
+          "nombre": "Fase 5: Metacognición (Exposición y funcionalidad) [23]"
+        }
+      ],
+      "sesiones_totales": 5,
+      "anexos": [
+        "Anexo 1: Tarjetas de acciones corporal",
+        "Anexo 2: Formato de diseño de herramienta [20, 24]"
+      ],
+      "vinculacion_ltg": [
+        "1° Nuestros saberes (págs. 70, 104)",
+        "1° Proyectos de aula: Mi cuerpo y sus movimientos (pág. 90) [24]"
+      ]
+    },
+    "implementacion": {
+      "duracion_horas": 0,
+      "materiales": [
+        "Papel cartulina/craft",
+        "Gafas oscuras",
+        "Pañuelos",
+        "Algodón",
+        "Materiales reciclados [20, 25, 26]"
+      ],
+      "modos_trabajo": [
+        "Parejas (silueta)",
+        "Individual (investigación)",
+        "Plenaria [20, 23]"
+      ]
+    },
+    "enriquecimiento_ia": {
+      "pedagogico": {
+        "momentos_ciclo_escolar": [
+          "Primer trimestre"
+        ],
+        "competencias_inferidas": [
+          "Empatía",
+          "Diseño tecnológico inclusivo"
+        ],
+        "habilidades_inferidas": [
+          "Simulación motriz",
+          "Análisis funcional del cuerpo"
+        ],
+        "tipos_interaccion": [
+          "Alumno-Alumno (en simulación)",
+          "Alumno-Usuario final"
+        ],
+        "nivel_abstraccion": "Vivencial/Aplicado",
+        "emociones_esperadas": [
+          "Compasión",
+          "Respeto",
+          "Ingenio"
+        ]
+      },
+      "curricular": {
+        "indice_creatividad": 9,
+        "indice_colaboracion": 8,
+        "indice_interdisciplinario": 10,
+        "indice_pensamiento_critico": 10,
+        "experiencias_relacionadas": [
+          "Proyectos de accesibilidad",
+          "Biomedicina básica"
+        ],
+        "continuidad": {
+          "fase_anterior": [
+            "Partes del cuerpo"
+          ],
+          "fase_siguiente": [
+            "Sistemas del cuerpo y salud"
+          ]
+        }
+      },
+      "recomendacion": {
+        "recomendado_para": [
+          "Fomento de la cultura de inclusión"
+        ],
+        "contextos_recomendados": [
+          "Escuelas con programas de integración"
+        ],
+        "agrupaciones_sugeridas": [
+          "Binas para apoyo en simulaciones"
+        ],
+        "experiencias_similares": [
+          "Ponte en mis zapatos"
+        ]
+      },
+      "semantica": {
+        "tags": [
+          "Cuerpo",
+          "Movimiento",
+          "Inclusión"
+        ],
+        "keywords": [
+          "Discapacidad",
+          "Herramienta",
+          "Simulación"
+        ],
+        "temas_detectados": [
+          "Anatomía funcional",
+          "Derechos humanos",
+          "Ingeniería social"
+        ]
+      }
+    }
+  },
+  {
+    "id": "94408c60-4a9e-4cee-9f97-cdbe92676ef6",
+    "archivo": {
+      "nombre": "p1_estructura_resistente.pdf",
+      "ruta": "p1_estructura_resistente.pdf",
+      "tipo": "Plano Didáctico",
+      "extension": ".pdf"
+    },
+    "clasificacion": {
+      "fase": 3,
+      "grado": 1,
+      "tipo_recurso": "Plano didáctico",
+      "categoria_pedagogica": "STEAM"
+    },
+    "contenido": {
+      "titulo": "Mi estructura resistente",
+      "nombre_proyecto": "Mi estructura resistente",
+      "proposito": "Desarrollar habilidades de indagación y exploración mediante la construcción de un puente con materiales diversos [27].",
+      "problema_contexto": "Necesidad de construir estructuras para mejorar la vialidad y el tránsito en la comunidad [28].",
+      "producto_central": "Puente construido con materiales resistentes [28].",
+      "metodologias": [
+        "Aprendizaje Basado en indagación (STEAM) [28]"
+      ],
+      "campos_formativos": [
+        {
+          "campo": "Saberes y pensamiento científico",
+          "contenidos": [
+            {
+              "contenido": "Objetos del entorno: características y propiedades",
+              "pda": [
+                "Explora y experimenta con diversos materiales para explicar sus propiedades: flexible, rígido, ligero, resistente [29]."
+              ]
+            }
+          ]
+        },
+        {
+          "campo": "Lenguajes",
+          "contenidos": [
+            {
+              "contenido": "Uso del dibujo y la escritura para recordar actividades",
+              "pda": [
+                "Escribe y/o dibuja para realizar tareas en casa, recordar mensajes o registrar acuerdos [27]."
+              ]
+            }
+          ]
+        },
+        {
+          "campo": "De lo humano y lo comunitario",
+          "contenidos": [
+            {
+              "contenido": "Capacidades y habilidades motrices",
+              "pda": [
+                "Utiliza patrones básicos de movimiento para favorecer el conocimiento de sí [29]."
+              ]
+            }
+          ]
+        }
+      ],
+      "ejes_articuladores": [
+        "Inclusión",
+        "Pensamiento crítico",
+        "Interculturalidad crítica",
+        "Igualdad de género",
+        "Vida saludable",
+        "Artes y experiencias estéticas [28, 30]"
+      ],
+      "momentos_metodologicos": [
+        {
+          "orden": 1,
+          "id": "introduccion",
+          "nombre": "Fase 1: Introducción (Observación de puentes reales y boceto) [31]"
+        },
+        {
+          "orden": 2,
+          "id": "diseno_indagacion",
+          "nombre": "Fase 2: Diseño de indagación (Propiedades de materiales) [30]"
+        },
+        {
+          "orden": 3,
+          "id": "organizar_respuestas",
+          "nombre": "Fase 3: Organizar respuestas (Lista de tareas y organización) [32]"
+        },
+        {
+          "orden": 4,
+          "id": "presentacion",
+          "nombre": "Fase 4: Presentación (Proceso de construcción) [33]"
+        },
+        {
+          "orden": 5,
+          "id": "metacognicion",
+          "nombre": "Fase 5: Metacognición (Pruebas de resistencia y mejora) [33]"
+        }
+      ],
+      "sesiones_totales": 5,
+      "anexos": [
+        "Anexo 1: Imágenes de puentes",
+        "Anexo 2: Clasificación de materiales (Rígidos, flexibles, etc.) [34]"
+      ],
+      "vinculacion_ltg": [
+        "1° Nuestros saberes (pág. 122)",
+        "1° Proyectos de aula: ¿Qué tan resistente es un tubo de papel? (pág. 112) [35, 36]"
+      ]
+    },
+    "implementacion": {
+      "duracion_horas": 0,
+      "materiales": [
+        "Cartón",
+        "Plastilina",
+        "Popotes",
+        "Palitos de madera",
+        "Ligas",
+        "Pegamento [34, 35]"
+      ],
+      "modos_trabajo": [
+        "Individual",
+        "Pares",
+        "Pequeños grupos [32]"
+      ]
+    },
+    "enriquecimiento_ia": {
+      "pedagogico": {
+        "momentos_ciclo_escolar": [
+          "Segundo o tercer trimestre"
+        ],
+        "competencias_inferidas": [
+          "Ingeniería básica",
+          "Análisis de materiales"
+        ],
+        "habilidades_inferidas": [
+          "Planificación de procesos",
+          "Modelado físico",
+          "Evaluación de fallos"
+        ],
+        "tipos_interaccion": [
+          "Alumno-Experimento (Pruebas de peso)"
+        ],
+        "nivel_abstraccion": "Concreto/Físico",
+        "emociones_esperadas": [
+          "Tensión",
+          "Satisfacción al éxito",
+          "Curiosidad"
+        ]
+      },
+      "curricular": {
+        "indice_creatividad": 8,
+        "indice_colaboracion": 9,
+        "indice_interdisciplinario": 10,
+        "indice_pensamiento_critico": 10,
+        "experiencias_relacionadas": [
+          "Día del ingeniero",
+          "Concursos de estructuras"
+        ],
+        "continuidad": {
+          "fase_anterior": [
+            "Construcción con bloques"
+          ],
+          "fase_siguiente": [
+            "Fuerzas y vectores básicos"
+          ]
+        }
+      },
+      "recomendacion": {
+        "recomendado_para": [
+          "Fomento de vocaciones STEM"
+        ],
+        "contextos_recomendados": [
+          "Comunidades con puentes dañados o faltantes"
+        ],
+        "agrupaciones_sugeridas": [
+          "Equipos con roles: Diseñador, Investigador, Constructor"
+        ],
+        "experiencias_similares": [
+          "El huevo que no se rompe"
+        ]
+      },
+      "semantica": {
+        "tags": [
+          "Puentes",
+          "Resistencia",
+          "Fuerza"
+        ],
+        "keywords": [
+          "Estructura",
+          "Materiales",
+          "Vialidad"
+        ],
+        "temas_detectados": [
+          "Física de materiales",
+          "Ingeniería civil",
+          "Urbanismo"
+        ]
+      }
+    }
+  },
+  {
+    "id": "94517426-0879-4bc5-b0e5-a608c0115d4c",
+    "archivo": {
+      "nombre": "p1_mercado_escolar.pdf",
+      "ruta": "p1_mercado_escolar.pdf",
+      "tipo": "Plano Didáctico",
+      "extension": ".pdf"
+    },
+    "clasificacion": {
+      "fase": 3,
+      "grado": 1,
+      "tipo_recurso": "Plano didáctico",
+      "categoria_pedagogica": "STEAM"
+    },
+    "contenido": {
+      "titulo": "Mercado Escolar",
+      "nombre_proyecto": "Mercado Escolar",
+      "proposito": "Resolver situaciones diarias que implican medir longitud, masa y capacidad utilizando unidades no convencionales en un contexto de mercado [37, 38].",
+      "problema_contexto": "Los alumnos no utilizan las unidades de medida no convencionales en la vida cotidiana, sino solo en ejercicios aislados [38].",
+      "producto_central": "Funcionamiento de un Mercado Escolar en la escuela [38].",
+      "metodologias": [
+        "Aprendizaje basado en indagación (STEAM como enfoque) [38]"
+      ],
+      "campos_formativos": [
+        {
+          "campo": "Saberes y pensamiento científico",
+          "contenidos": [
+            {
+              "contenido": "Medición de longitud, masa y capacidad",
+              "pda": [
+                "Compara longitud, masa y capacidad con apoyo de intermediarios (objetos o partes del cuerpo) [39]."
+              ]
+            },
+            {
+              "contenido": "Organización e interpretación de datos",
+              "pda": [
+                "Elabora registros de datos mediante pictogramas o tablas para responder preguntas [39]."
+              ]
+            }
+          ]
+        },
+        {
+          "campo": "Lenguajes",
+          "contenidos": [
+            {
+              "contenido": "Uso de convenciones de la escritura",
+              "pda": [
+                "Distingue letras de números y otros signos que identifica en textos cotidianos [37]."
+              ]
+            }
+          ]
+        }
+      ],
+      "ejes_articuladores": [
+        "Interculturalidad crítica",
+        "Pensamiento crítico",
+        "Artes y experiencias estéticas",
+        "Apropiación de las culturas a través de la lectura y la escritura [38]"
+      ],
+      "momentos_metodologicos": [
+        {
+          "orden": 1,
+          "id": "introduccion",
+          "nombre": "Fase 1: Introducción (¿Qué hay en un mercado?) [38]"
+        },
+        {
+          "orden": 2,
+          "id": "diseno_indagacion",
+          "nombre": "Fase 2: Diseño de indagación (Investigación por equipos y periódicos murales) [40]"
+        },
+        {
+          "orden": 3,
+          "id": "organizar_respuestas",
+          "nombre": "Fase 3: Organizar respuestas (Ensayo de medición con objetos) [41]"
+        },
+        {
+          "orden": 4,
+          "id": "presentacion",
+          "nombre": "Fase 4: Presentación (Venta de productos y cuentas finales) [42]"
+        },
+        {
+          "orden": 5,
+          "id": "metacognicion",
+          "nombre": "Fase 5: Metacognición (Reflexión sobre el proceso de medición) [42]"
+        }
+      ],
+      "sesiones_totales": 5,
+      "anexos": [
+        "Tablas de registro de mediciones",
+        "Anexo 2: Cuerpos geométricos (repetido del proyecto anterior) [41, 43]"
+      ],
+      "vinculacion_ltg": [
+        "1° Múltiples Lenguajes (pág. 76)",
+        "1° Nuestros saberes (pág. 98) [44]"
+      ]
+    },
+    "implementacion": {
+      "duracion_horas": 0,
+      "materiales": [
+        "Objetos de medición (lápiz, cuerda, libro)",
+        "Balanza",
+        "Productos para vender (naranjas, agua, etc.)",
+        "Pizarrón [38, 41]"
+      ],
+      "modos_trabajo": [
+        "Equipos temáticos",
+        "Votación grupal",
+        "Plenaria [38, 40]"
+      ]
+    },
+    "enriquecimiento_ia": {
+      "pedagogico": {
+        "momentos_ciclo_escolar": [
+          "Segundo trimestre (tras ver números)"
+        ],
+        "competencias_inferidas": [
+          "Cálculo mental inicial",
+          "Sentido numérico",
+          "Comercio justo"
+        ],
+        "habilidades_inferidas": [
+          "Uso de unidades no convencionales",
+          "Interpretación de pictogramas",
+          "Manejo de dinero/intercambio"
+        ],
+        "tipos_interaccion": [
+          "Alumno-Alumno (Comprador/Vendedor)",
+          "Alumno-Comunidad escolar"
+        ],
+        "nivel_abstraccion": "Concreto/Social",
+        "emociones_esperadas": [
+          "Entusiasmo",
+          "Responsabilidad",
+          "Orgullo al vender"
+        ]
+      },
+      "curricular": {
+        "indice_creatividad": 8,
+        "indice_colaboracion": 10,
+        "indice_interdisciplinario": 9,
+        "indice_pensamiento_critico": 9,
+        "experiencias_relacionadas": [
+          "Tiendita escolar",
+          "Ferias gastronómicas"
+        ],
+        "continuidad": {
+          "fase_anterior": [
+            "Conteo básico"
+          ],
+          "fase_siguiente": [
+            "Unidades de medida convencionales (metro, kilo)"
+          ]
+        }
+      },
+      "recomendacion": {
+        "recomendado_para": [
+          "Docentes que necesitan aplicar matemáticas en la vida real"
+        ],
+        "contextos_recomendados": [
+          "Escuelas con fuerte interacción comunitaria"
+        ],
+        "agrupaciones_sugeridas": [
+          "Equipos por tipo de puesto (frutas, lácteos, etc.)"
+        ],
+        "experiencias_similares": [
+          "El bazar de los sueños"
+        ]
+      },
+      "semantica": {
+        "tags": [
+          "Medición",
+          "Mercado",
+          "Conteo"
+        ],
+        "keywords": [
+          "Masa",
+          "Longitud",
+          "Intercambio"
+        ],
+        "temas_detectados": [
+          "Economía básica",
+          "Pesos y medidas",
+          "Registros contables"
+        ]
+      }
+    }
+  },
+  {
+    "id": "797b2cea-4961-40c3-995c-e5cb867cab3c",
+    "archivo": {
+      "nombre": "p1_se_mueve_se_gira.pdf",
+      "ruta": "p1_se_mueve_se_gira.pdf",
+      "tipo": "Plano Didáctico",
+      "extension": ".pdf"
+    },
+    "clasificacion": {
+      "fase": 3,
+      "grado": 1,
+      "tipo_recurso": "Plano didáctico",
+      "categoria_pedagogica": "STEAM"
+    },
+    "contenido": {
+      "titulo": "Se mueve, rueda y gira",
+      "nombre_proyecto": "Se mueve, rueda y gira",
+      "proposito": "Experimentar con diferentes tipos de movimiento (rodar, deslizar, girar, rebotar) y trayectorias para diseñar una pista que los represente [45].",
+      "problema_contexto": "Dudas sobre si los objetos se mueven de la misma manera y si siguen la misma trayectoria [46].",
+      "producto_central": "Circuito o pista de movimiento para carrera de objetos [47, 48].",
+      "metodologias": [
+        "Aprendizaje basado en indagación (STEAM como enfoque) [46]"
+      ],
+      "campos_formativos": [
+        {
+          "campo": "Saberes y pensamiento científico",
+          "contenidos": [
+            {
+              "contenido": "Efectos de la aplicación de fuerzas: movimiento y deformación",
+              "pda": [
+                "Experimenta con objetos al empujarlos y jalarlos para describir cómo se mueven.",
+                "Caracteriza el movimiento con términos como 'más lento que', 'más rápido que' [49]."
+              ]
+            }
+          ]
+        },
+        {
+          "campo": "De lo Humano y lo Comunitario",
+          "contenidos": [
+            {
+              "contenido": "Capacidades y habilidades motrices",
+              "pda": [
+                "Utiliza patrones básicos de movimiento ante situaciones que implican explorar espacios y objetos [49]."
+              ]
+            }
+          ]
+        }
+      ],
+      "ejes_articuladores": [
+        "Interculturalidad crítica",
+        "Pensamiento crítico [47]"
+      ],
+      "momentos_metodologicos": [
+        {
+          "orden": 1,
+          "id": "presentemos",
+          "nombre": "Fase 1: Presentemos (Juego libre con objetos del aula) [47]"
+        },
+        {
+          "orden": 2,
+          "id": "recolectemos",
+          "nombre": "Fase 2: Recolectemos (Registro en bitácora de desplazamientos) [50]"
+        },
+        {
+          "orden": 3,
+          "id": "formulen_problema",
+          "nombre": "Fase 3: Formulen el problema (Preguntas de indagación sobre rampas y peso) [51]"
+        },
+        {
+          "orden": 4,
+          "id": "organicemos",
+          "nombre": "Fase 4: Organicemos la experiencia (Diseño de pista con materiales diversos) [48]"
+        },
+        {
+          "orden": 5,
+          "id": "vivamos",
+          "nombre": "Fase 5: Vivamos la experiencia (Comparación entre predicción y realidad) [52]"
+        },
+        {
+          "orden": 6,
+          "id": "resultados",
+          "nombre": "Fase 6: Resultado y análisis (Conclusiones sobre peso y suelo) [53]"
+        }
+      ],
+      "sesiones_totales": 5,
+      "anexos": [
+        "Bitácora de registro de trayectorias (recta, curva, circular) [48, 50]"
+      ],
+      "vinculacion_ltg": [
+        "Contenidos de fuerza y movimiento de 1° Primaria [49]"
+      ]
+    },
+    "implementacion": {
+      "duracion_horas": 0,
+      "materiales": [
+        "Pelotas",
+        "Tapas",
+        "Cajas",
+        "Carritos",
+        "Cartón",
+        "Tubos",
+        "Cuerdas [47, 48]"
+      ],
+      "modos_trabajo": [
+        "Lluvia de ideas",
+        "Individual (bitácora)",
+        "Equipos de 3 alumnos [47, 53]"
+      ]
+    },
+    "enriquecimiento_ia": {
+      "pedagogico": {
+        "momentos_ciclo_escolar": [
+          "Segundo trimestre"
+        ],
+        "competencias_inferidas": [
+          "Pensamiento científico experimental",
+          "Lógica de causa-efecto"
+        ],
+        "habilidades_inferidas": [
+          "Predicción de resultados",
+          "Comparación cualitativa",
+          "Representación gráfica de trayectorias"
+        ],
+        "tipos_interaccion": [
+          "Alumno-Objeto físico",
+          "Pequeños equipos"
+        ],
+        "nivel_abstraccion": "Concreto/Seminabstracto",
+        "emociones_esperadas": [
+          "Sorpresa",
+          "Divertimento",
+          "Analítico"
+        ]
+      },
+      "curricular": {
+        "indice_creatividad": 9,
+        "indice_colaboracion": 8,
+        "indice_interdisciplinario": 7,
+        "indice_pensamiento_critico": 10,
+        "experiencias_relacionadas": [
+          "Parques de diversiones",
+          "Canicas y rampas"
+        ],
+        "continuidad": {
+          "fase_anterior": [
+            "Juegos de empujar/jalar"
+          ],
+          "fase_siguiente": [
+            "Leyes de Newton elementales"
+          ]
+        }
+      },
+      "recomendacion": {
+        "recomendado_para": [
+          "Iniciación al método científico"
+        ],
+        "contextos_recomendados": [
+          "Aulas con diversos tipos de superficies (piso liso, alfombra)"
+        ],
+        "agrupaciones_sugeridas": [
+          "Equipos por tipo de trayectoria a probar"
+        ],
+        "experiencias_similares": [
+          "Montañas rusas de papel"
+        ]
+      },
+      "semantica": {
+        "tags": [
+          "Física",
+          "Movimiento",
+          "Trayectoria"
+        ],
+        "keywords": [
+          "Rampa",
+          "Velocidad",
+          "Bitácora"
+        ],
+        "temas_detectados": [
+          "Dinámica básica",
+          "Cinemática cualitativa",
+          "Exploración lúdica"
+        ]
+      }
+    }
+  }
+]

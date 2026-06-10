@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es-MX" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maletin Primaria | Inicio Beta</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com/">
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="assets/css/theme.min.css" rel="stylesheet">
+  <link href="assets/css/inicio-beta.css" rel="stylesheet">
+  <link href="assets/css/tools-slider.css" rel="stylesheet">
+  <link href="assets/css/user.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="beta-scroll-progress" aria-hidden="true"><span id="betaScrollProgressBar"></span></div>
+  <main class="beta-main beta-main-compact" id="top">
+    <div class="beta-shell container-fluid py-3 py-lg-4">
+      <header class="beta-header card border-0" data-reveal>
+        <div class="beta-header-row beta-header-user-row">
+          <div class="beta-greeting">
+            <h1 class="beta-title mb-0">Hola <span id="betaUserName">Usuario</span> <span aria-hidden="true">&#128075;</span></h1>
+            <div class="beta-header-meta">
+              <span id="betaUserDate"></span>
+              <span id="betaUserTime"></span>
+            </div>
+          </div>
+          <div class="beta-user-avatar-wrap">
+            <img id="betaUserAvatar" class="beta-user-avatar" src="assets/img/icons/users/default.png" alt="Avatar de usuario" width="48" height="48" loading="lazy">
+          </div>
+        </div>
+      </header>
+
+      <section class="beta-hero card border-0 mt-2 mt-lg-3" aria-label="Planeacion rapida" data-reveal id="betaAssistantHero">
+        <div class="beta-hero-content">
+          <p class="beta-hero-badge" id="betaHeroBadge">Lista para construir una clase con sentido</p>
+          <h2 id="betaHeroTitle">&#9889; Tu clase de hoy puede nacer en minutos</h2>
+          <p class="beta-hero-text" id="betaHeroText">Conecta contexto, emocion y contenidos con una planeacion guiada que te sugiere rutas claras, actividades vivas y cierres memorables.</p>
+          <div class="beta-hero-actions">
+            <button class="btn beta-primary-btn" type="button" id="betaAssistantLaunch" data-bs-toggle="modal" data-bs-target="#betaAssistantFlowModal" aria-label="Abrir asistente pedagogico">Iniciar Asistente</button>
+            <a class="btn beta-secondary-btn" id="betaAssistantSecondary" href="busqueda.html" aria-label="Explorar descubrimientos pedagogicos">Explorar descubrimientos</a>
+          </div>
+          <div class="beta-hero-metrics" id="betaHeroMetrics" aria-label="Indicadores pedagogicos sugeridos">
+            <article>
+              <strong>3</strong>
+              <span>Rutas sugeridas</span>
+            </article>
+            <article>
+              <strong>12 min</strong>
+              <span>Tiempo de arranque</span>
+            </article>
+            <article>
+              <strong>+Alta</strong>
+              <span>Participacion esperada</span>
+            </article>
+          </div>
+        </div>
+        <div class="beta-hero-media">
+          <img src="assets/img/illustration/home-6-3.png" alt="Ilustracion para planear clase y semana">
+        </div>
+      </section>
+
+      <div class="beta-section mt-2 mt-lg-0" style="margin-bottom: 1.5rem !important;" data-reveal>
+        <div class="beta-tools-slider" id="toolsSlider">
+          <div class="beta-tools-carousel">
+            <div class="beta-tool-card active" id="toolCard">
+              <div class="beta-tool-emoji"></div>
+              <div class="beta-tool-content">
+                <h4 class="beta-tool-title"></h4>
+                <p class="beta-tool-type"></p>
+                <p class="beta-tool-description"></p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="beta-tools-controls">
+            <button class="beta-tool-btn-prev" aria-label="Herramienta anterior">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M12 16L6 10L12 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="beta-tools-dots" id="toolsDots"></div>
+            <button class="beta-tool-btn-next" aria-label="Siguiente herramienta">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M8 16L14 10L8 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="beta-section mt-2 mt-lg-0" style="margin-bottom: 0 !important;" data-reveal>
+        <div class="beta-section-head beta-head-row">
+          <div>
+            <h3>Continuar experiencias</h3>
+            <p class="beta-section-subtitle mb-0">Retoma proyectos abiertos o descubre propuestas alineadas a tu momento pedagógico.</p>
+          </div>
+          <div class="beta-carousel-controls">
+            <button class="beta-icon-btn" type="button" id="exp-prev" aria-label="Anterior">&#8592;</button>
+            <button class="beta-icon-btn" type="button" id="exp-next" aria-label="Siguiente">&#8594;</button>
+          </div>
+        </div>
+        <link rel="stylesheet" href="assets/css/dashboard.min.css">
+        <div class="beta-dashboard" id="betaDashboard">
+          <!-- KPIs dinámicos -->
+          <div class="beta-dashboard-card">
+            <h4>Experiencias activas</h4>
+            <div class="beta-dashboard-value" id="kpiActiveExp">0</div>
+            <div class="beta-dashboard-desc">Proyectos en curso</div>
+          </div>
+          <div class="beta-dashboard-card">
+            <h4>Avance promedio</h4>
+            <div class="beta-dashboard-value" id="kpiAvgProgress">0%</div>
+            <div class="beta-dashboard-desc">De tus experiencias</div>
+          </div>
+          <div class="beta-dashboard-card">
+            <h4>Experiencias completadas</h4>
+            <div class="beta-dashboard-value" id="kpiCompletedExp">0</div>
+            <div class="beta-dashboard-desc">Finalizadas este ciclo</div>
+          </div>
+        </div>
+        <div class="beta-carousel" id="exp-carousel"></div>
+      </div>
+
+      <div id="beta-menu-container"></div>
+
+      <div class="modal fade beta-assistant-modal" id="betaAssistantFlowModal" tabindex="-1" aria-labelledby="betaAssistantFlowLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl modal-fullscreen-lg-down">
+          <div class="modal-content beta-assistant-modal-content">
+            <div class="modal-header beta-assistant-modal-header border-0">
+              <div>
+                <p class="beta-assistant-kicker mb-1" id="betaAssistantFlowKicker">Asistente pedagógico</p>
+                <h5 class="modal-title mb-0" id="betaAssistantFlowLabel">Cargando experiencia guiada</h5>
+              </div>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body beta-assistant-modal-body" id="betaAssistantFlowBody"></div>
+          </div>
+        </div>
+      </div>
+
+
+  <script src="vendors/bootstrap/bootstrap.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/load-menu.js"></script>
+  <script src="assets/js/inicio-beta.js"></script>
+  <script src="assets/js/tools-slider.js"></script>
+</body>
+
+</html>

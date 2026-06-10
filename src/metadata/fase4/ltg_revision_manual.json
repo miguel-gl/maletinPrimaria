@@ -1,0 +1,155 @@
+{
+  "descripcion": "Fase 4 - vinculacion_ltg vacía en todos los registros. Investigación confirma que los PDFs de Fase 4 NO incluyen sección 'Vinculación con los Libros de Texto Gratuito'. La plantilla de planos didácticos de Fase 4 omite esta sección por diseño.",
+  "total": 21,
+  "requiere_revision_manual": false,
+  "hallazgo": "Los PDFs de Fase 4 (comunitarios, problemas, servicio, steam) no contienen ningún marcador de texto 'Vinculación con', 'LTG', 'Libro de texto' ni referencias a páginas de LTG. Se buscaron los 21 PDFs sin resultados. vinculacion_ltg=[] es correcto para todos los registros de esta fase.",
+  "registros": [
+    {
+      "id": "2293d958-4f74-535f-99f8-b98dca1f2596",
+      "titulo": "Conociendo mis derechos y emociones",
+      "archivo": "p3_conociendo_derechos.pdf",
+      "subdirectorio": "comunitarios",
+      "ltg": []
+    },
+    {
+      "id": "972925bd-8fb0-5e9c-90d1-aa504d8fb6ed",
+      "titulo": "Los Elementos Naturales en Nuestra Cultura",
+      "archivo": "p3_elementos_naturales.pdf",
+      "subdirectorio": "comunitarios",
+      "ltg": []
+    },
+    {
+      "id": "380193e2-4943-53c5-a90a-33101e83c8fa",
+      "titulo": "Juntos por Espacios Seguros e Igualitarios",
+      "archivo": "p3_juntos_espacios.pdf",
+      "subdirectorio": "comunitarios",
+      "ltg": []
+    },
+    {
+      "id": "a91969de-318a-5a5e-b599-243ec03b7fa4",
+      "titulo": "Narrando el Movimiento de los Animales",
+      "archivo": "p3_narrando_movimiento.pdf",
+      "subdirectorio": "comunitarios",
+      "ltg": []
+    },
+    {
+      "id": "2661f92a-2aad-53ac-b98b-24781a587f0a",
+      "titulo": "Nuestras palabras, nuestras raíces: Valorando la diversidad lingüística de México",
+      "archivo": "p3_nuestras_palabras.pdf",
+      "subdirectorio": "comunitarios",
+      "ltg": []
+    },
+    {
+      "id": "a0b5b919-cb58-5dfe-ae41-9202dd837dbc",
+      "titulo": "Tejiendo Comunidad: Juntos por Espacios Seguros e Igualitarios",
+      "archivo": "p3_tejiendo.pdf",
+      "subdirectorio": "comunitarios",
+      "ltg": []
+    },
+    {
+      "id": "8a54bec5-c021-55b8-bf66-02604b21768f",
+      "titulo": "Construyendo Democracia en Nuestra Escuela",
+      "archivo": "p3_construyendo_democracia.pdf",
+      "subdirectorio": "problemas",
+      "ltg": []
+    },
+    {
+      "id": "ee8669f4-05e7-5876-8181-92bbd5abc1a7",
+      "titulo": "Cuidando mi Cuerpo y mi Salud",
+      "archivo": "p3_cuidando_cuerpo.pdf",
+      "subdirectorio": "problemas",
+      "ltg": []
+    },
+    {
+      "id": "221db60f-6c0d-5f61-abc3-356069814b0a",
+      "titulo": "Multiplicando y Dividiendo en Comunidad",
+      "archivo": "p3_multiplicando_dividiendo.pdf",
+      "subdirectorio": "problemas",
+      "ltg": []
+    },
+    {
+      "id": "4df782d3-2d14-5c54-9e4e-8443c6622d1a",
+      "titulo": "El Tiempo en Nuestras Manos",
+      "archivo": "p3_tiempo_manos.pdf",
+      "subdirectorio": "problemas",
+      "ltg": []
+    },
+    {
+      "id": "d1df3aca-85f1-555c-8733-263f3a4e00b5",
+      "titulo": "Aprendiendo a expresarme con asertividad",
+      "archivo": "p3_aprendiendo_asertividad.pdf",
+      "subdirectorio": "servicio",
+      "ltg": []
+    },
+    {
+      "id": "3791a1f7-4f40-57e7-b04c-65e987a795ce",
+      "titulo": "Conociéndonos y fortaleciendo lazos a través de los datos",
+      "archivo": "p3_conociendonos.pdf",
+      "subdirectorio": "servicio",
+      "ltg": []
+    },
+    {
+      "id": "96cebcb3-3d40-5f87-a9bb-26c6278ef279",
+      "titulo": "Construyendo equidad desde nuestra comunidad",
+      "archivo": "p3_construyendo.pdf",
+      "subdirectorio": "servicio",
+      "ltg": []
+    },
+    {
+      "id": "f92399fa-21e1-52ce-847c-f9fdeaace9eb",
+      "titulo": "Medimos y representamos nuestro entorno",
+      "archivo": "p3_medimos_respresentamos.pdf",
+      "subdirectorio": "servicio",
+      "ltg": []
+    },
+    {
+      "id": "93049600-3ed0-500a-bf7b-851a47d8b372",
+      "titulo": "El teatro como herramienta para la igualdad",
+      "archivo": "p3_teatro_igualdad.pdf",
+      "subdirectorio": "servicio",
+      "ltg": []
+    },
+    {
+      "id": "b388b79f-85df-522f-9f95-8f4e2a211e48",
+      "titulo": "Trabajar en comunidad por una cultura de paz",
+      "archivo": "p3_trabajar_comunidad.pdf",
+      "subdirectorio": "servicio",
+      "ltg": []
+    },
+    {
+      "id": "ee077d8c-d7fc-5d22-b4d5-d9c8085855d4",
+      "titulo": "Construyendo mi identidad y mi proyecto de vida",
+      "archivo": "p3_construyendo.pdf",
+      "subdirectorio": "steam",
+      "ltg": []
+    },
+    {
+      "id": "c8e661ef-9582-5400-8acd-5cc1176ef831",
+      "titulo": "Cuentos para convivir",
+      "archivo": "p3_cuentos_convivir.pdf",
+      "subdirectorio": "steam",
+      "ltg": []
+    },
+    {
+      "id": "466290e2-31b8-5662-b9a7-6194a2bf4ebb",
+      "titulo": "Un minuto de emociones",
+      "archivo": "p3_emociones.pdf",
+      "subdirectorio": "steam",
+      "ltg": []
+    },
+    {
+      "id": "93c308e7-9404-50eb-a968-5bfef1b74161",
+      "titulo": "Medimos y representamos nuestro entorno",
+      "archivo": "p3_medimos_respresentamos.pdf",
+      "subdirectorio": "steam",
+      "ltg": []
+    },
+    {
+      "id": "4da67f50-bc09-5736-9a20-5b40b846a702",
+      "titulo": "El planeta es nuestra casa",
+      "archivo": "p3_planeta_casa.pdf",
+      "subdirectorio": "steam",
+      "ltg": []
+    }
+  ]
+}

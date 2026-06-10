@@ -1,0 +1,312 @@
+[
+  {
+    "id": "q1w2e3r4-t5y6-7u8i-9o0p-a1s2d3f4g5h6",
+    "archivo": {
+      "nombre": "cr_1_lenguajes1.pdf",
+      "ruta": "cr_1_lenguajes1.pdf",
+      "tipo": "Cuadernillo de Ejercicios",
+      "extension": ".pdf"
+    },
+    "clasificacion": {
+      "fase": 3,
+      "grado": 1,
+      "tipo_recurso": "Cuadernillo de trabajo",
+      "categoria_pedagogica": "Reforzamiento y Evaluación"
+    },
+    "contenido": {
+      "titulo": "Cuaderno de Ejercicios: Lenguajes (Bloque 1)",
+      "sintesis": "Colección de actividades prácticas enfocadas en la lectoescritura inicial, identificación de reglas y comprensión de textos informativos y literarios breves.",
+      "campos_formativos": [
+        {
+          "campo": "Lenguajes",
+          "contenidos": [
+            {
+              "contenido": "Escritura de nombres en la lengua materna.",
+              "pda": ["Escribe su nombre y lo compara con los nombres de sus compañeros."]
+            },
+            {
+              "contenido": "Uso del dibujo y/o la escritura para recordar actividades y acuerdos escolares.",
+              "pda": ["Escribe y/o dibuja para registrar acuerdos."]
+            },
+            {
+              "contenido": "Comprensión y producción de textos informativos.",
+              "pda": ["Identifica las características de una nota informativa y sus funciones."]
+            }
+          ]
+        }
+      ],
+      "temas_clave": [
+        "Reglas de biblioteca y salón",
+        "Rimas y calaveritas",
+        "Infografías (perros)",
+        "Noticias y su estructura"
+      ]
+    },
+    "implementacion": {
+      "materiales": ["Lápiz", "Colores", "Periódico (recortes)", "Pegamento"],
+      "modo_uso": "Reforzamiento en aula o tarea dirigida"
+    },
+    "enriquecimiento_ia": {
+      "pedagogico": {
+        "momentos_ciclo_escolar": ["Primer Trimestre"],
+        "habilidades_reforzadas": ["Identificación de grafías", "Comprensión lectora básica", "Seguimiento de reglas"],
+        "nivel_abstraccion": "Concreto / Gráfico"
+      },
+      "semantica": {
+        "tags": ["Lectoescritura", "Reglamentos", "Textos Informativos", "Rimas"],
+        "temas_detectados": ["Alfabetización inicial", "Convivencia escolar", "Comprensión de medios"]
+      },
+      "descubrimiento_contextual": {
+        "energia_y_dinamica_grupo": [
+          { "id": "grupos_tranquilos", "icono": "🌙", "titulo": "Para grupos tranquilos" },
+          { "id": "trabajo_individual", "icono": "🤫", "titulo": "Trabajo individual guiado" }
+        ],
+        "recursos_y_preparacion": [
+          { "id": "listo_imprimir", "icono": "🖨", "titulo": "Listo para imprimir" },
+          { "id": "poco_material", "icono": "🎨", "titulo": "Poco material" }
+        ],
+        "intencion_pedagogica": [
+          { "id": "reforzar_aprendizajes", "icono": "🛠", "titulo": "Refuerza aprendizajes" }
+        ]
+      }
+    }
+  },
+  {
+    "id": "z1x2c3v4-b5n6-m7l8-k9j0-q1w2e3r4t5y6",
+    "archivo": {
+      "nombre": "cr_1_lenguajes2.pdf",
+      "ruta": "cr_1_lenguajes2.pdf",
+      "tipo": "Cuadernillo de Ejercicios",
+      "extension": ".pdf"
+    },
+    "clasificacion": {
+      "fase": 3,
+      "grado": 1,
+      "tipo_recurso": "Cuadernillo de trabajo",
+      "categoria_pedagogica": "Reforzamiento y Evaluación"
+    },
+    "contenido": {
+      "titulo": "Cuaderno de Ejercicios: Lenguajes (Bloque 2)",
+      "sintesis": "Actividades de consolidación del sistema de escritura, organización del tiempo y seguridad en entornos digitales.",
+      "campos_formativos": [
+        {
+          "campo": "Lenguajes",
+          "contenidos": [
+            {
+              "contenido": "Uso de convenciones de la escritura presentes en la cotidianeidad.",
+              "pda": ["Distingue letras de números y otros signos."]
+            },
+            {
+              "contenido": "Aproximación a las tecnologías de la información.",
+              "pda": ["Reconoce las tecnologías que se utilizan en su entorno."]
+            }
+          ]
+        }
+      ],
+      "temas_clave": [
+        "Diferencia entre letras y números",
+        "Agenda semanal (Lunes-Viernes)",
+        "Esquemas (partes de la flor)",
+        "Navegación segura en internet"
+      ]
+    },
+    "enriquecimiento_ia": {
+      "pedagogico": {
+        "momentos_ciclo_escolar": ["Segundo Trimestre"],
+        "habilidades_reforzadas": ["Conciencia fonológica", "Organización temporal", "Seguridad digital"],
+        "nivel_abstraccion": "Simbólico / Aplicado"
+      },
+      "descubrimiento_contextual": {
+        "recursos_y_preparacion": [
+          { "id": "listo_imprimir", "icono": "🖨", "titulo": "Listo para imprimir" }
+        ],
+        "intencion_pedagogica": [
+          { "id": "reforzar_aprendizajes", "icono": "🛠", "titulo": "Refuerza aprendizajes" },
+          { "id": "generar_reflexion", "icono": "📣", "titulo": "Genera reflexión" }
+        ]
+      }
+    }
+  },
+  {
+    "id": "p0o9i8u7-y6t5-r4e3-w2q1-m0n9b8v7c6x5",
+    "archivo": {
+      "nombre": "cr_1_pensamientoC1.pdf",
+      "ruta": "cr_1_pensamientoC1.pdf",
+      "tipo": "Cuadernillo de Ejercicios",
+      "extension": ".pdf"
+    },
+    "clasificacion": {
+      "fase": 3,
+      "grado": 1,
+      "tipo_recurso": "Cuadernillo de trabajo",
+      "categoria_pedagogica": "Evaluación Matemática"
+    },
+    "contenido": {
+      "titulo": "Evaluación de Saberes y Pensamiento Científico (Bloque 1)",
+      "sintesis": "Reactivos de evaluación diagnóstica o de bloque sobre números naturales, geometría con tangram y nociones de tiempo.",
+      "campos_formativos": [
+        {
+          "campo": "Saberes y pensamiento científico",
+          "contenidos": [
+            {
+              "contenido": "Estudio de los números.",
+              "pda": ["Cuenta, ordena y representa cantidades de elementos de una colección."]
+            },
+            {
+              "contenido": "Figuras geométricas y sus características.",
+              "pda": ["Representa objetos utilizando el tangram."]
+            },
+            {
+              "contenido": "Organización e interpretación de datos.",
+              "pda": ["Elabora registros de datos mediante tablas."]
+            }
+          ]
+        }
+      ],
+      "temas_clave": [
+        "Uso de la moneda (pesos)",
+        "Días de la semana",
+        "Conteo hasta 100",
+        "Vértices de figuras"
+      ]
+    },
+    "enriquecimiento_ia": {
+      "pedagogico": {
+        "momentos_ciclo_escolar": ["Primer Trimestre"],
+        "habilidades_reforzadas": ["Cálculo mental", "Razonamiento lógico", "Uso de instrumentos de medida"],
+        "nivel_abstraccion": "Lógico-Matemático"
+      },
+      "descubrimiento_contextual": {
+        "tipo_experiencia_aprendizaje": [
+          { "id": "resolucion_problemas", "icono": "🧩", "titulo": "Resolución de problemas" }
+        ],
+        "recursos_y_preparacion": [
+          { "id": "material_manipulable", "icono": "🧰", "titulo": "Material manipulable (Tangram)" }
+        ]
+      }
+    }
+  },
+  {
+    "id": "a9s8d7f6-g5h4-j3k2-l1q0-z9x8c7v6b5n4",
+    "archivo": {
+      "nombre": "cr_1_pensamientoC2.pdf",
+      "ruta": "cr_1_pensamientoC2.pdf",
+      "tipo": "Cuadernillo de Ejercicios",
+      "extension": ".pdf"
+    },
+    "clasificacion": {
+      "fase": 3,
+      "grado": 1,
+      "tipo_recurso": "Cuadernillo de trabajo",
+      "categoria_pedagogica": "Reforzamiento Matemático"
+    },
+    "contenido": {
+      "titulo": "Ejercicios de Consolidación: Pensamiento Matemático",
+      "sintesis": "Práctica intensiva de agrupamiento en decenas, sucesiones numéricas y ubicación espacial.",
+      "campos_formativos": [
+        {
+          "campo": "Saberes y pensamiento científico",
+          "contenidos": [
+            {
+              "contenido": "Construcción de la noción de suma y resta.",
+              "pda": ["Resuelve situaciones que implican agregar y quitar."]
+            },
+            {
+              "contenido": "Estudio de los números.",
+              "pda": ["Identifica regularidades en la sucesión numérica hasta 100."]
+            }
+          ]
+        }
+      ],
+      "temas_clave": [
+        "Paquetes de 10 (Decenas)",
+        "Adivinanzas de figuras",
+        "Lectura de horarios",
+        "Comparación de tamaños"
+      ]
+    },
+    "enriquecimiento_ia": {
+      "pedagogico": {
+        "momentos_ciclo_escolar": ["Segundo Trimestre"],
+        "habilidades_reforzadas": ["Estimación de cantidades", "Seriación numérica", "Lectura de tablas"],
+        "nivel_abstraccion": "Simbólico / Numérico"
+      },
+      "descubrimiento_contextual": {
+        "intencion_pedagogica": [
+          { "id": "reforzar_aprendizajes", "icono": "🛠", "titulo": "Refuerza aprendizajes" }
+        ]
+      }
+    }
+  },
+  {
+    "id": "k1j2h3g4-f5d6-s7a8-p9o0-i1u2y3t4r5e6",
+    "archivo": {
+      "nombre": "cr_1_pensamientoC3.pdf",
+      "ruta": "cr_1_pensamientoC3.pdf",
+      "tipo": "Cuadernillo de Ejercicios",
+      "extension": ".pdf"
+    },
+    "clasificacion": {
+      "fase": 3,
+      "grado": 1,
+      "tipo_recurso": "Cuadernillo de trabajo",
+      "categoria_pedagogica": "Conocimiento del Medio y Ética"
+    },
+    "contenido": {
+      "titulo": "Exploración de la Naturaleza y Sociedad (Bloque 3)",
+      "sintesis": "Ejercicios sobre el cuerpo humano, el cuidado de la naturaleza, riesgos sociales y elementos del entorno.",
+      "campos_formativos": [
+        {
+          "campo": "Ética, naturaleza y sociedades",
+          "contenidos": [
+            {
+              "contenido": "Respeto, cuidado y empatía hacia la naturaleza.",
+              "pda": ["Propone acciones a favor de la naturaleza."]
+            }
+          ]
+        },
+        {
+          "campo": "Saberes y pensamiento científico",
+          "contenidos": [
+            {
+              "contenido": "Cuerpo humano: estructura externa y cuidado.",
+              "pda": ["Compara y representa las partes externas del cuerpo."]
+            }
+          ]
+        },
+        {
+          "campo": "De lo humano y lo comunitario",
+          "contenidos": [
+            {
+              "contenido": "Situaciones de riesgo social.",
+              "pda": ["Reconoce situaciones de riesgo social y la importancia del autocuidado."]
+            }
+          ]
+        }
+      ],
+      "temas_clave": [
+        "Hábitos de higiene",
+        "Animales domésticos",
+        "Elementos naturales vs sociales",
+        "Cuidado de las plantas",
+        "Línea de vida (Bebé-6 años)"
+      ]
+    },
+    "enriquecimiento_ia": {
+      "pedagogico": {
+        "momentos_ciclo_escolar": ["Tercer Trimestre"],
+        "habilidades_reforzadas": ["Observación de campo", "Empatía social", "Autocuidado"],
+        "nivel_abstraccion": "Situado / Ético"
+      },
+      "descubrimiento_contextual": {
+        "tipo_experiencia_aprendizaje": [
+          { "id": "exploracion_investigacion", "icono": "🔍", "titulo": "Exploración e investigación" },
+          { "id": "expresion_artistica", "icono": "🎨", "titulo": "Expresión artística" }
+        ],
+        "intencion_pedagogica": [
+          { "id": "generar_reflexion", "icono": "📣", "titulo": "Genera reflexión" }
+        ]
+      }
+    }
+  }
+]

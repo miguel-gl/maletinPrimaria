@@ -1,0 +1,108 @@
+.beta2-top {
+  background: linear-gradient(180deg, #f2effa 0%, #f8f6ff 100%);
+}
+
+.beta2-hero-card {
+  background: #ffffff;
+  border-radius: 1.25rem;
+  box-shadow: 0 12px 34px rgba(30, 34, 66, 0.08);
+}
+
+.beta2-feature {
+  background: #faf9ff;
+  border-radius: 1rem;
+}
+
+.beta2-search {
+  min-height: 48px;
+  border-radius: 999px;
+}
+
+.beta2-circle-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid #dfe4ff;
+  background: #fff;
+  color: #4b50d1;
+  font-weight: 700;
+  padding: 0;
+}
+
+.beta2-nav {
+  border-radius: 1rem;
+  overflow: hidden;
+  min-height: 230px;
+}
+
+.beta2-carousel {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(240px, 82%);
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 0.2rem;
+}
+
+.beta2-carousel::-webkit-scrollbar {
+  height: 8px;
+}
+
+.beta2-carousel::-webkit-scrollbar-thumb {
+  background: #cfd6ff;
+  border-radius: 999px;
+}
+
+.beta2-exp-card {
+  border-radius: 1rem;
+  background: #ffffff;
+  box-shadow: 0 10px 26px rgba(30, 34, 66, 0.08);
+}
+
+.beta2-progress {
+  height: 0.5rem;
+  background: #eceeff;
+}
+
+.beta2-progress .progress-bar {
+  background: linear-gradient(90deg, #5f50ff, #ff9f50);
+}
+
+.beta2-chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.beta2-chip-list button {
+  border: 1px solid #d9def9;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #4a4f70;
+  font-weight: 700;
+  padding: 0.5rem 0.95rem;
+}
+
+.beta2-chip-list button:hover {
+  background: #edf0ff;
+}
+
+.beta2-list {
+  padding-left: 1.1rem;
+  color: #5f6582;
+}
+
+.beta2-list li {
+  margin-bottom: 0.35rem;
+}
+
+@media (min-width: 992px) {
+  .beta2-nav {
+    min-height: 280px;
+  }
+
+  .beta2-carousel {
+    grid-auto-columns: minmax(260px, 35%);
+  }
+}

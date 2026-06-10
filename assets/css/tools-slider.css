@@ -1,0 +1,388 @@
+/* ============================================================
+   HERRAMIENTAS SLIDER - Rotación de Herramientas Docentes
+   ============================================================ */
+
+/* Contenedor principal del slider */
+.beta-tools-slider {
+	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+	border-radius: 20px;
+	padding: 1.25rem 1.1rem;
+	position: relative;
+	overflow: hidden;
+	border: 1px solid #e8ebfb;
+	box-shadow: 0 14px 30px rgba(55, 61, 112, 0.1);
+}
+
+.beta-tools-slider::before {
+	content: '';
+	position: absolute;
+	top: -40%;
+	right: -10%;
+	width: 320px;
+	height: 320px;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.05);
+	z-index: 0;
+}
+
+.beta-tools-slider::after {
+	content: '';
+	position: absolute;
+	bottom: -35%;
+	left: -5%;
+	width: 250px;
+	height: 250px;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.03);
+	z-index: 0;
+}
+
+/* Carrusel */
+.beta-tools-carousel {
+	position: relative;
+	z-index: 1;
+	min-height: 165px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Tarjeta de herramienta */
+.beta-tool-card {
+	width: 100%;
+	padding: 1.1rem 1.2rem;
+	background: #ffffff;
+	border-radius: 16px;
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	opacity: 1;
+	transform: translateY(0) scale(1);
+	border: 1px solid #eceef9;
+	box-shadow: 0 12px 28px rgba(42, 48, 95, 0.1);
+}
+
+.beta-tool-card {
+	cursor: pointer;
+}
+
+.beta-tool-card:not(.fade-in):not(.fade-out):hover {
+	box-shadow: 0 18px 40px rgba(42, 48, 95, 0.18);
+}
+
+/* Animación de entrada */
+.beta-tool-card.fade-in {
+	animation: slideInFromRight 0.46s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Animación de salida */
+.beta-tool-card.fade-out {
+	animation: slideOutToLeft 0.28s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes slideInFromRight {
+	from {
+		opacity: 0;
+		transform: translateX(34px) scale(0.98);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0) scale(1);
+	}
+}
+
+@keyframes slideOutToLeft {
+	from {
+		opacity: 1;
+		transform: translateX(0) scale(1);
+	}
+	to {
+		opacity: 0;
+		transform: translateX(-34px) scale(0.98);
+	}
+}
+
+.beta-tool-emoji {
+	font-size: 3rem;
+	min-width: 66px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(135deg, rgba(96, 113, 215, 0.12) 0%, rgba(255, 181, 111, 0.18) 100%);
+	border-radius: 14px;
+	width: 66px;
+	height: 66px;
+	flex-shrink: 0;
+}
+
+.beta-tool-card.fade-in .beta-tool-emoji {
+	animation: emojiPop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.1s backwards;
+}
+
+/* Contenido de la tarjeta */
+.beta-tool-content {
+	flex: 1;
+	min-width: 0;
+}
+
+.beta-tool-title {
+	font-size: 1.12rem;
+	font-weight: 800;
+	color: #1d2133;
+	margin: 0 0 0.28rem 0;
+	line-height: 1.3;
+}
+
+.beta-tool-home {
+	display: inline-flex;
+	align-items: center;
+	margin: 0 0 0.4rem 0;
+	padding: 0.16rem 0.5rem;
+	border-radius: 999px;
+	font-size: 0.67rem;
+	font-weight: 700;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+	color: #3a468b;
+	background: #eef2ff;
+	border: 1px solid #dbe1ff;
+}
+
+.beta-tool-type {
+	font-size: 0.7rem;
+	color: #5663ad;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	margin: 0 0 0.3rem 0;
+}
+
+.beta-tool-description {
+	font-size: 0.88rem;
+	color: #5e647b;
+	margin: 0;
+	line-height: 1.45;
+}
+
+/* Controles */
+.beta-tools-controls {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.8rem;
+	margin-top: 0.75rem;
+	position: relative;
+	z-index: 1;
+}
+
+/* Botones de navegación */
+.beta-tool-btn-prev,
+.beta-tool-btn-next {
+	width: 34px;
+	height: 34px;
+	border-radius: 50%;
+	border: 1px solid #d6dbf6;
+	background: #ffffff;
+	color: #4451a0;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.3s ease;
+	padding: 0;
+}
+
+.beta-tool-btn-prev:hover,
+.beta-tool-btn-next:hover {
+	background: #f3f5ff;
+	border-color: #c7cff3;
+	transform: scale(1.05);
+}
+
+.beta-tool-btn-prev:active,
+.beta-tool-btn-next:active {
+	transform: scale(0.95);
+}
+
+.beta-tool-btn-prev svg,
+.beta-tool-btn-next svg {
+	width: 17px;
+	height: 17px;
+}
+
+/* Indicadores (dots) */
+.beta-tools-dots {
+	display: flex;
+	gap: 0.4rem;
+	flex-wrap: wrap;
+	justify-content: center;
+	max-width: 80%;
+}
+
+.beta-tool-dot {
+	width: 7px;
+	height: 7px;
+	border-radius: 50%;
+	border: 2px solid #c5cef4;
+	background: transparent;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	padding: 0;
+	flex-shrink: 0;
+}
+
+.beta-tool-dot:hover {
+	border-color: #8d9de8;
+	transform: scale(1.2);
+}
+
+.beta-tool-dot.active {
+	background: #5565bb;
+	border-color: #5565bb;
+	transform: scale(1.2);
+}
+
+@keyframes emojiPop {
+	0% {
+		transform: scale(0.3) rotate(-20deg);
+		opacity: 0;
+	}
+	50% {
+		transform: scale(1.1) rotate(5deg);
+	}
+	100% {
+		transform: scale(1) rotate(0deg);
+		opacity: 1;
+	}
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+	.beta-tools-slider {
+		padding: 1rem 0.85rem;
+	}
+
+	.beta-tools-carousel {
+		min-height: 150px;
+	}
+
+	.beta-tool-card {
+		flex-direction: column;
+		text-align: center;
+		padding: 1rem;
+		gap: 0.9rem;
+	}
+
+	.beta-tool-emoji {
+		font-size: 2.4rem;
+		width: 56px;
+		height: 56px;
+	}
+
+	.beta-tool-title {
+		font-size: 1rem;
+	}
+
+	.beta-tool-description {
+		font-size: 0.82rem;
+	}
+
+	.beta-tools-dots {
+		max-width: 100%;
+	}
+
+	.beta-tool-btn-prev,
+	.beta-tool-btn-next {
+		width: 32px;
+		height: 32px;
+	}
+}
+
+@media (max-width: 480px) {
+	.beta-tools-slider {
+		padding: 0.8rem;
+	}
+
+	.beta-tools-carousel {
+		min-height: 132px;
+	}
+
+	.beta-tool-card {
+		padding: 0.85rem;
+		gap: 0.7rem;
+	}
+
+	.beta-tool-emoji {
+		font-size: 2.05rem;
+		width: 48px;
+		height: 48px;
+	}
+
+	.beta-tool-title {
+		font-size: 1rem;
+	}
+
+	.beta-tool-type {
+		font-size: 0.65rem;
+	}
+
+	.beta-tool-description {
+		font-size: 0.78rem;
+	}
+
+	.beta-tools-controls {
+		gap: 0.7rem;
+		margin-top: 0.6rem;
+	}
+
+	.beta-tool-btn-prev,
+	.beta-tool-btn-next {
+		width: 32px;
+		height: 32px;
+	}
+
+	.beta-tool-dot {
+		width: 6px;
+		height: 6px;
+	}
+}
+
+/* Tema claro mejorado */
+@media (prefers-color-scheme: light) {
+	.beta-tool-card {
+		background: rgba(255, 255, 255, 0.97);
+	}
+}
+
+/* Accesibilidad - Respeta preferencia de animación reducida */
+@media (prefers-reduced-motion: reduce) {
+	.beta-tool-card,
+	.beta-tool-btn-prev,
+	.beta-tool-btn-next,
+	.beta-tool-dot,
+	.beta-tool-card.fade-in,
+	.beta-tool-card.fade-out,
+	.beta-tool-card.fade-in .beta-tool-emoji {
+		animation: none !important;
+		transition: none;
+	}
+}
+/* Enlace "Ver todo el material docente" */
+.beta-tools-material-link {
+	display: block;
+	text-align: center;
+	font-size: 0.72rem;
+	font-weight: 600;
+	letter-spacing: 0.04em;
+	color: rgba(255, 255, 255, 0.65);
+	text-decoration: none;
+	margin-top: 0.55rem;
+	position: relative;
+	z-index: 1;
+	transition: color 0.2s ease;
+}
+
+.beta-tools-material-link:hover {
+	color: rgba(255, 255, 255, 0.95);
+	text-decoration: none;
+}

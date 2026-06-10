@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es-MX" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maletin Primaria | Inicio</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com/">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Mulish:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+  <link href="assets/css/theme.min.css" rel="stylesheet">
+  <link href="assets/css/user.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="inicio-splash" id="inicioSplash" aria-live="polite" aria-label="Cargando Mi Maletin Primaria">
+    <div class="inicio-splash-content">
+      <div class="inicio-splash-brand">
+        <h1 class="fw-light mt-4 fs-2 fs-xl-4">Mi Maletin<span class="fw-bolder text-gradient-blue inicio-brand-word">Primaria</span><span class="fw-bolder text-gradient-orange-1">2</span></h1>
+        <p class="inicio-splash-text" id="inicioSplashText">Preparando tu maletin creativo...</p>
+      </div>
+      <img class="img-fluid px-4 px-xl-5 px-xxl-0 w-lg-100 w-sm-75 inicio-splash-illustration" src="assets/img/illustration/home-6-3.png" alt="Ilustracion de inicio de Mi Maletin Primaria">
+      <div class="inicio-splash-track" role="presentation">
+        <span class="inicio-splash-bar"></span>
+      </div>
+    </div>
+  </div>
+
+  <main class="main" id="top">
+    <section class="inicio-onboarding pt-4 pt-lg-5 pb-6 pb-lg-7 min-vh-100 d-flex align-items-start">
+      <div class="container inicio-shell" id="inicioShell">
+        <ul class="inicio-timeline list-unstyled mb-4" id="inicioTimeline" aria-label="Progreso de configuracion">
+          <li class="inicio-timeline-item is-active" data-step="1">
+            <span class="inicio-step-dot" aria-hidden="true">1</span>
+            <div>
+              <p class="inicio-step-title mb-0">Tus datos</p>
+              <small>Nombre, ciclo y escuela</small>
+            </div>
+          </li>
+          <li class="inicio-timeline-item" data-step="2">
+            <span class="inicio-step-dot" aria-hidden="true">2</span>
+            <div>
+              <p class="inicio-step-title mb-0">Tu icono</p>
+              <small>Selecciona tu avatar</small>
+            </div>
+          </li>
+          <li class="inicio-timeline-item" data-step="3">
+            <span class="inicio-step-dot" aria-hidden="true">3</span>
+            <div>
+              <p class="inicio-step-title mb-0">Tu nivel</p>
+              <small>Define grado y fase</small>
+            </div>
+          </li>
+        </ul>
+
+        <div class="row justify-content-center">
+          <div class="col-xl-10 col-xxl-9">
+            <div class="inicio-stage">
+              <div id="paso-datos">
+                <div class="inicio-step-head text-center">
+                  <p class="inicio-chip mb-2">Paso 1 de 3</p>
+                  <h2 class="fw-light fs-2 fs-xl-3">Arranquemos con tus <span class="fw-bolder text-gradient-blue">datos base</span></h2>
+                  <p class="mt-2 fs-0 text-800">Completa la informacion principal para personalizar recomendaciones y accesos.</p>
+                </div>
+                <div class="card border-0 shadow-sm inicio-card inicio-card-form">
+                  <div class="card-body p-4 p-sm-5">
+                    <form class="needs-validation" id="form-inicio" novalidate>
+                      <div class="inicio-form-grid mb-4">
+                        <div class="inicio-field-wrap inicio-field-wide">
+                          <label class="form-label fw-bold" for="nombreDocente">Nombre docente <span class="text-danger">*</span></label>
+                          <input class="form-control" id="nombreDocente" name="nombreDocente" type="text" required>
+                        </div>
+
+                        <div class="inicio-field-wrap">
+                          <label class="form-label fw-bold" for="nombreVisible">Nombre visible/opcional</label>
+                          <input class="form-control" id="nombreVisible" name="nombreVisible" type="text">
+                        </div>
+
+                        <div class="inicio-field-wrap">
+                          <label class="form-label fw-bold" for="escuela">Escuela</label>
+                          <input class="form-control" id="escuela" name="escuela" type="text">
+                        </div>
+
+                        <div class="inicio-field-wrap inicio-field-wide">
+                          <label class="form-label fw-bold" for="cicloEscolar">Ciclo escolar <span class="text-danger">*</span></label>
+                          <select class="form-select" id="cicloEscolar" name="cicloEscolar" required>
+                            <option value="" selected disabled>Selecciona un ciclo escolar</option>
+                            <option value="2025-2026">2025 - 2026</option>
+                            <option value="2026-2027">2026 - 2027</option>
+                            <option value="2027-2028">2027 - 2028</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="inicio-field-wrap mb-4">
+                        <label class="form-label fw-bold" for="turno">Turno</label>
+                        <input id="turno" name="turno" type="hidden" value="">
+                        <div class="inicio-turno-options" role="group" aria-label="Seleccion de turno">
+                          <button class="inicio-turno-btn" type="button" data-turno="matutino">Matutino</button>
+                          <button class="inicio-turno-btn" type="button" data-turno="vespertino">Vespertino</button>
+                          <button class="inicio-turno-btn" type="button" data-turno="mixto">Mixto</button>
+                        </div>
+                      </div>
+
+                      <button class="btn btn-boots-warning w-100 mt-4 inicio-btn-primary" type="submit">Guardar e iniciar</button>
+                      <p class="mt-3 mb-0 text-700 fs--1"><span class="text-danger">*</span> Campos obligatorios</p>
+                    </form>
+                  </div>
+                </div>
+              </div>
+
+              <div id="paso-icono" class="d-none">
+                <div class="d-flex justify-content-start mb-2">
+                  <button class="btn btn-link text-primary fw-bold p-0" id="btn-volver-datos" type="button" aria-label="Regresar al formulario">&#8592; Regresar</button>
+                </div>
+                <div class="inicio-step-head text-center mb-4">
+                  <p class="inicio-chip mb-2">Paso 2 de 3</p>
+                  <h2 class="fw-light fs-2 fs-xl-3">Elige tu <span class="fw-bolder text-gradient-blue">icono</span></h2>
+                  <p class="mt-2 fs-0 text-800">Selecciona el icono que te representara dentro de la app.</p>
+                </div>
+                <div class="card border-0 shadow-sm inicio-card">
+                  <div class="card-body p-4 p-sm-5">
+                    <div class="row g-4 justify-content-center mt-1" id="icono-grid">
+                      <div class="col-6 col-md-3 d-flex justify-content-center">
+                        <div class="icono-item card border-2 p-3 text-center" data-icono="assets/img/icons/usboarth.png">
+                          <img class="icono-imagen" src="assets/img/icons/usboarth.png" alt="Icono docente 1">
+                        </div>
+                      </div>
+                      <div class="col-6 col-md-3 d-flex justify-content-center">
+                        <div class="icono-item card border-2 p-3 text-center" data-icono="assets/img/icons/usbook.png">
+                          <img class="icono-imagen" src="assets/img/icons/usbook.png" alt="Icono docente 2">
+                        </div>
+                      </div>
+                      <div class="col-6 col-md-3 d-flex justify-content-center">
+                        <div class="icono-item card border-2 p-3 text-center" data-icono="assets/img/icons/uspen.png">
+                          <img class="icono-imagen" src="assets/img/icons/uspen.png" alt="Icono docente 3">
+                        </div>
+                      </div>
+                      <div class="col-6 col-md-3 d-flex justify-content-center">
+                        <div class="icono-item card border-2 p-3 text-center" data-icono="assets/img/icons/usreg.png">
+                          <img class="icono-imagen" src="assets/img/icons/usreg.png" alt="Icono docente 4">
+                        </div>
+                      </div>
+                    </div>
+                    <button class="btn btn-pricing-danger border-0 w-100 mt-5 inicio-btn-primary" id="btn-confirmar-icono" disabled>Confirmar y continuar</button>
+                  </div>
+                </div>
+              </div>
+
+              <div id="paso-nivel" class="d-none">
+                <div class="d-flex justify-content-start mb-2">
+                  <button class="btn btn-link text-primary fw-bold p-0" id="btn-volver-icono" type="button" aria-label="Regresar a selección de icono">&#8592; Regresar</button>
+                </div>
+                <div class="inicio-step-head text-center mb-4">
+                  <p class="inicio-chip mb-2">Paso 3 de 3</p>
+                  <h2 class="fw-light fs-2 fs-xl-3">Selecciona tu <span class="fw-bolder text-gradient-blue">grado</span></h2>
+                  <p class="mt-2 fs-0 text-800">Selecciona uno o mas grados del 1 al 6. La fase se calcula automaticamente.</p>
+                </div>
+                <div class="card border-0 shadow-sm inicio-card">
+                  <div class="card-body p-4 p-sm-5 text-center">
+                    <div class="d-flex flex-wrap justify-content-center gap-3" id="nivel-grid">
+                      <button class="btn btn-outline-primary fw-bold nivel-item" data-nivel="1" type="button">1</button>
+                      <button class="btn btn-outline-primary fw-bold nivel-item" data-nivel="2" type="button">2</button>
+                      <button class="btn btn-outline-primary fw-bold nivel-item" data-nivel="3" type="button">3</button>
+                      <button class="btn btn-outline-primary fw-bold nivel-item" data-nivel="4" type="button">4</button>
+                      <button class="btn btn-outline-primary fw-bold nivel-item" data-nivel="5" type="button">5</button>
+                      <button class="btn btn-outline-primary fw-bold nivel-item" data-nivel="6" type="button">6</button>
+                    </div>
+                    <div class="inicio-phase-preview mt-4" id="phasePreview">
+                      <p class="mb-0">Grado seleccionado: <strong id="selectedGradeLabel">-</strong></p>
+                      <p class="mb-0">Fase estimada: <strong id="selectedPhaseLabel">-</strong></p>
+                    </div>
+                    <button class="btn hover-top btn-boots-purple w-100 mt-4 inicio-btn-primary" id="btn-confirmar-nivel" disabled>Guardar y entrar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="vendors/bootstrap/bootstrap.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/inicio-form.js"></script>
+</body>
+
+</html>

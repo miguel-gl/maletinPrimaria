@@ -1,0 +1,462 @@
+[
+  {
+    "id": "instrumento-autoevaluacion-proyectos-nem",
+    "archivo": {
+      "nombre": "1.Autoevaluacion_Proyectos_NEM.xlsx",
+      "ruta": "instrumentos_evaluacion/1.Autoevaluacion_Proyectos_NEM.xlsx",
+      "tipo": "Instrumento de evaluacion",
+      "extension": ".xlsx"
+    },
+    "clasificacion": {
+      "fase": null,
+      "fases_aplicables": [3, 4, 5],
+      "grado": null,
+      "nivel_educativo": "multinivel",
+      "tipo_recurso": "Instrumento de evaluacion",
+      "categoria_pedagogica": "Autoevaluacion y seguimiento de proyectos"
+    },
+    "contenido": {
+      "titulo": "Autoevaluacion de Proyectos NEM",
+      "instrumento": "Autoevaluacion",
+      "area": "Proyectos NEM",
+      "proposito": "Apoyar la autoevaluacion del avance, la participacion y los logros alcanzados durante el desarrollo de proyectos alineados con la Nueva Escuela Mexicana."
+    }
+  },
+  {
+    "id": "instrumento-rubrica-ensayo",
+    "archivo": {
+      "nombre": "2.Instrumento_1_Rubrica_Ensayo.xlsx",
+      "ruta": "instrumentos_evaluacion/2.Instrumento_1_Rubrica_Ensayo.xlsx",
+      "tipo": "Instrumento de evaluacion",
+      "extension": ".xlsx"
+    },
+    "clasificacion": {
+      "fase": null,
+      "fases_aplicables": [3, 4, 5],
+      "grado": null,
+      "nivel_educativo": "multinivel",
+      "tipo_recurso": "Instrumento de evaluacion",
+      "categoria_pedagogica": "Produccion escrita"
+    },
+    "contenido": {
+      "titulo": "Rubrica para ensayo",
+      "instrumento": "Rubrica",
+      "area": "Produccion escrita",
+      "proposito": "Valorar la calidad de ensayos a partir de criterios observables como estructura, argumentacion, claridad y uso pertinente del lenguaje."
+    }
+  },
+  {
+    "id": "instrumento-lista-informe",
+    "archivo": {
+      "nombre": "3.Instrumento_2_Lista_Informe.xlsx",
+      "ruta": "instrumentos_evaluacion/3.Instrumento_2_Lista_Informe.xlsx",
+      "tipo": "Instrumento de evaluacion",
+      "extension": ".xlsx"
+    },
+    "clasificacion": {
+      "fase": null,
+      "fases_aplicables": [3, 4, 5],
+      "grado": null,
+      "nivel_educativo": "multinivel",
+      "tipo_recurso": "Instrumento de evaluacion",
+      "categoria_pedagogica": "Seguimiento de informe"
+    },
+    "contenido": {
+      "titulo": "Lista de cotejo para informe",
+      "instrumento": "Lista de cotejo",
+      "area": "Produccion escrita",
+      "proposito": "Verificar el cumplimiento de elementos esenciales en la elaboracion de informes, incluyendo organizacion, contenidos esperados y evidencias presentadas."
+    }
+  },
+  {
+    "id": "instrumento-rubrica-resena",
+    "archivo": {
+      "nombre": "4.Instrumento_3_Rubrica_Resena.xlsx",
+      "ruta": "instrumentos_evaluacion/4.Instrumento_3_Rubrica_Resena.xlsx",
+      "tipo": "Instrumento de evaluacion",
+      "extension": ".xlsx"
+    },
+    "clasificacion": {
+      "fase": null,
+      "fases_aplicables": [3, 4, 5],
+      "grado": null,
+      "nivel_educativo": "multinivel",
+      "tipo_recurso": "Instrumento de evaluacion",
+      "categoria_pedagogica": "Analisis y reseña"
+    },
+    "contenido": {
+      "titulo": "Rubrica para reseña",
+      "instrumento": "Rubrica",
+      "area": "Analisis de textos",
+      "proposito": "Evaluar reseñas considerando comprension del material analizado, capacidad critica, organizacion de ideas y expresion escrita."
+    }
+  },
+  {
+    "id": "instrumento-guia-analisis-texto",
+    "archivo": {
+      "nombre": "5.Instrumento_4_Guia_Analisis_Texto.xlsx",
+      "ruta": "instrumentos_evaluacion/5.Instrumento_4_Guia_Analisis_Texto.xlsx",
+      "tipo": "Instrumento de evaluacion",
+      "extension": ".xlsx"
+    },
+    "clasificacion": {
+      "fase": null,
+      "fases_aplicables": [3, 4, 5],
+      "grado": null,
+      "nivel_educativo": "multinivel",
+      "tipo_recurso": "Instrumento de evaluacion",
+      "categoria_pedagogica": "Comprension y analisis"
+    },
+    "contenido": {
+      "titulo": "Guia para analisis de texto",
+      "instrumento": "Guia de analisis",
+      "area": "Comprension lectora",
+      "proposito": "Orientar la revision de textos mediante preguntas o criterios que faciliten identificar ideas centrales, estructura, intencion y elementos de interpretacion."
+    }
+  },
+  {
+    "id": "instrumento-rubrica-reflexion",
+    "archivo": {
+      "nombre": "6.Instrumento_5_Rubrica_Reflexion.xlsx",
+      "ruta": "instrumentos_evaluacion/6.Instrumento_5_Rubrica_Reflexion.xlsx",
+      "tipo": "Instrumento de evaluacion",
+      "extension": ".xlsx"
+    },
+    "clasificacion": {
+      "fase": null,
+      "fases_aplicables": [3, 4, 5],
+      "grado": null,
+      "nivel_educativo": "multinivel",
+      "tipo_recurso": "Instrumento de evaluacion",
+      "categoria_pedagogica": "Metacognicion y reflexion"
+    },
+    "contenido": {
+      "titulo": "Rubrica para reflexion",
+      "instrumento": "Rubrica",
+      "area": "Reflexion del aprendizaje",
+      "proposito": "Valorar la profundidad de la reflexion del estudiante sobre su proceso de aprendizaje, sus decisiones, dificultades y mejoras posibles."
+    }
+  },
+  {
+    "id": "instrumento-artes-1sec",
+    "archivo": {
+      "nombre": "7.Instrumentos_Evaluacion_Artes_1Sec.xlsx",
+      "ruta": "instrumentos_evaluacion/7.Instrumentos_Evaluacion_Artes_1Sec.xlsx",
+      "tipo": "Instrumento de evaluacion",
+      "extension": ".xlsx"
+    },
+    "clasificacion": {
+      "fase": null,
+      "fases_aplicables": [3, 4, 5],
+      "grado": 1,
+      "nivel_educativo": "secundaria",
+      "tipo_recurso": "Instrumento de evaluacion",
+      "categoria_pedagogica": "Evaluacion disciplinar"
+    },
+    "contenido": {
+      "titulo": "Instrumentos de evaluacion de Artes para 1 de secundaria",
+      "instrumento": "Coleccion de instrumentos",
+      "area": "Artes",
+      "proposito": "Registrar y valorar desempenos, procesos creativos y productos del campo de Artes en primer grado de secundaria."
+    }
+  },
+  {
+    "id": "instrumento-biologia-1sec",
+    "archivo": {
+      "nombre": "8.Instrumentos_Evaluacion_Biología_1Sec_SPC.xlsx",
+      "ruta": "instrumentos_evaluacion/8.Instrumentos_Evaluacion_Biología_1Sec_SPC.xlsx",
+      "tipo": "Instrumento de evaluacion",
+      "extension": ".xlsx"
+    },
+    "clasificacion": {
+      "fase": null,
+      "fases_aplicables": [3, 4, 5],
+      "grado": 1,
+      "nivel_educativo": "secundaria",
+      "tipo_recurso": "Instrumento de evaluacion",
+      "categoria_pedagogica": "Evaluacion disciplinar"
+    },
+    "contenido": {
+      "titulo": "Instrumentos de evaluacion de Biologia para 1 de secundaria",
+      "instrumento": "Coleccion de instrumentos",
+      "area": "Biologia / Saberes y pensamiento cientifico",
+      "proposito": "Apoyar la evaluacion de conocimientos, habilidades cientificas y evidencias de aprendizaje en contenidos de Biologia para primer grado de secundaria."
+    }
+  },
+  {
+    "id": "instrumento-educacion-socioemocional-1sec",
+    "archivo": {
+      "nombre": "9.Instrumentos_Evaluacion_Educación_Socioemocional_1Sec_HyC.xlsx",
+      "ruta": "instrumentos_evaluacion/9.Instrumentos_Evaluacion_Educación_Socioemocional_1Sec_HyC.xlsx",
+      "tipo": "Instrumento de evaluacion",
+      "extension": ".xlsx"
+    },
+    "clasificacion": {
+      "fase": null,
+      "fases_aplicables": [3, 4, 5],
+      "grado": 1,
+      "nivel_educativo": "secundaria",
+      "tipo_recurso": "Instrumento de evaluacion",
+      "categoria_pedagogica": "Evaluacion formativa"
+    },
+    "contenido": {
+      "titulo": "Instrumentos de evaluacion de Educacion Socioemocional para 1 de secundaria",
+      "instrumento": "Coleccion de instrumentos",
+      "area": "Educacion socioemocional / De lo humano y lo comunitario",
+      "proposito": "Favorecer la valoracion de actitudes, habilidades socioemocionales, convivencia y procesos de autorregulacion en estudiantes de primer grado de secundaria."
+    }
+  },
+  {
+    "id": "instrumento-espanol-1sec",
+    "archivo": {
+      "nombre": "10.Instrumentos_Evaluacion_Español_1Sec.xlsx",
+      "ruta": "instrumentos_evaluacion/10.Instrumentos_Evaluacion_Español_1Sec.xlsx",
+      "tipo": "Instrumento de evaluacion",
+      "extension": ".xlsx"
+    },
+    "clasificacion": {
+      "fase": null,
+      "fases_aplicables": [3, 4, 5],
+      "grado": 1,
+      "nivel_educativo": "secundaria",
+      "tipo_recurso": "Instrumento de evaluacion",
+      "categoria_pedagogica": "Evaluacion disciplinar"
+    },
+    "contenido": {
+      "titulo": "Instrumentos de evaluacion de Espanol para 1 de secundaria",
+      "instrumento": "Coleccion de instrumentos",
+      "area": "Espanol / Lenguajes",
+      "proposito": "Evaluar producciones orales y escritas, comprension lectora y desempenos comunicativos propios del area de Espanol en primer grado de secundaria."
+    }
+  },
+  {
+    "id": "instrumento-exposiciones-nem",
+    "archivo": {
+      "nombre": "11.Instrumentos_Evaluacion_Exposiciones_NEM.xlsx",
+      "ruta": "instrumentos_evaluacion/11.Instrumentos_Evaluacion_Exposiciones_NEM.xlsx",
+      "tipo": "Instrumento de evaluacion",
+      "extension": ".xlsx"
+    },
+    "clasificacion": {
+      "fase": null,
+      "fases_aplicables": [3, 4, 5],
+      "grado": null,
+      "nivel_educativo": "multinivel",
+      "tipo_recurso": "Instrumento de evaluacion",
+      "categoria_pedagogica": "Comunicacion oral"
+    },
+    "contenido": {
+      "titulo": "Instrumentos de evaluacion para exposiciones NEM",
+      "instrumento": "Coleccion de instrumentos",
+      "area": "Exposiciones y presentaciones",
+      "proposito": "Valorar la planeacion, claridad, dominio del tema, recursos de apoyo y comunicacion oral en exposiciones escolares."
+    }
+  },
+  {
+    "id": "instrumento-fce-1sec-ens",
+    "archivo": {
+      "nombre": "12.Instrumentos_Evaluacion_Formacion_Civica_Etica_1Sec_ENS.xlsx",
+      "ruta": "instrumentos_evaluacion/12.Instrumentos_Evaluacion_Formacion_Civica_Etica_1Sec_ENS.xlsx",
+      "tipo": "Instrumento de evaluacion",
+      "extension": ".xlsx"
+    },
+    "clasificacion": {
+      "fase": null,
+      "fases_aplicables": [3, 4, 5],
+      "grado": 1,
+      "nivel_educativo": "secundaria",
+      "tipo_recurso": "Instrumento de evaluacion",
+      "categoria_pedagogica": "Evaluacion disciplinar"
+    },
+    "contenido": {
+      "titulo": "Instrumentos de evaluacion de Formacion Civica y Etica para 1 de secundaria",
+      "instrumento": "Coleccion de instrumentos",
+      "area": "Formacion civica y etica / Etica, naturaleza y sociedades",
+      "proposito": "Dar seguimiento a aprendizajes vinculados con participacion, juicio etico, convivencia y responsabilidad ciudadana en primer grado de secundaria."
+    }
+  },
+  {
+    "id": "instrumento-formacion-civica-1sec-completo",
+    "archivo": {
+      "nombre": "13.Instrumentos_Evaluacion_FormacionCivica_1Sec_ENS_COMPLETO.xlsx",
+      "ruta": "instrumentos_evaluacion/13.Instrumentos_Evaluacion_FormacionCivica_1Sec_ENS_COMPLETO.xlsx",
+      "tipo": "Instrumento de evaluacion",
+      "extension": ".xlsx"
+    },
+    "clasificacion": {
+      "fase": null,
+      "fases_aplicables": [3, 4, 5],
+      "grado": 1,
+      "nivel_educativo": "secundaria",
+      "tipo_recurso": "Instrumento de evaluacion",
+      "categoria_pedagogica": "Evaluacion disciplinar integral"
+    },
+    "contenido": {
+      "titulo": "Instrumentos completos de evaluacion de Formacion Civica para 1 de secundaria",
+      "instrumento": "Coleccion integral de instrumentos",
+      "area": "Formacion civica",
+      "proposito": "Concentrar instrumentos mas amplios o completos para evaluar aprendizajes, actitudes y evidencias del area de Formacion Civica en primer grado de secundaria."
+    }
+  },
+  {
+    "id": "instrumento-geografia-1sec",
+    "archivo": {
+      "nombre": "15.Instrumentos_Evaluacion_Geografia_1Sec_ENS.xlsx",
+      "ruta": "instrumentos_evaluacion/15.Instrumentos_Evaluacion_Geografia_1Sec_ENS.xlsx",
+      "tipo": "Instrumento de evaluacion",
+      "extension": ".xlsx"
+    },
+    "clasificacion": {
+      "fase": null,
+      "fases_aplicables": [3, 4, 5],
+      "grado": 1,
+      "nivel_educativo": "secundaria",
+      "tipo_recurso": "Instrumento de evaluacion",
+      "categoria_pedagogica": "Evaluacion disciplinar"
+    },
+    "contenido": {
+      "titulo": "Instrumentos de evaluacion de Geografia para 1 de secundaria",
+      "instrumento": "Coleccion de instrumentos",
+      "area": "Geografia / Etica, naturaleza y sociedades",
+      "proposito": "Apoyar la valoracion de aprendizajes relacionados con espacio geografico, lectura de mapas, analisis del entorno y pensamiento territorial."
+    }
+  },
+  {
+    "id": "instrumento-historia-1sec-completo",
+    "archivo": {
+      "nombre": "16.Instrumentos_Evaluacion_Historia_1Sec_ENS_COMPLETO.xlsx",
+      "ruta": "instrumentos_evaluacion/16.Instrumentos_Evaluacion_Historia_1Sec_ENS_COMPLETO.xlsx",
+      "tipo": "Instrumento de evaluacion",
+      "extension": ".xlsx"
+    },
+    "clasificacion": {
+      "fase": null,
+      "fases_aplicables": [3, 4, 5],
+      "grado": 1,
+      "nivel_educativo": "secundaria",
+      "tipo_recurso": "Instrumento de evaluacion",
+      "categoria_pedagogica": "Evaluacion disciplinar integral"
+    },
+    "contenido": {
+      "titulo": "Instrumentos completos de evaluacion de Historia para 1 de secundaria",
+      "instrumento": "Coleccion integral de instrumentos",
+      "area": "Historia",
+      "proposito": "Concentrar criterios e instrumentos para valorar comprension historica, uso de fuentes, secuencias temporales y analisis de procesos sociales."
+    }
+  },
+  {
+    "id": "instrumento-ingles-1sec",
+    "archivo": {
+      "nombre": "19.Instrumentos_Evaluacion_Inglés_1Sec.xlsx",
+      "ruta": "instrumentos_evaluacion/19.Instrumentos_Evaluacion_Inglés_1Sec.xlsx",
+      "tipo": "Instrumento de evaluacion",
+      "extension": ".xlsx"
+    },
+    "clasificacion": {
+      "fase": null,
+      "fases_aplicables": [3, 4, 5],
+      "grado": 1,
+      "nivel_educativo": "secundaria",
+      "tipo_recurso": "Instrumento de evaluacion",
+      "categoria_pedagogica": "Evaluacion disciplinar"
+    },
+    "contenido": {
+      "titulo": "Instrumentos de evaluacion de Ingles para 1 de secundaria",
+      "instrumento": "Coleccion de instrumentos",
+      "area": "Ingles",
+      "proposito": "Evaluar desempenos comunicativos en ingles, incluyendo comprension, expresion, participacion y uso funcional del idioma."
+    }
+  },
+  {
+    "id": "instrumento-lengua-indigena-1sec",
+    "archivo": {
+      "nombre": "21.Instrumentos_Evaluacion_Lengua_Indígena_LM_1Sec.xlsx",
+      "ruta": "instrumentos_evaluacion/21.Instrumentos_Evaluacion_Lengua_Indígena_LM_1Sec.xlsx",
+      "tipo": "Instrumento de evaluacion",
+      "extension": ".xlsx"
+    },
+    "clasificacion": {
+      "fase": null,
+      "fases_aplicables": [3, 4, 5],
+      "grado": 1,
+      "nivel_educativo": "secundaria",
+      "tipo_recurso": "Instrumento de evaluacion",
+      "categoria_pedagogica": "Evaluacion disciplinar"
+    },
+    "contenido": {
+      "titulo": "Instrumentos de evaluacion de Lengua Indigena para 1 de secundaria",
+      "instrumento": "Coleccion de instrumentos",
+      "area": "Lengua indigena / Lenguajes",
+      "proposito": "Valorar el uso, comprension, produccion y preservacion de la lengua indigena materna en actividades y evidencias escolares."
+    }
+  },
+  {
+    "id": "instrumento-matematicas-1sec",
+    "archivo": {
+      "nombre": "22.Instrumentos_Evaluacion_Matemáticas_1Sec_SPC.xlsx",
+      "ruta": "instrumentos_evaluacion/22.Instrumentos_Evaluacion_Matemáticas_1Sec_SPC.xlsx",
+      "tipo": "Instrumento de evaluacion",
+      "extension": ".xlsx"
+    },
+    "clasificacion": {
+      "fase": null,
+      "fases_aplicables": [3, 4, 5],
+      "grado": 1,
+      "nivel_educativo": "secundaria",
+      "tipo_recurso": "Instrumento de evaluacion",
+      "categoria_pedagogica": "Evaluacion disciplinar"
+    },
+    "contenido": {
+      "titulo": "Instrumentos de evaluacion de Matematicas para 1 de secundaria",
+      "instrumento": "Coleccion de instrumentos",
+      "area": "Matematicas / Saberes y pensamiento cientifico",
+      "proposito": "Apoyar la evaluacion de procedimientos, resolucion de problemas, razonamiento matematico y comunicacion de resultados en primer grado de secundaria."
+    }
+  },
+  {
+    "id": "instrumento-tecnologia-1sec",
+    "archivo": {
+      "nombre": "23.Instrumentos_Evaluacion_Tecnología_1Sec_HyC.xlsx",
+      "ruta": "instrumentos_evaluacion/23.Instrumentos_Evaluacion_Tecnología_1Sec_HyC.xlsx",
+      "tipo": "Instrumento de evaluacion",
+      "extension": ".xlsx"
+    },
+    "clasificacion": {
+      "fase": null,
+      "fases_aplicables": [3, 4, 5],
+      "grado": 1,
+      "nivel_educativo": "secundaria",
+      "tipo_recurso": "Instrumento de evaluacion",
+      "categoria_pedagogica": "Evaluacion disciplinar"
+    },
+    "contenido": {
+      "titulo": "Instrumentos de evaluacion de Tecnologia para 1 de secundaria",
+      "instrumento": "Coleccion de instrumentos",
+      "area": "Tecnologia / De lo humano y lo comunitario",
+      "proposito": "Registrar y valorar desempenos relacionados con proyectos tecnologicos, procesos, uso responsable de herramientas y solucion de necesidades del contexto."
+    }
+  },
+  {
+    "id": "instrumento-evaluacion-formativa",
+    "archivo": {
+      "nombre": "24.instrumentos_evaluacionFormativa.xlsx",
+      "ruta": "instrumentos_evaluacion/24.instrumentos_evaluacionFormativa.xlsx",
+      "tipo": "Instrumento de evaluacion",
+      "extension": ".xlsx"
+    },
+    "clasificacion": {
+      "fase": null,
+      "fases_aplicables": [3, 4, 5],
+      "grado": null,
+      "nivel_educativo": "multinivel",
+      "tipo_recurso": "Instrumento de evaluacion",
+      "categoria_pedagogica": "Evaluacion formativa"
+    },
+    "contenido": {
+      "titulo": "Instrumentos de evaluacion formativa",
+      "instrumento": "Coleccion de instrumentos",
+      "area": "Seguimiento del aprendizaje",
+      "proposito": "Facilitar el seguimiento continuo del aprendizaje mediante criterios, evidencias y observaciones utiles para retroalimentar y ajustar la ensenanza."
+    }
+  }
+]

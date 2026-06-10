@@ -1,0 +1,351 @@
+[
+  {
+    "id": "adm-expediente-identidad",
+    "archivo": {
+      "nombre": "1_exp.pdf",
+      "tipo": "Ficha de Identificación"
+    },
+    "contenido": {
+      "titulo": "Tu Registro de Identidad: Ficha del Alumno",
+      "para_que_te_sirve": "Mapea la información vital de cada estudiante, desde sus datos de contacto hasta su cobertura médica. Te permite tener a la mano la CURP y los datos del tutor para actuar con prontitud ante cualquier trámite o emergencia escolar, asegurando que cada niño esté correctamente identificado y protegido en tu aula.",
+      "descripcion_slide": "Gestiona con precisión la identidad de tus alumnos; mantén un control administrativo impecable y garantiza que la información de seguridad esté siempre a tu alcance.",
+      "emoji_recurso": "📁"
+    },
+    "enriquecimiento_ia": {
+      "pedagogico": {
+        "competencias_docentes": ["Gestión administrativa", "Protección civil escolar"],
+        "nivel_abstraccion": "Operativo / Práctico"
+      }
+    }
+  },
+  {
+    "id": "adm-horario-armonia",
+    "archivo": {
+      "nombre": "CRONOGRAMA.pdf",
+      "tipo": "Organizador Semanal"
+    },
+    "contenido": {
+      "titulo": "El Corazón de tu Jornada: Cronograma Semanal",
+      "para_que_te_sirve": "Estructura tus actividades diarias con equilibrio y fluidez. Este recurso te ayuda a visualizar tu semana completa, integrando los tiempos de aprendizaje con los periodos de receso, permitiéndote optimizar tu labor pedagógica y reducir la improvisación en el aula.",
+      "descripcion_slide": "Organiza tu tiempo con maestría; crea un ritmo escolar armónico donde el aprendizaje y el descanso conviven para potenciar el bienestar de tu grupo.",
+      "emoji_recurso": "🗓️"
+    },
+    "enriquecimiento_ia": {
+      "pedagogico": {
+        "habilidades_reforzadas": ["Planeación estratégica", "Gestión del tiempo"],
+        "emociones_esperadas": ["Serenidad", "Control profesional"]
+      }
+    }
+  },
+  {
+    "id": "leg-marco-etico",
+    "archivo": {
+      "nombre": "DECLARACIÓN DE PROPIEDAD INTELECTUAL.docx",
+      "tipo": "Documento Normativo"
+    },
+    "contenido": {
+      "titulo": "Tu Respaldo Ético: Declaración de Contenidos",
+      "para_que_te_sirve": "Conoce el marco legal y pedagógico que sustenta los materiales complementarios de tu maletín. Te brinda la certeza de que los recursos están alineados con la Ley Federal del Derecho de Autor y la Nueva Escuela Mexicana, fortaleciendo tu integridad profesional al utilizar materiales de consulta pertinentes y de calidad.",
+      "descripcion_slide": "Fundamenta tu práctica con transparencia; utiliza recursos validados legalmente que enriquecen tu labor bajo los principios de la Nueva Escuela Mexicana.",
+      "emoji_recurso": "📜"
+    }
+  },
+  {
+    "id": "adm-puente-familia",
+    "archivo": {
+      "nombre": "directorio_padresfam.pdf",
+      "tipo": "Directorio de Contacto"
+    },
+    "contenido": {
+      "titulo": "Tu Red de Apoyo: Directorio de Padres de Familia",
+      "para_que_te_sirve": "Establece canales directos de comunicación con las familias de tu grupo. Este formato te permite organizar los números de contacto y correos electrónicos para fortalecer la corresponsabilidad educativa y mantener una comunicación constante sobre el progreso de tus estudiantes.",
+      "descripcion_slide": "Construye puentes con la comunidad; agiliza la comunicación con las familias y hazlas partícipes activas en el proceso formativo de sus hijos.",
+      "emoji_recurso": "📞"
+    }
+  },
+  {
+    "id": "diag-hogar-contexto",
+    "archivo": {
+      "nombre": "ENTREVISTA.pdf",
+      "tipo": "Instrumento de Diagnóstico Familiar"
+    },
+    "contenido": {
+      "titulo": "Ventana al Entorno: Entrevista a Padres",
+      "para_que_te_sirve": "Explora la realidad profunda de tus alumnos; conoce sus antecedentes de salud, hábitos de estudio en casa y dinámicas familiares. Utiliza esta herramienta para realizar la lectura de la realidad que la Nueva Escuela Mexicana solicita, permitiéndote adaptar tus proyectos a las necesidades reales del hogar.",
+      "descripcion_slide": "Descubre la historia detrás de cada estudiante; conecta con las familias para entender su contexto y personalizar tu enseñanza con empatía.",
+      "emoji_recurso": "📝"
+    },
+    "enriquecimiento_ia": {
+      "pedagogico": {
+        "competencias_docentes": ["Análisis sociocultural", "Empatía", "Escucha activa"]
+      }
+    }
+  },
+  {
+    "id": "diag-voz-alumno",
+    "archivo": {
+      "nombre": "Entrevista_alumnos.pdf",
+      "tipo": "Guía de Diálogo Infantil"
+    },
+    "contenido": {
+      "titulo": "Escucha su Corazón: Entrevista al Alumno",
+      "para_que_te_sirve": "Conoce los sueños, miedos y preferencias de tus niños directamente de su voz. Este guion ameno te ayuda a romper el hielo y detectar necesidades de apoyo emocional o académico, transformando tu aula en un espacio donde cada estudiante se siente escuchado y valorado.",
+      "descripcion_slide": "Dale voz a tus alumnos; genera un clima de confianza y descubre sus intereses para convertirlos en el motor de tus clases.",
+      "emoji_recurso": "🧒"
+    }
+  },
+  {
+    "id": "ped-memoria-proceso",
+    "archivo": {
+      "nombre": "expediente_personal.pdf",
+      "tipo": "Bitácora de Seguimiento"
+    },
+    "contenido": {
+      "titulo": "Tu Espejo de Avances: Expediente y Diario de Trabajo",
+      "para_que_te_sirve": "Documenta el proceso vivo de aprendizaje de tu grupo y reflexiona sobre tu propia práctica diaria. Te sirve para capturar los destellos de asombro de los niños y reconstruir mentalmente tu jornada, permitiéndote realizar una evaluación formativa que realmente guíe tu mejora continua.",
+      "descripcion_slide": "Captura la magia de aprender; registra logros y desafíos para perfeccionar tu arte de enseñar y celebrar el crecimiento de cada niño.",
+      "emoji_recurso": "📚"
+    }
+  },
+  {
+    "id": "plan-diseño-nem",
+    "archivo": {
+      "nombre": "formato_proyecto.pdf",
+      "tipo": "Plantilla de Planeación Sociocrítica"
+    },
+    "contenido": {
+      "titulo": "Arquitecto de Experiencias: Formato de Proyecto",
+      "para_que_te_sirve": "Diseña proyectos integradores que vinculen los campos formativos con los problemas del contexto. Esta plantilla te guía paso a paso para articular contenidos, PDA y ejes articuladores, dándote la estructura necesaria para cumplir con el codiseño y la metodología de la Nueva Escuela Mexicana.",
+      "descripcion_slide": "Transforma el currículo en acción; crea rutas de aprendizaje situadas que conviertan a tus alumnos en agentes de cambio para su comunidad.",
+      "emoji_recurso": "🏗️"
+    }
+  },
+  {
+    "id": "adm-registro-casos",
+    "archivo": {
+      "nombre": "INCIDENCIAS.pdf",
+      "tipo": "Registro de Situaciones Relevantes"
+    },
+    "contenido": {
+      "titulo": "Tu Diario de Soluciones: Registro de Incidencias",
+      "para_que_te_sirve": "Documenta situaciones extraordinarias o conflictos que requieran un seguimiento formal. Te permite asentar la resolución de cada caso, garantizando transparencia y seguridad jurídica en tu labor, a la vez que te ayuda a identificar patrones para mejorar la convivencia escolar.",
+      "descripcion_slide": "Gestiona la convivencia con profesionalismo; registra eventos clave y sus soluciones para mantener un ambiente de paz y justicia en tu escuela.",
+      "emoji_recurso": "⚠️"
+    }
+  },
+  {
+    "id": "mu-estrategia-docente",
+    "archivo": {
+      "nombre": "Manual_usuario.pdf",
+      "tipo": "Guía de Implementación"
+    },
+    "contenido": {
+      "titulo": "Tu Manual de Vuelo: Guía del Maletín",
+      "para_que_te_sirve": "Optimiza tu tiempo y potencia tu autonomía profesional con esta guía estratégica. Te enseña cómo adaptar, modificar y recrear cada recurso de tu maletín, vinculándolos perfectamente con los Libros de Texto Gratuitos para que tu enseñanza sea fluida y significativa.",
+      "descripcion_slide": "Domina tus recursos educativos; empodérate con herramientas diseñadas para ahorrarte tiempo y enriquecer cada minuto que pasas frente a tu grupo.",
+      "emoji_recurso": "📖"
+    }
+  },
+  {
+    "id": "adm-rol-puerta",
+    "archivo": {
+      "nombre": "ROL_ENTRADA_SALIDA_CLASES.pdf",
+      "tipo": "Organizador de Seguridad"
+    },
+    "contenido": {
+      "titulo": "Guardianes del Orden: Rol de Entrada y Salida",
+      "para_que_te_sirve": "Estructura la vigilancia en los momentos más críticos del día. Te ayuda a organizar las guardias del personal para asegurar un tránsito fluido y seguro de los estudiantes, brindando tranquilidad a las familias y orden a la institución.",
+      "descripcion_slide": "Garantiza entradas y salidas seguras; organiza la presencia docente para cuidar lo más valioso: la integridad de tus alumnos.",
+      "emoji_recurso": "🚪"
+    }
+  },
+  {
+    "id": "adm-rol-patio",
+    "archivo": {
+      "nombre": "ROL_PERSONAL_RECREO.pdf",
+      "tipo": "Organizador de Supervisión"
+    },
+    "contenido": {
+      "titulo": "Cuidado en el Juego: Rol de Guardias de Recreo",
+      "para_que_te_sirve": "Distribuye las responsabilidades de supervisión durante el descanso de los alumnos. Te permite asignar espacios específicos a cada docente, asegurando que el juego libre sea siempre seguro y que cualquier incidencia sea atendida de inmediato por un profesional.",
+      "descripcion_slide": "Supervisa con atención y calidez; organiza las guardias de patio para que el recreo sea un espacio de diversión y convivencia protegida.",
+      "emoji_recurso": "🛝"
+    }
+  },
+  {
+    "id": "adm-asistencia-docente",
+    "archivo": {
+      "nombre": "rol_profesores.pdf",
+      "tipo": "Control de Asistencia y Función"
+    },
+    "contenido": {
+      "titulo": "Tu Equipo en Marcha: Rol de Profesores",
+      "para_que_te_sirve": "Gestiona la presencia y funciones del equipo docente de manera clara. Te sirve para registrar horarios de entrada y salida, así como las funciones asignadas a cada compañero, fomentando un ambiente de orden, puntualidad y responsabilidad compartida en la escuela.",
+      "descripcion_slide": "Coordina el esfuerzo colectivo; organiza las funciones de tu equipo docente para que la escuela funcione con la precisión de un reloj.",
+      "emoji_recurso": "🧑‍🏫"
+    }
+  },
+    {
+    "id": "adm-inst-escoltas-25",
+    "archivo": {
+      "nombre": "Instructivo de Escoltas y Hojas de Evaluación 2025-2026.pdf",
+      "tipo": "Manual de Identidad Institucional"
+    },
+    "contenido": {
+      "titulo": "Tu Guía para la Marcialidad y el Respeto: Instructivo de Escoltas",
+      "para_que_te_sirve": "Organiza y evalúa con precisión los concursos de escoltas en tu zona o escuela aplicando criterios claros de ejecución técnica y marcialidad. Este recurso te permite guiar a tus estudiantes en el respeto a los símbolos patrios mientras fortaleces su coordinación y disciplina grupal.",
+      "descripcion_slide": "Coordina la elegancia y el rigor de tu escolta escolar; garantiza una evaluación justa y profesional que celebre el orgullo nacional en cada paso de tus alumnos.",
+      "emoji_recurso": "🚩"
+    },
+    "enriquecimiento_ia": {
+      "pedagogico": {
+        "competencias_inferidas": ["Identidad nacional", "Disciplina motriz", "Trabajo colaborativo"],
+        "habilidades_inferidas": ["Coordinación psicomotriz", "Seguimiento de ordenanzas", "Liderazgo de mando"],
+        "nivel_abstraccion": "Práctico / Cívico"
+      },
+      "descubrimiento_contextual": {
+        "energia_y_dinamica_grupo": [{"id": "grupos_inquietos", "icono": "🔥", "titulo": "Ideal para grupos activos"}],
+        "tipo_experiencia_aprendizaje": [{"id": "participacion_oral", "icono": "🗣", "titulo": "Voces de mando"}],
+        "intencion_pedagogica": [{"id": "cierre_socializacion", "icono": "🏁", "titulo": "Cierre o socialización"}]
+      }
+    }
+  },
+  {
+    "id": "nem-sintetico-f3",
+    "archivo": {
+      "nombre": "Programa_Sintetico_Fase_3.pdf",
+      "tipo": "Cimiento Curricular"
+    },
+    "contenido": {
+      "titulo": "Tu Cimiento Pedagógico: Programa Sintético Fase 3",
+      "para_que_te_sirve": "Contextualiza los contenidos nacionales de los primeros grados y ejerce tu autonomía profesional para tomar las mejores decisiones en favor de tu comunidad escolar. Es tu base estratégica para diseñar un Programa Analítico vivo que responda a lo que tus niñas y niños realmente necesitan aprender en primaria baja.",
+      "descripcion_slide": "Teje los saberes universales con la realidad de tu entorno y construye una educación con profundo sentido humano para tus estudiantes más pequeños.",
+      "emoji_recurso": "🌱"
+    },
+    "enriquecimiento_ia": {
+      "pedagogico": {
+        "competencias_docentes": ["Codiseño curricular", "Pensamiento crítico", "Lectura de la realidad"],
+        "nivel_abstraccion": "Estratégico / Normativo"
+      },
+      "descubrimiento_contextual": {
+        "enfoque_metodologico_nem": [{"id": "comunitario", "icono": "🌱", "titulo": "Humanismo social"}],
+        "intencion_pedagogica": [{"id": "introducir_tema", "icono": "🧭", "titulo": "Base de planeación"}]
+      }
+    }
+  },
+  {
+    "id": "nem-sintetico-f4",
+    "archivo": {
+      "nombre": "Programa_Sintetico_Fase_4.pdf",
+      "tipo": "Brújula de Saberes"
+    },
+    "contenido": {
+      "titulo": "Tu Brújula de Desarrollo: Programa Sintético Fase 4",
+      "para_que_te_sirve": "Articula los contenidos y procesos de aprendizaje para el bloque intermedio de primaria permitiéndote profundizar en la comprensión de la realidad de tus alumnos. Utiliza este documento para diseñar proyectos situados que conecten el conocimiento con hechos concretos y el bienestar colectivo de tu comunidad.",
+      "descripcion_slide": "Lidera el crecimiento de tus grupos de tercero y cuarto; crea rutas de aprendizaje que desafíen su curiosidad y fortalezcan su identidad social.",
+      "emoji_recurso": "🧭"
+    },
+    "enriquecimiento_ia": {
+      "pedagogico": {
+        "competencias_docentes": ["Vinculación interdisciplinaria", "Diseño de proyectos", "Autonomía profesional"],
+        "nivel_abstraccion": "Estratégico / Operativo"
+      },
+      "descubrimiento_contextual": {
+        "enfoque_metodologico_nem": [{"id": "basado_problemas", "icono": "🧠", "titulo": "Aprendizaje situado"}],
+        "intencion_pedagogica": [{"id": "reforzar_aprendizajes", "icono": "🛠", "titulo": "Consolidación curricular"}]
+      }
+    }
+  },
+  {
+    "id": "nem-sintetico-f5",
+    "archivo": {
+      "nombre": "Programa_Sintetico_Fase_5.pdf",
+      "tipo": "Guía de Autonomía"
+    },
+    "contenido": {
+      "titulo": "Tu Guía para la Transformación: Programa Sintético Fase 5",
+      "para_que_te_sirve": "Organiza el cierre de la educación primaria con una visión integradora y crítica preparando a tus alumnos para sus futuros retos académicos. Te otorga la libertad de codiseñar contenidos locales que brinden herramientas reales de participación social a tus estudiantes de los últimos grados.",
+      "descripcion_slide": "Empodera a tus alumnos de primaria alta; diseña misiones de aprendizaje que los conviertan en agentes capaces de transformar su mundo.",
+      "emoji_recurso": "🎓"
+    },
+    "enriquecimiento_ia": {
+      "pedagogico": {
+        "competencias_docentes": ["Liderazgo transformador", "Codiseño regional", "Evaluación formativa"],
+        "nivel_abstraccion": "Simbólico / Crítico"
+      },
+      "descubrimiento_contextual": {
+        "enfoque_metodologico_nem": [{"id": "aprendizaje_servicio", "icono": "🤲", "titulo": "Impacto social"}],
+        "intencion_pedagogica": [{"id": "generar_reflexion", "icono": "📣", "titulo": "Conciencia crítica"}]
+      }
+    }
+  },
+  {
+    "id": "leg-prot-prevencion",
+    "archivo": {
+      "nombre": "Protocolo Para La Prevención, Detención,.pdf",
+      "tipo": "Escudo Normativo"
+    },
+    "contenido": {
+      "titulo": "Tu Respaldo Jurídico: Protocolo de Protección Escolar",
+      "para_que_te_sirve": "Establece procedimientos claros y legales para salvaguardar la integridad física y emocional de tus estudiantes ante situaciones de riesgo. Te brinda la certeza profesional para integrar expedientes y notificar a las autoridades competentes asegurando el respeto al derecho educativo.",
+      "descripcion_slide": "Protege el bienestar de tu comunidad; actúa con la seguridad legal y humana que requiere el cuidado de la vida de nuestras niñas y niños.",
+      "emoji_recurso": "🛡️"
+    },
+    "enriquecimiento_ia": {
+      "pedagogico": {
+        "competencias_docentes": ["Seguridad jurídica", "Protección civil escolar", "Ética profesional"],
+        "nivel_abstraccion": "Operativo / Normativo"
+      },
+      "descubrimiento_contextual": {
+        "clima_emocional_aula": [{"id": "favorece_convivencia", "icono": "🤝", "titulo": "Cultura de paz"}],
+        "intencion_pedagogica": [{"id": "generar_reflexion", "icono": "📣", "titulo": "Seguimiento formal"}]
+      }
+    }
+  },
+  {
+    "id": "leg-prot-deteccion",
+    "archivo": {
+      "nombre": "Protocolos Para La Detección,.pdf",
+      "tipo": "Herramienta de Actuación"
+    },
+    "contenido": {
+      "titulo": "Guardianes de la Infancia: Protocolos de Detección",
+      "para_que_te_sirve": "Detecta oportunamente indicadores de acoso o maltrato escolar y sigue la ruta correcta de actuación para proteger a las víctimas. Te guía en la implementación de medidas para salvaguardar la integridad de los implicados y fortalecer el enfoque de derechos humanos en tu plantel.",
+      "descripcion_slide": "Abre un camino de seguridad; implementa acciones preventivas que garanticen una escuela justa y llena de respeto para todos.",
+      "emoji_recurso": "🫂"
+    },
+    "enriquecimiento_ia": {
+      "pedagogico": {
+        "competencias_docentes": ["Empatía protectora", "Detección de riesgos", "Mediación de conflictos"],
+        "tipos_interaccion": ["Docente-Alumno", "Escuela-Autoridades"]
+      },
+      "descubrimiento_contextual": {
+        "clima_emocional_aula": [{"id": "fortalece_confianza", "icono": "🌟", "titulo": "Escuela segura"}],
+        "tipo_experiencia_aprendizaje": [{"id": "resolucion_problemas", "icono": "🧩", "titulo": "Gestión de crisis"}]
+      }
+    }
+  },
+  {
+    "id": "adm-reg-permisos",
+    "archivo": {
+      "nombre": "REGLAMENTO DE LAS.pdf",
+      "tipo": "Respaldo Laboral"
+    },
+    "contenido": {
+      "titulo": "Tu Equilibrio Profesional: Reglamento de Permisos y Licencias",
+      "para_que_te_sirve": "Conoce y ejerce tus derechos laborales como docente desde licencias por salud hasta permisos por lactancia o cuidados familiares. Te permite gestionar tu tiempo personal con la tranquilidad de cumplir correctamente con la normativa oficial de la Secretaría.",
+      "descripcion_slide": "Cuida tu bienestar personal; utiliza las herramientas administrativas para asegurar tu equilibrio mientras sigues entregando lo mejor a tus estudiantes.",
+      "emoji_recurso": "📑"
+    },
+    "enriquecimiento_ia": {
+      "pedagogico": {
+        "competencias_docentes": ["Gestión administrativa", "Conciencia de derechos", "Planificación personal"],
+        "nivel_abstraccion": "Práctico / Administrativo"
+      },
+      "descubrimiento_contextual": {
+        "energia_y_dinamica_grupo": [{"id": "actividad_rapida", "icono": "⚡", "titulo": "Trámite eficiente"}],
+        "recursos_y_preparacion": [{"id": "listo_imprimir", "icono": "🖨", "titulo": "Formatos listos"}]
+      }
+    }
+  }
+]

@@ -1,0 +1,48 @@
+{
+  "catalogo_descubrimiento_contextual": {
+    "energia_y_dinamica_grupo": [
+      "grupos_inquietos",
+      "grupos_tranquilos",
+      "actividad_rapida",
+      "proyecto_largo",
+      "alta_participacion",
+      "trabajo_individual"
+    ],
+    "recursos_y_preparacion": [
+      "poco_material",
+      "material_manipulable",
+      "apoyo_digital",
+      "listo_imprimir",
+      "espacios_escolares"
+    ],
+    "tipo_experiencia_aprendizaje": [
+      "participacion_oral",
+      "produccion_escrita",
+      "exploracion_investigacion",
+      "resolucion_problemas",
+      "expresion_artistica",
+      "experimentacion",
+      "trabajo_colaborativo",
+      "conexion_comunidad"
+    ],
+    "intencion_pedagogica": [
+      "activar_conocimientos",
+      "introducir_tema",
+      "reforzar_aprendizajes",
+      "generar_reflexion",
+      "cierre_socializacion"
+    ],
+    "enfoque_metodologico_nem": [
+      "comunitario",
+      "basado_problemas",
+      "aprendizaje_servicio",
+      "steam"
+    ],
+    "clima_emocional_aula": [
+      "motivadora_divertida",
+      "relajada_creativa",
+      "favorece_convivencia",
+      "fortalece_confianza"
+    ]
+  }
+}

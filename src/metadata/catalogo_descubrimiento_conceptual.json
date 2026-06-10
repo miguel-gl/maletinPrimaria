@@ -1,0 +1,240 @@
+{
+"catalogo_descubrimiento_contextual": {
+"energia_y_dinamica_grupo": [
+{
+"id": "grupos_inquietos",
+"icono": "🔥",
+"titulo": "Ideal para grupos inquietos",
+"descripcion": "Actividades con movimiento, participación activa, exploración o manipulación.",
+"tags": ["movimiento", "participacion", "dinamica", "exploracion"]
+},
+{
+"id": "grupos_tranquilos",
+"icono": "🌙",
+"titulo": "Para grupos tranquilos",
+"descripcion": "Experiencias reflexivas, de observación o trabajo individual.",
+"tags": ["reflexion", "observacion", "calma"]
+},
+{
+"id": "actividad_rapida",
+"icono": "⚡",
+"titulo": "Actividad rápida",
+"descripcion": "Puede implementarse en poco tiempo o como inicio de clase.",
+"tags": ["rapida", "inicio", "corta"]
+},
+{
+"id": "proyecto_largo",
+"icono": "🕰",
+"titulo": "Proyecto de varias sesiones",
+"descripcion": "Experiencias amplias con continuidad y producto final.",
+"tags": ["proyecto", "continuidad", "sesiones"]
+},
+{
+"id": "alta_participacion",
+"icono": "🎭",
+"titulo": "Mucha participación",
+"descripcion": "Promueve diálogo, colaboración y trabajo grupal.",
+"tags": ["dialogo", "equipo", "participacion"]
+},
+{
+"id": "trabajo_individual",
+"icono": "🤫",
+"titulo": "Trabajo individual guiado",
+"descripcion": "Ideal para momentos de concentración o autonomía.",
+"tags": ["individual", "autonomia", "concentracion"]
+}
+],
+"recursos_y_preparacion": [
+{
+"id": "poco_material",
+"icono": "🎨",
+"titulo": "Poco material",
+"descripcion": "Puede realizarse con materiales básicos del aula.",
+"tags": ["simple", "material_basico", "facil"]
+},
+{
+"id": "material_manipulable",
+"icono": "🧰",
+"titulo": "Material manipulable",
+"descripcion": "Usa recortes, bloques, maquetas u objetos físicos.",
+"tags": ["manipulacion", "objetos", "maqueta"]
+},
+{
+"id": "apoyo_digital",
+"icono": "📱",
+"titulo": "Apoyo digital opcional",
+"descripcion": "Puede enriquecerse con videos, imágenes o dispositivos.",
+"tags": ["digital", "multimedia", "tecnologia"]
+},
+{
+"id": "listo_imprimir",
+"icono": "🖨",
+"titulo": "Listo para imprimir",
+"descripcion": "Incluye hojas, cuadernillos o actividades imprimibles.",
+"tags": ["imprimible", "pdf", "hojas"]
+},
+{
+"id": "espacios_escolares",
+"icono": "🏫",
+"titulo": "Aprovecha espacios escolares",
+"descripcion": "Utiliza patio, pasillos o espacios comunitarios.",
+"tags": ["patio", "escuela", "recorrido"]
+}
+],
+"tipo_experiencia_aprendizaje": [
+{
+"id": "participacion_oral",
+"icono": "🗣",
+"titulo": "Participación oral",
+"descripcion": "Conversación, exposición, entrevistas o narración.",
+"tags": ["oralidad", "dialogo", "expresion"]
+},
+{
+"id": "produccion_escrita",
+"icono": "✍",
+"titulo": "Producción escrita",
+"descripcion": "Registro, redacción, notas o cuentos.",
+"tags": ["escritura", "texto", "registro"]
+},
+{
+"id": "exploracion_investigacion",
+"icono": "🔍",
+"titulo": "Exploración e investigación",
+"descripcion": "Observación, preguntas y búsqueda de información.",
+"tags": ["indagacion", "exploracion", "investigacion"]
+},
+{
+"id": "resolucion_problemas",
+"icono": "🧩",
+"titulo": "Resolución de problemas",
+"descripcion": "Retos, situaciones reales y pensamiento crítico.",
+"tags": ["abp", "reto", "pensamiento_critico"]
+},
+{
+"id": "expresion_artistica",
+"icono": "🎨",
+"titulo": "Expresión artística",
+"descripcion": "Dibujo, teatro, música o creación visual.",
+"tags": ["arte", "creatividad", "expresion"]
+},
+{
+"id": "experimentacion",
+"icono": "🧪",
+"titulo": "Experimentación",
+"descripcion": "Prueba-error, construcción y descubrimiento.",
+"tags": ["steam", "experimento", "descubrimiento"]
+},
+{
+"id": "trabajo_colaborativo",
+"icono": "🤝",
+"titulo": "Trabajo colaborativo",
+"descripcion": "Construcción colectiva y acuerdos grupales.",
+"tags": ["colaboracion", "equipo", "cooperacion"]
+},
+{
+"id": "conexion_comunidad",
+"icono": "🌎",
+"titulo": "Conexión con la comunidad",
+"descripcion": "Relaciona entorno, familia o contexto social.",
+"tags": ["comunidad", "contexto", "familia"]
+}
+],
+"intencion_pedagogica": [
+{
+"id": "activar_conocimientos",
+"icono": "💡",
+"titulo": "Activa conocimientos previos",
+"descripcion": "Ideal para iniciar proyectos o temas.",
+"tags": ["inicio", "detonador", "saberes_previos"]
+},
+{
+"id": "introducir_tema",
+"icono": "🧭",
+"titulo": "Introduce un tema nuevo",
+"descripcion": "Experiencias detonadoras o de exploración inicial.",
+"tags": ["introduccion", "tema", "exploracion"]
+},
+{
+"id": "reforzar_aprendizajes",
+"icono": "🛠",
+"titulo": "Refuerza aprendizajes",
+"descripcion": "Práctica, consolidación o ejercitación.",
+"tags": ["practica", "refuerzo", "ejercicios"]
+},
+{
+"id": "generar_reflexion",
+"icono": "📣",
+"titulo": "Genera reflexión",
+"descripcion": "Promueve análisis, opinión o conciencia crítica.",
+"tags": ["reflexion", "analisis", "critico"]
+},
+{
+"id": "cierre_socializacion",
+"icono": "🏁",
+"titulo": "Cierre o socialización",
+"descripcion": "Presentación de productos o conclusiones.",
+"tags": ["cierre", "exposicion", "producto_final"]
+}
+],
+"enfoque_metodologico_nem": [
+{
+"id": "comunitario",
+"icono": "🌱",
+"titulo": "Comunitario",
+"descripcion": "Identidad, entorno y participación comunitaria.",
+"tags": ["comunidad", "participacion", "identidad"]
+},
+{
+"id": "basado_problemas",
+"icono": "🧠",
+"titulo": "Basado en problemas",
+"descripcion": "Retos reales y pensamiento crítico.",
+"tags": ["abp", "problemas", "retos"]
+},
+{
+"id": "aprendizaje_servicio",
+"icono": "🤲",
+"titulo": "Aprendizaje-servicio",
+"descripcion": "Acciones con impacto social y colaboración.",
+"tags": ["servicio", "impacto", "social"]
+},
+{
+"id": "steam",
+"icono": "🚀",
+"titulo": "STEAM",
+"descripcion": "Creatividad, ciencia y experimentación interdisciplinaria.",
+"tags": ["steam", "ciencia", "creatividad"]
+}
+],
+"clima_emocional_aula": [
+{
+"id": "motivadora_divertida",
+"icono": "😊",
+"titulo": "Motivadora y divertida",
+"descripcion": "Alta energía y engagement.",
+"tags": ["motivacion", "diversion", "energia"]
+},
+{
+"id": "relajada_creativa",
+"icono": "🧘",
+"titulo": "Relajada y creativa",
+"descripcion": "Exploración libre y expresión creativa.",
+"tags": ["calma", "creatividad", "libre"]
+},
+{
+"id": "favorece_convivencia",
+"icono": "🤝",
+"titulo": "Favorece convivencia",
+"descripcion": "Empatía, escucha y colaboración.",
+"tags": ["convivencia", "empatia", "respeto"]
+},
+{
+"id": "fortalece_confianza",
+"icono": "🌟",
+"titulo": "Fortalece confianza",
+"descripcion": "Participación segura y expresión personal.",
+"tags": ["confianza", "seguridad", "participacion"]
+}
+]
+}
+}

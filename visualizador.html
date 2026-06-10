@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es-MX" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maletin Primaria | Visualizador</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com/">
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="assets/css/theme.min.css" rel="stylesheet">
+  <link href="assets/css/user.min.css" rel="stylesheet">
+  <link href="assets/css/inicio-beta.css" rel="stylesheet">
+</head>
+
+<body>
+  <main class="beta-main viz-main" id="top">
+    <div class="beta-shell container-fluid py-3 py-lg-4">
+
+      <!-- Barra superior -->
+      <header class="viz-topbar card border-0">
+        <div class="viz-topbar-left">
+          <a class="viz-back-btn" href="planos-didacticos.html" aria-label="Regresar">
+            <span aria-hidden="true">&#8592;</span> Planos
+          </a>
+          <div class="viz-breadcrumb">
+            <span class="viz-bc-fase" id="viz-bc-fase">Fase 3</span>
+            <span class="viz-bc-sep" aria-hidden="true">/</span>
+            <span class="viz-bc-grado" id="viz-bc-grado">1er grado</span>
+            <span class="viz-bc-sep" aria-hidden="true">/</span>
+            <span class="viz-bc-titulo" id="viz-bc-titulo">Plano didactico</span>
+          </div>
+        </div>
+        <div class="viz-topbar-right">
+          <!-- Boton modo inteligente -->
+          <button class="viz-smart-toggle" id="viz-smart-toggle" type="button" aria-pressed="false">
+            <span class="viz-smart-toggle-orb" aria-hidden="true"></span>
+            <span class="viz-smart-toggle-label">Activar modo inteligente</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Layout principal -->
+      <div class="viz-layout mt-3">
+
+        <!-- Panel izquierdo: visor de archivo + metadata -->
+        <div class="viz-panel-left">
+
+          <!-- Visor del archivo -->
+          <div class="viz-viewer card border-0">
+            <div class="viz-viewer-toolbar">
+              <span class="viz-viewer-title" id="viz-file-title">Cargando...</span>
+              <div class="viz-viewer-actions">
+                <a class="viz-icon-btn" id="viz-download-btn" href="#" download aria-label="Descargar archivo">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                </a>
+                <button class="viz-icon-btn" id="viz-fullscreen-btn" type="button" aria-label="Pantalla completa">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
+                </button>
+              </div>
+            </div>
+            <div class="viz-viewer-body" id="viz-viewer-body">
+              <div class="viz-viewer-placeholder" id="viz-viewer-placeholder">
+                <div class="viz-placeholder-icon" aria-hidden="true">📄</div>
+                <p>Selecciona un plano para visualizarlo</p>
+              </div>
+              <iframe class="viz-iframe d-none" id="viz-iframe" title="Visor de archivo" allowfullscreen></iframe>
+            </div>
+          </div>
+
+          <!-- Metadata del recurso -->
+          <div class="viz-meta-panel card border-0 mt-3">
+              <h3 class="viz-meta-heading" id="viz-meta-heading">Sobre este plano</h3>
+            <div class="viz-meta-grid" id="viz-meta-grid">
+              <div class="viz-meta-item">
+                  <span class="viz-meta-label" id="viz-label-titulo">Titulo</span>
+                <span class="viz-meta-value" id="viz-meta-titulo">—</span>
+              </div>
+              <div class="viz-meta-item">
+                  <span class="viz-meta-label" id="viz-label-fase">Fase</span>
+                <span class="viz-meta-value" id="viz-meta-fase">—</span>
+              </div>
+              <div class="viz-meta-item">
+                  <span class="viz-meta-label" id="viz-label-grado">Grado</span>
+                <span class="viz-meta-value" id="viz-meta-grado">—</span>
+              </div>
+              <div class="viz-meta-item">
+                  <span class="viz-meta-label" id="viz-label-categoria">Categoria</span>
+                <span class="viz-meta-value" id="viz-meta-categoria">—</span>
+              </div>
+                <div class="viz-meta-item viz-meta-item--full" id="viz-meta-item-proposito">
+                  <span class="viz-meta-label" id="viz-label-proposito">Proposito</span>
+                <span class="viz-meta-value" id="viz-meta-proposito">—</span>
+              </div>
+                <div class="viz-meta-item viz-meta-item--full" id="viz-meta-item-producto">
+                  <span class="viz-meta-label">Producto central</span>
+                <span class="viz-meta-value" id="viz-meta-producto">—</span>
+              </div>
+              <div class="viz-meta-item viz-meta-item--full">
+                <span class="viz-meta-label">✦ Recomendaciones</span>
+                <div class="viz-ai-actions">
+                  <button class="viz-ai-generate-btn" id="viz-ai-generate-btn" type="button">Generar recomendaciones</button>
+                  <span class="viz-ai-status" id="viz-ai-status" aria-live="polite"></span>
+                </div>
+                <div class="viz-meta-value viz-ai-output" id="viz-meta-ai-recomendaciones">Pulsa el boton para generar recomendaciones.</div>
+              </div>
+            </div>
+            <div class="viz-meta-tags" id="viz-meta-metodologias"></div>
+          </div>
+
+        </div>
+
+        <!-- Panel derecho: herramientas inteligentes -->
+        <aside class="viz-panel-right" id="viz-panel-right">
+
+          <!-- Indicador de estado -->
+          <div class="viz-smart-hint" id="viz-smart-hint">
+            <div class="viz-smart-hint-icon" aria-hidden="true">✦</div>
+            <p>Activa el <strong>modo inteligente</strong> para registrar tu avance, agregar notas y hacer seguimiento de esta sesion.</p>
+          </div>
+
+          <!-- Tarjeta: Inicio de seguimiento -->
+          <div class="viz-smart-card viz-locked" id="viz-card-seguimiento">
+            <div class="viz-smart-card-lock" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </div>
+            <div class="viz-smart-card-header">
+              <span class="viz-smart-card-icon" aria-hidden="true">🎯</span>
+              <h4>Seguimiento de clase</h4>
+            </div>
+            <p class="viz-smart-card-desc">Registra si iniciaste, pausaste o completaste esta sesion didactica.</p>
+            <div class="viz-status-track">
+              <button class="viz-status-btn" type="button" data-status="pendiente" disabled>
+                <span>⬜</span> Pendiente
+              </button>
+              <button class="viz-status-btn" type="button" data-status="en-curso" disabled>
+                <span>🟡</span> En curso
+              </button>
+              <button class="viz-status-btn is-active" type="button" data-status="completado" disabled>
+                <span>🟢</span> Completado
+              </button>
+            </div>
+          </div>
+
+          <!-- Tarjeta: Progreso -->
+          <div class="viz-smart-card viz-locked" id="viz-card-progreso">
+            <div class="viz-smart-card-lock" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </div>
+            <div class="viz-smart-card-header">
+              <span class="viz-smart-card-icon" aria-hidden="true">📈</span>
+              <h4>Progreso de la sesion</h4>
+            </div>
+            <p class="viz-smart-card-desc">¿Que tanto avanzaste en este plano con tu grupo hoy?</p>
+            <div class="viz-progress-wrap">
+              <div class="viz-progress-bar">
+                <div class="viz-progress-fill" id="viz-progress-fill" style="width: 0%"></div>
+              </div>
+              <span class="viz-progress-pct" id="viz-progress-pct">0%</span>
+            </div>
+            <input class="viz-progress-range" id="viz-progress-range" type="range" min="0" max="100" value="0" disabled aria-label="Progreso de sesion">
+          </div>
+
+          <!-- Tarjeta: Seguimiento de actividades -->
+          <div class="viz-smart-card viz-locked" id="viz-card-notas">
+            <div class="viz-smart-card-lock" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </div>
+            <div class="viz-smart-card-header">
+              <span class="viz-smart-card-icon" aria-hidden="true">✅</span>
+              <h4>Seguimiento de actividades</h4>
+            </div>
+            <p class="viz-smart-card-desc">Registra actividad por actividad, su avance y marca cuando este terminada.</p>
+            <div class="viz-activities-card-resume" id="viz-activities-card-resume">1 actividad registrada · 0 terminadas</div>
+            <button class="viz-open-activities-btn" id="viz-open-activities-btn" type="button" disabled>
+              Abrir seguimiento de actividades
+            </button>
+          </div>
+
+          <!-- Tarjeta: Campos formativos -->
+          <div class="viz-smart-card viz-locked" id="viz-card-campos">
+            <div class="viz-smart-card-lock" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </div>
+            <div class="viz-smart-card-header">
+              <span class="viz-smart-card-icon" aria-hidden="true">🗂️</span>
+              <h4>Campos formativos</h4>
+            </div>
+            <p class="viz-smart-card-desc">Contenidos y PDA vinculados a este plano.</p>
+            <ul class="viz-campos-list" id="viz-campos-list">
+              <li class="viz-campo-placeholder">Activa el modo inteligente para ver los campos</li>
+            </ul>
+          </div>
+
+          <!-- Tarjeta: Instrumentos de evaluacion -->
+          <div class="viz-smart-card viz-locked" id="viz-card-instrumentos">
+            <div class="viz-smart-card-lock" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </div>
+            <div class="viz-smart-card-header">
+              <img class="viz-smart-card-icon-img" src="assets/img/lineicons/examen.png" alt="Evaluacion">
+              <h4>Instrumento de evaluacion sugerido</h4>
+            </div>
+            <p class="viz-smart-card-desc">Sugerencias calculadas para evaluar este plano con instrumentos compatibles.</p>
+            <button class="viz-open-instruments-btn" id="viz-open-instruments-btn" type="button" disabled>
+              Recomendacion de instrumentos de evaluacion
+            </button>
+            <div class="viz-instrumentos-summary" id="viz-instrumentos-summary">Cargando sugerencias de instrumentos...</div>
+          </div>
+
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <div class="modal fade" id="viz-instrumentos-modal" tabindex="-1" aria-labelledby="viz-instrumentos-modal-title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content viz-modal-content">
+        <div class="modal-header viz-modal-header">
+          <h5 class="modal-title" id="viz-instrumentos-modal-title">Recomendacion de instrumentos de evaluacion</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body viz-modal-body">
+          <div class="viz-modal-copy">Selecciona un instrumento sugerido para abrirlo.</div>
+          <ul class="viz-modal-instrumentos-list" id="viz-modal-instrumentos-list">
+            <li class="viz-campo-placeholder">No hay recomendaciones disponibles.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="viz-activities-modal" tabindex="-1" aria-labelledby="viz-activities-modal-title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content viz-modal-content">
+        <div class="modal-header viz-modal-header">
+          <h5 class="modal-title" id="viz-activities-modal-title">Seguimiento de actividades</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body viz-modal-body">
+          <div class="viz-activities-modal-copy">Agrega actividades del plano, registra avance y marca cada una cuando se complete.</div>
+          <div class="viz-activities-list" id="viz-activities-list">
+            <article class="viz-activity-item" data-index="0">
+              <div class="viz-activity-top">
+                <h5 class="viz-activity-title">Actividad 1</h5>
+                <label class="viz-activity-check">
+                  <input class="viz-activity-done" type="checkbox" disabled>
+                  <span>Terminada</span>
+                </label>
+              </div>
+              <input class="viz-activity-name" type="text" placeholder="Describe la actividad" disabled>
+              <textarea class="viz-activity-progress" placeholder="Agrega avance, observaciones o acuerdos..." rows="3" disabled></textarea>
+              <button class="viz-activity-remove" type="button" disabled>Quitar actividad</button>
+            </article>
+          </div>
+          <div class="viz-activities-actions">
+            <button class="viz-add-activity-btn" type="button" id="viz-add-activity-btn" disabled>+ Agregar nueva actividad</button>
+            <button class="viz-save-notes-btn" type="button" id="viz-save-notes-btn" disabled>Guardar seguimiento</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="beta-menu-container"></div>
+
+  <script src="vendors/bootstrap/bootstrap.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/load-menu.js"></script>
+  <script src="assets/js/visualizador.js"></script>
+</body>
+
+</html>

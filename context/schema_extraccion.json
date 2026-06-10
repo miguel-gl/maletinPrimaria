@@ -1,0 +1,137 @@
+{
+  "id": "",
+  "archivo": {
+    "nombre": "",
+    "ruta": "",
+    "tipo": "",
+    "extension": ""
+  },
+  "clasificacion": {
+    "fase": "<number>",
+    "grado": "<number>",
+    "tipo_recurso": "",
+    "categoria_pedagogica": ""
+  },
+  "contenido": {
+    "titulo": "",
+    "nombre_proyecto": "",
+    "sintesis": "",
+    "proposito": "",
+    "problema_contexto": "",
+    "producto_central": "",
+    "metodologias": [],
+    "ejes_articuladores": [],
+    "campos_formativos": [
+      {
+        "campo": "",
+        "contenidos": [
+          {
+            "contenido": "",
+            "pda": []
+          }
+        ]
+      }
+    ],
+    "temas_clave": [],
+    "momentos_metodologicos": [
+      {
+        "orden": "<number>",
+        "nombre": "",
+        "verbo_metodologico": "",
+        "descripcion_completa": ""
+      }
+    ],
+    "sesiones_totales": "<number>",
+    "sesiones": [
+      {
+        "numero_sesion": "<number>",
+        "titulo": "",
+        "momento_metodologico": "",
+        "actividades": [],
+        "recursos": [],
+        "evidencias": []
+      }
+    ],
+    "anexos": [],
+    "vinculacion_ltg": [
+      {
+        "grado": "",
+        "libro": "",
+        "seccion": "",
+        "pagina": "<number>"
+      }
+    ]
+  },
+  "evaluacion": {
+    "instrumento": "",
+    "grado": "",
+    "criterios": [
+      {
+        "numero": "<number>",
+        "criterio": "",
+        "excelente_4": "",
+        "bueno_3": "",
+        "satisfactorio_2": "",
+        "necesita_mejorar_1": ""
+      }
+    ]
+  },
+  "implementacion": {
+    "duracion_horas": 0,
+    "materiales": [],
+    "modos_trabajo": []
+  },
+  "enriquecimiento_ia": {
+    "pedagogico": {
+      "momentos_ciclo_escolar": [],
+      "competencias_inferidas": [],
+      "habilidades_inferidas": [],
+      "habilidades_reforzadas": [],
+      "tipos_interaccion": [],
+      "nivel_abstraccion": "",
+      "emociones_esperadas": []
+    },
+    "curricular": {
+      "indice_creatividad": "<number 1-10>",
+      "indice_colaboracion": "<number 1-10>",
+      "indice_interdisciplinario": "<number 1-10>",
+      "indice_pensamiento_critico": "<number 1-10>",
+      "experiencias_relacionadas": [],
+      "continuidad": {
+        "fase_anterior": [],
+        "fase_siguiente": []
+      }
+    },
+    "recomendacion": {
+      "recomendado_para": [],
+      "contextos_recomendados": [],
+      "agrupaciones_sugeridas": [],
+      "experiencias_similares": []
+    },
+    "semantica": {
+      "tags": [],
+      "keywords": [],
+      "temas_detectados": []
+    },
+    "descubrimiento_contextual": {
+      "energia_y_dinamica_grupo": [
+        { "id": "", "icono": "", "titulo": "" }
+      ],
+      "recursos_y_preparacion": [
+        { "id": "", "icono": "", "titulo": "" }
+      ],
+      "tipo_experiencia_aprendizaje": [
+        { "id": "", "icono": "", "titulo": "" }
+      ],
+      "intencion_pedagogica": [
+        { "id": "", "icono": "", "titulo": "" }
+      ],
+      "enfoque_metodologico_nem": [
+        { "id": "", "icono": "", "titulo": "" }
+      ],
+      "clima_emocional_aula": [
+        { "id": "", "icono": "", "titulo": "" }
+      ]
+    }
+  }
+}

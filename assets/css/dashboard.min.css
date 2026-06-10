@@ -1,0 +1,51 @@
+/* Dashboard para "Continuar experiencias" */
+.beta-dashboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+@media (max-width: 900px) {
+  .beta-dashboard {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+.beta-dashboard-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(76,63,209,0.07);
+  padding: 1.2rem 1.3rem 1.1rem 1.3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 160px;
+  position: relative;
+}
+.beta-dashboard-card h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  color: #4c3fd1;
+}
+.beta-dashboard-card .beta-dashboard-value {
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: #1d2133;
+  margin-bottom: 0.2rem;
+}
+.beta-dashboard-card .beta-dashboard-desc {
+  font-size: 0.98rem;
+  color: #6a6e8a;
+  margin-bottom: 0.1rem;
+}
+.beta-dashboard-card .beta-dashboard-trend {
+  font-size: 0.92rem;
+  color: #1dbf73;
+  font-weight: 600;
+  margin-top: 0.2rem;
+}
+.beta-dashboard-card .beta-dashboard-trend.negative {
+  color: #e14b4b;
+}

@@ -1,0 +1,18 @@
+{
+  "name": "maletinprimaria-electron",
+  "version": "1.0.0",
+  "description": "App de escritorio Electron para Maletin Primaria",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "consolidate:resources": "node src/scripts/consolidateMetadataResources.js",
+    "generate:embeddings": "node src/scripts/generateEmbeddings.js",
+    "rebuild:embeddings": "npm run consolidate:resources && npm run generate:embeddings"
+  },
+  "dependencies": {
+    "@xenova/transformers": "^2.17.2"
+  },
+  "devDependencies": {
+    "electron": "^32.2.1"
+  }
+}
