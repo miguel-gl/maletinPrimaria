@@ -136,8 +136,10 @@ ipcMain.handle('save-local-resource', async (_event, payload = {}) => {
   return { ok: true, savedPath: saveResult.filePath };
 });
 
+let mainWindow = null;
+
 function createWindow() {
-  const mainWindow = new BrowserWindow({
+  mainWindow = new BrowserWindow({
     width: 1366,
     height: 900,
     minWidth: 1024,
@@ -246,15 +248,26 @@ body{font-family:'Segoe UI',sans-serif;background:transparent;display:flex;align
 
   autoUpdater.on('update-downloaded', (info) => {
     console.log('[updater] Descarga completa:', info.version);
-    closeUpdateWindow();
-    dialog.showMessageBox({
-      type: 'info',
-      title: 'Actualizacion lista',
-      message: 'La version ' + info.version + ' esta lista. La app se reiniciara para aplicar la actualizacion.',
-      buttons: ['Reiniciar ahora'],
-    }).then(() => {
-      autoUpdater.quitAndInstall();
-    });
+    if (updateWin && !updateWin.isDestroyed()) {
+      updateWin.webContents.executeJavaScript(
+        `document.getElementById('bar').style.width='100%';` +
+        `document.getElementById('pct').textContent='100%';` +
+        `document.getElementById('status').textContent='Descarga completada';`
+      ).catch(() => {});
+    }
+    setTimeout(() => {
+      closeUpdateWindow();
+      const parent = mainWindow && !mainWindow.isDestroyed() ? mainWindow : null;
+      dialog.showMessageBox(Object.assign({}, parent ? { window: parent } : {}, {
+        type: 'info',
+        title: 'Actualizacion lista',
+        message: 'La version ' + info.version + ' esta lista.',
+        detail: 'La app se reiniciara para aplicar la actualizacion.',
+        buttons: ['Reiniciar ahora'],
+      })).then(() => {
+        autoUpdater.quitAndInstall();
+      });
+    }, 1500);
   });
 
   autoUpdater.on('error', (err) => {
