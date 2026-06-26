@@ -166,17 +166,73 @@ app.whenReady().then(() => {
   autoUpdater.autoDownload = true;
   autoUpdater.autoInstallOnAppQuit = true;
 
+  let updateWin = null;
+
+  function createUpdateWindow(version) {
+    updateWin = new BrowserWindow({
+      width: 420,
+      height: 220,
+      resizable: false,
+      minimizable: false,
+      maximizable: false,
+      fullscreenable: false,
+      frame: false,
+      alwaysOnTop: true,
+      transparent: true,
+      webPreferences: { contextIsolation: true, nodeIntegration: false },
+    });
+
+    const html = `<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',sans-serif;background:transparent;display:flex;align-items:center;justify-content:center;height:100vh}
+.card{background:#fff;border-radius:18px;padding:1.6rem 1.8rem;box-shadow:0 20px 50px rgba(30,50,100,.18);border:1px solid #e8edf8;width:100%;text-align:center}
+.title{font-size:.82rem;font-weight:800;color:#1f2d54;margin-bottom:.15rem}
+.version{font-size:.74rem;color:#5f6b8b;margin-bottom:1rem}
+.track{height:10px;border-radius:999px;background:#e8edf8;overflow:hidden;margin-bottom:.6rem}
+.bar{height:100%;border-radius:999px;background:linear-gradient(90deg,#4d91ff,#44c2ff);width:0%;transition:width .3s ease}
+.pct{font-size:1.1rem;font-weight:800;color:#4d91ff}
+.status{font-size:.72rem;color:#8a96b3;margin-top:.4rem}
+</style></head><body>
+<div class="card">
+<p class="title">Descargando actualizacion</p>
+<p class="version" id="ver">Version ${version}</p>
+<div class="track"><div class="bar" id="bar"></div></div>
+<p class="pct" id="pct">0%</p>
+<p class="status" id="status">Iniciando descarga...</p>
+</div>
+</body></html>`;
+
+    updateWin.loadURL('data:text/html;charset=utf-8,' + encodeURIComponent(html));
+    updateWin.center();
+  }
+
+  function updateProgress(percent, speed) {
+    if (!updateWin || updateWin.isDestroyed()) return;
+    const pct = Math.round(percent);
+    const mbps = speed ? (speed / 1024 / 1024).toFixed(1) : '0.0';
+    const status = pct < 100 ? mbps + ' MB/s' : 'Finalizando...';
+    updateWin.webContents.executeJavaScript(
+      `document.getElementById('bar').style.width='${pct}%';` +
+      `document.getElementById('pct').textContent='${pct}%';` +
+      `document.getElementById('status').textContent='${status}';`
+    ).catch(() => {});
+  }
+
+  function closeUpdateWindow() {
+    if (updateWin && !updateWin.isDestroyed()) {
+      updateWin.close();
+    }
+    updateWin = null;
+  }
+
   autoUpdater.on('checking-for-update', () => {
     console.log('[updater] Buscando actualizaciones...');
   });
 
   autoUpdater.on('update-available', (info) => {
     console.log('[updater] Actualizacion disponible:', info.version);
-    dialog.showMessageBox({
-      type: 'info',
-      title: 'Actualizacion disponible',
-      message: 'Se encontro la version ' + info.version + '. Descargando...',
-    });
+    createUpdateWindow(info.version);
   });
 
   autoUpdater.on('update-not-available', () => {
@@ -185,14 +241,16 @@ app.whenReady().then(() => {
 
   autoUpdater.on('download-progress', (progress) => {
     console.log('[updater] Descargando: ' + Math.round(progress.percent) + '%');
+    updateProgress(progress.percent, progress.bytesPerSecond);
   });
 
   autoUpdater.on('update-downloaded', (info) => {
     console.log('[updater] Descarga completa:', info.version);
+    closeUpdateWindow();
     dialog.showMessageBox({
       type: 'info',
       title: 'Actualizacion lista',
-      message: 'La version ' + info.version + ' se descargo. La app se reiniciara para aplicar la actualizacion.',
+      message: 'La version ' + info.version + ' esta lista. La app se reiniciara para aplicar la actualizacion.',
       buttons: ['Reiniciar ahora'],
     }).then(() => {
       autoUpdater.quitAndInstall();
@@ -201,6 +259,7 @@ app.whenReady().then(() => {
 
   autoUpdater.on('error', (err) => {
     console.error('[updater] Error:', err.message);
+    closeUpdateWindow();
   });
 
   autoUpdater.checkForUpdatesAndNotify();
