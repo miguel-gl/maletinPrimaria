@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es-MX" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maletin Primaria | Activacion de Licencia</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com/">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Mulish:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="assets/css/activacion.css" rel="stylesheet">
+</head>
+
+<body>
+  <main class="act-main">
+    <div class="act-container">
+      <div class="act-panel-left">
+        <div class="act-brand-card">
+          <h1 class="act-logo">Mi Maletin<span class="act-logo-blue">Primaria</span><span class="act-logo-orange">2</span></h1>
+          <p class="act-tagline">Tu asistente pedagogico de escritorio</p>
+          <img class="act-illustration" src="assets/img/illustration/home-6-3.png" alt="Ilustracion de Mi Maletin Primaria">
+          <div class="act-features">
+            <div class="act-feature">
+              <span class="act-feature-icon">&#128203;</span>
+              <span>Planea tu semana en minutos</span>
+            </div>
+            <div class="act-feature">
+              <span class="act-feature-icon">&#128218;</span>
+              <span>Libros, fichas y material listo para usar</span>
+            </div>
+            <div class="act-feature">
+              <span class="act-feature-icon">&#9997;&#65039;</span>
+              <span>Instrumentos de evaluacion incluidos</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="act-panel-right">
+        <div class="act-card">
+          <div class="act-card-header">
+            <div class="act-badge">Activacion requerida</div>
+            <h2 class="act-card-title">Activa tu licencia</h2>
+            <p class="act-card-desc">Ingresa tus datos y la clave que recibiste al momento de tu compra para desbloquear todas las funciones.</p>
+          </div>
+
+          <form class="act-form" id="activacionForm" novalidate>
+            <div class="act-field-wrap">
+              <label class="act-label" for="actNombre">Nombre completo</label>
+              <div class="act-input-wrap">
+                <svg class="act-input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                <input class="act-input" id="actNombre" name="nombreCompleto" type="text" placeholder="Ej. Maria Lopez Hernandez" required autocomplete="name">
+              </div>
+              <span class="act-error" id="actNombreError"></span>
+            </div>
+
+            <div class="act-field-wrap">
+              <label class="act-label" for="actLic1">Clave de licencia</label>
+              <div class="act-license-box">
+                <div class="act-license-grid">
+                  <input class="act-lic-input" id="actLic1" maxlength="4" placeholder="XXXX" required autocomplete="off" data-license-segment="1">
+                  <span class="act-lic-sep" aria-hidden="true">&mdash;</span>
+                  <input class="act-lic-input" id="actLic2" maxlength="4" placeholder="XXXX" required autocomplete="off" data-license-segment="2">
+                  <span class="act-lic-sep" aria-hidden="true">&mdash;</span>
+                  <input class="act-lic-input" id="actLic3" maxlength="4" placeholder="XXXX" required autocomplete="off" data-license-segment="3">
+                  <span class="act-lic-sep" aria-hidden="true">&mdash;</span>
+                  <input class="act-lic-input" id="actLic4" maxlength="4" placeholder="XXXX" required autocomplete="off" data-license-segment="4">
+                </div>
+              </div>
+              <span class="act-error" id="actLicenciaError"></span>
+            </div>
+
+            <div class="act-row-2">
+              <div class="act-field-wrap">
+                <label class="act-label" for="actTelefono">Telefono</label>
+                <div class="act-input-wrap">
+                  <svg class="act-input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  <input class="act-input" id="actTelefono" name="telefono" type="tel" placeholder="55 1234 5678" required autocomplete="tel">
+                </div>
+                <span class="act-error" id="actTelefonoError"></span>
+              </div>
+
+              <div class="act-field-wrap">
+                <label class="act-label" for="actFolio">Folio de compra</label>
+                <div class="act-input-wrap">
+                  <svg class="act-input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                  <input class="act-input" id="actFolio" name="folioCompra" type="text" placeholder="FOL-00123" required autocomplete="off">
+                </div>
+                <span class="act-error" id="actFolioError"></span>
+              </div>
+            </div>
+
+            <div class="act-feedback" id="actFeedback" role="alert"></div>
+
+            <button class="act-submit" type="submit" id="actSubmitBtn">
+              <span class="act-submit-text" id="actSubmitText">Activar licencia</span>
+              <span class="act-submit-loader" id="actLoader" aria-hidden="true"></span>
+            </button>
+          </form>
+        </div>
+        <p class="act-footer">Si no cuentas con una licencia, contacta a tu distribuidor autorizado.</p>
+      </div>
+    </div>
+  </main>
+
+  <script src="assets/js/activacion.js"></script>
+</body>
+
+</html>

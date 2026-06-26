@@ -1,5 +1,11 @@
 const { contextBridge, ipcRenderer } = require('electron');
 
+contextBridge.exposeInMainWorld('maletinLicense', {
+  activate(payload) {
+    return ipcRenderer.invoke('activate-license', payload);
+  },
+});
+
 contextBridge.exposeInMainWorld('maletinAI', {
   semanticSearch(query, options = {}) {
     return ipcRenderer.invoke('semantic-search', {

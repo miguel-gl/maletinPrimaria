@@ -2,12 +2,14 @@
   "use strict";
 
   var CATALOGO_URL = "src/metadata/catalogo_descubrimiento_conceptual.json";
-  var RESOURCE_DATASET_URLS = [
-    "src/metadata/fase3/planos_didacticos.json",
-    "src/metadata/resources.json"
-  ];
   var DESCUBRIMIENTO_MAP = {};
-  var RESOURCE_DATASET_CACHE = null;
+  var RESOURCE_DATASET_CACHE_BY_PHASE = {};
+  var VISUAL_ONLY_CATEGORIES = {
+    campo: true
+  };
+  var CATEGORY_SELECTION_LIMITS = {
+    campo: 3
+  };
   var FILTROS_ACTIVOS = {
     energia: [],
     recursos: [],
@@ -15,6 +17,7 @@
     intencion: [],
     enfoque: [],
     clima: [],
+    campo: [],
     busqueda: ""
   };
 
@@ -69,8 +72,107 @@
     return DISCOVERY_ID_ALIASES[normalized] || normalized;
   }
 
+  function parseStoredProfile(rawValue) {
+    if (!rawValue) {
+      return null;
+    }
+
+    try {
+      return JSON.parse(rawValue);
+    } catch (_err) {
+      return null;
+    }
+  }
+
+  function getTeacherProfile() {
+    try {
+      return parseStoredProfile(localStorage.getItem("maletinPrimariaTeacherProfile")) || {};
+    } catch (_err) {
+      return {};
+    }
+  }
+
+  function getTeacherPhase() {
+    var profile = getTeacherProfile();
+    var phase = parseInt(profile && profile.phase, 10);
+
+    if (phase >= 3 && phase <= 5) {
+      return phase;
+    }
+
+    return 3;
+  }
+
+  function getTeacherLevel() {
+    var profile = getTeacherProfile();
+    var candidates = [
+      profile && profile.level,
+      Array.isArray(profile && profile.levels) ? profile.levels[0] : null,
+      profile && profile.grado,
+      profile && profile.selectedGrado
+    ];
+
+    for (var i = 0; i < candidates.length; i += 1) {
+      var parsed = parseInt(candidates[i], 10);
+      if (!isNaN(parsed) && parsed > 0) {
+        return parsed;
+      }
+    }
+
+    return null;
+  }
+
+  function getPhasePlanosUrl(phase) {
+    var phaseNum = parseInt(phase, 10);
+    if (phaseNum < 3 || phaseNum > 5) {
+      phaseNum = getTeacherPhase();
+    }
+
+    return "src/metadata/fase" + phaseNum + "/planos_didacticos.json";
+  }
+
+  function resourceMatchesLevel(resource, level) {
+    if (!level) {
+      return true;
+    }
+
+    var grado = resource && resource.clasificacion ? parseInt(resource.clasificacion.grado, 10) : NaN;
+    return grado === level;
+  }
+
   function getNormalizedActiveIds(category) {
     return toArray(FILTROS_ACTIVOS[category]).map(normalizeDiscoveryId).filter(Boolean);
+  }
+
+  function isVisualOnlyCategory(category) {
+    return !!VISUAL_ONLY_CATEGORIES[category];
+  }
+
+  function getCategorySelectionLimit(category) {
+    return CATEGORY_SELECTION_LIMITS[category] || 0;
+  }
+
+  function updateCategorySelectionState(category) {
+    var limit = getCategorySelectionLimit(category);
+    if (!limit) {
+      return;
+    }
+
+    var activeCount = Array.isArray(FILTROS_ACTIVOS[category]) ? FILTROS_ACTIVOS[category].length : 0;
+    var chips = document.querySelectorAll(".explorador-chip[data-category='" + category + "']");
+    var hint = document.getElementById("campo-formativo-hint");
+
+    chips.forEach(function (chip) {
+      var chipDiscoveryId = normalizeDiscoveryId(chip.getAttribute("data-discovery-id"));
+      var isActive = FILTROS_ACTIVOS[category].indexOf(chipDiscoveryId) > -1;
+      chip.disabled = !isActive && activeCount >= limit;
+    });
+
+    if (hint) {
+      hint.textContent = activeCount >= limit
+        ? "Ya seleccionaste 3 de 3 campos formativos."
+        : "Puedes seleccionar hasta 3 campos formativos.";
+    }
   }
 
   function buildShortDiscoveryLabel(desc) {
@@ -230,53 +332,30 @@
       });
   }
 
-  function cargarRecursosDescubrimiento() {
-    if (RESOURCE_DATASET_CACHE) {
-      return Promise.resolve(RESOURCE_DATASET_CACHE);
+  function cargarPlanosPorFase(phase) {
+    var phaseNum = parseInt(phase, 10);
+    if (RESOURCE_DATASET_CACHE_BY_PHASE[phaseNum]) {
+      return Promise.resolve(RESOURCE_DATASET_CACHE_BY_PHASE[phaseNum]);
     }
 
-    return Promise.all(RESOURCE_DATASET_URLS.map(function (url) {
-      return fetch(url)
-        .then(function (response) {
-          if (!response.ok) {
-            throw new Error("No se pudo cargar " + url);
-          }
-          return response.json();
-        })
-        .catch(function () {
-          return [];
-        });
-    })).then(function (datasets) {
-      var mergedByFile = {};
+    var url = getPhasePlanosUrl(phaseNum);
 
-      datasets.forEach(function (dataset) {
-        toArray(dataset).forEach(function (resource) {
-          var fileKey = resource && resource.archivo ? (resource.archivo.ruta || resource.archivo.nombre || resource.id) : resource.id;
-          if (!fileKey) {
-            return;
-          }
-
-          if (!mergedByFile[fileKey]) {
-            mergedByFile[fileKey] = resource;
-            return;
-          }
-
-          var current = mergedByFile[fileKey];
-          var currentDiscovery = current && current.enriquecimiento_ia ? current.enriquecimiento_ia.descubrimiento_contextual : null;
-          var nextDiscovery = resource && resource.enriquecimiento_ia ? resource.enriquecimiento_ia.descubrimiento_contextual : null;
-
-          if ((!currentDiscovery || !Object.keys(currentDiscovery).length) && nextDiscovery && Object.keys(nextDiscovery).length) {
-            mergedByFile[fileKey] = resource;
-          }
-        });
+    return fetch(url)
+      .then(function (response) {
+        if (!response.ok) {
+          throw new Error("No se pudo cargar " + url);
+        }
+        return response.json();
+      })
+      .then(function (dataset) {
+        RESOURCE_DATASET_CACHE_BY_PHASE[phaseNum] = toArray(dataset);
+        return RESOURCE_DATASET_CACHE_BY_PHASE[phaseNum];
+      })
+      .catch(function (err) {
+        console.error("Error cargando planos por fase:", err);
+        RESOURCE_DATASET_CACHE_BY_PHASE[phaseNum] = [];
+        return [];
       });
-
-      RESOURCE_DATASET_CACHE = Object.keys(mergedByFile).map(function (key) {
-        return mergedByFile[key];
-      });
-
-      return RESOURCE_DATASET_CACHE;
-    });
   }
 
   function resourceMatchesDiscoveryFilters(resource, discoveryContext) {
@@ -319,13 +398,25 @@
           FILTROS_ACTIVOS[category].splice(index, 1);
           chip.classList.remove("is-active");
         } else {
+          var limit = getCategorySelectionLimit(category);
+          if (limit && FILTROS_ACTIVOS[category].length >= limit) {
+            updateCategorySelectionState(category);
+            return;
+          }
+
           FILTROS_ACTIVOS[category].push(discoveryId);
           chip.classList.add("is-active");
         }
         
         // Sincronizar chips en main y modal
         sincronizarChips(discoveryId, category);
+        updateCategorySelectionState(category);
         actualizarPillBadges();
+
+        if (isVisualOnlyCategory(category)) {
+          return;
+        }
+
         buscarRecursos();
       });
     });
@@ -342,6 +433,8 @@
         chip.classList.remove("is-active");
       }
     });
+
+    updateCategorySelectionState(category);
   }
 
   function initSearch() {
@@ -387,19 +480,25 @@
         FILTROS_ACTIVOS.intencion = [];
         FILTROS_ACTIVOS.enfoque = [];
         FILTROS_ACTIVOS.clima = [];
+        FILTROS_ACTIVOS.campo = [];
         
         document.querySelectorAll(".explorador-chip.is-active").forEach(function (chip) {
           chip.classList.remove("is-active");
         });
+
+        document.querySelectorAll(".explorador-chip:disabled").forEach(function (chip) {
+          chip.disabled = false;
+        });
         
         actualizarPillBadges();
-        mostrarEstadoVacio();
+        updateCategorySelectionState("campo");
+        mostrarTopActividades();
         if (searchInput) searchInput.focus();
       });
     }
 
     // Sincronizar chips al abrir cualquier modal de categoría
-    var categoryModalIds = ["modalEnergia", "modalRecursos", "modalExperiencia", "modalIntencion", "modalEnfoque", "modalClima"];
+    var categoryModalIds = ["modalEnergia", "modalRecursos", "modalExperiencia", "modalIntencion", "modalEnfoque", "modalClima", "modalCampo"];
     categoryModalIds.forEach(function (modalId) {
       var modal = document.getElementById(modalId);
       if (modal) {
@@ -452,11 +551,14 @@
       if (key === "busqueda") {
         return FILTROS_ACTIVOS[key].length > 0;
       }
+      if (isVisualOnlyCategory(key)) {
+        return false;
+      }
       return Array.isArray(FILTROS_ACTIVOS[key]) && FILTROS_ACTIVOS[key].length > 0;
     });
     
     if (!tieneFilter) {
-      mostrarEstadoVacio();
+      mostrarTopActividades();
       return;
     }
     
@@ -486,6 +588,8 @@
 
   function buscarPorDescubrimiento() {
     var discoveryContext = getDiscoveryFilterPayload();
+    var phase = getTeacherPhase();
+    var level = getTeacherLevel();
     var statusEl = document.getElementById("beta-search-status");
     var gridEl = document.getElementById("planos-grid");
 
@@ -502,9 +606,13 @@
       gridEl.innerHTML = '<div class="explorador-empty"><p>Buscando recursos que coincidan con los filtros seleccionados...</p></div>';
     }
 
-    cargarRecursosDescubrimiento()
+    cargarPlanosPorFase(phase)
       .then(function (resources) {
         var filteredResources = toArray(resources).filter(function (resource) {
+          if (!resourceMatchesLevel(resource, level)) {
+            return false;
+          }
+
           return resourceMatchesDiscoveryFilters(resource, discoveryContext);
         });
 
@@ -581,6 +689,41 @@
     }
 
     mostrarError("La búsqueda semántica no está disponible en esta ventana. Recarga la app Electron y vuelve a entrar al explorador.");
+  }
+
+  function mostrarTopActividades() {
+    var statusEl = document.getElementById("beta-search-status");
+    var gridEl = document.getElementById("planos-grid");
+    var phase = getTeacherPhase();
+    var level = getTeacherLevel();
+
+    if (statusEl) {
+      statusEl.textContent = "Mostrando top 10 de actividades de fase " + phase + (level ? " y grado " + level : "") + "...";
+    }
+
+    if (gridEl) {
+      gridEl.innerHTML = '<div class="explorador-empty"><p>Armando el top 10 de actividades...</p></div>';
+    }
+
+    cargarPlanosPorFase(phase)
+      .then(function (resources) {
+        var filtered = toArray(resources).filter(function (resource) {
+          return resourceMatchesLevel(resource, level);
+        }).slice(0, 10);
+
+        if (filtered.length > 0) {
+          mostrarResultadosSemanticos(filtered.map(function (resource) {
+            return {
+              id: resource.id,
+              score: 0,
+              recurso: resource
+            };
+          }));
+          return;
+        }
+
+        mostrarEstadoVacio("No hay actividades disponibles para mostrar.");
+      });
   }
 
   function mostrarResultadosSemanticos(results) {
@@ -750,7 +893,7 @@
   cargarCatalogo().then(function () {
     initChips();
     initSearch();
-    mostrarEstadoVacio();
+    mostrarTopActividades();
   });
 
 })();

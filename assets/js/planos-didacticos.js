@@ -496,7 +496,8 @@
       var categoria = clasificacion.categoria_pedagogica || "";
       var fase = clasificacion.fase != null ? clasificacion.fase : "-";
       var grado = clasificacion.grado != null ? clasificacion.grado : "-";
-      var href = "visualizador.html?id=" + encodeURIComponent(item.id || "") +
+      var targetPage = "visualizador.html";
+      var href = targetPage + "?id=" + encodeURIComponent(item.id || "") +
         "&fase=" + encodeURIComponent(clasificacion.fase || "") +
         "&tipo=" + encodeURIComponent(currentResource.key) +
         "&from=planos";

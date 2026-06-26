@@ -1,10 +1,12 @@
 {
   "name": "maletinprimaria-electron",
   "version": "1.0.0",
-  "description": "App de escritorio Electron para Maletin Primaria",
+  "description": "App de escritorio para docentes de primaria NEM",
   "main": "main.js",
+  "author": "Miguel Gonzalez",
   "scripts": {
     "start": "electron .",
+    "build": "cross-env CSC_IDENTITY_AUTO_DISCOVERY=false electron-builder --win",
     "consolidate:resources": "node src/scripts/consolidateMetadataResources.js",
     "generate:embeddings": "node src/scripts/generateEmbeddings.js",
     "rebuild:embeddings": "npm run consolidate:resources && npm run generate:embeddings"
@@ -13,6 +15,52 @@
     "@xenova/transformers": "^2.17.2"
   },
   "devDependencies": {
-    "electron": "^32.2.1"
+    "cross-env": "^7.0.3",
+    "electron": "^32.2.1",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "mx.maletinprimaria.app",
+    "productName": "Maletin Primaria",
+    "copyright": "Miguel Gonzalez",
+    "files": [
+      "main.js",
+      "preload.js",
+      "*.html",
+      "assets/**",
+      "vendors/**",
+      "components/**",
+      "src/ai/**",
+      "src/metadata/**",
+      "src/resources/**",
+      "!src/metadata/fase3/planos_didacticos_old.json",
+      "!assets/js/inicio-beta-v2.js",
+      "!assets/js/inicio-beta-v3.js"
+    ],
+    "asar": true,
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "assets/img/lineicons/maletin.png",
+      "signingHashAlgorithms": null,
+      "sign": null
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Maletin Primaria"
+    },
+    "directories": {
+      "output": "dist",
+      "buildResources": "build-resources"
+    }
   }
 }

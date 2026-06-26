@@ -1,20 +1,63 @@
-const { app, BrowserWindow, ipcMain, shell, dialog } = require('electron');
+const { app, BrowserWindow, ipcMain, shell, dialog, Menu, net } = require('electron');
 const path = require('path');
 const fs = require('fs');
 
 const { semanticSearch } = require('./src/ai/search');
 
+const ACTIVATION_API_URL = 'https://sistemasaudiovisualesinternacionales.com/saiadmin/api/activar.php';
+
+ipcMain.handle('activate-license', async (_event, payload = {}) => {
+  const body = JSON.stringify({
+    licencia: String(payload.licencia || '').trim(),
+    nombre_completo: String(payload.nombre_completo || '').trim(),
+    telefono: String(payload.telefono || '').trim(),
+    folio_compra: String(payload.folio_compra || '').trim(),
+  });
+
+  console.log('[activate-license] POST', ACTIVATION_API_URL);
+  console.log('[activate-license] body:', body);
+
+  try {
+    const response = await net.fetch(ACTIVATION_API_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body,
+    });
+
+    const raw = await response.text();
+    console.log('[activate-license] HTTP', response.status, raw);
+
+    let json;
+    try {
+      json = JSON.parse(raw);
+    } catch (_e) {
+      console.error('[activate-license] respuesta no es JSON valido:', raw);
+      return { ok: false, httpStatus: response.status, status: 'error', message: 'Respuesta inesperada del servidor.', data: null };
+    }
+
+    return {
+      ok: response.ok,
+      httpStatus: response.status,
+      status: json.status,
+      message: json.message || '',
+      data: json.data || null,
+    };
+  } catch (error) {
+    console.error('[activate-license] error de red:', error.message);
+    return {
+      ok: false,
+      httpStatus: 0,
+      status: 'error',
+      message: 'No se pudo conectar al servidor. Verifica tu conexion a internet.',
+      data: null,
+    };
+  }
+});
+
 ipcMain.handle('semantic-search', async (_event, payload = {}) => {
   const query = String(payload.query || '').trim();
   const discoveryContext = payload?.filters?.discoveryContext || {};
   const hasDiscoveryContextFilters = Object.values(discoveryContext).some((values) => Array.isArray(values) && values.length > 0);
-
-  if (!query && !hasDiscoveryContextFilters) {
-    return {
-      ok: true,
-      results: [],
-    };
-  }
 
   try {
     const results = await semanticSearch(query, {
@@ -98,6 +141,7 @@ function createWindow() {
     height: 900,
     minWidth: 1024,
     minHeight: 700,
+    icon: path.join(__dirname, 'assets/img/lineicons/maletin.png'),
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
       contextIsolation: true,
@@ -106,10 +150,15 @@ function createWindow() {
     }
   });
 
-  mainWindow.loadFile(path.join(__dirname, 'inicio.html'));
+  mainWindow.loadFile(path.join(__dirname, 'activacion.html'));
+
+  if (!app.isPackaged) {
+    mainWindow.webContents.openDevTools();
+  }
 }
 
 app.whenReady().then(() => {
+  Menu.setApplicationMenu(null);
   createWindow();
 
   app.on('activate', () => {

@@ -156,10 +156,6 @@ async function semanticSearch(query, options = {}) {
 
   const hasDiscoveryContextFilters = filters?.discoveryContext && Object.values(filters.discoveryContext).some((values) => Array.isArray(values) && values.length > 0);
 
-  if ((!query || !String(query).trim()) && !hasDiscoveryContextFilters) {
-    throw new Error('semanticSearch requiere un query no vacio.');
-  }
-
   const { resources, embeddings } = loadData();
   const byId = new Map(resources.map((r) => [r.id, r]));
   const normalizedQuery = String(query || '').trim();

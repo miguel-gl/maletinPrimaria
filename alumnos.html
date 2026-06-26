@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es-MX" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maletin Primaria | Alumnos</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com/">
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="assets/css/theme.min.css" rel="stylesheet">
+  <link href="assets/css/user.min.css" rel="stylesheet">
+  <link href="assets/css/inicio-beta.css" rel="stylesheet">
+  <link href="assets/css/goals-panel.css" rel="stylesheet">
+</head>
+
+<body>
+  <script src="assets/js/license-guard.js"></script>
+  <main class="beta-main planos-page" id="top">
+    <div class="beta-shell container-fluid py-3 py-lg-4">
+      <section class="beta-section planos-unified-section mt-3 mt-lg-3" aria-label="Dashboard del grupo" id="resource-section">
+        <div class="planos-hero card border-0">
+          <div class="planos-hero-copy">
+            <a class="planos-back-top" href="index.html" aria-label="Regresar al inicio">Regresar</a>
+            <p class="planos-eyebrow">Dashboard del grupo</p>
+            <h2 id="resource-hero-title">Mi Grupo: seguimiento claro para decidir la siguiente clase</h2>
+            <p class="planos-lead" id="resource-hero-lead">Visualiza asistencia, incidencias, progreso y focos de acompanamiento desde un solo tablero. Los datos son mock para esta primera version.</p>
+            <div class="planos-metrics" id="alumnos-hero-metrics"></div>
+          </div>
+          <div class="planos-hero-art" aria-hidden="true">
+            <img src="assets/img/lineicons/alumnos.png" alt="" id="resource-hero-icon">
+          </div>
+        </div>
+
+        <div class="planos-toolbar card border-0 mt-3">
+          <div class="planos-search-wrap">
+            <label class="visually-hidden" for="alumnos-search">Buscar alumnos</label>
+            <input class="form-control planos-search" id="alumnos-search" type="search" placeholder="Buscar por alumno, fortaleza o senal...">
+          </div>
+          <div class="planos-filter-chips" role="group" aria-label="Filtros rapidos">
+            <button type="button" class="planos-chip is-active" data-filter="all">Todos</button>
+            <button type="button" class="planos-chip" data-filter="apoyo">Requieren apoyo</button>
+            <button type="button" class="planos-chip" data-filter="proceso">En proceso</button>
+            <button type="button" class="planos-chip" data-filter="destacado">Destacados</button>
+            <button type="button" class="planos-chip" data-filter="cumpleanos">Cumpleanos</button>
+          </div>
+        </div>
+
+        <div class="beta-section-head mt-3">
+          <h3 id="resource-section-title">Resumen del grupo</h3>
+        </div>
+        <div class="row g-2 g-xl-3 row-cols-2 row-cols-xl-4" id="alumnos-kpi-grid"></div>
+
+        <div class="beta-section-head mt-4">
+          <h3>Listado del grupo</h3>
+        </div>
+        <article class="plano-card">
+          <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+            <div>
+              <p class="plano-meta mb-1">Vista general</p>
+              <h4 class="mb-1">Data table de alumnos</h4>
+              <p class="mb-0">Consulta asistencia, incidencias y estatus del grupo en una sola vista.</p>
+            </div>
+            <div class="d-flex flex-wrap align-items-center gap-2">
+              <span class="planos-table-count" id="alumnos-table-count">0 alumnos</span>
+              <button class="btn btn-outline-secondary px-3 py-2" type="button" id="alumnos-print-trigger">&#128438; Imprimir lista</button>
+              <button class="btn btn-outline-secondary px-3 py-2" type="button" id="alumnos-history-trigger">&#128203; Historial</button>
+              <button class="btn btn-outline-secondary px-3 py-2" type="button" id="alumnos-actividades-trigger">&#128204; Actividades</button>
+              <button class="btn btn-outline-secondary px-3 py-2" type="button" id="alumnos-asistencia-trigger" data-bs-toggle="modal" data-bs-target="#alumnos-asistencia-modal">&#9989; Pasar lista</button>
+              <button class="btn beta-primary-btn px-3 py-2" type="button" id="alumnos-add-trigger">Agregar alumnos</button>
+            </div>
+          </div>
+          <div class="planos-table-wrap table-responsive">
+            <table class="table table-hover align-middle planos-table mb-0">
+              <thead>
+                <tr>
+                  <th scope="col">Alumno</th>
+                  <th scope="col">Grado</th>
+                  <th scope="col">Asistencia</th>
+                  <th scope="col">Incidencias</th>
+                  <th scope="col">Estatus</th>
+                  <th scope="col">Cumpleanos</th>
+                  <th scope="col" class="text-end">Detalle</th>
+                </tr>
+              </thead>
+              <tbody id="alumnos-table-body"></tbody>
+            </table>
+          </div>
+        </article>
+
+        <div class="beta-section-head mt-4">
+          <h3>Seguimiento y focos de accion</h3>
+        </div>
+        <div class="d-flex flex-column gap-3">
+          <article class="plano-card" id="seguimiento-clases">
+            <p class="plano-meta">Bloque en curso</p>
+            <h4>Clases terminadas</h4>
+            <div id="alumnos-progress-list"></div>
+            <div class="border-top pt-3 mt-3">
+              <p class="plano-meta">Experiencias del grupo</p>
+              <h5 class="mb-2">Avance por campo</h5>
+              <div id="alumnos-field-list"></div>
+            </div>
+          </article>
+          <article class="plano-card" id="alertas">
+            <p class="plano-meta">Atencion prioritaria</p>
+            <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-2">
+              <h4 class="mb-0">Incidencias y alertas</h4>
+              <button class="btn beta-primary-btn btn-sm" type="button" id="alumnos-add-incident-trigger">Agregar incidencia</button>
+            </div>
+            <div id="alumnos-alert-list"></div>
+          </article>
+        </div>
+
+        <!-- Panel Semanal Docente — ancho completo -->
+        <section class="gp-section mt-4" aria-label="Panel semanal docente" id="goals-panel-section">
+          <div class="gp-topbar card border-0">
+            <div class="gp-topbar-left">
+              <select class="gp-cycle-select" id="gp-cycle-select" aria-label="Seleccionar ciclo escolar"></select>
+              <div class="gp-progress-wrap">
+                <div class="gp-progress-track" role="progressbar" aria-label="Progreso del ciclo">
+                  <div class="gp-progress-fill" id="gp-progress-fill" style="width:0%"></div>
+                </div>
+                <span class="gp-week-label" id="gp-week-label">Semana 1 / 44</span>
+              </div>
+            </div>
+            <div class="gp-topbar-right">
+              <div class="gp-context-label" id="gp-context-label"></div>
+              <div class="gp-nav-btns">
+                <button class="gp-nav-btn" id="gp-prev-btn" type="button" aria-label="Semana anterior">&#8592; Anterior</button>
+                <button class="gp-nav-btn" id="gp-next-btn" type="button" aria-label="Semana siguiente">Siguiente &#8594;</button>
+              </div>
+            </div>
+          </div>
+          <div class="gp-main mt-2" id="gp-main" aria-live="polite"></div>
+        </section>
+
+        <article class="plano-card mt-3" id="cumpleanos">
+          <p class="plano-meta">Este mes</p>
+          <h4>Cumpleanos proximos</h4>
+          <div id="alumnos-birthday-list"></div>
+        </article>
+
+      </section>
+    </div>
+  </main>
+
+  <div class="modal fade" id="alumnos-detalle-offcanvas" tabindex="-1" aria-labelledby="alumnos-detalle-offcanvas-title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-md-down">
+      <div class="modal-content planos-modal-content">
+        <div class="modal-header planos-modal-header border-0 pb-0">
+          <div>
+            <p class="planos-eyebrow mb-1" id="alumnos-detalle-eyebrow">Alumno en foco</p>
+            <h5 class="modal-title fw-bold" id="alumnos-detalle-offcanvas-title">—</h5>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body planos-modal-body" id="alumnos-detalle-body"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="alumnos-incident-modal" tabindex="-1" aria-labelledby="alumnos-incident-modal-title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-md-down">
+      <div class="modal-content planos-modal-content">
+        <div class="modal-header planos-modal-header border-0 pb-0">
+          <div>
+            <p class="planos-eyebrow mb-1">Seguimiento rapido</p>
+            <h5 class="modal-title fw-bold" id="alumnos-incident-modal-title">Agregar incidencia</h5>
+            <p class="mb-0 text-muted">Registra una alerta o incidencia para mantener el tablero al dia.</p>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body planos-modal-body">
+          <form id="alumnos-incident-form" novalidate>
+            <div class="row g-3">
+              <div class="col-12">
+                <label class="form-label mb-1" for="incident-title">Titulo de la incidencia</label>
+                <input class="form-control" id="incident-title" name="title" type="text" placeholder="Ej. Falta de seguimiento en recreo" required>
+              </div>
+              <div class="col-12">
+                <label class="form-label mb-1" for="incident-detail">Detalle</label>
+                <textarea class="form-control" id="incident-detail" name="detail" rows="6" placeholder="Describe brevemente lo sucedido" required></textarea>
+                <p class="small text-muted mb-0 mt-1">Usa este campo para dejar la observacion completa.</p>
+              </div>
+              <div class="col-12 col-md-4">
+                <label class="form-label mb-1" for="incident-priority">Prioridad</label>
+                <select class="form-select" id="incident-priority" name="priority">
+                  <option value="alta">Alta</option>
+                  <option value="media" selected>Media</option>
+                  <option value="baja">Baja</option>
+                </select>
+              </div>
+              <div class="col-12 col-md-4">
+                <label class="form-label mb-1" for="incident-status">Estado</label>
+                <select class="form-select" id="incident-status" name="status">
+                  <option value="Abierta" selected>Abierta</option>
+                  <option value="En seguimiento">En seguimiento</option>
+                  <option value="Cerrada">Cerrada</option>
+                </select>
+              </div>
+              <div class="col-12 col-md-4">
+                <label class="form-label mb-1" for="incident-source">Origen</label>
+                <input class="form-control" id="incident-source" name="source" type="text" placeholder="Ej. Observacion docente" value="Observacion docente">
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer border-0 pt-0">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="submit" form="alumnos-incident-form" id="alumnos-incident-save" class="btn beta-primary-btn">Guardar incidencia</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="alumnos-incident-history-modal" tabindex="-1" aria-labelledby="alumnos-incident-history-title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-md-down">
+      <div class="modal-content planos-modal-content">
+        <div class="modal-header planos-modal-header border-0 pb-0">
+          <div>
+            <p class="planos-eyebrow mb-1">Detalle de incidencia</p>
+            <h5 class="modal-title fw-bold" id="alumnos-incident-history-title">Incidencia</h5>
+            <p class="mb-0 text-muted" id="alumnos-incident-history-meta">Sin datos</p>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body planos-modal-body">
+          <form id="alumnos-incident-history-form" novalidate>
+            <div class="row g-3 mb-3">
+              <div class="col-12">
+                <label class="form-label mb-1" for="incident-history-title-input">Titulo de la incidencia</label>
+                <input class="form-control" id="incident-history-title-input" name="title" type="text" placeholder="Titulo" required>
+              </div>
+              <div class="col-12">
+                <label class="form-label mb-1" for="incident-history-detail-input">Detalle</label>
+                <textarea class="form-control" id="incident-history-detail-input" name="detail" rows="6" placeholder="Detalle" required></textarea>
+              </div>
+              <div class="col-12 col-md-4">
+                <label class="form-label mb-1" for="incident-history-priority-input">Prioridad</label>
+                <select class="form-select" id="incident-history-priority-input" name="priority">
+                  <option value="alta">Alta</option>
+                  <option value="media">Media</option>
+                  <option value="baja">Baja</option>
+                </select>
+              </div>
+              <div class="col-12 col-md-4">
+                <label class="form-label mb-1" for="incident-history-status-input">Estado</label>
+                <select class="form-select" id="incident-history-status-input" name="status">
+                  <option value="Abierta">Abierta</option>
+                  <option value="En seguimiento">En seguimiento</option>
+                  <option value="Cerrada">Cerrada</option>
+                </select>
+              </div>
+              <div class="col-12 col-md-4">
+                <label class="form-label mb-1" for="incident-history-source-input">Origen</label>
+                <input class="form-control" id="incident-history-source-input" name="source" type="text" placeholder="Origen">
+              </div>
+            </div>
+          </form>
+          <div class="incident-observations is-visible m-0">
+            <div class="incident-observations-head">Historial de observaciones</div>
+            <div class="incident-observations-list" id="incident-history-list"></div>
+            <div class="incident-observations-add">
+              <input type="text" class="form-control form-control-sm" id="incident-history-input" placeholder="Agregar observacion...">
+              <button type="button" class="btn btn-sm btn-outline-secondary" id="incident-history-add">Agregar</button>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer border-0 pt-0">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="submit" form="alumnos-incident-history-form" class="btn beta-primary-btn" id="incident-history-save">Guardar cambios</button>
+          <button type="button" class="btn beta-primary-btn" id="incident-history-close">Cerrar incidencia</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="alumnos-create-modal" tabindex="-1" aria-labelledby="alumnos-create-modal-title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-md-down">
+      <div class="modal-content planos-modal-content">
+        <div class="modal-header planos-modal-header border-0 pb-0">
+          <div>
+            <p class="planos-eyebrow mb-1">Alta rapida</p>
+            <h5 class="modal-title" id="alumnos-create-modal-title">Agrega alumnos sin sentir que llenas formularios</h5>
+            <p class="mb-0 text-muted">Escribe el nombre, define acompanamiento y fecha de nacimiento. El grado se toma de tu configuracion inicial.</p>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body planos-modal-body pt-3">
+          <div class="planos-builder-stage">
+            <div class="row g-2">
+              <div class="col-12">
+                <label class="form-label mb-1" for="alumnos-builder-firstname">Nombre(s)</label>
+                <input class="form-control planos-builder-name" id="alumnos-builder-firstname" type="text" placeholder="Ej. Sofia">
+              </div>
+              <div class="col-6">
+                <label class="form-label mb-1" for="alumnos-builder-paternal">Apellido paterno</label>
+                <input class="form-control planos-builder-name" id="alumnos-builder-paternal" type="text" placeholder="Ej. Martinez">
+              </div>
+              <div class="col-6">
+                <label class="form-label mb-1" for="alumnos-builder-maternal">Apellido materno</label>
+                <input class="form-control planos-builder-name" id="alumnos-builder-maternal" type="text" placeholder="Ej. Lopez">
+              </div>
+              <div class="col-12 col-md-6">
+                <p class="planos-builder-label mt-1">Nivel de acompanamiento</p>
+                <div class="planos-builder-chip-group mt-1" id="alumnos-builder-statuses"></div>
+              </div>
+              <div class="col-12 col-md-6">
+                <label class="form-label mb-1" for="alumnos-builder-birthdate">Fecha de nacimiento</label>
+                <input class="form-control" id="alumnos-builder-birthdate" type="date" max="2099-12-31">
+              </div>
+            </div>
+          </div>
+          <div class="planos-builder-draft mt-3">
+            <div class="d-flex justify-content-between align-items-center gap-2 mb-2">
+              <strong>Listos para registrar</strong>
+              <span class="planos-table-count" id="alumnos-builder-draft-count">0 alumnos</span>
+            </div>
+            <div id="alumnos-builder-list"></div>
+          </div>
+        </div>
+        <div class="modal-footer border-0 pt-0">
+          <button type="button" class="btn btn-link text-decoration-none" data-bs-dismiss="modal">Ahora no</button>
+          <button type="button" class="btn btn-outline-secondary" id="alumnos-builder-add">Agregar a la lista</button>
+          <button type="button" class="btn beta-primary-btn" id="alumnos-builder-save">Registrar alumnos</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="alumnos-asistencia-modal" tabindex="-1" aria-labelledby="alumnos-asistencia-modal-title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-md-down">
+      <div class="modal-content planos-modal-content">
+        <div class="modal-header planos-modal-header border-0 pb-0">
+          <div>
+            <p class="planos-eyebrow mb-1">Registro de asistencia</p>
+            <h5 class="modal-title" id="alumnos-asistencia-modal-title">Pasar lista</h5>
+            <p class="mb-0 text-muted" id="alumnos-asistencia-fecha"></p>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body planos-modal-body pt-3" id="alumnos-asistencia-body"></div>
+        <div class="modal-footer border-0 pt-0">
+          <button type="button" class="btn btn-link text-decoration-none" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn beta-primary-btn" id="alumnos-asistencia-save">Guardar asistencia</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="beta-menu-container"></div>
+
+  <script src="vendors/bootstrap/bootstrap.min.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/load-menu.js"></script>
+  <script src="assets/js/alumnos.js"></script>
+  <script src="assets/js/goals-panel.js"></script>
+</body>
+
+</html>

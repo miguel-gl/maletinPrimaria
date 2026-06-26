@@ -1,0 +1,639 @@
+{
+  "metadata": {
+    "nombre": "Sistema de Metas Docentes",
+    "programa_base": "Programa Sintético - Nueva Escuela Mexicana (NEM)",
+    "campos_formativos": [
+      "Lenguajes",
+      "Saberes y Pensamiento Científico",
+      "Ética, Naturaleza y Sociedades",
+      "De lo Humano y lo Comunitario"
+    ],
+    "version": "1.0",
+    "generado": "2026-06-15"
+  },
+
+  "ciclos": [
+    {
+      "id": "2026-2027",
+      "inicio": "2026-08-24",
+      "fin": "2027-07-09",
+
+      "metas_generales": [
+        {
+          "id": "MG-001",
+          "campo_formativo": "Lenguajes",
+          "meta": "Fortalecer las prácticas de lectura y escritura con propósito comunicativo real",
+          "indicadores": [
+            "Al menos 80% del grupo lee con comprensión textos de su contexto",
+            "Los estudiantes producen al menos un texto completo por mes"
+          ]
+        },
+        {
+          "id": "MG-002",
+          "campo_formativo": "Saberes y Pensamiento Científico",
+          "meta": "Promover el pensamiento crítico mediante proyectos de indagación comunitaria",
+          "indicadores": [
+            "Cada estudiante participa en al menos 2 proyectos de indagación por ciclo",
+            "El grupo formula preguntas propias sobre su entorno"
+          ]
+        },
+        {
+          "id": "MG-003",
+          "campo_formativo": "Ética, Naturaleza y Sociedades",
+          "meta": "Consolidar el sentido de pertenencia e identidad cultural del grupo",
+          "indicadores": [
+            "El grupo reconoce y valora sus tradiciones locales",
+            "Se establecen al menos 3 proyectos de impacto comunitario"
+          ]
+        },
+        {
+          "id": "MG-004",
+          "campo_formativo": "De lo Humano y lo Comunitario",
+          "meta": "Impulsar el bienestar socioemocional y la convivencia pacífica",
+          "indicadores": [
+            "Reducción de conflictos entre pares en al menos un 60%",
+            "Cada estudiante identifica y regula sus emociones en situaciones de tensión"
+          ]
+        }
+      ],
+
+      "periodos": [
+        {
+          "nombre": "Periodo 1 — Inicio de ciclo",
+          "inicio": "2026-08-24",
+          "fin": "2026-10-16",
+          "acciones_clave": [
+            {
+              "id": "P1-A01",
+              "tipo": "diagnóstico",
+              "titulo": "Evaluación diagnóstica inicial",
+              "descripcion": "Aplicar instrumentos para conocer el nivel de cada estudiante en lectura, escritura y pensamiento matemático.",
+              "prioridad": "alta",
+              "semana_sugerida": 1
+            },
+            {
+              "id": "P1-A02",
+              "tipo": "vinculación",
+              "titulo": "Primer encuentro con familias",
+              "descripcion": "Reunión de presentación: compartir el plan de trabajo del ciclo, los campos formativos y los proyectos comunitarios previstos.",
+              "prioridad": "alta",
+              "semana_sugerida": 2
+            },
+            {
+              "id": "P1-A03",
+              "tipo": "planeación",
+              "titulo": "Definir proyectos eje del grupo",
+              "descripcion": "Co-diseñar con los estudiantes los proyectos de indagación que guiarán el ciclo, vinculados a necesidades de su comunidad.",
+              "prioridad": "alta",
+              "semana_sugerida": 3
+            },
+            {
+              "id": "P1-A04",
+              "tipo": "organización",
+              "titulo": "Conformar equipos de trabajo colaborativo",
+              "descripcion": "Combinar perfiles destacados con estudiantes en proceso para potenciar el aprendizaje entre pares.",
+              "prioridad": "media",
+              "semana_sugerida": 3
+            },
+            {
+              "id": "P1-A05",
+              "tipo": "seguimiento",
+              "titulo": "Registro de asistencia y alertas tempranas",
+              "descripcion": "Identificar en las primeras semanas a estudiantes con inasistencia recurrente y contactar a sus familias antes del fin del primer mes.",
+              "prioridad": "alta",
+              "semana_sugerida": 4
+            }
+          ]
+        },
+        {
+          "nombre": "Periodo 2 — Consolidación",
+          "inicio": "2026-10-19",
+          "fin": "2026-12-18",
+          "acciones_clave": [
+            {
+              "id": "P2-A01",
+              "tipo": "evaluación",
+              "titulo": "Evaluación formativa intermedia",
+              "descripcion": "Revisar avances con rúbricas cualitativas por campo formativo. Ajustar estrategias para estudiantes que requieren apoyo adicional.",
+              "prioridad": "alta",
+              "semana_sugerida": 8
+            },
+            {
+              "id": "P2-A02",
+              "tipo": "comunidad",
+              "titulo": "Evento de vinculación comunitaria",
+              "descripcion": "Organizar una muestra o presentación donde el grupo comparta los avances de sus proyectos a padres y comunidad.",
+              "prioridad": "media",
+              "semana_sugerida": 10
+            },
+            {
+              "id": "P2-A03",
+              "tipo": "ajuste",
+              "titulo": "Revisión y reajuste de equipos",
+              "descripcion": "Reorganizar equipos según dinámicas observadas. Intervenir en conflictos relacionales con estrategias de mediación entre pares.",
+              "prioridad": "media",
+              "semana_sugerida": 9
+            },
+            {
+              "id": "P2-A04",
+              "tipo": "cierre_parcial",
+              "titulo": "Cierre de proyectos del primer semestre",
+              "descripcion": "Cada equipo presenta resultados parciales. El docente retroalimenta con foco en proceso, no solo en producto.",
+              "prioridad": "alta",
+              "semana_sugerida": 14
+            }
+          ]
+        },
+        {
+          "nombre": "Periodo 3 — Regreso y profundización",
+          "inicio": "2027-01-11",
+          "fin": "2027-03-26",
+          "acciones_clave": [
+            {
+              "id": "P3-A01",
+              "tipo": "reenganche",
+              "titulo": "Sesión de reencuadre tras vacaciones",
+              "descripcion": "Actividad de reencuadre socioemocional: reconectar al grupo con los proyectos y metas del ciclo. Revisar compromisos.",
+              "prioridad": "alta",
+              "semana_sugerida": 1
+            },
+            {
+              "id": "P3-A02",
+              "tipo": "profundización",
+              "titulo": "Lanzar nuevos proyectos de indagación del segundo semestre",
+              "descripcion": "Integrar los aprendizajes previos en proyectos más complejos. Priorizar la voz del estudiante en la elección de temas.",
+              "prioridad": "alta",
+              "semana_sugerida": 2
+            },
+            {
+              "id": "P3-A03",
+              "tipo": "seguimiento",
+              "titulo": "Revisión de casos de atención prioritaria",
+              "descripcion": "Reunirse con orientación o familias de estudiantes con rezago o situaciones socioemocionales complejas detectadas en el primer semestre.",
+              "prioridad": "alta",
+              "semana_sugerida": 3
+            }
+          ]
+        },
+        {
+          "nombre": "Periodo 4 — Cierre de ciclo",
+          "inicio": "2027-04-07",
+          "fin": "2027-07-09",
+          "acciones_clave": [
+            {
+              "id": "P4-A01",
+              "tipo": "evaluación",
+              "titulo": "Evaluación sumativa final",
+              "descripcion": "Aplicar instrumentos de cierre que evidencien el crecimiento de cada estudiante desde el diagnóstico inicial.",
+              "prioridad": "alta",
+              "semana_sugerida": 2
+            },
+            {
+              "id": "P4-A02",
+              "tipo": "presentación",
+              "titulo": "Muestra de aprendizajes comunitaria",
+              "descripcion": "Organizar un evento final donde los estudiantes presenten sus proyectos del ciclo a la comunidad escolar y familias.",
+              "prioridad": "alta",
+              "semana_sugerida": 8
+            },
+            {
+              "id": "P4-A03",
+              "tipo": "reflexión",
+              "titulo": "Autoevaluación docente del ciclo",
+              "descripcion": "Reflexionar sobre práctica docente: ¿Qué funcionó? ¿Qué cambiaría? Registrar en bitácora personal para el siguiente ciclo.",
+              "prioridad": "alta",
+              "semana_sugerida": 10
+            },
+            {
+              "id": "P4-A04",
+              "tipo": "transición",
+              "titulo": "Informe de transición por estudiante",
+              "descripcion": "Preparar un breve perfil de logros y áreas de crecimiento de cada estudiante para el docente del siguiente grado.",
+              "prioridad": "media",
+              "semana_sugerida": 11
+            }
+          ]
+        }
+      ],
+
+      "fechas_importantes": [
+        {
+          "fecha": "2026-09-13",
+          "nombre": "Semana de la Patria (antesala)",
+          "campo_formativo": "Ética, Naturaleza y Sociedades",
+          "accion_sugerida": "Propón que los estudiantes investiguen una tradición de su comunidad vinculada a la identidad nacional. Evita el desfile superficial: ve a la historia local.",
+          "tipo": "efeméride",
+          "impacto": "identidad_cultural"
+        },
+        {
+          "fecha": "2026-09-15",
+          "nombre": "Independencia de México",
+          "campo_formativo": "Ética, Naturaleza y Sociedades",
+          "accion_sugerida": "Organiza una tertulia donde cada estudiante comparta qué significa la libertad para ellos hoy. Conecta con valores de la NEM.",
+          "tipo": "efeméride",
+          "impacto": "participación_ciudadana"
+        },
+        {
+          "fecha": "2026-10-31",
+          "nombre": "Víspera de Día de Muertos",
+          "campo_formativo": "De lo Humano y lo Comunitario",
+          "accion_sugerida": "Invita al grupo a construir colectivamente un altar con personajes de su historia familiar. Promueve la narrativa oral: que cada quien cuente una historia de alguien recordado. Esto fortalece identidad, lenguaje oral y vínculos afectivos.",
+          "tipo": "tradición_cultural",
+          "impacto": "identidad_y_lenguaje"
+        },
+        {
+          "fecha": "2026-11-02",
+          "nombre": "Día de Muertos",
+          "campo_formativo": "Lenguajes",
+          "accion_sugerida": "Propón la escritura de textos breves: cartas para alguien que ya no está, leyendas de su pueblo o crónicas de una celebración vivida. El propósito comunicativo real detona escritura auténtica.",
+          "tipo": "tradición_cultural",
+          "impacto": "escritura_significativa"
+        },
+        {
+          "fecha": "2026-11-20",
+          "nombre": "Revolución Mexicana",
+          "campo_formativo": "Saberes y Pensamiento Científico",
+          "accion_sugerida": "Propón una línea del tiempo colaborativa donde los estudiantes investiguen ¿qué cambió en su comunidad gracias a la Revolución? Usa fuentes locales: periódicos, relatos de abuelos.",
+          "tipo": "efeméride",
+          "impacto": "pensamiento_histórico"
+        },
+        {
+          "fecha": "2026-12-12",
+          "nombre": "Día de la Virgen de Guadalupe",
+          "campo_formativo": "De lo Humano y lo Comunitario",
+          "accion_sugerida": "Desde un enfoque laico y respetuoso: reflexiona con el grupo sobre las tradiciones que unen a las familias. ¿Qué rituales compartimos que nos hacen comunidad?",
+          "tipo": "tradición_cultural",
+          "impacto": "convivencia_comunitaria"
+        },
+        {
+          "fecha": "2027-02-05",
+          "nombre": "Día de la Constitución",
+          "campo_formativo": "Ética, Naturaleza y Sociedades",
+          "accion_sugerida": "Selecciona 2-3 derechos del niño vinculados a artículos constitucionales. Propón que el grupo identifique si esos derechos se cumplen en su escuela y comunidad. Acción cívica real.",
+          "tipo": "efeméride",
+          "impacto": "participación_ciudadana"
+        },
+        {
+          "fecha": "2027-02-24",
+          "nombre": "Día de la Bandera",
+          "campo_formativo": "Lenguajes",
+          "accion_sugerida": "Propón que cada estudiante escriba un texto breve sobre un símbolo que represente a su grupo, su comunidad o a ellos mismos. Relacionar símbolos patrios con identidades propias.",
+          "tipo": "efeméride",
+          "impacto": "identidad_y_lenguaje"
+        },
+        {
+          "fecha": "2027-03-21",
+          "nombre": "Natalicio de Benito Juárez / Inicio de Primavera",
+          "campo_formativo": "Ética, Naturaleza y Sociedades",
+          "accion_sugerida": "Doble oportunidad: explora la historia de Juárez como símbolo de superación y justicia social. Simultáneamente, realiza con el grupo una salida al patio o área verde para observar cambios de estación.",
+          "tipo": "efeméride",
+          "impacto": "pensamiento_crítico"
+        },
+        {
+          "fecha": "2027-04-30",
+          "nombre": "Día del Niño",
+          "campo_formativo": "De lo Humano y lo Comunitario",
+          "accion_sugerida": "No lo celebres solo con juegos. Propón que cada estudiante comparta algo que los hace únicos: un talento, un sueño, algo que aman. Sistematiza en un 'mapa de talentos del grupo' visible en el aula.",
+          "tipo": "celebración",
+          "impacto": "autoestima_y_reconocimiento"
+        },
+        {
+          "fecha": "2027-05-10",
+          "nombre": "Día de las Madres",
+          "campo_formativo": "Lenguajes",
+          "accion_sugerida": "Propón la creación de un texto literario real: poema, cuento corto o carta para una figura de cuidado importante. Exponer en la escuela. El propósito afectivo impulsa la calidad de la escritura.",
+          "tipo": "celebración",
+          "impacto": "escritura_significativa"
+        },
+        {
+          "fecha": "2027-05-15",
+          "nombre": "Día del Maestro",
+          "campo_formativo": "De lo Humano y lo Comunitario",
+          "accion_sugerida": "Propón que tus estudiantes entrevisten a un maestro de la escuela sobre su vocación. Practica habilidades de lenguaje oral y escucha activa, mientras construyen vínculos con la comunidad escolar.",
+          "tipo": "celebración",
+          "impacto": "lenguaje_oral_y_vínculos"
+        },
+        {
+          "fecha": "2027-06-05",
+          "nombre": "Día Mundial del Medio Ambiente",
+          "campo_formativo": "Saberes y Pensamiento Científico",
+          "accion_sugerida": "Realiza un diagnóstico ambiental de la escuela con el grupo: ¿Dónde se genera más basura? ¿Hay zonas de desperdicio de agua? Que los estudiantes propongan y ejecuten una mejora concreta. Ciencia aplicada real.",
+          "tipo": "fecha_global",
+          "impacto": "pensamiento_científico_aplicado"
+        }
+      ],
+
+      "acciones_semanales_sugeridas": {
+        "descripcion": "Micro-acciones concretas clasificadas por tipo para consultar cualquier semana del ciclo",
+        "inicio_de_semana": [
+          "Revisar lista de asistencia y marcar alertas si hay 2+ faltas consecutivas",
+          "Leer el plan de la semana y ajustarlo según el avance real del grupo",
+          "Identificar al estudiante que más necesita atención positiva esta semana"
+        ],
+        "mitad_de_semana": [
+          "Retroalimentar al menos 3 trabajos de estudiantes con comentarios específicos (no solo calificación)",
+          "Verificar si los equipos de trabajo están funcionando bien o necesitan ajuste",
+          "Registrar en bitácora una observación relevante del grupo"
+        ],
+        "cierre_de_semana": [
+          "Compartir con el grupo 2 logros colectivos de la semana",
+          "Enviar un mensaje breve a las familias de estudiantes con avance significativo o situación de atención",
+          "Preparar el material o experiencia de aprendizaje de la siguiente semana"
+        ]
+      }
+    },
+
+    {
+      "id": "2027-2028",
+      "inicio": "2027-08-23",
+      "fin": "2028-07-07",
+
+      "metas_generales": [
+        {
+          "id": "MG-001",
+          "campo_formativo": "Lenguajes",
+          "meta": "Ampliar el repertorio de géneros textuales que los estudiantes producen y comprenden",
+          "indicadores": [
+            "Cada estudiante produce al menos 3 géneros distintos en el ciclo (narrativo, argumentativo, informativo)",
+            "El grupo participa en al menos una experiencia de lectura en voz alta mensual"
+          ]
+        },
+        {
+          "id": "MG-002",
+          "campo_formativo": "Saberes y Pensamiento Científico",
+          "meta": "Consolidar la metodología de indagación como práctica habitual del grupo",
+          "indicadores": [
+            "Los estudiantes formulan hipótesis antes de explorar cualquier fenómeno",
+            "Cada proyecto documenta evidencia recolectada, no solo conclusiones"
+          ]
+        },
+        {
+          "id": "MG-003",
+          "campo_formativo": "Ética, Naturaleza y Sociedades",
+          "meta": "Desarrollar en los estudiantes la capacidad de tomar decisiones éticas informadas",
+          "indicadores": [
+            "Los estudiantes analizan dilemas éticos reales de su entorno al menos 1 vez por bimestre",
+            "El grupo identifica sus derechos y responsabilidades ciudadanas"
+          ]
+        },
+        {
+          "id": "MG-004",
+          "campo_formativo": "De lo Humano y lo Comunitario",
+          "meta": "Fortalecer la autonomía, la autogestión y el liderazgo distribuido en el grupo",
+          "indicadores": [
+            "Los estudiantes lideran al menos una actividad por bimestre con apoyo docente mínimo",
+            "El grupo establece y respeta acuerdos de convivencia propios"
+          ]
+        }
+      ],
+
+      "periodos": [
+        {
+          "nombre": "Periodo 1 — Inicio de ciclo",
+          "inicio": "2027-08-23",
+          "fin": "2027-10-15",
+          "acciones_clave": [
+            {
+              "id": "P1-A01",
+              "tipo": "diagnóstico",
+              "titulo": "Diagnóstico situacional del grupo",
+              "descripcion": "Aplicar una evaluación diagnóstica que incluya dimensiones académicas y socioemocionales. Usar el informe de transición del ciclo anterior.",
+              "prioridad": "alta",
+              "semana_sugerida": 1
+            },
+            {
+              "id": "P1-A02",
+              "tipo": "planeación_participativa",
+              "titulo": "Asamblea de planeación con estudiantes",
+              "descripcion": "Realizar una asamblea donde los estudiantes co-construyan las reglas, metas y proyectos del ciclo. Documentar acuerdos en un cartel grupal visible.",
+              "prioridad": "alta",
+              "semana_sugerida": 2
+            },
+            {
+              "id": "P1-A03",
+              "tipo": "vinculación",
+              "titulo": "Mapa de recursos comunitarios",
+              "descripcion": "Con el grupo, mapear los recursos, saberes y personas de la comunidad que pueden enriquecer los proyectos del ciclo.",
+              "prioridad": "media",
+              "semana_sugerida": 3
+            },
+            {
+              "id": "P1-A04",
+              "tipo": "organización",
+              "titulo": "Sistema de roles rotativos en el aula",
+              "descripcion": "Establecer roles semanales (moderador, relator, gestor de materiales, animador) que rotan entre estudiantes. Fomenta autonomía y responsabilidad.",
+              "prioridad": "media",
+              "semana_sugerida": 3
+            }
+          ]
+        },
+        {
+          "nombre": "Periodo 2 — Consolidación",
+          "inicio": "2027-10-18",
+          "fin": "2027-12-17",
+          "acciones_clave": [
+            {
+              "id": "P2-A01",
+              "tipo": "evaluación",
+              "titulo": "Portafolios de evidencia intermedio",
+              "descripcion": "Cada estudiante selecciona 3 trabajos que representen su aprendizaje del primer bimestre y escribe por qué los eligió. Metacognición en acción.",
+              "prioridad": "alta",
+              "semana_sugerida": 8
+            },
+            {
+              "id": "P2-A02",
+              "tipo": "apertura",
+              "titulo": "Invitar un experto comunitario al aula",
+              "descripcion": "Invitar a alguien de la comunidad (artesano, médico, agricultor, abuela) a compartir su saber con el grupo. Vincula con el proyecto en curso.",
+              "prioridad": "media",
+              "semana_sugerida": 9
+            },
+            {
+              "id": "P2-A03",
+              "tipo": "intervención",
+              "titulo": "Círculo restaurativo ante conflictos",
+              "descripcion": "Si hay conflictos relacionales en el grupo, aplicar una dinámica de círculo restaurativo en lugar de sanción. El grupo construye la solución.",
+              "prioridad": "alta",
+              "semana_sugerida": 10
+            }
+          ]
+        },
+        {
+          "nombre": "Periodo 3 — Profundización",
+          "inicio": "2028-01-10",
+          "fin": "2028-03-28",
+          "acciones_clave": [
+            {
+              "id": "P3-A01",
+              "tipo": "reencuadre",
+              "titulo": "Revisión de metas del ciclo con el grupo",
+              "descripcion": "Volver al cartel de metas del inicio del ciclo. ¿Qué ya logramos? ¿Qué ajustamos? Que sean los estudiantes quienes valoren el avance.",
+              "prioridad": "alta",
+              "semana_sugerida": 1
+            },
+            {
+              "id": "P3-A02",
+              "tipo": "profundización",
+              "titulo": "Proyectos de acción comunitaria",
+              "descripcion": "Llevar los proyectos del aula hacia la comunidad: mejorar un espacio, crear un recurso, hacer una campaña. Aprendizaje con impacto real.",
+              "prioridad": "alta",
+              "semana_sugerida": 4
+            },
+            {
+              "id": "P3-A03",
+              "tipo": "autoevaluación",
+              "titulo": "Autoevaluación intermedia del docente",
+              "descripcion": "Revisar la propia práctica: ¿Estoy dando voz a todos los estudiantes? ¿Qué estrategia debo cambiar para el cierre?",
+              "prioridad": "media",
+              "semana_sugerida": 6
+            }
+          ]
+        },
+        {
+          "nombre": "Periodo 4 — Cierre de ciclo",
+          "inicio": "2028-04-17",
+          "fin": "2028-07-07",
+          "acciones_clave": [
+            {
+              "id": "P4-A01",
+              "tipo": "evaluación_integral",
+              "titulo": "Portafolios final y evaluación de pares",
+              "descripcion": "Cada estudiante presenta su portafolio final al grupo. Los compañeros retroalimentan con base en criterios consensuados previamente.",
+              "prioridad": "alta",
+              "semana_sugerida": 4
+            },
+            {
+              "id": "P4-A02",
+              "tipo": "presentación_pública",
+              "titulo": "Festival de saberes comunitario",
+              "descripcion": "Evento final ampliado: invitar a familias, otros grupos y comunidad. Cada equipo expone un logro concreto del ciclo. El docente modera, no protagoniza.",
+              "prioridad": "alta",
+              "semana_sugerida": 9
+            },
+            {
+              "id": "P4-A03",
+              "tipo": "reflexión_docente",
+              "titulo": "Informe narrativo del ciclo",
+              "descripcion": "Redactar un informe personal de máximo 2 páginas: logros del grupo, aprendizajes propios como docente, propuestas para el siguiente ciclo.",
+              "prioridad": "alta",
+              "semana_sugerida": 11
+            }
+          ]
+        }
+      ],
+
+      "fechas_importantes": [
+        {
+          "fecha": "2027-09-15",
+          "nombre": "Independencia de México",
+          "campo_formativo": "Ética, Naturaleza y Sociedades",
+          "accion_sugerida": "Propón que el grupo cree un 'periódico histórico' con noticias de la Independencia escritas desde la perspectiva de diferentes actores: indígenas, mujeres, criollos. Desarrolla pensamiento crítico e histórico.",
+          "tipo": "efeméride",
+          "impacto": "pensamiento_histórico"
+        },
+        {
+          "fecha": "2027-10-31",
+          "nombre": "Víspera de Día de Muertos",
+          "campo_formativo": "De lo Humano y lo Comunitario",
+          "accion_sugerida": "Propón un proyecto de 'Memorias vivas': cada estudiante entrevista a un familiar mayor sobre una tradición o recuerdo importante y lo documenta. El grupo crea una exposición de memorias colectivas.",
+          "tipo": "tradición_cultural",
+          "impacto": "lenguaje_oral_e_identidad"
+        },
+        {
+          "fecha": "2027-11-02",
+          "nombre": "Día de Muertos",
+          "campo_formativo": "Lenguajes",
+          "accion_sugerida": "Crea con el grupo un libro colectivo de relatos breves sobre sus seres queridos. Publicarlo en la biblioteca escolar o en la comunidad digital de la escuela da propósito real a la escritura.",
+          "tipo": "tradición_cultural",
+          "impacto": "escritura_con_propósito"
+        },
+        {
+          "fecha": "2027-11-20",
+          "nombre": "Revolución Mexicana",
+          "campo_formativo": "Saberes y Pensamiento Científico",
+          "accion_sugerida": "¿Qué problemas del México de 1910 siguen existiendo hoy? Propón un debate estructurado donde los estudiantes argumenten con evidencia. Desarrolla pensamiento crítico y lenguaje argumentativo.",
+          "tipo": "efeméride",
+          "impacto": "argumentación_y_ciudadanía"
+        },
+        {
+          "fecha": "2028-02-05",
+          "nombre": "Día de la Constitución",
+          "campo_formativo": "Ética, Naturaleza y Sociedades",
+          "accion_sugerida": "Propón que el grupo redacte su propia 'Constitución del aula': derechos, responsabilidades y mecanismos de resolución de conflictos. Votación y ratificación colectiva.",
+          "tipo": "efeméride",
+          "impacto": "participación_democrática"
+        },
+        {
+          "fecha": "2028-03-21",
+          "nombre": "Primavera y Natalicio de Juárez",
+          "campo_formativo": "Saberes y Pensamiento Científico",
+          "accion_sugerida": "Salida de campo para documentar señales de cambio de estación en su entorno. Fotografiar, registrar, comparar con datos de años anteriores. Construir un pequeño banco de datos del grupo sobre su ecosistema local.",
+          "tipo": "efeméride",
+          "impacto": "observación_científica"
+        },
+        {
+          "fecha": "2028-04-22",
+          "nombre": "Día de la Tierra",
+          "campo_formativo": "Saberes y Pensamiento Científico",
+          "accion_sugerida": "Propón una acción concreta y medible: reducir residuos en la semana, calcular cuánta agua gasta el grupo en un día, diseñar una propuesta de jardín escolar. La ciencia al servicio de la comunidad.",
+          "tipo": "fecha_global",
+          "impacto": "acción_ambiental_concreta"
+        },
+        {
+          "fecha": "2028-05-15",
+          "nombre": "Día del Maestro",
+          "campo_formativo": "De lo Humano y lo Comunitario",
+          "accion_sugerida": "Propón que los estudiantes escriban una carta a su 'yo docente futuro': ¿Qué tipo de maestro/maestra quieren ser algún día? ¿Qué aprendieron de sus maestros? Reflexión profunda sobre vocación y cuidado.",
+          "tipo": "celebración",
+          "impacto": "reflexión_identitaria"
+        },
+        {
+          "fecha": "2028-06-05",
+          "nombre": "Día Mundial del Medio Ambiente",
+          "campo_formativo": "Saberes y Pensamiento Científico",
+          "accion_sugerida": "Presentación pública de los resultados del proyecto ambiental iniciado en abril. El grupo expone ante la comunidad escolar los datos y propuestas. Ciencia con impacto social.",
+          "tipo": "fecha_global",
+          "impacto": "comunicación_científica"
+        }
+      ],
+
+      "acciones_semanales_sugeridas": {
+        "descripcion": "Micro-acciones concretas para cualquier semana del ciclo 2027-2028",
+        "inicio_de_semana": [
+          "Revisar el tablero de proyectos: ¿qué equipo necesita acompañamiento específico?",
+          "Seleccionar a 2 estudiantes para observar con atención especial durante la semana",
+          "Compartir al inicio del lunes una meta clara y alcanzable para la semana"
+        ],
+        "mitad_de_semana": [
+          "Aplicar una dinámica breve de autorregulación emocional (5 min) si el grupo está tenso",
+          "Documentar con foto o nota un momento de aprendizaje significativo",
+          "Revisar que los estudiantes con menor participación hayan tenido al menos un espacio de voz"
+        ],
+        "cierre_de_semana": [
+          "Ronda de cierre: cada quien comparte en una palabra cómo se va",
+          "Actualizar el registro de avances por estudiante",
+          "Planear la actividad de apertura de la siguiente semana con base en lo observado"
+        ]
+      }
+    }
+  ],
+
+  "motor_de_sugerencias_contextuales": {
+    "descripcion": "Lógica para proponer acciones según la fecha actual del docente",
+    "instrucciones_de_uso": "Comparar la fecha del sistema con las fechas_importantes del ciclo activo. Si la fecha actual está dentro de los 7 días previos a una fecha importante, mostrar la accion_sugerida correspondiente como 'Próxima acción por fecha clave'. Si no hay fecha próxima, mostrar las acciones_semanales_sugeridas según el día de la semana.",
+    "ventana_de_anticipacion_dias": 7,
+    "categorias_de_impacto": {
+      "identidad_cultural": "Fortalece el sentido de pertenencia e historia del grupo",
+      "escritura_significativa": "Activa la escritura con propósito comunicativo real",
+      "pensamiento_histórico": "Desarrolla análisis crítico del pasado y presente",
+      "participación_ciudadana": "Forma sujetos activos y responsables socialmente",
+      "convivencia_comunitaria": "Mejora el clima de aula y la relación con familias",
+      "pensamiento_científico_aplicado": "Lleva la indagación a problemas reales del entorno",
+      "autoestima_y_reconocimiento": "Refuerza la identidad positiva de cada estudiante",
+      "lenguaje_oral_y_vínculos": "Desarrolla comunicación oral y relaciones afectivas",
+      "argumentación_y_ciudadanía": "Ejercita el pensamiento crítico y la participación democrática",
+      "acción_ambiental_concreta": "Transforma la conciencia ambiental en acción medible",
+      "reflexión_identitaria": "Profundiza el autoconocimiento y la vocación"
+    }
+  }
+}

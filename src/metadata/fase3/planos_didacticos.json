@@ -2,8 +2,8 @@
   {
     "id": "e05e4a03-c112-59f9-91ea-b138398680ba",
     "archivo": {
-      "nombre": "comunitarios_p1_actuar_en_mi_comunidad.pdf",
-      "ruta": "comunitarios_p1_actuar_en_mi_comunidad.pdf",
+      "nombre": "comunitarios/p1_actuar_en_mi_comunidad.pdf",
+      "ruta": "comunitarios/p1_actuar_en_mi_comunidad.pdf",
       "tipo": "Planeación Didáctica",
       "extension": ".pdf"
     },
@@ -407,8 +407,8 @@
   {
     "id": "5cefdb73-5711-500d-af13-798fc8059fdc",
     "archivo": {
-      "nombre": "steam_p1_cuerpos_geometricos.pdf",
-      "ruta": "steam_p1_cuerpos_geometricos.pdf",
+      "nombre": "steam/p1_cuerpos_geometricos.pdf",
+      "ruta": "steam/p1_cuerpos_geometricos.pdf",
       "tipo": "Planeación Didáctica",
       "extension": ".pdf"
     },
@@ -900,8 +900,8 @@
   {
     "id": "e27b333f-eabc-5f76-be28-985e449bcd9e",
     "archivo": {
-      "nombre": "steam_p1_descubriendo_habilidades.pdf",
-      "ruta": "steam_p1_descubriendo_habilidades.pdf",
+      "nombre": "steam/p1_descubriendo_habilidades.pdf",
+      "ruta": "steam/p1_descubriendo_habilidades.pdf",
       "tipo": "Planeación Didáctica",
       "extension": ".pdf"
     },
@@ -1322,8 +1322,8 @@
   {
     "id": "e119f93b-9472-50b5-9d0d-d96e77570716",
     "archivo": {
-      "nombre": "steam_p1_estructura_resistente.pdf",
-      "ruta": "steam_p1_estructura_resistente.pdf",
+      "nombre": "steam/p1_estructura_resistente.pdf",
+      "ruta": "steam/p1_estructura_resistente.pdf",
       "tipo": "Planeación Didáctica",
       "extension": ".pdf"
     },
@@ -1739,8 +1739,8 @@
   {
     "id": "9fbd99fd-7ee7-5251-bc40-29dff43276cc",
     "archivo": {
-      "nombre": "steam_p1_mercado_escolar.pdf",
-      "ruta": "steam_p1_mercado_escolar.pdf",
+      "nombre": "steam/p1_mercado_escolar.pdf",
+      "ruta": "steam/p1_mercado_escolar.pdf",
       "tipo": "Planeación Didáctica",
       "extension": ".pdf"
     },
@@ -2143,8 +2143,8 @@
   {
     "id": "96dfb3fd-bc2c-532c-b044-635c5c6dd2c7",
     "archivo": {
-      "nombre": "steam_p1_se_mueve_se_gira.pdf",
-      "ruta": "steam_p1_se_mueve_se_gira.pdf",
+      "nombre": "steam/p1_se_mueve_se_gira.pdf",
+      "ruta": "steam/p1_se_mueve_se_gira.pdf",
       "tipo": "Planeación Didáctica",
       "extension": ".pdf"
     },
@@ -2634,8 +2634,8 @@
   {
     "id": "4dd67c6d-6c4c-5a08-84f3-750d0fdabd7c",
     "archivo": {
-      "nombre": "comunitarios_p1_cambiado_comunidad.pdf",
-      "ruta": "comunitarios_p1_cambiado_comunidad.pdf",
+      "nombre": "comunitarios/p1_cambiado_comunidad.pdf",
+      "ruta": "comunitarios/p1_cambiado_comunidad.pdf",
       "tipo": "Planeación Didáctica",
       "extension": ".pdf"
     },
@@ -3091,8 +3091,8 @@
   {
     "id": "7b567d52-ecf9-5835-a00a-882854a7ec1d",
     "archivo": {
-      "nombre": "comunitarios_p1_fiestas_comunidad.pdf",
-      "ruta": "comunitarios_p1_fiestas_comunidad.pdf",
+      "nombre": "comunitarios/p1_fiestas_comunidad.pdf",
+      "ruta": "comunitarios/p1_fiestas_comunidad.pdf",
       "tipo": "Planeación Didáctica",
       "extension": ".pdf"
     },
@@ -3565,8 +3565,8 @@
   {
     "id": "d737b425-7b4b-5b32-95d1-0c693d46ac15",
     "archivo": {
-      "nombre": "comunitarios_p1_jardin_casa.pdf",
-      "ruta": "comunitarios_p1_jardin_casa.pdf",
+      "nombre": "comunitarios/p1_jardin_casa.pdf",
+      "ruta": "comunitarios/p1_jardin_casa.pdf",
       "tipo": "Planeación Didáctica",
       "extension": ".pdf"
     },
@@ -4026,8 +4026,8 @@
   {
     "id": "f0d2388a-deec-5244-aba5-80019ec8e102",
     "archivo": {
-      "nombre": "comunitarios_p1_seguros_comunidad.pdf",
-      "ruta": "comunitarios_p1_seguros_comunidad.pdf",
+      "nombre": "comunitarios/p1_seguros_comunidad.pdf",
+      "ruta": "comunitarios/p1_seguros_comunidad.pdf",
       "tipo": "Planeación Didáctica",
       "extension": ".pdf"
     },
@@ -4448,8 +4448,8 @@
   {
     "id": "6a23938e-52b9-544d-b2f9-a81a42d2e480",
     "archivo": {
-      "nombre": "problemas_p1_como_juego.pdf",
-      "ruta": "problemas_p1_como_juego.pdf",
+      "nombre": "problemas/p1_como_juego.pdf",
+      "ruta": "problemas/p1_como_juego.pdf",
       "tipo": "Planeación Didáctica",
       "extension": ".pdf"
     },
@@ -4924,8 +4924,8 @@
   {
     "id": "27d69c5f-5f3f-52d0-85e5-d64d2071d75f",
     "archivo": {
-      "nombre": "problemas_p1_construyamos_soluciones.pdf",
-      "ruta": "problemas_p1_construyamos_soluciones.pdf",
+      "nombre": "problemas/p1_construyamos_soluciones.pdf",
+      "ruta": "problemas/p1_construyamos_soluciones.pdf",
       "tipo": "Planeación Didáctica",
       "extension": ".pdf"
     },
@@ -5358,8 +5358,8 @@
   {
     "id": "2f2768f8-a1fe-546a-8c39-10b504261c07",
     "archivo": {
-      "nombre": "problemas_p1_formas_ser.pdf",
-      "ruta": "problemas_p1_formas_ser.pdf",
+      "nombre": "problemas/p1_formas_ser.pdf",
+      "ruta": "problemas/p1_formas_ser.pdf",
       "tipo": "Planeación Didáctica",
       "extension": ".pdf"
     },
@@ -5820,8 +5820,8 @@
   {
     "id": "81af495f-12eb-53f3-a652-cf7a9d99b699",
     "archivo": {
-      "nombre": "problemas_p1_hola_me_llamo.pdf",
-      "ruta": "problemas_p1_hola_me_llamo.pdf",
+      "nombre": "problemas/p1_hola_me_llamo.pdf",
+      "ruta": "problemas/p1_hola_me_llamo.pdf",
       "tipo": "Planeación Didáctica",
       "extension": ".pdf"
     },
@@ -6249,8 +6249,8 @@
   {
     "id": "4686a52d-5605-561d-9927-4b6e62d6ebbd",
     "archivo": {
-      "nombre": "problemas_p1_vida_suenos.pdf",
-      "ruta": "problemas_p1_vida_suenos.pdf",
+      "nombre": "problemas/p1_vida_suenos.pdf",
+      "ruta": "problemas/p1_vida_suenos.pdf",
       "tipo": "Planeación Didáctica",
       "extension": ".pdf"
     },
@@ -6723,8 +6723,8 @@
   {
     "id": "198a3378-c427-52ae-83e5-656abd7a080a",
     "archivo": {
-      "nombre": "servicio_p1_conociendo_contruyendo.pdf",
-      "ruta": "servicio_p1_conociendo_contruyendo.pdf",
+      "nombre": "servicio/p1_conociendo_contruyendo.pdf",
+      "ruta": "servicio/p1_conociendo_contruyendo.pdf",
       "tipo": "Planeación Didáctica",
       "extension": ".pdf"
     },
@@ -7143,8 +7143,8 @@
   {
     "id": "50b5430c-2991-5b96-990d-33cc9803b120",
     "archivo": {
-      "nombre": "servicio_p1_derecho_vivir.pdf",
-      "ruta": "servicio_p1_derecho_vivir.pdf",
+      "nombre": "servicio/p1_derecho_vivir.pdf",
+      "ruta": "servicio/p1_derecho_vivir.pdf",
       "tipo": "Planeación Didáctica",
       "extension": ".pdf"
     },
@@ -7554,8 +7554,8 @@
   {
     "id": "09aed6fe-0546-514a-90e0-6cb08f59975d",
     "archivo": {
-      "nombre": "servicio_p1_festival.pdf",
-      "ruta": "servicio_p1_festival.pdf",
+      "nombre": "servicio/p1_festival.pdf",
+      "ruta": "servicio/p1_festival.pdf",
       "tipo": "Planeación Didáctica",
       "extension": ".pdf"
     },
@@ -7961,8 +7961,8 @@
   {
     "id": "c2606d2a-330d-5969-be65-fe124b953b74",
     "archivo": {
-      "nombre": "servicio_p1_heroes.pdf",
-      "ruta": "servicio_p1_heroes.pdf",
+      "nombre": "servicio/p1_heroes.pdf",
+      "ruta": "servicio/p1_heroes.pdf",
       "tipo": "Planeación Didáctica",
       "extension": ".pdf"
     },
@@ -8414,8 +8414,8 @@
   {
     "id": "24912940-2583-51ca-97cf-ba5b9a026b87",
     "archivo": {
-      "nombre": "servicio_p1_presento_emociones.pdf",
-      "ruta": "servicio_p1_presento_emociones.pdf",
+      "nombre": "servicio/p1_presento_emociones.pdf",
+      "ruta": "servicio/p1_presento_emociones.pdf",
       "tipo": "Planeación Didáctica",
       "extension": ".pdf"
     },

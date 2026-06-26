@@ -16,6 +16,7 @@
 </head>
 
 <body>
+  <script src="assets/js/license-guard.js"></script>
   <main class="beta-main planos-page" id="top">
     <div class="beta-shell container-fluid py-3 py-lg-4">
       <section class="beta-section planos-unified-section mt-3 mt-lg-3" aria-label="Explorador de recursos" id="resource-section">
@@ -24,8 +25,8 @@
         <div class="planos-hero card border-0">
           <div class="planos-hero-copy">
             <a class="planos-back-top" href="index.html" aria-label="Regresar al inicio">Regresar</a>
-            <h2 id="resource-hero-title">Descubre actividades perfectas para tu aula</h2>
-            <p class="planos-lead" id="resource-hero-lead">Busca o explora por tipo de experiencia, duración, recursos y contexto pedagógico para encontrar exactamente lo que necesitas.</p>
+            <h2 id="resource-hero-title">Encuentra experiencias NEM validadas, para tu aula</h2>
+            <p class="planos-lead" id="resource-hero-lead">Inicia una experiencia valida NEM sin construir planeaciones manualmente, explora por tipo de experiencia, recursos y contexto pedagógico para encontrar exactamente lo que necesitas.</p>
             <div class="planos-metrics">
               <span><strong id="explorador-total-recursos">0</strong> recursos</span>
               <span><strong>6</strong> grados</span>
@@ -51,6 +52,7 @@
               <button class="btn explorador-cat-pill" data-category="energia" data-bs-toggle="modal" data-bs-target="#modalEnergia" type="button">🔥 Energía</button>
               <button class="btn explorador-cat-pill" data-category="recursos" data-bs-toggle="modal" data-bs-target="#modalRecursos" type="button">🎨 Recursos</button>
               <button class="btn explorador-cat-pill" data-category="experiencia" data-bs-toggle="modal" data-bs-target="#modalExperiencia" type="button">🌟 Experiencia</button>
+              <button class="btn explorador-cat-pill" data-category="campo" data-bs-toggle="modal" data-bs-target="#modalCampo" type="button">📚 Campo</button>
               <button class="btn explorador-cat-pill" data-category="intencion" data-bs-toggle="modal" data-bs-target="#modalIntencion" type="button">💡 Pedagógica</button>
               <button class="btn explorador-cat-pill" data-category="enfoque" data-bs-toggle="modal" data-bs-target="#modalEnfoque" type="button">🌱 Enfoque</button>
               <button class="btn explorador-cat-pill" data-category="clima" data-bs-toggle="modal" data-bs-target="#modalClima" type="button">😊 Clima</button>
@@ -151,6 +153,32 @@
             <button type="button" class="explorador-chip" data-discovery-id="experimentacion" data-category="experiencia">Experimentos 🧪</button>
             <button type="button" class="explorador-chip" data-discovery-id="trabajo_colaborativo" data-category="experiencia">Colaborativa 🤝</button>
             <button type="button" class="explorador-chip" data-discovery-id="conexion_comunidad" data-category="experiencia">Comunidad 🌎</button>
+          </div>
+        </div>
+        <div class="modal-footer border-top-0">
+          <button type="button" class="btn beta-secondary-btn btn-sm" data-bs-dismiss="modal">Listo</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Campo Formativo -->
+  <div class="modal fade" id="modalCampo" tabindex="-1" aria-labelledby="modalCampoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header border-bottom-0">
+          <h5 class="modal-title" id="modalCampoLabel">
+            <span class="explorador-modal-ia" aria-hidden="true">✨</span> 📚 Campo formativo
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <p class="explorador-modal-note" id="campo-formativo-hint">Puedes seleccionar hasta 3 campos formativos.</p>
+          <div class="explorador-chips-wrap" role="group" aria-label="Filtros de campo formativo">
+            <button type="button" class="explorador-chip" data-discovery-id="lenguajes" data-category="campo">Lenguajes</button>
+            <button type="button" class="explorador-chip" data-discovery-id="saberes_pensamiento_cientifico" data-category="campo">Saberes y pensamiento científico</button>
+            <button type="button" class="explorador-chip" data-discovery-id="etica_naturaleza_sociedades" data-category="campo">Ética, naturaleza y sociedades</button>
+            <button type="button" class="explorador-chip" data-discovery-id="humano_comunitario" data-category="campo">De lo humano y lo comunitario</button>
           </div>
         </div>
         <div class="modal-footer border-top-0">

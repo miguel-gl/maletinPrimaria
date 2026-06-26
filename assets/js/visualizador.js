@@ -4,14 +4,22 @@
   console.log("DEBUG: visualizador.js IIFE executed at", new Date().toISOString());
 
   var PROFILE_KEY = "maletinPrimariaTeacherProfile";
+  var ALUMNOS_STORAGE_KEY = "maletinPrimariaAlumnos";
+  var GROUP_EXPERIENCE_STORAGE_KEY = "maletinPrimariaGroupExperiences";
   var SMART_MODE_KEY_PREFIX = "vizSmartMode_";
   var NOTES_KEY_PREFIX = "vizNotes_";
   var ACTIVITIES_KEY_PREFIX = "vizActivities_";
+  var ACTIVITIES_HISTORY_KEY_PREFIX = "vizActivitiesHistory_";
+  var CURRENT_SESSION_KEY_PREFIX = "vizCurrentSession_";
   var PROGRESS_KEY_PREFIX = "vizProgress_";
+  var PROGRESS_MANUAL_KEY_PREFIX = "vizProgressManual_";
   var STATUS_KEY_PREFIX = "vizStatus_";
   var AI_RECOMMENDATIONS_KEY_PREFIX = "vizAiRecommendations_";
   var INSTRUMENT_RECOMMENDATIONS_KEY_PREFIX = "vizInstrumentRecommendations_";
   var INSTRUMENT_RECOMMENDATIONS_DATA_KEY_PREFIX = "vizInstrumentRecommendationsData_";
+  var IA_CUSTOM_PARAMS_KEY_PREFIX = "vizIaCustomCriterionParams_";
+  var IA_CUSTOM_CRITERIA_KEY_PREFIX = "vizIaCustomCriteria_";
+  var ASSISTANT_STATE_KEY = "maletinAssistantStateV1";
 
   var currentId = null;
   var smartActive = false;
@@ -19,6 +27,7 @@
   var currentInstrumentRecommendations = [];
   var currentEnrichment = {};
   var currentSessionOptions = [];
+  var currentActivitiesCache = [];
   var aiTypingTimer = null;
   var instrumentCatalogPromise = null;
   var instrumentsModalInstance = null;
@@ -183,6 +192,7 @@
     }
 
     updateEvaluationRecommendations(false);
+    refreshEvaluationModalContent();
 
     var metsTags = document.getElementById("viz-meta-metodologias");
     if (metsTags && Array.isArray(contenido.metodologias)) {
@@ -204,7 +214,7 @@
 
     // Refresca el resumen/selector de sesiones de actividades con la metadata del plano
     var savedActivities = currentId ? safeGetJson(ACTIVITIES_KEY_PREFIX + currentId) : null;
-    renderActivities(savedActivities || [createDefaultActivity()]);
+    renderActivities(savedActivities || createActivitiesFromItem(item));
 
     // Visor PDF
     if (archivo.nombre) {
@@ -219,19 +229,246 @@
         iframe.classList.remove("d-none");
       }
       if (placeholder) placeholder.classList.add("d-none");
-      if (downloadBtn && filePath) downloadBtn.href = filePath;
+      if (downloadBtn && filePath) downloadBtn.href = toAbsoluteUrl(filePath);
     }
   }
 
   // Ajusta parametros del visor para ocultar paneles laterales cuando el navegador lo soporta.
   function buildViewerPath(filePath) {
-    return filePath + "#pagemode=none&navpanes=0";
+    return toAbsoluteUrl(filePath) + "#pagemode=none&navpanes=0";
+  }
+
+  function toAbsoluteUrl(path) {
+    try {
+      return new URL(path, window.location.href).href;
+    } catch (error) {
+      return encodeURI(path);
+    }
+  }
+
+  function getTeacherProfileSelection() {
+    var profile = {};
+
+    try {
+      profile = JSON.parse(localStorage.getItem(PROFILE_KEY) || "{}") || {};
+    } catch (_) {
+      profile = {};
+    }
+
+    var phase = parseInt(profile.phase, 10);
+    var grade = parseInt(profile.level, 10);
+
+    if (isNaN(phase) && Array.isArray(profile.phases) && profile.phases.length) {
+      phase = parseInt(profile.phases[0], 10);
+    }
+
+    if (isNaN(grade) && Array.isArray(profile.levels) && profile.levels.length) {
+      grade = parseInt(profile.levels[0], 10);
+    }
+
+    return {
+      phase: isNaN(phase) ? null : phase,
+      grade: isNaN(grade) ? null : grade
+    };
+  }
+
+  function safeParseJson(rawValue, fallbackValue) {
+    try {
+      return rawValue ? JSON.parse(rawValue) : fallbackValue;
+    } catch (_) {
+      return fallbackValue;
+    }
+  }
+
+  function getTeacherProfileRaw() {
+    return safeParseJson(localStorage.getItem(PROFILE_KEY), {}) || {};
+  }
+
+  function normalizeGroupText(value) {
+    return String(value || "")
+      .trim()
+      .toLowerCase()
+      .replace(/\s+/g, "-")
+      .replace(/[^a-z0-9\-]/g, "");
+  }
+
+  function resolveGroupContext() {
+    var profile = getTeacherProfileRaw();
+    var selection = getTeacherProfileSelection();
+    var phase = selection.phase || parseInt(profile.phase, 10) || parseInt(getParam("fase"), 10) || null;
+    var grade = selection.grade || parseInt(profile.level, 10) || null;
+    var group = profile.group || profile.grupo || profile.groupName || profile.levelGroup || "A";
+    var shift = profile.shift || profile.turno || "";
+
+    return {
+      phase: phase,
+      grade: grade,
+      group: String(group || "A"),
+      shift: String(shift || "")
+    };
+  }
+
+  function getGroupExperienceKey() {
+    var ctx = resolveGroupContext();
+    return [
+      "fase" + (ctx.phase || "x"),
+      "grado" + (ctx.grade || "x"),
+      "grupo" + (normalizeGroupText(ctx.group) || "a"),
+      normalizeGroupText(ctx.shift) || "sin-turno"
+    ].join("_");
+  }
+
+  function loadStudentsDataset() {
+    var raw = safeParseJson(localStorage.getItem(ALUMNOS_STORAGE_KEY), []);
+
+    if (Array.isArray(raw)) {
+      return raw;
+    }
+
+    // Compatibilidad: algunas versiones guardan un objeto con `students`.
+    if (raw && Array.isArray(raw.students)) {
+      return raw.students;
+    }
+
+    return [];
+  }
+
+  function saveStudentsDataset(students) {
+    try {
+      localStorage.setItem(ALUMNOS_STORAGE_KEY, JSON.stringify(Array.isArray(students) ? students : []));
+    } catch (_) {}
+  }
+
+  function buildExperienceSnapshot(statusLabel) {
+    var ctx = resolveGroupContext();
+    var progressRange = document.getElementById("viz-progress-range");
+    var progressValue = parseInt((progressRange && progressRange.value) || "0", 10);
+    var safeActivities = normalizeActivities(currentActivitiesCache);
+    var doneCount = safeActivities.filter(function (activity) { return !!activity.done; }).length;
+
+    return {
+      id: currentId,
+      title: currentItem && currentItem.contenido ? (currentItem.contenido.titulo || currentItem.contenido.nombre_proyecto || "Experiencia") : "Experiencia",
+      fase: ctx.phase,
+      grado: ctx.grade,
+      grupo: ctx.group,
+      turno: ctx.shift,
+      status: statusLabel || safeGet(STATUS_KEY_PREFIX + currentId) || "pendiente",
+      progress: Number.isFinite(progressValue) ? progressValue : 0,
+      completedActivities: doneCount,
+      totalActivities: safeActivities.length,
+      currentSession: getCurrentSessionOrder(),
+      updatedAt: Date.now()
+    };
+  }
+
+  function syncHomeActiveExperience(snapshot) {
+    if (!currentId || !currentItem || !smartActive) return;
+
+    var content = currentItem.contenido || {};
+    var sesiones = Array.isArray(content.sesiones) ? content.sesiones : [];
+    var totalSessions = parseInt(content.sesiones_totales, 10) || sesiones.length || 1;
+    var currentSession = Math.max(1, parseInt((snapshot && snapshot.currentSession) || getCurrentSessionOrder() || 1, 10) || 1);
+    var sessionIndex = Math.max(0, Math.min(currentSession - 1, Math.max(0, sesiones.length - 1)));
+    var sessionObj = sesiones[sessionIndex] || null;
+    var moments = Array.isArray(content.momentos_metodologicos) ? content.momentos_metodologicos : [];
+    var momentObj = moments.find(function (item) {
+      return item && sessionObj && item.nombre === sessionObj.momento_metodologico;
+    }) || moments[0] || null;
+
+    var rawState = safeParseJson(localStorage.getItem(ASSISTANT_STATE_KEY), {});
+    var previousActive = rawState && rawState.activeExperience && rawState.activeExperience.resourceId === currentId
+      ? rawState.activeExperience
+      : null;
+    var startedAt = previousActive && previousActive.startedAt ? previousActive.startedAt : new Date().toISOString();
+    var classDuration = parseInt(previousActive && previousActive.classDuration, 10) || 50;
+    var daysPerWeek = parseInt(previousActive && previousActive.daysPerWeek, 10) || 2;
+    var plannedWeeks = parseInt(previousActive && previousActive.plannedWeeks, 10) || Math.max(1, Math.ceil(totalSessions / Math.max(1, daysPerWeek)));
+
+    rawState = rawState && typeof rawState === "object" ? rawState : {};
+    rawState.activeExperience = {
+      resourceId: currentId,
+      resourceType: String(getParam("tipo") || "planos").toLowerCase(),
+      title: content.titulo || content.nombre_proyecto || "Experiencia",
+      metodologia: (content.metodologias && content.metodologias[0]) || "Ruta pedagogica",
+      product: content.producto_central || "Producto final",
+      totalSessions: totalSessions,
+      currentSession: currentSession,
+      progress: Math.max(0, Math.min(100, parseInt((snapshot && snapshot.progress) || "0", 10) || 0)),
+      calendarProgress: previousActive && typeof previousActive.calendarProgress === "number" ? previousActive.calendarProgress : 0,
+      plannedWeeks: plannedWeeks,
+      classDuration: classDuration,
+      daysPerWeek: daysPerWeek,
+      estimatedEndLabel: previousActive && previousActive.estimatedEndLabel ? previousActive.estimatedEndLabel : "Fecha estimada",
+      currentMoment: (momentObj && momentObj.nombre) || (sessionObj && sessionObj.momento_metodologico) || "Momento inicial",
+      todayObjective: (momentObj && momentObj.descripcion_completa) || "Continuar la experiencia con el grupo.",
+      todayTasks: Array.isArray(sessionObj && sessionObj.actividades) ? sessionObj.actividades.slice(0, 3) : [],
+      remainingSessions: Math.max(0, totalSessions - currentSession),
+      startedAt: startedAt
+    };
+
+    try {
+      localStorage.setItem(ASSISTANT_STATE_KEY, JSON.stringify(rawState));
+    } catch (_) {}
+  }
+
+  function persistExperienceToGroupAndStudents(statusLabel) {
+    if (!currentId || !currentItem) return;
+
+    var snapshot = buildExperienceSnapshot(statusLabel);
+    syncHomeActiveExperience(snapshot);
+    var groupKey = getGroupExperienceKey();
+
+    var groupStore = safeParseJson(localStorage.getItem(GROUP_EXPERIENCE_STORAGE_KEY), {});
+    if (!groupStore || typeof groupStore !== "object") {
+      groupStore = {};
+    }
+
+    if (!groupStore[groupKey]) {
+      groupStore[groupKey] = {
+        context: {
+          fase: snapshot.fase,
+          grado: snapshot.grado,
+          grupo: snapshot.grupo,
+          turno: snapshot.turno
+        },
+        resources: {}
+      };
+    }
+
+    groupStore[groupKey].resources[currentId] = snapshot;
+
+    try {
+      localStorage.setItem(GROUP_EXPERIENCE_STORAGE_KEY, JSON.stringify(groupStore));
+    } catch (_) {}
+
+    var students = loadStudentsDataset();
+    if (!students.length) return;
+
+    var enrichedStudents = students.map(function (student) {
+      var safeStudent = Object.assign({}, student);
+      var tracking = safeStudent.experienceTracking && typeof safeStudent.experienceTracking === "object"
+        ? Object.assign({}, safeStudent.experienceTracking)
+        : {};
+
+      if (!tracking[groupKey]) {
+        tracking[groupKey] = { resources: {} };
+      }
+
+      tracking[groupKey].resources = tracking[groupKey].resources || {};
+      tracking[groupKey].resources[currentId] = snapshot;
+      safeStudent.experienceTracking = tracking;
+      return safeStudent;
+    });
+
+    saveStudentsDataset(enrichedStudents);
   }
 
   // Construye la ruta al archivo en src/resources según fase, grado y categoria
   function buildFilePath(clasificacion, archivo, resourceConfig, item) {
-    var nombre = archivo.nombre || archivo.ruta || "";
-    if (!nombre) return null;
+    var nombre = archivo.nombre || "";
+    var ruta = String(archivo.ruta || "").replace(/\\/g, "/").replace(/^\/+/, "");
+    if (!ruta && !archivo.nombre) return null;
 
     if (resourceConfig.folderName === "material_docente") {
       return "src/resources/MATERIAL PARA EL DOCENTE/" + nombre;
@@ -253,8 +490,9 @@
       return "src/resources/material_alumno/Imprimibles/" + imprimiblesSubfolder + "/" + nombre;
     }
 
-    var fase = parseInt(clasificacion.fase, 10);
-    var grado = parseInt(clasificacion.grado, 10);
+    var profileSelection = getTeacherProfileSelection();
+    var fase = profileSelection.phase || parseInt(clasificacion.fase, 10);
+    var grado = profileSelection.grade || parseInt(clasificacion.grado, 10);
     if (!fase || !grado) return null;
 
     var faseSegment = "FASE " + fase;
@@ -268,8 +506,9 @@
     }
 
     if (resourceConfig.folderName === "planos_didacticos") {
-      var categoriaSegment = categoriaToCarpeta(clasificacion.categoria_pedagogica || "");
-      return "src/resources/" + faseSegment + "/" + gradoSegment + "/planos_didacticos/" + categoriaSegment + "/" + nombre;
+      if (!ruta) return null;
+      var relativeRuta = ruta.replace(/^planos_didacticos\//i, "");
+      return "src/resources/" + faseSegment + "/" + gradoSegment + "/planos_didacticos/" + relativeRuta;
     }
 
     return "src/resources/" + faseSegment + "/" + gradoSegment + "/" + resourceConfig.folderName + "/" + nombre;
@@ -472,7 +711,7 @@
       var placeholder = document.getElementById("viz-viewer-placeholder");
       var downloadBtn = document.getElementById("viz-download-btn");
 
-      if (filePath && downloadBtn) downloadBtn.href = filePath;
+      if (filePath && downloadBtn) downloadBtn.href = toAbsoluteUrl(filePath);
 
       var ext = archivo.nombre ? archivo.nombre.split(".").pop().toLowerCase() : "";
       if (ext === "pdf" && iframe && filePath) {
@@ -721,7 +960,7 @@
 
   function setInstrumentGenerationState(isGenerating, message) {
     var summaryEl = document.getElementById("viz-instrumentos-summary");
-    var modalCopyEl = document.querySelector(".viz-modal-copy");
+    var modalCopyEl = document.getElementById("viz-modal-copy");
     if (summaryEl) {
       summaryEl.classList.toggle("is-generating", !!isGenerating);
       if (message) {
@@ -738,7 +977,7 @@
   }
 
   function setInstrumentOpenFeedback(message, isError) {
-    var modalCopyEl = document.querySelector(".viz-modal-copy");
+    var modalCopyEl = document.getElementById("viz-modal-copy");
     if (!modalCopyEl) return;
 
     modalCopyEl.classList.remove("is-generating");
@@ -772,7 +1011,7 @@
   }
 
   function resetInstrumentOpenFeedback() {
-    var modalCopyEl = document.querySelector(".viz-modal-copy");
+    var modalCopyEl = document.getElementById("viz-modal-copy");
     if (!modalCopyEl) return;
 
     modalCopyEl.style.color = "";
@@ -894,25 +1133,950 @@
         '</li>'
       ].join("");
     }).join("");
-    // Instrucción clara para el usuario
-    var modalCopyEl = document.querySelector('.viz-modal-copy');
-    if (modalCopyEl) {
-      modalCopyEl.textContent = 'Para guardar el archivo, haz clic derecho en el enlace y selecciona "Guardar enlace como..." o ábrelo directamente en el explorador de archivos de Windows.';
-      modalCopyEl.style.color = '';
-      modalCopyEl.style.fontWeight = '';
+  }
+
+  function getJsonCriteriaSuggestions() {
+    var evaluacion = currentItem && currentItem.evaluacion ? currentItem.evaluacion : null;
+    var suggestions = [];
+
+    if (evaluacion && Array.isArray(evaluacion.criterios) && evaluacion.criterios.length) {
+      evaluacion.criterios.forEach(function (c) {
+        if (c.criterio) suggestions.push(String(c.criterio));
+      });
+    } else {
+      var sesiones = currentItem && currentItem.contenido && Array.isArray(currentItem.contenido.sesiones)
+        ? currentItem.contenido.sesiones
+        : [];
+      sesiones.slice(0, 4).forEach(function (sesion) {
+        var actividades = Array.isArray(sesion.actividades) ? sesion.actividades : [];
+        if (actividades[0]) suggestions.push(String(actividades[0]));
+      });
     }
+
+    return suggestions;
+  }
+
+  function getPlanoEvaluationCriteria() {
+    var evaluacion = currentItem && currentItem.evaluacion ? currentItem.evaluacion : null;
+    var base = [];
+
+    if (evaluacion && Array.isArray(evaluacion.criterios) && evaluacion.criterios.length) {
+      base = evaluacion.criterios.slice();
+    } else {
+      var sesiones = currentItem && currentItem.contenido && Array.isArray(currentItem.contenido.sesiones)
+        ? currentItem.contenido.sesiones
+        : [];
+      sesiones.slice(0, 4).forEach(function (sesion) {
+        var actividades = Array.isArray(sesion.actividades) ? sesion.actividades : [];
+        if (actividades[0]) {
+          base.push({
+            numero: base.length + 1,
+            criterio: String(actividades[0])
+          });
+        }
+      });
+    }
+
+    var custom = getStoredCustomCriteria();
+    custom.forEach(function (text) {
+      base.push({
+        numero: base.length + 1,
+        criterio: text,
+        excelente_4: "Excelente",
+        bueno_3: "Bueno",
+        satisfactorio_2: "Satisfactorio",
+        necesita_mejorar_1: "Necesita mejorar"
+      });
+    });
+
+    return base;
+  }
+
+  function getCurrentPlanoPdfPath() {
+    if (!currentItem || !currentResourceConfig) return null;
+    var clasificacion = currentItem.clasificacion || {};
+    var archivo = currentItem.archivo || {};
+    return buildFilePath(clasificacion, archivo, currentResourceConfig, currentItem);
+  }
+
+  function renderPdfEvaluationPane() {
+    var summaryEl = document.getElementById("viz-pdf-eval-summary");
+    var openPdfBtn = document.getElementById("viz-open-plano-pdf-btn");
+    if (!summaryEl || !openPdfBtn) return;
+
+    var criterios = getPlanoEvaluationCriteria();
+    var evaluacion = currentItem && currentItem.evaluacion ? currentItem.evaluacion : {};
+    var instrumento = evaluacion.instrumento || "Instrumento del plano";
+
+    if (!criterios.length) {
+      summaryEl.textContent = "Este plano no tiene criterios de evaluacion en la metadata. Puedes agregar criterios en la pestaña de evaluacion personalizada.";
+    } else {
+      summaryEl.textContent = "Instrumento: " + instrumento + ". " + criterios.length + " criterios listos para evaluar.";
+    }
+
+    var filePath = getCurrentPlanoPdfPath();
+    if (filePath) {
+      openPdfBtn.href = toAbsoluteUrl(filePath);
+      openPdfBtn.classList.remove("disabled");
+      openPdfBtn.setAttribute("aria-disabled", "false");
+    } else {
+      openPdfBtn.href = "#";
+      openPdfBtn.classList.add("disabled");
+      openPdfBtn.setAttribute("aria-disabled", "true");
+    }
+  }
+
+  function getStudentsForEvaluation() {
+    var students = loadStudentsDataset();
+    if (!students.length) return [];
+
+    var ctx = resolveGroupContext();
+    var gradeText = ctx.grade ? String(ctx.grade) : "";
+
+    if (!gradeText) {
+      return students;
+    }
+
+    var filtered = students.filter(function (student) {
+      var gradeValue = String(student.grade || student.grado || student.level || "");
+      return gradeValue.indexOf(gradeText) !== -1;
+    });
+
+    // Si no hay coincidencias por grado, no bloquear la evaluacion.
+    return filtered.length ? filtered : students;
+  }
+
+  function getCriterionScaleOptions(criterion) {
+    var customParams = getStoredGlobalParameters();
+    var options = [];
+
+    customParams.forEach(function (param, idx) {
+      options.push({ value: String(5 + idx), label: param });
+    });
+
+    options.push({ value: "4", label: "Excelente" });
+    options.push({ value: "3", label: "Bueno" });
+    options.push({ value: "2", label: "Satisfactorio" });
+    options.push({ value: "1", label: "Necesita mejorar" });
+
+    return options.map(function (option) {
+      return {
+        value: option.value,
+        label: String(option.label || "").trim() || ("Nivel " + option.value)
+      };
+    });
+  }
+
+  function getMaxScaleValue() {
+    var customParams = getStoredGlobalParameters();
+    return 4 + customParams.length;
+  }
+
+  function getCriterionCode(index) {
+    return "C" + (index + 1);
+  }
+
+  function normalizeCriterionParameter(value) {
+    return String(value || "").replace(/\s+/g, " ").trim();
+  }
+
+  function getStoredGlobalParameters() {
+    if (!currentId) return [];
+    var stored = safeGetJson(IA_CUSTOM_PARAMS_KEY_PREFIX + currentId);
+    return Array.isArray(stored) ? stored : [];
+  }
+
+  function saveGlobalParameters(list) {
+    if (!currentId) return;
+    safeSetJson(IA_CUSTOM_PARAMS_KEY_PREFIX + currentId, list || []);
+  }
+
+  function getCriterionParameterOptions(criterion, index) {
+    var custom = getStoredGlobalParameters();
+    var merged = custom.filter(function (item) {
+      return normalizeCriterionParameter(item);
+    }).map(function (item) {
+      return normalizeCriterionParameter(item);
+    }).filter(function (item, idx, arr) {
+      return arr.indexOf(item) === idx;
+    });
+
+    if (!merged.length) {
+      return [{ id: "", label: "Sin parametro" }];
+    }
+
+    return merged.map(function (label, idx) {
+      return {
+        id: "P" + (idx + 1),
+        label: label
+      };
+    });
+  }
+
+  function addGlobalParameter(rawValue) {
+    var value = normalizeCriterionParameter(rawValue);
+    if (!value) return false;
+
+    var list = getStoredGlobalParameters().slice();
+    if (list.map(function (item) { return item.toLowerCase(); }).indexOf(value.toLowerCase()) !== -1) {
+      return false;
+    }
+
+    list.push(value);
+    saveGlobalParameters(list);
+    return true;
+  }
+
+  function getStoredCustomCriteria() {
+    if (!currentId) return [];
+    var stored = safeGetJson(IA_CUSTOM_CRITERIA_KEY_PREFIX + currentId);
+    return Array.isArray(stored) ? stored : [];
+  }
+
+  function saveCustomCriteria(list) {
+    if (!currentId) return;
+    safeSetJson(IA_CUSTOM_CRITERIA_KEY_PREFIX + currentId, list || []);
+  }
+
+  function addCustomCriterion(rawText) {
+    var text = normalizeCriterionParameter(rawText);
+    if (!text) return false;
+
+    var list = getStoredCustomCriteria().slice();
+    if (list.map(function (item) { return item.toLowerCase(); }).indexOf(text.toLowerCase()) !== -1) {
+      return false;
+    }
+
+    list.push(text);
+    saveCustomCriteria(list);
+    return true;
+  }
+
+  function removeCustomCriterion(index) {
+    var list = getStoredCustomCriteria().slice();
+    if (index < 0 || index >= list.length) return;
+    list.splice(index, 1);
+    saveCustomCriteria(list);
+  }
+
+  function removeGlobalParameter(index) {
+    var list = getStoredGlobalParameters().slice();
+    if (index < 0 || index >= list.length) return;
+    list.splice(index, 1);
+    saveGlobalParameters(list);
+  }
+
+  function readEvaluationDraftFromDom() {
+    var draft = {};
+    var cards = Array.prototype.slice.call(document.querySelectorAll(".viz-ia-student-card"));
+
+    cards.forEach(function (card) {
+      var studentId = String(card.getAttribute("data-student-id") || "");
+      if (!studentId) return;
+      draft[studentId] = {};
+
+      var rows = Array.prototype.slice.call(card.querySelectorAll(".viz-ia-criterion"));
+      rows.forEach(function (row) {
+        var criterionIndex = String(row.getAttribute("data-criterion-index") || "");
+        if (!criterionIndex) return;
+
+        var scoreSelect = row.querySelector(".viz-ia-criterion-select");
+        var noteInput = row.querySelector(".viz-ia-observation-input");
+
+        draft[studentId][criterionIndex] = {
+          score: scoreSelect ? String(scoreSelect.value || "") : "",
+          observation: noteInput ? String(noteInput.value || "") : ""
+        };
+      });
+    });
+
+    return draft;
+  }
+
+  function applyEvaluationDraftToDom(draft) {
+    if (!draft || typeof draft !== "object") return;
+
+    var cards = Array.prototype.slice.call(document.querySelectorAll(".viz-ia-student-card"));
+    cards.forEach(function (card) {
+      var studentId = String(card.getAttribute("data-student-id") || "");
+      if (!studentId || !draft[studentId]) return;
+
+      var rows = Array.prototype.slice.call(card.querySelectorAll(".viz-ia-criterion"));
+      rows.forEach(function (row) {
+        var criterionIndex = String(row.getAttribute("data-criterion-index") || "");
+        var saved = draft[studentId][criterionIndex];
+        if (!saved) return;
+
+        var scoreSelect = row.querySelector(".viz-ia-criterion-select");
+        var noteInput = row.querySelector(".viz-ia-observation-input");
+
+        if (scoreSelect && saved.score) scoreSelect.value = saved.score;
+        if (noteInput && typeof saved.observation === "string") noteInput.value = saved.observation;
+      });
+    });
+  }
+
+  function getSavedEvaluationDraftForCurrentResource(students, criteriaCount) {
+    if (!currentId || !Array.isArray(students) || !students.length) return {};
+
+    var draft = {};
+    students.forEach(function (student) {
+      var evaluations = Array.isArray(student.personalizedEvaluations)
+        ? student.personalizedEvaluations
+        : [];
+      if (!evaluations.length) return;
+
+      var match = null;
+      for (var i = evaluations.length - 1; i >= 0; i -= 1) {
+        var candidate = evaluations[i];
+        if (String(candidate.resourceId || "") === String(currentId)) {
+          match = candidate;
+          break;
+        }
+      }
+      if (!match || !Array.isArray(match.grades)) return;
+
+      var studentId = String(student.id || "");
+      if (!studentId) return;
+
+      draft[studentId] = {};
+      match.grades.forEach(function (grade) {
+        var criterionIndex = Number.isFinite(grade.criterionIndex)
+          ? grade.criterionIndex
+          : parseInt(String(grade.criterionCode || "").replace(/^C/i, ""), 10) - 1;
+
+        if (!Number.isFinite(criterionIndex) || criterionIndex < 0 || criterionIndex >= criteriaCount) return;
+
+        draft[studentId][String(criterionIndex)] = {
+          score: String(grade.score || ""),
+          observation: String(grade.observation || "")
+        };
+      });
+    });
+
+    return draft;
+  }
+
+  function renderTagsList(items, dataType) {
+    if (!items.length) return '<p class="viz-ia-empty-hint">Aun no has agregado ' + (dataType === "criterion" ? "criterios" : "parametros") + '.</p>';
+    return '<div class="viz-ia-tags-list">' + items.map(function (text, idx) {
+      return '<span class="viz-ia-tag">' +
+        '<span class="viz-ia-tag-text">' + escapeHtml(text) + '</span>' +
+        '<button class="viz-ia-tag-delete" type="button" data-tag-type="' + dataType + '" data-tag-index="' + idx + '" title="Eliminar">&times;</button>' +
+      '</span>';
+    }).join("") + '</div>';
+  }
+
+  function renderCriterionParameterManager() {
+    var storedCriteria = getStoredCustomCriteria();
+    var storedParams = getStoredGlobalParameters();
+    var jsonCount = getJsonCriteriaSuggestions().length;
+
+    return [
+      '<section class="viz-ia-parameter-manager">',
+        '<h6 class="viz-ia-parameter-manager-title">Criterios adicionales' + (jsonCount ? ' <span style="font-weight:400;font-size:0.7rem;color:#6c7390">(' + jsonCount + ' del plano + ' + storedCriteria.length + ' adicionales)</span>' : '') + '</h6>',
+        '<p class="viz-ia-parameter-manager-copy">Agrega criterios extra o escribe para buscar.</p>',
+        renderTagsList(storedCriteria, "criterion"),
+        '<div class="viz-ia-parameter-item-row">',
+          '<div class="viz-ia-autocomplete-wrap">',
+            '<input class="viz-ia-parameter-input" type="text" id="viz-ia-criterion-input" placeholder="Ej. Trabaja de forma colaborativa" autocomplete="off">',
+            '<div class="viz-ia-autocomplete-list" id="viz-ia-criterion-autocomplete"></div>',
+          '</div>',
+          '<button class="btn btn-sm btn-outline-primary viz-ia-criterion-add" type="button">Agregar</button>',
+        '</div>',
+        '<h6 class="viz-ia-parameter-manager-title" style="margin-top:0.65rem">Parametros de evaluacion</h6>',
+        '<p class="viz-ia-parameter-manager-copy">Agrega parametros para incluirlos en la escala de calificacion.</p>',
+        renderTagsList(storedParams, "parameter"),
+        '<div class="viz-ia-parameter-item-row">',
+          '<div class="viz-ia-autocomplete-wrap">',
+            '<input class="viz-ia-parameter-input" type="text" id="viz-ia-global-param-input" placeholder="Ej. Argumenta con evidencia" autocomplete="off">',
+            '<div class="viz-ia-autocomplete-list" id="viz-ia-param-autocomplete"></div>',
+          '</div>',
+          '<button class="btn btn-sm btn-outline-primary viz-ia-parameter-add" type="button">Agregar</button>',
+        '</div>',
+      '</section>'
+    ].join("");
+  }
+
+  function renderPersonalizedAiPlan() {
+    var planEl = document.getElementById("viz-ia-plan");
+    if (!planEl) return;
+
+    var contenido = currentItem && currentItem.contenido ? currentItem.contenido : {};
+    var criterios = getPlanoEvaluationCriteria();
+    var alumnos = getStudentsForEvaluation();
+
+    var jsonCount = getJsonCriteriaSuggestions().length;
+    var customCount = getStoredCustomCriteria().length;
+    var planCopy = 'Evaluacion basada en <strong>' + escapeHtml(contenido.titulo || "el plano") + '</strong>. '
+      + '<strong>' + jsonCount + '</strong> criterios del plano'
+      + (customCount ? ' + <strong>' + customCount + '</strong> adicionales' : '')
+      + ' para <strong>' + alumnos.length + '</strong> alumnos.';
+
+    planEl.innerHTML = [
+      '<div class="viz-ia-plan-title">Evaluacion personalizada</div>',
+      '<p class="viz-ia-plan-copy">' + planCopy + '</p>'
+    ].join("");
+  }
+
+  function renderAiStudentEvaluationForm() {
+    var studentsWrap = document.getElementById("viz-ia-students");
+    if (!studentsWrap) return;
+
+    var alumnos = getStudentsForEvaluation();
+    var criterios = getPlanoEvaluationCriteria();
+
+    if (!alumnos.length) {
+      studentsWrap.innerHTML = '<div class="viz-campo-placeholder">No hay alumnos registrados para este grupo. Ve a la pantalla de alumnos y agrega al grupo primero.</div>';
+      return;
+    }
+
+    var studentCards = "";
+    if (criterios.length) {
+      studentCards = alumnos.map(function (student) {
+        return [
+          '<article class="viz-ia-student-card" data-student-id="' + escapeHtml(student.id || "") + '">',
+            '<h6 class="viz-ia-student-name">' + escapeHtml(student.name || "Alumno") + '</h6>',
+            '<div class="viz-ia-criteria-grid">',
+              criterios.map(function (criterio, index) {
+                var scale = getCriterionScaleOptions(criterio);
+                return [
+                  '<div class="viz-ia-criterion" data-criterion-index="' + index + '">',
+                    '<span class="viz-ia-criterion-label">' + getCriterionCode(index) + '. ' + escapeHtml(criterio.criterio || "Criterio") + '</span>',
+                    '<select class="viz-ia-criterion-select" data-criterion-index="' + index + '">',
+                      scale.map(function (option) {
+                        return '<option value="' + escapeHtml(option.value) + '">' + escapeHtml(option.label) + '</option>';
+                      }).join(""),
+                    '</select>',
+                    '<textarea class="viz-ia-observation-input" data-criterion-index="' + index + '" rows="2" placeholder="Observacion para ' + getCriterionCode(index) + '"></textarea>',
+                  '</div>'
+                ].join("");
+              }).join(""),
+            '</div>',
+          '</article>'
+        ].join("");
+      }).join("");
+    } else {
+      studentCards = '<div class="viz-campo-placeholder">Agrega al menos un criterio de evaluacion para comenzar a evaluar.</div>';
+    }
+
+    studentsWrap.innerHTML = [
+      renderCriterionParameterManager(),
+      studentCards
+    ].join("");
+
+    bindAutocompleteEvents();
+
+    if (criterios.length) {
+      var savedDraft = getSavedEvaluationDraftForCurrentResource(alumnos, criterios.length);
+      applyEvaluationDraftToDom(savedDraft);
+    }
+  }
+
+  function highlightMatch(text, query) {
+    if (!query) return escapeHtml(text);
+    var lower = text.toLowerCase();
+    var qLower = query.toLowerCase();
+    var idx = lower.indexOf(qLower);
+    if (idx === -1) return escapeHtml(text);
+    return escapeHtml(text.substring(0, idx)) + '<mark>' + escapeHtml(text.substring(idx, idx + query.length)) + '</mark>' + escapeHtml(text.substring(idx + query.length));
+  }
+
+  function showAutocomplete(inputEl, listEl, suggestions, query) {
+    if (!query || !suggestions.length) {
+      listEl.classList.remove("is-open");
+      listEl.innerHTML = "";
+      return;
+    }
+
+    var qLower = query.toLowerCase();
+    var existing = getStoredCustomCriteria().map(function (s) { return s.toLowerCase(); });
+    var filtered = suggestions.filter(function (s) {
+      return s.toLowerCase().indexOf(qLower) !== -1 && existing.indexOf(s.toLowerCase()) === -1;
+    });
+
+    if (!filtered.length) {
+      listEl.classList.remove("is-open");
+      listEl.innerHTML = "";
+      return;
+    }
+
+    listEl.innerHTML = filtered.map(function (item) {
+      return '<div class="viz-ia-autocomplete-item" data-value="' + escapeHtml(item) + '">' + highlightMatch(item, query) + '</div>';
+    }).join("");
+    listEl.classList.add("is-open");
+  }
+
+  function bindAutocompleteEvents() {
+    var criterionInput = document.getElementById("viz-ia-criterion-input");
+    var criterionList = document.getElementById("viz-ia-criterion-autocomplete");
+
+    if (criterionInput && criterionList) {
+      var suggestions = getJsonCriteriaSuggestions();
+
+      criterionInput.addEventListener("input", function () {
+        showAutocomplete(criterionInput, criterionList, suggestions, criterionInput.value.trim());
+      });
+
+      criterionInput.addEventListener("focus", function () {
+        if (criterionInput.value.trim()) {
+          showAutocomplete(criterionInput, criterionList, suggestions, criterionInput.value.trim());
+        }
+      });
+
+      criterionList.addEventListener("click", function (e) {
+        var item = e.target.closest(".viz-ia-autocomplete-item");
+        if (!item) return;
+        var value = item.getAttribute("data-value");
+        if (value) {
+          var draft = readEvaluationDraftFromDom();
+          addCustomCriterion(value);
+          criterionInput.value = "";
+          criterionList.classList.remove("is-open");
+          renderPersonalizedAiPlan();
+          renderAiStudentEvaluationForm();
+          applyEvaluationDraftToDom(draft);
+        }
+      });
+    }
+  }
+
+  function readPersonalizedEvaluationPayload() {
+    var criterios = getPlanoEvaluationCriteria();
+    var cards = Array.prototype.slice.call(document.querySelectorAll(".viz-ia-student-card"));
+
+    return cards.map(function (card) {
+      var studentId = card.getAttribute("data-student-id");
+      var studentName = (card.querySelector(".viz-ia-student-name") || {}).textContent || "Alumno";
+      var rows = Array.prototype.slice.call(card.querySelectorAll(".viz-ia-criterion"));
+
+      var grades = rows.map(function (row) {
+        var criterionIndex = parseInt(row.getAttribute("data-criterion-index"), 10);
+        var criterion = criterios[criterionIndex] || {};
+        var scoreSelect = row.querySelector(".viz-ia-criterion-select");
+        var noteInput = row.querySelector(".viz-ia-observation-input");
+        var score = parseInt(scoreSelect ? scoreSelect.value : "0", 10);
+
+        return {
+          criterionIndex: criterionIndex,
+          criterionCode: getCriterionCode(criterionIndex),
+          criterion: criterion.criterio || "Criterio",
+          score: Number.isFinite(score) ? score : 0,
+          observation: noteInput ? String(noteInput.value || "").trim() : ""
+        };
+      });
+
+      var total = grades.reduce(function (sum, item) { return sum + item.score; }, 0);
+      var maxVal = getMaxScaleValue();
+      var max = grades.length ? grades.length * maxVal : 0;
+      var percent = max ? Math.round((total / max) * 100) : 0;
+
+      return {
+        studentId: studentId,
+        studentName: studentName,
+        grades: grades,
+        total: total,
+        max: max,
+        percent: percent,
+        criterios: criterios.map(function (c) {
+          return { criterio: c.criterio || "", numero: c.numero || 0 };
+        }),
+        parametros: getStoredGlobalParameters().slice()
+      };
+    });
+  }
+
+  function persistPersonalizedEvaluation(payload) {
+    var students = loadStudentsDataset();
+    if (!students.length || !Array.isArray(payload)) return;
+
+    var byStudent = {};
+    payload.forEach(function (entry) {
+      byStudent[String(entry.studentId)] = entry;
+    });
+
+    var now = Date.now();
+    var updated = students.map(function (student) {
+      var match = byStudent[String(student.id)];
+      if (!match) return student;
+
+      var next = Object.assign({}, student);
+      var evaluations = Array.isArray(next.personalizedEvaluations)
+        ? next.personalizedEvaluations.slice()
+        : [];
+
+      var savedCriterios = getPlanoEvaluationCriteria().map(function (c) {
+        return { criterio: c.criterio || "", numero: c.numero || 0 };
+      });
+      var savedParametros = getStoredGlobalParameters().slice();
+
+      evaluations.push({
+        resourceId: currentId,
+        resourceTitle: currentItem && currentItem.contenido ? (currentItem.contenido.titulo || "Plano") : "Plano",
+        updatedAt: now,
+        total: match.total,
+        max: match.max,
+        percent: match.percent,
+        grades: match.grades,
+        criterios: savedCriterios,
+        parametros: savedParametros
+      });
+
+      next.personalizedEvaluations = evaluations.slice(-30);
+      return next;
+    });
+
+    saveStudentsDataset(updated);
+  }
+
+  function escapeHtmlForDocument(value) {
+    return escapeHtml(value).replace(/\n/g, "<br>");
+  }
+
+  function buildEvaluationReportHtml(payload) {
+    var contenido = currentItem && currentItem.contenido ? currentItem.contenido : {};
+    var evaluacion = currentItem && currentItem.evaluacion ? currentItem.evaluacion : {};
+    var instrumentName = String(evaluacion.instrumento || "");
+    var isRubricInstrument = /rubrica/i.test(instrumentName);
+    var isChecklistInstrument = /lista de cotejo|autoevaluacion|preguntas de autoevaluacion/i.test(instrumentName);
+    var ctx = resolveGroupContext();
+    var nowLabel = new Date().toLocaleString("es-MX");
+    var criterios = getPlanoEvaluationCriteria();
+    var avgPercent = payload.length
+      ? Math.round(payload.reduce(function (sum, row) { return sum + row.percent; }, 0) / payload.length)
+      : 0;
+    var avgCompletion = payload.length
+      ? Math.round(payload.reduce(function (sum, row) {
+          var achieved = row.grades.reduce(function (count, item) {
+            return count + (Number(item.score) >= 3 ? 1 : 0);
+          }, 0);
+          var completion = row.grades.length ? Math.round((achieved / row.grades.length) * 100) : 0;
+          return sum + completion;
+        }, 0) / payload.length)
+      : 0;
+
+    var scaleOptionsMap = {};
+    getCriterionScaleOptions({}).forEach(function (opt) {
+      scaleOptionsMap[opt.value] = opt.label;
+    });
+
+    function getScoreLabel(score) {
+      var key = String(score);
+      return scaleOptionsMap[key] || key;
+    }
+
+    function getChecklistScoreLabel(score) {
+      var value = Number(score);
+      if (value >= 4) return "Cumple";
+      if (value >= 3) return "Parcial";
+      if (value >= 2) return "En proceso";
+      if (value >= 1) return "Requiere apoyo";
+      return "-";
+    }
+
+    return [
+      '<!doctype html>',
+      '<html lang="es">',
+      '<head>',
+        '<meta charset="utf-8">',
+        '<title>Evaluacion personalizada</title>',
+        '<style>',
+          'body{font-family:Arial,sans-serif;margin:0;background:#f2f4fb;color:#1d2338;}',
+          '.sheet{max-width:980px;margin:24px auto;background:#fff;border-radius:18px;padding:26px 30px;box-shadow:0 18px 45px rgba(26,35,68,.15);}',
+          '.hero{padding:18px;border-radius:14px;color:#fff;margin-bottom:18px;}',
+          '.hero--rubric{background:linear-gradient(135deg,#103f91,#2f7ad3);}',
+          '.hero--checklist{background:linear-gradient(135deg,#1f5f43,#2f8b62);}',
+          '.hero h1{margin:0 0 6px;font-size:24px;line-height:1.2;}',
+          '.hero p{margin:0;font-size:14px;opacity:.92;}',
+          '.meta{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:14px 0 20px;}',
+          '.meta-item{background:#f7f9ff;border:1px solid #dde5fb;border-radius:10px;padding:10px;}',
+          '.meta-item strong{display:block;font-size:11px;color:#64719a;text-transform:uppercase;margin-bottom:4px;}',
+          '.meta-item span{font-size:13px;font-weight:700;color:#223056;}',
+          'table{width:100%;border-collapse:collapse;font-size:12px;}',
+          'th,td{border:1px solid #dfe6fb;padding:8px;vertical-align:top;}',
+          'th{background:#eef3ff;text-align:left;color:#2a3c66;font-size:11px;text-transform:uppercase;}',
+          '.pill{display:inline-block;padding:4px 8px;border-radius:999px;background:#eaf6ee;border:1px solid #cae8d4;color:#1f6e3a;font-weight:700;font-size:11px;}',
+          '.block{margin-top:16px;}',
+          '.block h3{margin:0 0 8px;font-size:14px;color:#20345e;}',
+          '.glossary{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;}',
+          '.glossary-item{border:1px solid #dbe5fb;border-radius:10px;background:#f8fbff;padding:8px;}',
+          '.glossary-item strong{display:block;font-size:12px;color:#1f4a86;margin-bottom:4px;}',
+          '.glossary-item p{margin:0;font-size:11px;color:#455780;line-height:1.45;}',
+          '.scale-table{width:100%;border-collapse:collapse;font-size:11px;margin-top:6px;}',
+          '.scale-table th,.scale-table td{border:1px solid #dfe6fb;padding:5px 7px;text-align:left;}',
+          '.scale-table th{background:#f0f5ff;color:#2a3c66;font-size:10px;}',
+          '.obs-card{border:1px solid #dde7fb;border-radius:10px;padding:10px;margin-bottom:8px;background:#fcfdff;}',
+          '.obs-card h4{margin:0 0 7px;font-size:12px;color:#22335d;}',
+          '.obs-row{margin:0 0 5px;font-size:11px;color:#3c4e77;line-height:1.45;}',
+          '.foot{margin-top:16px;font-size:12px;color:#4a587f;}',
+          '@media print{body{background:#fff}.sheet{margin:0;box-shadow:none;border-radius:0}.meta{grid-template-columns:repeat(2,minmax(0,1fr));}.glossary{grid-template-columns:1fr;}}',
+        '</style>',
+      '</head>',
+      '<body>',
+        '<div class="sheet">',
+          '<section class="hero ' + (isRubricInstrument ? 'hero--rubric' : 'hero--checklist') + '">',
+            '<h1>' + (isRubricInstrument ? 'Reporte de rubrica del grupo' : 'Reporte de lista de cotejo/autoevaluacion') + '</h1>',
+            '<p>' + escapeHtmlForDocument(contenido.titulo || "Plano didactico") + '</p>',
+          '</section>',
+          '<section class="meta">',
+            '<div class="meta-item"><strong>Fecha</strong><span>' + escapeHtmlForDocument(nowLabel) + '</span></div>',
+            '<div class="meta-item"><strong>Fase</strong><span>' + escapeHtmlForDocument(String(ctx.phase || "-")) + '</span></div>',
+            '<div class="meta-item"><strong>Grado / Grupo</strong><span>' + escapeHtmlForDocument(String(ctx.grade || "-") + " / " + String(ctx.group || "A")) + '</span></div>',
+            '<div class="meta-item"><strong>' + (isRubricInstrument ? 'Promedio grupal' : 'Cumplimiento grupal') + '</strong><span>' + escapeHtmlForDocument(String(isRubricInstrument ? avgPercent : avgCompletion) + "%") + '</span></div>',
+          '</section>',
+          '<section>',
+            '<p><span class="pill">Instrumento: ' + escapeHtmlForDocument(evaluacion.instrumento || "Personalizado IA") + '</span></p>',
+            '<table>',
+              '<thead>',
+                '<tr>',
+                  '<th>Alumno</th>',
+                  criterios.map(function (_, index) { return '<th>' + getCriterionCode(index) + '</th>'; }).join(""),
+                  '<th>' + (isRubricInstrument ? 'Resultado' : 'Cumplimiento') + '</th>',
+                '</tr>',
+              '</thead>',
+              '<tbody>',
+                payload.map(function (row) {
+                  var criteriaCells = row.grades.map(function (g) {
+                    if (isRubricInstrument) {
+                      return '<td>' + escapeHtmlForDocument(getScoreLabel(g.score)) + '</td>';
+                    }
+                    return '<td>' + escapeHtmlForDocument(getChecklistScoreLabel(g.score)) + '</td>';
+                  }).join("");
+                  if (isRubricInstrument) {
+                    return '<tr><td>' + escapeHtmlForDocument(row.studentName) + '</td>' + criteriaCells + '<td><strong>' + escapeHtmlForDocument(String(row.percent) + '%') + '</strong></td></tr>';
+                  }
+                  var achievedCount = row.grades.reduce(function (count, item) {
+                    return count + (Number(item.score) >= 3 ? 1 : 0);
+                  }, 0);
+                  return '<tr><td>' + escapeHtmlForDocument(row.studentName) + '</td>' + criteriaCells + '<td><strong>' + escapeHtmlForDocument(String(achievedCount) + '/' + String(row.grades.length) + ' criterios') + '</strong></td></tr>';
+                }).join(""),
+              '</tbody>',
+            '</table>',
+          '</section>',
+          '<section class="block">',
+            '<h3>Glosario de criterios</h3>',
+            '<div class="glossary">',
+              criterios.map(function (criterio, index) {
+                return '<div class="glossary-item"><strong>' + getCriterionCode(index) + '</strong><p>' + escapeHtmlForDocument(criterio.criterio || "Criterio") + '</p></div>';
+              }).join(""),
+            '</div>',
+          '</section>',
+          (isRubricInstrument ? [
+            '<section class="block">',
+              '<h3>Glosario de parametros de calificacion</h3>',
+              '<div class="glossary">',
+                getCriterionScaleOptions({}).map(function (item) {
+                  return '<div class="glossary-item"><strong>' + escapeHtmlForDocument(item.value) + '</strong><p>' + escapeHtmlForDocument(item.label) + '</p></div>';
+                }).join(""),
+              '</div>',
+            '</section>'
+          ].join("") : (isChecklistInstrument ? [
+            '<section class="block">',
+              '<h3>Escala de cumplimiento</h3>',
+              '<div class="glossary">',
+                '<div class="glossary-item"><strong>Cumple</strong><p>Logra el criterio de forma consistente.</p></div>',
+                '<div class="glossary-item"><strong>Parcial</strong><p>Logra el criterio con apoyo o de forma intermitente.</p></div>',
+                '<div class="glossary-item"><strong>En proceso</strong><p>Muestra avances iniciales en el criterio.</p></div>',
+                '<div class="glossary-item"><strong>Requiere apoyo</strong><p>Necesita acompanamiento para lograr el criterio.</p></div>',
+              '</div>',
+            '</section>'
+          ].join("") : "")),
+          '<section class="block">',
+            '<h3>Observaciones por alumno</h3>',
+            payload.map(function (row) {
+              return [
+                '<article class="obs-card">',
+                  '<h4>' + escapeHtmlForDocument(row.studentName) + ' (' + escapeHtmlForDocument(String(row.percent) + '%') + ')</h4>',
+                  row.grades.map(function (g) {
+                    var observation = g.observation || "";
+                    if (!observation) return '';
+                    var parts = ['<strong>' + escapeHtmlForDocument(g.criterionCode || "C") + '</strong>'];
+                    if (observation) parts.push('<strong>Observacion:</strong> ' + escapeHtmlForDocument(observation));
+                    return '<p class="obs-row">' + parts.join(' | ') + '</p>';
+                  }).join(""),
+                '</article>'
+              ].join("");
+            }).join(""),
+          '</section>',
+          '<p class="foot">Reporte generado desde el visualizador inteligente. Usa "Guardar como PDF" en el dialogo de impresion.</p>',
+        '</div>',
+      '</body>',
+      '</html>'
+    ].join("");
+  }
+
+  function generatePersonalizedEvaluationPdf() {
+    var payload = readPersonalizedEvaluationPayload();
+    if (!payload.length) {
+      setInstrumentOpenFeedback("No hay evaluaciones por alumno para exportar.", true);
+      return;
+    }
+
+    persistPersonalizedEvaluation(payload);
+    persistExperienceToGroupAndStudents("en-curso");
+
+    var reportHtml = buildEvaluationReportHtml(payload);
+    var reportWindow = window.open("", "_blank", "width=1200,height=850");
+    if (!reportWindow) {
+      setInstrumentOpenFeedback("Tu navegador bloqueo la ventana del reporte. Habilita popups para generar el PDF.", true);
+      return;
+    }
+
+    reportWindow.document.open();
+    reportWindow.document.write(reportHtml);
+    reportWindow.document.close();
+    reportWindow.focus();
+    setTimeout(function () {
+      reportWindow.print();
+    }, 240);
+
+    setInstrumentOpenFeedback("Reporte listo. Se abrio la impresion para guardar el PDF.", false);
+  }
+
+  function switchEvaluationPane(pane) {
+    var optionButtons = document.querySelectorAll(".viz-eval-option");
+    var panes = document.querySelectorAll(".viz-eval-pane");
+
+    optionButtons.forEach(function (button) {
+      button.classList.toggle("is-active", button.getAttribute("data-eval-pane") === pane);
+    });
+
+    panes.forEach(function (section) {
+      section.classList.toggle("is-active", section.getAttribute("data-pane") === pane);
+    });
+  }
+
+  function refreshEvaluationModalContent() {
+    renderPdfEvaluationPane();
+    renderPersonalizedAiPlan();
+    renderAiStudentEvaluationForm();
   }
 
   function initInstrumentsModal() {
     var openBtn = document.getElementById("viz-open-instruments-btn");
     var modalEl = document.getElementById("viz-instrumentos-modal");
+    var optionButtons = document.querySelectorAll(".viz-eval-option");
+    var generatePdfBtn = document.getElementById("viz-generate-eval-pdf-btn");
     if (!openBtn || !modalEl || !window.bootstrap || !bootstrap.Modal) return;
 
     instrumentsModalInstance = new bootstrap.Modal(modalEl);
 
     openBtn.addEventListener("click", function () {
       if (openBtn.disabled) return;
+      refreshEvaluationModalContent();
+      switchEvaluationPane("pdf");
       instrumentsModalInstance.show();
+    });
+
+    optionButtons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        var pane = button.getAttribute("data-eval-pane");
+        switchEvaluationPane(pane);
+      });
+    });
+
+    modalEl.addEventListener("click", function (event) {
+      var target = event.target;
+
+      var tagDelete = target && target.closest ? target.closest(".viz-ia-tag-delete") : null;
+      if (tagDelete) {
+        var tagType = tagDelete.getAttribute("data-tag-type");
+        var tagIndex = parseInt(tagDelete.getAttribute("data-tag-index"), 10);
+        if (!Number.isFinite(tagIndex)) return;
+
+        var draft = readEvaluationDraftFromDom();
+        if (tagType === "criterion") {
+          removeCustomCriterion(tagIndex);
+        } else if (tagType === "parameter") {
+          removeGlobalParameter(tagIndex);
+        }
+        renderPersonalizedAiPlan();
+        renderAiStudentEvaluationForm();
+        applyEvaluationDraftToDom(draft);
+        setInstrumentOpenFeedback(tagType === "criterion" ? "Criterio eliminado." : "Parametro eliminado.", false);
+        return;
+      }
+
+      var trigger = target && target.closest ? target.closest(".viz-ia-parameter-add, .viz-ia-criterion-add") : null;
+      if (!trigger) return;
+
+      var isCriterion = trigger.classList.contains("viz-ia-criterion-add");
+
+      if (isCriterion) {
+        var inputEl = modalEl.querySelector("#viz-ia-criterion-input");
+        if (!inputEl) return;
+        var val = String(inputEl.value || "").trim();
+        if (!val) {
+          setInstrumentOpenFeedback("Escribe el texto del criterio antes de agregar.", true);
+          return;
+        }
+        var draft2 = readEvaluationDraftFromDom();
+        var created = addCustomCriterion(val);
+        if (!created) {
+          setInstrumentOpenFeedback("Ese criterio ya existe.", true);
+          return;
+        }
+        inputEl.value = "";
+        renderPersonalizedAiPlan();
+        renderAiStudentEvaluationForm();
+        applyEvaluationDraftToDom(draft2);
+        setInstrumentOpenFeedback("Criterio agregado.", false);
+        return;
+      }
+
+      var input = modalEl.querySelector("#viz-ia-global-param-input");
+      if (!input) return;
+
+      var value = String(input.value || "").trim();
+      if (!value) {
+        setInstrumentOpenFeedback("Escribe un parametro antes de agregarlo.", true);
+        return;
+      }
+
+      var draft3 = readEvaluationDraftFromDom();
+      var created2 = addGlobalParameter(value);
+      if (!created2) {
+        setInstrumentOpenFeedback("Ese parametro ya existe.", true);
+        return;
+      }
+
+      input.value = "";
+      renderAiStudentEvaluationForm();
+      applyEvaluationDraftToDom(draft3);
+      setInstrumentOpenFeedback("Parametro agregado.", false);
+    });
+
+    var saveEvalBtn = document.getElementById("viz-save-eval-btn");
+    if (saveEvalBtn) {
+      saveEvalBtn.addEventListener("click", function () {
+        var criterios = getPlanoEvaluationCriteria();
+        if (!criterios.length) {
+          setInstrumentOpenFeedback("Agrega al menos un criterio antes de guardar.", true);
+          return;
+        }
+        var payload = readPersonalizedEvaluationPayload();
+        if (!payload.length) {
+          setInstrumentOpenFeedback("No hay datos de evaluacion para guardar.", true);
+          return;
+        }
+        persistPersonalizedEvaluation(payload);
+        setInstrumentOpenFeedback("Evaluacion guardada correctamente.", false);
+      });
+    }
+
+    if (generatePdfBtn) {
+      generatePdfBtn.addEventListener("click", function () {
+        generatePersonalizedEvaluationPdf();
+      });
+    }
+
+    document.addEventListener("click", function (e) {
+      var autocompletes = document.querySelectorAll(".viz-ia-autocomplete-list.is-open");
+      autocompletes.forEach(function (list) {
+        if (!list.contains(e.target) && e.target !== document.getElementById("viz-ia-criterion-input")) {
+          list.classList.remove("is-open");
+        }
+      });
     });
 
     document.addEventListener("click", handleOpenInstrumentClick);
@@ -1145,6 +2309,7 @@
 
     if (active && currentId) {
       restoreState();
+      syncHomeActiveExperience(buildExperienceSnapshot("en-curso"));
     }
 
     if (currentId) {
@@ -1163,7 +2328,55 @@
     };
   }
 
+  function createActivitiesFromItem(item) {
+    var sesiones = item && item.contenido && Array.isArray(item.contenido.sesiones)
+      ? item.contenido.sesiones
+      : [];
+
+    if (!sesiones.length) {
+      return [createDefaultActivity()];
+    }
+
+    var activities = [];
+
+    sesiones.forEach(function (sesion, index) {
+      var sessionNumber = parseInt(sesion && sesion.numero_sesion, 10);
+      var sessionOrder = Number.isFinite(sessionNumber) ? sessionNumber : (index + 1);
+      var sessionActivities = Array.isArray(sesion && sesion.actividades) ? sesion.actividades : [];
+
+      sessionActivities.forEach(function (activityText) {
+        activities.push({
+          name: String(activityText || ""),
+          progress: "",
+          done: false,
+          sessionOrder: sessionOrder
+        });
+      });
+    });
+
+    return activities.length ? activities : [createDefaultActivity()];
+  }
+
   function getSessionOptionsFromItem(item) {
+    var sesiones = item && item.contenido && Array.isArray(item.contenido.sesiones)
+      ? item.contenido.sesiones
+      : [];
+
+    if (sesiones.length) {
+      return sesiones.map(function (sesion, index) {
+        var parsedOrder = parseInt(sesion && sesion.numero_sesion, 10);
+        var order = Number.isFinite(parsedOrder) ? parsedOrder : (index + 1);
+        var title = String(sesion && sesion.titulo ? sesion.titulo : ("Sesion " + order));
+
+        return {
+          order: order,
+          name: title
+        };
+      }).sort(function (a, b) {
+        return a.order - b.order;
+      });
+    }
+
     var momentos = item && item.contenido && Array.isArray(item.contenido.momentos_metodologicos)
       ? item.contenido.momentos_metodologicos
       : [];
@@ -1184,6 +2397,28 @@
   function getDefaultSessionOrder() {
     if (!Array.isArray(currentSessionOptions) || !currentSessionOptions.length) return null;
     return currentSessionOptions[0].order;
+  }
+
+  function getCurrentSessionOrder() {
+    var defaultOrder = getDefaultSessionOrder();
+    if (!currentId) return defaultOrder;
+
+    var raw = safeGet(CURRENT_SESSION_KEY_PREFIX + currentId);
+    var parsed = parseInt(raw, 10);
+    if (!Number.isFinite(parsed)) return defaultOrder;
+
+    var isValid = (currentSessionOptions || []).some(function (option) {
+      return option.order === parsed;
+    });
+
+    return isValid ? parsed : defaultOrder;
+  }
+
+  function setCurrentSessionOrder(order) {
+    if (!currentId) return;
+    var parsed = parseInt(order, 10);
+    if (!Number.isFinite(parsed)) return;
+    safeSet(CURRENT_SESSION_KEY_PREFIX + currentId, String(parsed));
   }
 
   function getSessionLabel(sessionOrder) {
@@ -1250,35 +2485,296 @@
     if (openBtn) openBtn.disabled = !smartActive;
   }
 
-  function updateActivitiesSummary(activities) {
+  function updateActivitiesSummary(allActivities) {
     var summaryEl = document.getElementById("viz-activities-card-resume");
     if (!summaryEl) return;
 
-    var safeActivities = normalizeActivities(activities);
-    var doneCount = safeActivities.filter(function (activity) { return activity.done; }).length;
-    var labelActivities = safeActivities.length === 1 ? "actividad registrada" : "actividades registradas";
+    var safeActivities = normalizeActivities(allActivities);
+    var currentSessionOrder = getCurrentSessionOrder();
+    var sessionActivities = safeActivities.filter(function (activity) {
+      return parseInt(activity.sessionOrder, 10) === currentSessionOrder;
+    });
+
+    var doneCount = sessionActivities.filter(function (activity) { return activity.done; }).length;
+    var labelActivities = sessionActivities.length === 1 ? "actividad" : "actividades";
     var labelDone = doneCount === 1 ? "terminada" : "terminadas";
 
-    summaryEl.textContent = safeActivities.length + " " + labelActivities + " · " + doneCount + " " + labelDone;
+    summaryEl.textContent = "Sesion " + currentSessionOrder + " · " + sessionActivities.length + " " + labelActivities + " · " + doneCount + " " + labelDone;
+    updateTrackingStatusText(safeActivities);
+  }
+
+  function formatHistoryDate(timestamp) {
+    var date = new Date(timestamp);
+    if (!Number.isFinite(date.getTime())) return "Fecha desconocida";
+    return date.toLocaleString("es-MX", {
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+      hour: "2-digit",
+      minute: "2-digit"
+    });
+  }
+
+  function getHistoryEntryKey(activityIndex, sessionOrder) {
+    return String(activityIndex) + "|" + String(sessionOrder);
+  }
+
+  function normalizeHistoryEntries(rawHistory) {
+    if (!Array.isArray(rawHistory) || !rawHistory.length) return [];
+
+    // Compatibilidad con formato anterior por eventos: conserva solo los palomeos activos.
+    var hasLegacyEvents = rawHistory.some(function (entry) {
+      return Object.prototype.hasOwnProperty.call(entry || {}, "nextDone");
+    });
+
+    if (hasLegacyEvents) {
+      var byKey = {};
+      rawHistory.slice().sort(function (a, b) {
+        return (a && a.timestamp ? a.timestamp : 0) - (b && b.timestamp ? b.timestamp : 0);
+      }).forEach(function (entry) {
+        var activityIndex = parseInt(entry && entry.activityIndex, 10);
+        var sessionOrder = parseInt(entry && entry.sessionOrder, 10) || getDefaultSessionOrder();
+        if (!Number.isFinite(activityIndex)) return;
+
+        var key = getHistoryEntryKey(activityIndex, sessionOrder);
+        if (entry && entry.nextDone) {
+          byKey[key] = {
+            id: entry.id || (String(Date.now()) + "_" + key),
+            key: key,
+            timestamp: entry.timestamp || Date.now(),
+            activityIndex: activityIndex,
+            sessionOrder: sessionOrder,
+            activityName: String(entry.activityName || ("Actividad " + (activityIndex + 1))),
+            done: true
+          };
+        } else {
+          delete byKey[key];
+        }
+      });
+
+      return Object.keys(byKey).map(function (key) { return byKey[key]; });
+    }
+
+    return rawHistory.filter(function (entry) {
+      return entry && entry.done;
+    }).map(function (entry) {
+      var activityIndex = parseInt(entry.activityIndex, 10);
+      var sessionOrder = parseInt(entry.sessionOrder, 10) || getDefaultSessionOrder();
+      var key = getHistoryEntryKey(activityIndex, sessionOrder);
+      return {
+        id: entry.id || (String(Date.now()) + "_" + key),
+        key: key,
+        timestamp: entry.timestamp || Date.now(),
+        activityIndex: activityIndex,
+        sessionOrder: sessionOrder,
+        activityName: String(entry.activityName || ("Actividad " + (activityIndex + 1))),
+        done: true
+      };
+    }).filter(function (entry) {
+      return Number.isFinite(entry.activityIndex);
+    });
+  }
+
+  function getActivitiesHistory() {
+    if (!currentId) return [];
+    var raw = safeGetJson(ACTIVITIES_HISTORY_KEY_PREFIX + currentId);
+    return normalizeHistoryEntries(raw);
+  }
+
+  function setActivitiesHistory(history) {
+    if (!currentId) return;
+    var safeHistory = normalizeHistoryEntries(history).slice(-250);
+    safeSetJson(ACTIVITIES_HISTORY_KEY_PREFIX + currentId, safeHistory);
+  }
+
+  function syncActivitiesHistory(beforeActivities, afterActivities) {
+    if (!currentId) return;
+
+    var before = normalizeActivities(beforeActivities);
+    var after = normalizeActivities(afterActivities);
+    var history = getActivitiesHistory();
+    var byKey = {};
+
+    history.forEach(function (entry) {
+      if (!entry || !entry.key) return;
+      byKey[entry.key] = entry;
+    });
+
+    var now = Date.now();
+
+    for (var i = 0; i < after.length; i++) {
+      var prev = before[i] || {};
+      var next = after[i] || {};
+      var prevDone = !!prev.done;
+      var nextDone = !!next.done;
+      if (prevDone === nextDone) continue;
+
+      var sessionOrder = parseInt(next.sessionOrder, 10) || parseInt(prev.sessionOrder, 10) || getDefaultSessionOrder();
+      var key = getHistoryEntryKey(i, sessionOrder);
+
+      if (nextDone) {
+        byKey[key] = {
+          id: key + "_" + now,
+          key: key,
+          timestamp: now,
+          activityIndex: i,
+          sessionOrder: sessionOrder,
+          activityName: String(next.name || prev.name || ("Actividad " + (i + 1))),
+          done: true
+        };
+      } else {
+        // Al despalomear eliminamos su registro para evitar historial basura.
+        delete byKey[key];
+      }
+    }
+
+    setActivitiesHistory(Object.keys(byKey).map(function (key) {
+      return byKey[key];
+    }));
+  }
+
+  function isProgressManualOverride() {
+    if (!currentId) return false;
+    return safeGet(PROGRESS_MANUAL_KEY_PREFIX + currentId) === "1";
+  }
+
+  function setProgressManualOverride(isManual) {
+    if (!currentId) return;
+    safeSet(PROGRESS_MANUAL_KEY_PREFIX + currentId, isManual ? "1" : "0");
+  }
+
+  function updateProgressFromActivities(activities, force) {
+    if (!currentId || !smartActive) return;
+    if (!force && isProgressManualOverride()) return;
+
+    var safeActivities = normalizeActivities(activities);
+    var doneCount = safeActivities.filter(function (activity) { return !!activity.done; }).length;
+    var total = safeActivities.length;
+    var pct = total > 0 ? Math.round((doneCount / total) * 100) : 0;
+
+    var range = document.getElementById("viz-progress-range");
+    if (range) {
+      range.value = pct;
+      updateProgressUI(pct);
+    }
+
+    safeSet(PROGRESS_KEY_PREFIX + currentId, String(pct));
+  }
+
+  function updateTrackingStatusText(allActivities) {
+    var statusEl = document.getElementById("viz-status-text");
+    if (!statusEl) return;
+
+    if (!smartActive) {
+      statusEl.textContent = "Activa el modo inteligente para ver el estado de la clase.";
+      return;
+    }
+
+    var safeActivities = normalizeActivities(allActivities || currentActivitiesCache);
+    var doneCount = safeActivities.filter(function (activity) { return !!activity.done; }).length;
+    var total = safeActivities.length;
+    var progressValue = parseInt((document.getElementById("viz-progress-range") || {}).value || "0", 10);
+    var pct = total > 0 ? Math.round((doneCount / total) * 100) : 0;
+    var explicitStatus = currentId ? safeGet(STATUS_KEY_PREFIX + currentId) : null;
+    var startBtn = document.getElementById("viz-start-experience-btn");
+
+    if (pct === 100) {
+      if (currentId) safeSet(STATUS_KEY_PREFIX + currentId, "completado");
+      if (startBtn) startBtn.textContent = "Experiencia completada";
+      statusEl.textContent = "Clase completada. Todas las actividades estan palomeadas.";
+      if (currentId && smartActive) {
+        persistExperienceToGroupAndStudents("completado");
+      }
+      return;
+    }
+
+    if (explicitStatus === "en-curso" || pct > 0 || progressValue > 0) {
+      if (startBtn) startBtn.textContent = "Experiencia en curso";
+      statusEl.textContent = "Clase en avance: " + doneCount + " de " + total + " actividades completadas.";
+      if (currentId && smartActive) {
+        persistExperienceToGroupAndStudents("en-curso");
+      }
+      return;
+    }
+
+    if (startBtn) startBtn.textContent = "Iniciar experiencia";
+    statusEl.textContent = "Clase pendiente por iniciar.";
+    if (currentId && smartActive) {
+      persistExperienceToGroupAndStudents("pendiente");
+    }
+  }
+
+  function renderActivitiesHistory() {
+    var list = document.getElementById("viz-activities-history-list");
+    if (!list) return;
+
+    var history = getActivitiesHistory();
+    if (!history.length) {
+      list.innerHTML = '<li class="viz-history-empty">Aun no hay movimientos registrados.</li>';
+      return;
+    }
+
+    var sorted = history.slice().sort(function (a, b) {
+      return (b.timestamp || 0) - (a.timestamp || 0);
+    }).slice(0, 40);
+
+    list.innerHTML = sorted.map(function (entry) {
+      var session = Number.isFinite(parseInt(entry.sessionOrder, 10))
+        ? ("Sesion " + parseInt(entry.sessionOrder, 10))
+        : "Sesion";
+
+      return [
+        '<li class="viz-history-item">',
+          '<div class="viz-history-main">',
+            '<div class="viz-history-title">' + escapeHtml('Palomeada: ' + (entry.activityName || 'Actividad')) + '</div>',
+            '<div class="viz-history-meta">' + escapeHtml(session + ' · ' + formatHistoryDate(entry.timestamp)) + '</div>',
+          '</div>',
+          '<button class="viz-history-undo" type="button" data-history-id="' + escapeHtml(entry.id || '') + '">Quitar</button>',
+        '</li>'
+      ].join("");
+    }).join("");
+  }
+
+  function undoHistoryEntry(historyId) {
+    if (!smartActive || !currentId) return;
+    var history = getActivitiesHistory();
+    var target = history.find(function (entry) {
+      return String(entry.id) === String(historyId);
+    });
+    if (!target) return;
+
+    var before = normalizeActivities(currentActivitiesCache);
+    var index = parseInt(target.activityIndex, 10);
+    if (!Number.isFinite(index) || !before[index]) return;
+
+    var after = before.slice();
+    after[index] = {
+      name: String(before[index].name || ""),
+      progress: String(before[index].progress || ""),
+      done: false,
+      sessionOrder: before[index].sessionOrder
+    };
+
+    currentActivitiesCache = normalizeActivities(after);
+    safeSetJson(ACTIVITIES_KEY_PREFIX + currentId, currentActivitiesCache);
+    syncActivitiesHistory(before, currentActivitiesCache);
+    updateProgressFromActivities(currentActivitiesCache, false);
+
+    setCurrentSessionOrder(parseInt(after[index].sessionOrder, 10));
+    renderActivities(currentActivitiesCache);
+    renderActivitiesHistory();
   }
 
   function readActivitiesFromUI() {
     var items = document.querySelectorAll(".viz-activity-item");
-    var activities = [];
+    var activities = normalizeActivities(currentActivitiesCache);
 
     items.forEach(function (item) {
-      var nameInput = item.querySelector(".viz-activity-name");
-      var progressInput = item.querySelector(".viz-activity-progress");
+      var globalIndex = parseInt(item.getAttribute("data-activity-index"), 10);
       var doneInput = item.querySelector(".viz-activity-done");
-      var sessionInput = item.querySelector(".viz-activity-session");
-      var parsedOrder = parseInt(sessionInput ? sessionInput.value : "", 10);
 
-      activities.push({
-        name: nameInput ? nameInput.value : "",
-        progress: progressInput ? progressInput.value : "",
-        done: !!(doneInput && doneInput.checked),
-        sessionOrder: Number.isFinite(parsedOrder) ? parsedOrder : getDefaultSessionOrder()
-      });
+      if (!Number.isFinite(globalIndex) || !activities[globalIndex]) return;
+      activities[globalIndex].done = !!(doneInput && doneInput.checked);
     });
 
     return normalizeActivities(activities);
@@ -1289,28 +2785,38 @@
     if (!list) return;
 
     var safeActivities = normalizeActivities(activities);
-    list.innerHTML = safeActivities.map(function (activity, index) {
-      var selectedOrder = Number.isFinite(parseInt(activity.sessionOrder, 10))
-        ? parseInt(activity.sessionOrder, 10)
-        : getDefaultSessionOrder();
+    currentActivitiesCache = safeActivities;
+
+    var currentSessionOrder = getCurrentSessionOrder();
+    if (Number.isFinite(currentSessionOrder)) {
+      setCurrentSessionOrder(currentSessionOrder);
+    }
+
+    var visibleActivities = safeActivities.map(function (activity, index) {
+      return { activity: activity, index: index };
+    }).filter(function (entry) {
+      return parseInt(entry.activity.sessionOrder, 10) === currentSessionOrder;
+    });
+
+    if (!visibleActivities.length) {
+      list.innerHTML = '<p class="exp-empty mb-0">No hay actividades para la sesion actual.</p>';
+      updateActivitiesSummary(safeActivities);
+      syncActivitiesInteractivity();
+      return;
+    }
+
+    list.innerHTML = visibleActivities.map(function (entry, localIndex) {
+      var activity = entry.activity;
+      var globalIndex = entry.index;
 
       return [
-        '<article class="viz-activity-item" data-index="' + index + '">',
-          '<div class="viz-activity-top">',
-            '<h5 class="viz-activity-title">Actividad ' + (index + 1) + '</h5>',
-            '<label class="viz-activity-check">',
+        '<article class="viz-activity-item exp-activity" data-index="' + localIndex + '" data-activity-index="' + globalIndex + '">',
+          '<div class="exp-activity-top">',
+            '<label class="exp-check">',
               '<input class="viz-activity-done" type="checkbox"' + (activity.done ? ' checked' : '') + '>',
-              '<span>Terminada</span>',
+              '<span>' + escapeHtml(activity.name || ('Actividad ' + (localIndex + 1))) + '</span>',
             '</label>',
           '</div>',
-          '<div class="viz-activity-session-row">',
-            '<label class="viz-activity-session-label">Sesion asociada</label>',
-            '<select class="viz-activity-session">' + buildSessionOptionsHtml(selectedOrder) + '</select>',
-          '</div>',
-          '<div class="viz-activity-session-chip">' + escapeHtml(getSessionLabel(selectedOrder)) + '</div>',
-          '<input class="viz-activity-name" type="text" placeholder="Describe la actividad" value="' + escapeHtml(activity.name) + '">',
-          '<textarea class="viz-activity-progress" placeholder="Agrega avance, observaciones o acuerdos..." rows="3">' + escapeHtml(activity.progress) + '</textarea>',
-          '<button class="viz-activity-remove" type="button">Quitar actividad</button>',
         '</article>'
       ].join("");
     }).join("");
@@ -1319,9 +2825,85 @@
     syncActivitiesInteractivity();
   }
 
+  function getNextPendingSessionOrder(allActivities) {
+    var safeActivities = normalizeActivities(allActivities);
+    var currentOrder = getCurrentSessionOrder();
+    if (!Number.isFinite(currentOrder)) return null;
+
+    var currentSessionActivities = safeActivities.filter(function (activity) {
+      return parseInt(activity.sessionOrder, 10) === currentOrder;
+    });
+
+    if (!currentSessionActivities.length) return null;
+
+    var currentIsCompleted = currentSessionActivities.every(function (activity) {
+      return !!activity.done;
+    });
+
+    if (!currentIsCompleted) return null;
+
+    var orderedSessions = (currentSessionOptions || [])
+      .map(function (option) { return option.order; })
+      .sort(function (a, b) { return a - b; });
+
+    var currentIndex = orderedSessions.indexOf(currentOrder);
+    if (currentIndex === -1) return null;
+
+    for (var i = currentIndex + 1; i < orderedSessions.length; i++) {
+      var candidateOrder = orderedSessions[i];
+      var hasPending = safeActivities.some(function (activity) {
+        return parseInt(activity.sessionOrder, 10) === candidateOrder && !activity.done;
+      });
+
+      if (hasPending) {
+        return candidateOrder;
+      }
+    }
+
+    return null;
+  }
+
   function persistActivitiesIfPossible() {
-    if (!currentId || !smartActive) return;
-    safeSetJson(ACTIVITIES_KEY_PREFIX + currentId, readActivitiesFromUI());
+    if (!currentId || !smartActive) return normalizeActivities(currentActivitiesCache);
+    var before = normalizeActivities(currentActivitiesCache);
+    var updated = readActivitiesFromUI();
+    currentActivitiesCache = updated;
+    safeSetJson(ACTIVITIES_KEY_PREFIX + currentId, updated);
+    syncActivitiesHistory(before, updated);
+    updateProgressFromActivities(updated, false);
+    persistExperienceToGroupAndStudents("en-curso");
+    return updated;
+  }
+
+  function resetExperienceProgress() {
+    if (!currentId) return;
+
+    try {
+      localStorage.removeItem(ACTIVITIES_KEY_PREFIX + currentId);
+      localStorage.removeItem(ACTIVITIES_HISTORY_KEY_PREFIX + currentId);
+      localStorage.removeItem(CURRENT_SESSION_KEY_PREFIX + currentId);
+      localStorage.removeItem(PROGRESS_KEY_PREFIX + currentId);
+      localStorage.removeItem(PROGRESS_MANUAL_KEY_PREFIX + currentId);
+      localStorage.removeItem(STATUS_KEY_PREFIX + currentId);
+      localStorage.removeItem(NOTES_KEY_PREFIX + currentId);
+    } catch (_) {}
+
+    var baseActivities = currentItem
+      ? createActivitiesFromItem(currentItem)
+      : [createDefaultActivity()];
+
+    currentActivitiesCache = normalizeActivities(baseActivities);
+    renderActivities(currentActivitiesCache);
+    renderActivitiesHistory();
+
+    var range = document.getElementById("viz-progress-range");
+    if (range) {
+      range.value = 0;
+      updateProgressUI(0);
+    }
+
+    updateTrackingStatusText(currentActivitiesCache);
+    persistExperienceToGroupAndStudents("pendiente");
   }
 
   // --- Persiste y restaura estado ---
@@ -1330,7 +2912,8 @@
 
     // Seguimiento de actividades
     var activities = safeGetJson(ACTIVITIES_KEY_PREFIX + currentId);
-    renderActivities(normalizeActivities(activities));
+    renderActivities(normalizeActivities(activities || createActivitiesFromItem(currentItem)));
+    renderActivitiesHistory();
 
     // Progreso
     var progress = parseInt(safeGet(PROGRESS_KEY_PREFIX + currentId) || "0", 10);
@@ -1340,11 +2923,11 @@
       updateProgressUI(progress);
     }
 
-    // Status
-    var status = safeGet(STATUS_KEY_PREFIX + currentId) || "pendiente";
-    document.querySelectorAll(".viz-status-btn").forEach(function (btn) {
-      btn.classList.toggle("is-active", btn.dataset.status === status);
-    });
+    if (!isProgressManualOverride()) {
+      updateProgressFromActivities(currentActivitiesCache, false);
+    }
+
+    updateTrackingStatusText(currentActivitiesCache);
   }
 
   function updateProgressUI(val) {
@@ -1352,6 +2935,7 @@
     var pct = document.getElementById("viz-progress-pct");
     if (fill) fill.style.width = val + "%";
     if (pct) pct.textContent = val + "%";
+    updateTrackingStatusText(currentActivitiesCache);
   }
 
   function safeGet(key) {
@@ -1421,55 +3005,29 @@
     // Estado visual inicial de actividades
     currentSessionOptions = [];
     renderActivities([createDefaultActivity()]);
+    renderActivitiesHistory();
 
     // Gestion de seguimiento de actividades
     var activitiesList = document.getElementById("viz-activities-list");
-    var addActivityBtn = document.getElementById("viz-add-activity-btn");
-    var saveNotesBtn = document.getElementById("viz-save-notes-btn");
+    var activitiesHistoryList = document.getElementById("viz-activities-history-list");
+
+    if (activitiesHistoryList) {
+      activitiesHistoryList.addEventListener("click", function (event) {
+        var undoBtn = event.target.closest(".viz-history-undo");
+        if (!undoBtn) return;
+        undoHistoryEntry(undoBtn.getAttribute("data-history-id"));
+      });
+    }
 
     if (activitiesList) {
-      activitiesList.addEventListener("click", function (event) {
-        var removeBtn = event.target.closest(".viz-activity-remove");
-        if (!removeBtn || !smartActive) return;
-
-        var item = removeBtn.closest(".viz-activity-item");
-        if (!item) return;
-
-        var next = readActivitiesFromUI().filter(function (_, index) {
-          return index !== parseInt(item.dataset.index, 10);
-        });
-
-        renderActivities(next);
-        persistActivitiesIfPossible();
-      });
-
       activitiesList.addEventListener("change", function () {
-        persistActivitiesIfPossible();
-      });
-
-      activitiesList.addEventListener("input", function () {
-        persistActivitiesIfPossible();
-      });
-    }
-
-    if (addActivityBtn) {
-      addActivityBtn.addEventListener("click", function () {
-        if (!smartActive) return;
-        var activities = readActivitiesFromUI();
-        activities.push(createDefaultActivity());
-        renderActivities(activities);
-        persistActivitiesIfPossible();
-      });
-    }
-
-    if (saveNotesBtn) {
-      saveNotesBtn.addEventListener("click", function () {
-        if (!currentId || !smartActive) return;
-        safeSetJson(ACTIVITIES_KEY_PREFIX + currentId, readActivitiesFromUI());
-        saveNotesBtn.textContent = "✓ Guardado";
-        setTimeout(function () {
-          saveNotesBtn.textContent = "Guardar seguimiento";
-        }, 2000);
+        var updated = persistActivitiesIfPossible();
+        var nextSessionOrder = getNextPendingSessionOrder(updated);
+        if (Number.isFinite(nextSessionOrder)) {
+          setCurrentSessionOrder(nextSessionOrder);
+        }
+        renderActivities(updated);
+        renderActivitiesHistory();
       });
     }
 
@@ -1478,26 +3036,39 @@
     if (progressRange) {
       progressRange.addEventListener("input", function () {
         var val = parseInt(progressRange.value, 10);
+        if (currentId && smartActive) {
+          setProgressManualOverride(true);
+          safeSet(STATUS_KEY_PREFIX + currentId, "en-curso");
+        }
         updateProgressUI(val);
         if (currentId && smartActive) {
           safeSet(PROGRESS_KEY_PREFIX + currentId, String(val));
+          persistExperienceToGroupAndStudents("en-curso");
         }
       });
     }
 
-    // Status de seguimiento
-    document.querySelectorAll(".viz-status-btn").forEach(function (btn) {
-      btn.addEventListener("click", function () {
-        if (!smartActive) return;
-        document.querySelectorAll(".viz-status-btn").forEach(function (b) {
-          b.classList.remove("is-active");
-        });
-        btn.classList.add("is-active");
-        if (currentId) {
-          safeSet(STATUS_KEY_PREFIX + currentId, btn.dataset.status);
-        }
+    var startExperienceBtn = document.getElementById("viz-start-experience-btn");
+    if (startExperienceBtn) {
+      startExperienceBtn.addEventListener("click", function () {
+        if (!smartActive || !currentId) return;
+        safeSet(STATUS_KEY_PREFIX + currentId, "en-curso");
+        setProgressManualOverride(false);
+        updateProgressFromActivities(currentActivitiesCache, true);
+        updateTrackingStatusText(currentActivitiesCache);
+        persistExperienceToGroupAndStudents("en-curso");
       });
-    });
+    }
+
+    var resetExperienceBtn = document.getElementById("viz-reset-experience-btn");
+    if (resetExperienceBtn) {
+      resetExperienceBtn.addEventListener("click", function () {
+        if (!smartActive || !currentId) return;
+        var shouldReset = window.confirm("Se borrara todo el avance de esta experiencia. ¿Deseas continuar?");
+        if (!shouldReset) return;
+        resetExperienceProgress();
+      });
+    }
 
     initFullscreen();
     initInstrumentsModal();
