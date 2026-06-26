@@ -2,6 +2,7 @@ const { app, BrowserWindow, ipcMain, shell, dialog, Menu, net } = require('elect
 const path = require('path');
 const fs = require('fs');
 
+const { autoUpdater } = require('electron-updater');
 const { semanticSearch } = require('./src/ai/search');
 
 const ACTIVATION_API_URL = 'https://sistemasaudiovisualesinternacionales.com/saiadmin/api/activar.php';
@@ -160,6 +161,7 @@ function createWindow() {
 app.whenReady().then(() => {
   Menu.setApplicationMenu(null);
   createWindow();
+  autoUpdater.checkForUpdatesAndNotify();
 
   app.on('activate', () => {
     if (BrowserWindow.getAllWindows().length === 0) {

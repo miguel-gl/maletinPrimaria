@@ -1,9 +1,9 @@
 {
-  "name": "maletinprimaria-electron",
+  "name": "maletinprimaria",
   "version": "1.0.0",
   "description": "App de escritorio para docentes de primaria NEM",
   "main": "main.js",
-  "author": "Miguel Gonzalez",
+  "author": "SAI",
   "scripts": {
     "start": "electron .",
     "build": "cross-env CSC_IDENTITY_AUTO_DISCOVERY=false electron-builder --win",
@@ -12,7 +12,8 @@
     "rebuild:embeddings": "npm run consolidate:resources && npm run generate:embeddings"
   },
   "dependencies": {
-    "@xenova/transformers": "^2.17.2"
+    "@xenova/transformers": "^2.17.2",
+    "electron-updater": "^6.8.9"
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
@@ -22,7 +23,7 @@
   "build": {
     "appId": "mx.maletinprimaria.app",
     "productName": "Maletin Primaria",
-    "copyright": "Miguel Gonzalez",
+    "copyright": "SAI",
     "files": [
       "main.js",
       "preload.js",
@@ -57,6 +58,11 @@
       "createDesktopShortcut": true,
       "createStartMenuShortcut": true,
       "shortcutName": "Maletin Primaria"
+    },
+    "publish": {
+      "provider": "github",
+      "owner": "miguel-gl",
+      "repo": "maletinPrimaria"
     },
     "directories": {
       "output": "dist",
