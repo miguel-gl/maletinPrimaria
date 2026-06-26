@@ -161,6 +161,48 @@ function createWindow() {
 app.whenReady().then(() => {
   Menu.setApplicationMenu(null);
   createWindow();
+
+  autoUpdater.logger = console;
+  autoUpdater.autoDownload = true;
+  autoUpdater.autoInstallOnAppQuit = true;
+
+  autoUpdater.on('checking-for-update', () => {
+    console.log('[updater] Buscando actualizaciones...');
+  });
+
+  autoUpdater.on('update-available', (info) => {
+    console.log('[updater] Actualizacion disponible:', info.version);
+    dialog.showMessageBox({
+      type: 'info',
+      title: 'Actualizacion disponible',
+      message: 'Se encontro la version ' + info.version + '. Descargando...',
+    });
+  });
+
+  autoUpdater.on('update-not-available', () => {
+    console.log('[updater] No hay actualizaciones disponibles.');
+  });
+
+  autoUpdater.on('download-progress', (progress) => {
+    console.log('[updater] Descargando: ' + Math.round(progress.percent) + '%');
+  });
+
+  autoUpdater.on('update-downloaded', (info) => {
+    console.log('[updater] Descarga completa:', info.version);
+    dialog.showMessageBox({
+      type: 'info',
+      title: 'Actualizacion lista',
+      message: 'La version ' + info.version + ' se descargo. La app se reiniciara para aplicar la actualizacion.',
+      buttons: ['Reiniciar ahora'],
+    }).then(() => {
+      autoUpdater.quitAndInstall();
+    });
+  });
+
+  autoUpdater.on('error', (err) => {
+    console.error('[updater] Error:', err.message);
+  });
+
   autoUpdater.checkForUpdatesAndNotify();
 
   app.on('activate', () => {
