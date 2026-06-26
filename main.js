@@ -165,55 +165,76 @@ app.whenReady().then(() => {
   createWindow();
 
   autoUpdater.logger = console;
-  autoUpdater.autoDownload = true;
+  autoUpdater.autoDownload = false;
   autoUpdater.autoInstallOnAppQuit = true;
 
   let updateWin = null;
+  let updateReady = false;
+  let pendingVersion = '';
+  let pendingProgress = [];
+
+  function getUpdateHTML(version) {
+    return `<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',sans-serif;background:#f0f4ff;display:flex;align-items:center;justify-content:center;height:100vh}
+.card{background:#fff;border-radius:18px;padding:1.8rem 2rem;box-shadow:0 20px 50px rgba(30,50,100,.18);border:1px solid #e0e8f8;width:100%;text-align:center}
+.title{font-size:.88rem;font-weight:800;color:#1f2d54;margin-bottom:.2rem}
+.version{font-size:.76rem;color:#5f6b8b;margin-bottom:1.1rem}
+.track{height:10px;border-radius:999px;background:#e4edf8;overflow:hidden;margin-bottom:.65rem}
+.bar{height:100%;border-radius:999px;background:linear-gradient(90deg,#4d91ff,#44c2ff);width:0%;transition:width .3s ease}
+.pct{font-size:1.2rem;font-weight:800;color:#4d91ff}
+.status{font-size:.74rem;color:#8a96b3;margin-top:.45rem}
+.btn{display:none;margin-top:1rem;width:100%;height:42px;border:none;border-radius:10px;background:linear-gradient(145deg,#4d91ff,#44c2ff);color:#fff;font-size:.86rem;font-weight:800;cursor:pointer;box-shadow:0 8px 20px rgba(71,139,238,.3)}
+.btn:hover{opacity:.9}
+.btn.show{display:block}
+</style></head><body>
+<div class="card">
+<p class="title" id="title">Descargando actualizacion</p>
+<p class="version">Version ${version}</p>
+<div class="track" id="track"><div class="bar" id="bar"></div></div>
+<p class="pct" id="pct">0%</p>
+<p class="status" id="status">Preparando descarga...</p>
+<button class="btn" id="btn" onclick="window.__restart()">Reiniciar ahora</button>
+</div>
+</body></html>`;
+  }
 
   function createUpdateWindow(version) {
     updateWin = new BrowserWindow({
-      width: 420,
-      height: 220,
+      width: 440,
+      height: 260,
       resizable: false,
       minimizable: false,
       maximizable: false,
       fullscreenable: false,
       frame: false,
       alwaysOnTop: true,
-      transparent: true,
-      webPreferences: { contextIsolation: true, nodeIntegration: false },
+      webPreferences: {
+        contextIsolation: false,
+        nodeIntegration: false,
+      },
     });
 
-    const html = `<!DOCTYPE html>
-<html><head><meta charset="utf-8"><style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Segoe UI',sans-serif;background:transparent;display:flex;align-items:center;justify-content:center;height:100vh}
-.card{background:#fff;border-radius:18px;padding:1.6rem 1.8rem;box-shadow:0 20px 50px rgba(30,50,100,.18);border:1px solid #e8edf8;width:100%;text-align:center}
-.title{font-size:.82rem;font-weight:800;color:#1f2d54;margin-bottom:.15rem}
-.version{font-size:.74rem;color:#5f6b8b;margin-bottom:1rem}
-.track{height:10px;border-radius:999px;background:#e8edf8;overflow:hidden;margin-bottom:.6rem}
-.bar{height:100%;border-radius:999px;background:linear-gradient(90deg,#4d91ff,#44c2ff);width:0%;transition:width .3s ease}
-.pct{font-size:1.1rem;font-weight:800;color:#4d91ff}
-.status{font-size:.72rem;color:#8a96b3;margin-top:.4rem}
-</style></head><body>
-<div class="card">
-<p class="title">Descargando actualizacion</p>
-<p class="version" id="ver">Version ${version}</p>
-<div class="track"><div class="bar" id="bar"></div></div>
-<p class="pct" id="pct">0%</p>
-<p class="status" id="status">Iniciando descarga...</p>
-</div>
-</body></html>`;
+    updateWin.loadURL('data:text/html;charset=utf-8,' + encodeURIComponent(getUpdateHTML(version)));
 
-    updateWin.loadURL('data:text/html;charset=utf-8,' + encodeURIComponent(html));
+    updateWin.webContents.on('did-finish-load', () => {
+      updateReady = true;
+      updateWin.webContents.executeJavaScript(
+        `window.__restart = function() { require('electron').ipcRenderer.send('do-restart'); };`
+      ).catch(() => {});
+      pendingProgress.forEach((p) => sendProgress(p.percent, p.speed));
+      pendingProgress = [];
+    });
+
     updateWin.center();
   }
 
-  function updateProgress(percent, speed) {
+  function sendProgress(percent, speed) {
     if (!updateWin || updateWin.isDestroyed()) return;
     const pct = Math.round(percent);
     const mbps = speed ? (speed / 1024 / 1024).toFixed(1) : '0.0';
-    const status = pct < 100 ? mbps + ' MB/s' : 'Finalizando...';
+    const status = pct < 100 ? (mbps + ' MB/s') : 'Finalizando...';
     updateWin.webContents.executeJavaScript(
       `document.getElementById('bar').style.width='${pct}%';` +
       `document.getElementById('pct').textContent='${pct}%';` +
@@ -221,12 +242,29 @@ body{font-family:'Segoe UI',sans-serif;background:transparent;display:flex;align
     ).catch(() => {});
   }
 
-  function closeUpdateWindow() {
-    if (updateWin && !updateWin.isDestroyed()) {
-      updateWin.close();
+  function showCompleted(version) {
+    if (!updateWin || updateWin.isDestroyed()) {
+      dialog.showMessageBox({
+        type: 'info',
+        title: 'Actualizacion lista',
+        message: 'La version ' + version + ' esta lista. Reinicia la app para aplicarla.',
+        buttons: ['Reiniciar ahora'],
+      }).then(() => { autoUpdater.quitAndInstall(); });
+      return;
     }
-    updateWin = null;
+    updateWin.webContents.executeJavaScript(
+      `document.getElementById('bar').style.width='100%';` +
+      `document.getElementById('pct').textContent='100%';` +
+      `document.getElementById('title').textContent='Actualizacion lista';` +
+      `document.getElementById('status').textContent='Listo para instalar';` +
+      `document.getElementById('track').style.display='none';` +
+      `document.getElementById('btn').classList.add('show');`
+    ).catch(() => {});
   }
+
+  ipcMain.on('do-restart', () => {
+    autoUpdater.quitAndInstall();
+  });
 
   autoUpdater.on('checking-for-update', () => {
     console.log('[updater] Buscando actualizaciones...');
@@ -234,7 +272,11 @@ body{font-family:'Segoe UI',sans-serif;background:transparent;display:flex;align
 
   autoUpdater.on('update-available', (info) => {
     console.log('[updater] Actualizacion disponible:', info.version);
+    pendingVersion = info.version;
+    updateReady = false;
+    pendingProgress = [];
     createUpdateWindow(info.version);
+    autoUpdater.downloadUpdate();
   });
 
   autoUpdater.on('update-not-available', () => {
@@ -243,31 +285,23 @@ body{font-family:'Segoe UI',sans-serif;background:transparent;display:flex;align
 
   autoUpdater.on('download-progress', (progress) => {
     console.log('[updater] Descargando: ' + Math.round(progress.percent) + '%');
-    updateProgress(progress.percent, progress.bytesPerSecond);
+    if (updateReady) {
+      sendProgress(progress.percent, progress.bytesPerSecond);
+    } else {
+      pendingProgress.push({ percent: progress.percent, speed: progress.bytesPerSecond });
+    }
   });
 
   autoUpdater.on('update-downloaded', (info) => {
     console.log('[updater] Descarga completa:', info.version);
-    if (updateWin && !updateWin.isDestroyed()) {
-      updateWin.webContents.executeJavaScript(
-        `document.getElementById('bar').style.width='100%';` +
-        `document.getElementById('pct').textContent='100%';` +
-        `document.getElementById('status').textContent='Descarga completada';`
-      ).catch(() => {});
-    }
-    setTimeout(() => {
-      closeUpdateWindow();
-      const parent = mainWindow && !mainWindow.isDestroyed() ? mainWindow : null;
-      dialog.showMessageBox(Object.assign({}, parent ? { window: parent } : {}, {
-        type: 'info',
-        title: 'Actualizacion lista',
-        message: 'La version ' + info.version + ' esta lista.',
-        detail: 'La app se reiniciara para aplicar la actualizacion.',
-        buttons: ['Reiniciar ahora'],
-      })).then(() => {
-        autoUpdater.quitAndInstall();
-      });
-    }, 1500);
+    const waitForReady = () => {
+      if (updateReady) {
+        showCompleted(info.version);
+      } else {
+        setTimeout(waitForReady, 200);
+      }
+    };
+    waitForReady();
   });
 
   autoUpdater.on('error', (err) => {
